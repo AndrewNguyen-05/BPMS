@@ -52,11 +52,12 @@ namespace BPMS
                 //Button
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(241, 243, 245);
-                currentBtn.ForeColor = color;//Color.FromArgb(57, 213, 213);
+                currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;//Color.FromArgb(57, 213, 213);
+                currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                currentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
                 //Left border button
                 leftBorderBtn.BackColor = color;
@@ -74,12 +75,12 @@ namespace BPMS
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.White;
-                currentBtn.ForeColor = Color.FromArgb(0, 23, 55);
+                currentBtn.ForeColor = Color.FromArgb(0, 152, 179);
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.FromArgb(101, 114, 133);
+                currentBtn.IconColor = Color.FromArgb(0, 152, 179);
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
-                currentBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                currentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void OpenChildForm(Form childForm)
@@ -113,6 +114,11 @@ namespace BPMS
         #region Events
 
         #region Menu Buttons Click
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new FormHome());
+        }
         private void btnImport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
@@ -143,7 +149,7 @@ namespace BPMS
         {
             this.Close();
         }
-        private void picLogo_Click(object sender, EventArgs e)
+        private void pbLogo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormHome());
         }
@@ -168,27 +174,23 @@ namespace BPMS
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void panelLogo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
         private void panelDesktop_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void label2_MouseDown(object sender, MouseEventArgs e)
+        private void pbLogo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
+
+
+
+
         #endregion
-
-
-
 
         #endregion
 
