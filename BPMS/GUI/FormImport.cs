@@ -1,4 +1,5 @@
-﻿using BPMS.DTO;
+﻿using BPMS.DAO;
+using BPMS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,6 @@ namespace BPMS.GUI
 {
     public partial class FormImport : Form
     {
-        BPMSDatabase db = new BPMSDatabase();
         public FormImport()
         {
             InitializeComponent();
@@ -23,10 +23,7 @@ namespace BPMS.GUI
         #region Methods
         void LoadData()
         {
-            var result = from c in db.DeliveryReports
-                         select c;
-
-            dtgvImport.DataSource = result.ToList();
+            dtgvImport.DataSource = DeliveryReportDAO.Instance.GetDeliveryReports();
         }
         #endregion
 
