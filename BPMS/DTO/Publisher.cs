@@ -17,16 +17,17 @@ namespace BPMS.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Publisher()
         {
-            this.DeliveryReports = new HashSet<DeliveryReport>();
+            this.ReceiptReports = new HashSet<ReceiptReport>();
         }
     
         public int id { get; set; }
         public int idAccount { get; set; }
+        public string name { get; set; }
         public string AccountNumber { get; set; }
         public string PhoneNumber { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DeliveryReport> DeliveryReports { get; set; }
+        public virtual ICollection<ReceiptReport> ReceiptReports { get; set; }
     }
 }

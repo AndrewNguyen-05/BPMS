@@ -15,11 +15,11 @@ namespace BPMS.DTO
     public partial class DeliveryReport
     {
         public int id { get; set; }
-        public int idPublisher { get; set; }
+        public int idAgency { get; set; }
         public System.DateTime DeliveryDate { get; set; }
         public string DeliveryPerson { get; set; }
         public string UnitLeader { get; set; }
     
-        public virtual Publisher Publisher { get; set; }
+        public virtual Agency Agency { get; set; }
     }
 }

@@ -15,10 +15,10 @@ namespace BPMS.DTO
     public partial class ReceiptReport
     {
         public int id { get; set; }
-        public int idAgency { get; set; }
+        public int idPublisher { get; set; }
         public System.DateTime ReceiptDate { get; set; }
         public string ReceiptPerson { get; set; }
     
-        public virtual Agency Agency { get; set; }
+        public virtual Publisher Publisher { get; set; }
     }
 }
