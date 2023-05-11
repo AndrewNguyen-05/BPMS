@@ -38,6 +38,8 @@
             // 
             // dtgvImport
             // 
+            this.dtgvImport.AllowUserToAddRows = false;
+            this.dtgvImport.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -59,12 +61,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvImport.Location = new System.Drawing.Point(46, 73);
+            this.dtgvImport.Location = new System.Drawing.Point(12, 73);
             this.dtgvImport.Name = "dtgvImport";
+            this.dtgvImport.ReadOnly = true;
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
             this.dtgvImport.RowTemplate.Height = 28;
-            this.dtgvImport.Size = new System.Drawing.Size(630, 416);
+            this.dtgvImport.Size = new System.Drawing.Size(893, 491);
             this.dtgvImport.TabIndex = 0;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -79,7 +82,7 @@
             this.dtgvImport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgvImport.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgvImport.ThemeStyle.ReadOnly = false;
+            this.dtgvImport.ThemeStyle.ReadOnly = true;
             this.dtgvImport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvImport.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
