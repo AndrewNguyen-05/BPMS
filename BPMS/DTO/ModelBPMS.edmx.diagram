@@ -19,6 +19,7 @@
         <AssociationConnector Association="BPMSModel.FK__Publisher__idAcc__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="BPMSModel.FK__ReceiptRe__idAge__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="BPMSModel.FK__DeliveryR__idPub__3A81B327" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BPMSModel.Book" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

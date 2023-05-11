@@ -32,5 +32,6 @@ namespace BPMS.DTO
         public virtual DbSet<DeliveryReport> DeliveryReports { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<ReceiptReport> ReceiptReports { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
     }
 }

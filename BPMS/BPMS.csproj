@@ -80,6 +80,9 @@
     <Compile Include="DTO\Bill.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Book.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="DTO\DeliveryReport.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
