@@ -63,7 +63,7 @@
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
             this.dtgvImport.RowTemplate.Height = 28;
-            this.dtgvImport.Size = new System.Drawing.Size(495, 341);
+            this.dtgvImport.Size = new System.Drawing.Size(630, 416);
             this.dtgvImport.TabIndex = 0;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,7 +95,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(586, 128);
+            this.guna2Button1.Location = new System.Drawing.Point(757, 86);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 1;

@@ -16,5 +16,11 @@ namespace BPMS.GUI
         {
             InitializeComponent();
         }
+        #region Methods
+
+        #endregion
+
+        #region Events
+        #endregion
     }
 }

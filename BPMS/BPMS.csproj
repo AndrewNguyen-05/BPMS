@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -42,9 +48,12 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +68,42 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Account.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Accountant.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Agency.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Bill.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DeliveryReport.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ModelBPMS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBPMS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ModelBPMS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ModelBPMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBPMS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Publisher.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ReceiptReport.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +161,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DTO\ModelBPMS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelBPMS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\ModelBPMS.edmx.diagram">
+      <DependentUpon>ModelBPMS.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -132,9 +184,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAO\" />
-    <Folder Include="DTO\" />
     <Folder Include="Pictures\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\ModelBPMS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBPMS.edmx</DependentUpon>
+      <LastGenOutput>ModelBPMS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\ModelBPMS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBPMS.edmx</DependentUpon>
+      <LastGenOutput>ModelBPMS.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
