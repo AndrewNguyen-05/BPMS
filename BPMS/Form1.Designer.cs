@@ -38,17 +38,20 @@
             this.btnAnalytic = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
             this.btnLogOut = new FontAwesome.Sharp.IconButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelLogo1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelLogo2 = new System.Windows.Forms.Label();
+            this.labelLogo3 = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.controlClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelLogOut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,22 +69,26 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(288, 741);
             this.panelMenu.TabIndex = 0;
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.labelLogo3);
+            this.panelLogo.Controls.Add(this.labelLogo2);
             this.panelLogo.Controls.Add(this.labelLogo1);
-            this.panelLogo.Controls.Add(this.guna2PictureBox1);
+            this.panelLogo.Controls.Add(this.picLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(288, 120);
             this.panelLogo.TabIndex = 0;
+            this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLogo_MouseDown);
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.White;
+            this.panelTitleBar.Controls.Add(this.controlMinimize);
+            this.panelTitleBar.Controls.Add(this.controlClose);
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -89,6 +96,7 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1127, 120);
             this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnImport
             // 
@@ -110,6 +118,7 @@
             this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnExport
             // 
@@ -131,6 +140,7 @@
             this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnPayment
             // 
@@ -152,6 +162,7 @@
             this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnAnalytic
             // 
@@ -173,6 +184,7 @@
             this.btnAnalytic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnalytic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAnalytic.UseVisualStyleBackColor = true;
+            this.btnAnalytic.Click += new System.EventHandler(this.btnAnalytic_Click);
             // 
             // panelLogOut
             // 
@@ -199,18 +211,20 @@
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // guna2PictureBox1
+            // picLogo
             // 
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(124, 120);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(124, 120);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
             // 
             // labelLogo1
             // 
@@ -221,26 +235,29 @@
             this.labelLogo1.Size = new System.Drawing.Size(157, 26);
             this.labelLogo1.TabIndex = 1;
             this.labelLogo1.Text = "BOOK PUBLISH";
+            this.labelLogo1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
             // 
-            // label1
+            // labelLogo2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "MANAGEMENT";
+            this.labelLogo2.AutoSize = true;
+            this.labelLogo2.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo2.Location = new System.Drawing.Point(130, 44);
+            this.labelLogo2.Name = "labelLogo2";
+            this.labelLogo2.Size = new System.Drawing.Size(158, 26);
+            this.labelLogo2.TabIndex = 2;
+            this.labelLogo2.Text = "MANAGEMENT";
+            this.labelLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
             // 
-            // label2
+            // labelLogo3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 26);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "SYSTEM";
+            this.labelLogo3.AutoSize = true;
+            this.labelLogo3.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo3.Location = new System.Drawing.Point(161, 82);
+            this.labelLogo3.Name = "labelLogo3";
+            this.labelLogo3.Size = new System.Drawing.Size(91, 26);
+            this.labelLogo3.TabIndex = 3;
+            this.labelLogo3.Text = "SYSTEM";
+            this.labelLogo3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
             // 
             // iconCurrentChildForm
             // 
@@ -268,14 +285,49 @@
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "HOME";
             // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(288, 120);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1127, 621);
+            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDesktop_MouseDown);
+            // 
+            // controlClose
+            // 
+            this.controlClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlClose.Animated = true;
+            this.controlClose.BackColor = System.Drawing.Color.Transparent;
+            this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.controlClose.ForeColor = System.Drawing.Color.Black;
+            this.controlClose.IconColor = System.Drawing.Color.Black;
+            this.controlClose.Location = new System.Drawing.Point(1079, 3);
+            this.controlClose.Name = "controlClose";
+            this.controlClose.Size = new System.Drawing.Size(45, 40);
+            this.controlClose.TabIndex = 2;
+            // 
+            // controlMinimize
+            // 
+            this.controlMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.controlMinimize.IconColor = System.Drawing.Color.Black;
+            this.controlMinimize.Location = new System.Drawing.Point(1028, 3);
+            this.controlMinimize.Name = "controlMinimize";
+            this.controlMinimize.Size = new System.Drawing.Size(45, 40);
+            this.controlMinimize.TabIndex = 3;
+            // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1415, 741);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -283,7 +335,7 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panelLogOut.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
@@ -300,12 +352,15 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelLogOut;
         private FontAwesome.Sharp.IconButton btnLogOut;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelLogo3;
+        private System.Windows.Forms.Label labelLogo2;
         private System.Windows.Forms.Label labelLogo1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private System.Windows.Forms.Label lblTitleChildForm;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2ControlBox controlMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox controlClose;
     }
 }
 

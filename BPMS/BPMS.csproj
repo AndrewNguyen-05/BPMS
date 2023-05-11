@@ -77,6 +77,12 @@
     <Compile Include="GUI\FormExport.Designer.cs">
       <DependentUpon>FormExport.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormImport.cs">
       <SubType>Form</SubType>
     </Compile>
