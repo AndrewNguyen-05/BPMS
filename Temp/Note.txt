@@ -1,0 +1,3 @@
+RGB Logo: 0, 152, 179
+RGB Font: 0, 105, 127
+RGB Icon: 0, 137, 165
