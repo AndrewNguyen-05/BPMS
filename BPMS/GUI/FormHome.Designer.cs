@@ -38,8 +38,8 @@
             // 
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
-            this.lblTime.Location = new System.Drawing.Point(154, 381);
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.lblTime.Location = new System.Drawing.Point(252, 413);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(590, 117);
             this.lblTime.TabIndex = 0;
@@ -48,7 +48,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(233, 91);
+            this.pictureBox1.Location = new System.Drawing.Point(297, 123);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(511, 284);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -60,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 511);
+            this.ClientSize = new System.Drawing.Size(1136, 621);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

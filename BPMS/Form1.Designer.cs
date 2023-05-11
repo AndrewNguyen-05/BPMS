@@ -90,9 +90,9 @@
             this.btnImport.FlatAppearance.BorderSize = 0;
             this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnImport.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.btnImport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnImport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnImport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImport.Location = new System.Drawing.Point(0, 225);
@@ -112,9 +112,9 @@
             this.btnExport.FlatAppearance.BorderSize = 0;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnExport.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.btnExport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnExport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExport.Location = new System.Drawing.Point(0, 301);
@@ -134,9 +134,9 @@
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
-            this.btnPayment.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnPayment.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayment.Location = new System.Drawing.Point(2, 377);
@@ -156,9 +156,9 @@
             this.btnAnalytic.FlatAppearance.BorderSize = 0;
             this.btnAnalytic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnalytic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalytic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnAnalytic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnAnalytic.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
-            this.btnAnalytic.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnAnalytic.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnAnalytic.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAnalytic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnalytic.Location = new System.Drawing.Point(2, 453);
@@ -185,9 +185,9 @@
             // btnLogOut
             // 
             this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.Location = new System.Drawing.Point(40, 55);
@@ -203,9 +203,9 @@
             // iconCurrentChildForm
             // 
             this.iconCurrentChildForm.BackColor = System.Drawing.Color.White;
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 48;
             this.iconCurrentChildForm.Location = new System.Drawing.Point(16, 31);
@@ -219,7 +219,7 @@
             // 
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
@@ -288,9 +288,9 @@
             this.btnMainPage.FlatAppearance.BorderSize = 0;
             this.btnMainPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainPage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnMainPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnMainPage.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnMainPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(179)))));
+            this.btnMainPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnMainPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMainPage.Location = new System.Drawing.Point(2, 149);
