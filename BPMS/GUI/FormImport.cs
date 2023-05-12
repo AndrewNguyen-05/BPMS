@@ -1,5 +1,7 @@
 ﻿using BPMS.DAO;
 using BPMS.DTO;
+using FontAwesome.Sharp;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +21,11 @@ namespace BPMS.GUI
         {
             InitializeComponent();
             LoadData();
+
+            //Border form
+            Guna2Elipse elipse = new Guna2Elipse();
+            elipse.TargetControl = guna2Button1;
+            elipse.BorderRadius = 45;
         }
         #region Methods
         void LoadData()

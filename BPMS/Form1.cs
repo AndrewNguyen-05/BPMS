@@ -29,10 +29,23 @@ namespace BPMS
             leftBorderBtn.Size = new Size(7, btnImport.Height);
             panelMenu.Controls.Add(leftBorderBtn);
 
-            //Border form
-            //Guna2Elipse elipse = new Guna2Elipse();
-            //elipse.TargetControl = this;
-            //elipse.BorderRadius = 45;
+            #region Border buttons
+            //Close
+            Guna2Elipse elipse_close = new Guna2Elipse();
+            elipse_close.TargetControl = controlClose;
+            elipse_close.BorderRadius = 35;
+
+            //Minimize
+            Guna2Elipse elipse_minimize = new Guna2Elipse();
+            elipse_minimize.TargetControl = controlMinimize;
+            elipse_minimize.BorderRadius = 35;
+
+            //Log out
+            Guna2Elipse elipse_out = new Guna2Elipse();
+            elipse_out.TargetControl = btnLogOut;
+            elipse_out.BorderRadius = 45;
+            #endregion
+
 
             //Form
             this.Text = string.Empty;
@@ -81,7 +94,7 @@ namespace BPMS
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.White;
+                currentBtn.BackColor = Color.FromArgb(252, 228, 236);
                 currentBtn.ForeColor = Color.FromArgb(0, 152, 179);
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.FromArgb(0, 152, 179);

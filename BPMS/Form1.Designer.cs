@@ -57,7 +57,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
             this.panelMenu.Controls.Add(this.btnMainPage);
             this.panelMenu.Controls.Add(this.panelLogOut);
             this.panelMenu.Controls.Add(this.btnAnalytic);
@@ -106,6 +106,9 @@
             // 
             // btnLogOut
             // 
+            this.btnLogOut.BackColor = System.Drawing.Color.White;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
             this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
@@ -119,7 +122,7 @@
             this.btnLogOut.Text = "LOG OUT";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnAnalytic
@@ -250,7 +253,7 @@
             // 
             this.controlMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.controlMinimize.FillColor = System.Drawing.Color.White;
             this.controlMinimize.IconColor = System.Drawing.Color.Black;
             this.controlMinimize.Location = new System.Drawing.Point(1037, 3);
             this.controlMinimize.Name = "controlMinimize";
@@ -261,8 +264,8 @@
             // 
             this.controlClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controlClose.Animated = true;
-            this.controlClose.BackColor = System.Drawing.Color.Transparent;
-            this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.controlClose.BackColor = System.Drawing.Color.White;
+            this.controlClose.FillColor = System.Drawing.Color.White;
             this.controlClose.ForeColor = System.Drawing.Color.Black;
             this.controlClose.IconColor = System.Drawing.Color.Black;
             this.controlClose.Location = new System.Drawing.Point(1088, 3);
@@ -309,7 +312,7 @@
             // 
             // BorderlessForm
             // 
-            this.BorderlessForm.BorderRadius = 25;
+            this.BorderlessForm.BorderRadius = 50;
             this.BorderlessForm.ContainerControl = this;
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
