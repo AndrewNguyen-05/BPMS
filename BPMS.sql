@@ -10,10 +10,10 @@ CREATE TABLE Book
 	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
 	type NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thể loại',
 	author NVARCHAR(100) NOT NULL DEFAULT N'Chưa có tác giả',
-	amount INT NOT NULL DEFAULT 0,
 	price FLOAT DEFAULT 0
 )
 GO
+
 
 CREATE TABLE Account
 (
@@ -60,26 +60,53 @@ CREATE TABLE Agency
 GO
 
 
-CREATE TABLE DeliveryReport
+CREATE TABLE ExportReport
 (
 	id INT IDENTITY PRIMARY KEY,
 	idAgency INT NOT NULL,
-	DeliveryDate DATETIME NOT NULL DEFAULT GETDATE(),
-	DeliveryPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người giao',
-	UnitLeader NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thủ trưởng',
+	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	ExportDate DATETIME NOT NULL DEFAULT GETDATE(),
+	TotalPrice INT NOT NULL DEFAULT 0,
 	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id)
 )
 GO
 
-CREATE TABLE ReceiptReport
+
+CREATE TABLE ExportReportDetail
+(
+	id INT IDENTITY PRIMARY KEY,
+	idBook INT NOT NULL,
+	idExport INT NOT NULL,
+	quantity INT NOT NULL,
+	FOREIGN KEY (idBook) REFERENCES dbo.Book(id),
+	FOREIGN KEY (idExport) REFERENCES dbo.ExportReport(id)
+)
+GO
+
+
+CREATE TABLE ImportReport
 (
 	id INT IDENTITY PRIMARY KEY,
 	idPublisher INT NOT NULL,
-	ReceiptDate DATETIME NOT NULL DEFAULT GETDATE(),
-	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	DeliveryPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người giao',
+	ImportDate DATETIME NOT NULL DEFAULT GETDATE(),
+	UnitLeader NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thủ trưởng',
+	TotalPrice INT NOT NULL DEFAULT 0,
 	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
 )
 GO
+
+CREATE TABLE ImportReportDetail
+(
+	id INT IDENTITY PRIMARY KEY,
+	idBook INT NOT NULL,
+	idImport INT NOT NULL,
+	quantity INT NOT NULL,
+	FOREIGN KEY (idBook) REFERENCES dbo.Book(id),
+	FOREIGN KEY (idImport) REFERENCES dbo.ImportReport(id)
+)
+GO
+
 
 CREATE TABLE Bill
 (
@@ -95,6 +122,12 @@ CREATE TABLE Bill
 )
 GO
 
+INSERT INTO Book (name, type, author, price) VALUES (N'Nhà Giả Kim', 'Tiểu thuyết', N'Paulo Coelho', 50000)
+INSERT INTO Book (name, type, author, price) VALUES (N'Đắc nhân tâm', 'Self Help', N'Dale Carnegie', 75000)
+INSERT INTO Book (name, type, author, price) VALUES (N'Bố Già', 'Novel', N'Mario Puzo', 250000)
+INSERT INTO Book (name, type, author, price) VALUES (N'Cuộc sống không giới hạn', 'Self Help', N'Nick Vujicic', 25000)
+INSERT INTO Book (name, type, author, price) VALUES (N'Tuổi trẻ đáng giá bao nhiêu', 'Self Help', N'Rosie Nguyen', 25000)
+GO
 
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 1, 'a')
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 0, 'c')
@@ -125,22 +158,71 @@ INSERT INTO Publisher (idAccount, AccountNumber, PhoneNumber) VALUES (11, '71596
 GO
 
 
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (1, '11/05/2023', N'Nguyễn Văn A', N'Trương Hoàng B')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (2, '12/05/2023', N'Trương Hoàng B', N'Hoàng Đức C')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (3, '10/05/2023', N'Nguyễn Văn C', N'Trương Hoàng A')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (4, '12/05/2023', N'Trương Hoàng D', N'Hoàng Đức C')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (2, '04/05/2023', N'Nguyễn Văn E', N'Hoàng Đức S')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (5, '01/05/2023', N'Hoàng Đức F', N'Hoàng Đức F')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (2, '02/07/2023', N'Nguyễn Văn S', N'Hoàng Đức E')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (3, '03/08/2023', N'Nguyễn Văn B', N'Hoàng Đức R')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (4, '05/05/2023', N'Hoàng Đức C', N'Hoàng Đức A')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (5, '04/02/2023', N'Nguyễn Văn A', N'Hoàng Đức S')
-INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (1, '08/01/2023', N'Nguyễn Văn D', N'Trương Hoàng B')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (1, '11/05/2023', N'Nguyễn Văn A', N'Trương Hoàng B')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (2, '12/05/2023', N'Trương Hoàng B', N'Hoàng Đức C')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (3, '10/05/2023', N'Nguyễn Văn C', N'Trương Hoàng A')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (4, '12/05/2023', N'Trương Hoàng D', N'Hoàng Đức C')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (2, '04/05/2023', N'Nguyễn Văn E', N'Hoàng Đức S')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (5, '01/05/2023', N'Hoàng Đức F', N'Hoàng Đức F')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (2, '02/07/2023', N'Nguyễn Văn S', N'Hoàng Đức E')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (3, '03/08/2023', N'Nguyễn Văn B', N'Hoàng Đức R')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (4, '05/05/2023', N'Hoàng Đức C', N'Hoàng Đức A')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (5, '04/02/2023', N'Nguyễn Văn A', N'Hoàng Đức S')
+INSERT INTO ImportReport (idPublisher, ImportDate, DeliveryPerson, UnitLeader) VALUES (1, '08/01/2023', N'Nguyễn Văn D', N'Trương Hoàng B')
 GO
+
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (1, '05/05/2023', N'Nguyễn Văn A')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (2, '11/02/2023', N'Trương Hoàng B')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (3, '10/20/2023', N'Nguyễn Văn C')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (4, '12/24/2023', N'Trương Hoàng S')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (2, '04/13/2023', N'Nguyễn Văn E')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (5, '02/15/2023', N'Trương Hoàng B')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (2, '03/27/2023', N'Nguyễn Văn S')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (3, '09/08/2023', N'Hoàng Đức F')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (4, '02/01/2023', N'Hoàng Đức A')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (5, '12/20/2023', N'Nguyễn Văn A')
+INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (1, '02/01/2023', N'Hoàng Đức S')
+GO
+
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 1)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 15, 1)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 8, 1)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 2)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 2)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 2)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 3)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 3)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 3)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 4)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 4)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 4)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 5)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 5)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 5)
+GO
+
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 1)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 15, 1)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 8, 1)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 2)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 2)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 2)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 3)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 3)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 3)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 4)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 4)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 4)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 5)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 5)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 5)
+GO
+
+
 
 SELECT * FROM Account
 SELECT * FROM Agency
 SELECT * FROM Publisher
-SELECT * FROM DeliveryReport
-SELECT * FROM ReceiptReport
+SELECT * FROM ImportReport
+SELECT * FROM ExportReport
 GO
