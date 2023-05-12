@@ -121,7 +121,7 @@
   <data name="pbLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPoAAAB0CAIAAAAjNLjCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJ
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAB3RJ
         TUUH5wULCwo4Bsw2HgAAADR0RVh0Q29tbWVudAB4cjpkOkRBRmltZnhVU0VNOjIzLGo6NDY5MjcxNDA0
         NDQsdDoyMzA1MTExMUOOyDsAACT/SURBVHhe7X0HdFzHee6CFCnlSJZkxj5KVBzJiS1FtE9s+ckvTuIS
         S3KRy3svdl7syGm28+SS82IrTiLHjuU4cZMoojeSYAEpEiB2sbvoHSSIShBgQyMJopEEQFAASZAE0Sjl
@@ -284,4 +284,7 @@
         sIxg0d3CssGbb/43ofQ+FywkukEAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="BorderlessForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
