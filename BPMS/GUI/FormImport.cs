@@ -25,7 +25,7 @@ namespace BPMS.GUI
             #region Border form
             //Button
             Guna2Elipse elipse = new Guna2Elipse();
-            elipse.TargetControl = guna2Button1;
+            elipse.TargetControl = btnCreate;
             elipse.BorderRadius = 45;
 
             //Dtgv

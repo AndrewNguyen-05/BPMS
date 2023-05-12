@@ -41,14 +41,13 @@
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.lblTime.Location = new System.Drawing.Point(252, 413);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(590, 117);
+            this.lblTime.Size = new System.Drawing.Size(3, 2);
             this.lblTime.TabIndex = 0;
-            this.lblTime.Text = "Current Time";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(297, 123);
+            this.pictureBox1.Location = new System.Drawing.Point(348, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(511, 284);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
