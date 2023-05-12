@@ -25,7 +25,10 @@ namespace BPMS.DAO
 
         public List<DeliveryReport> GetDeliveryReports()
         {
-            return db.DeliveryReports.ToList();
+            //var result = from c in db.DeliveryReports 
+            //             select new {id = c.id, agency_name = c.Agency.Account.DisplayName}
+
+            //return result.ToList();
         }
     }
 }

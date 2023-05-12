@@ -61,21 +61,21 @@ GO
 CREATE TABLE DeliveryReport
 (
 	id INT IDENTITY PRIMARY KEY,
-	idPublisher INT NOT NULL,
+	idAgency INT NOT NULL,
 	DeliveryDate DATETIME NOT NULL DEFAULT GETDATE(),
 	DeliveryPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người giao',
 	UnitLeader NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thủ trưởng',
-	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
+	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id)
 )
 GO
 
 CREATE TABLE ReceiptReport
 (
 	id INT IDENTITY PRIMARY KEY,
-	idAgency INT NOT NULL,
+	idPublisher INT NOT NULL,
 	ReceiptDate DATETIME NOT NULL DEFAULT GETDATE(),
 	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
-	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id)
+	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
 )
 GO
 
@@ -92,3 +92,26 @@ CREATE TABLE Bill
 	FOREIGN KEY (idSender) REFERENCES dbo.Account(id)
 )
 GO
+
+
+INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (1, '11/05/2023', N'Nguyễn Văn A', N'Trương Hoàng B')
+INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (2, '12/05/2023', N'Nguyễn Văn B', N'Hoàng Đức C')
+INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (3, '10/05/2023', N'Nguyễn Văn C', N'Trương Hoàng A')
+INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (4, '19/05/2023', N'Nguyễn Văn A', N'Hoàng Đức C')
+INSERT INTO DeliveryReport (idAgency, DeliveryDate, DeliveryPerson, UnitLeader) VALUES (2, '04/05/2023', N'Nguyễn Văn B', N'Hoàng Đức C')
+GO
+
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 1, 'a')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 0, 'c')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phương Nam Book City', 'DL', 0, 'd')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('MK', N'Minh Khai', 'DL', 0, 'e')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('VL', N'Văn Lang', 'DL', 0, 'f')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NVC', N'Nguyễn Văn Cừ', 'DL', 0, 'g')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('KD', N'Kim Đồng', 'NXB', 0, 'b')
+GO
+
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES ()
+
+SELECT * FROM Account
+SELECT * FROM Agency
+SELECT * FROM DeliveryReport

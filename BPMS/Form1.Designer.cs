@@ -309,7 +309,7 @@
             // 
             // BorderlessForm
             // 
-            this.BorderlessForm.BorderRadius = 45;
+            this.BorderlessForm.BorderRadius = 25;
             this.BorderlessForm.ContainerControl = this;
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
