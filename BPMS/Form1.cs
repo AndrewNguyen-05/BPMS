@@ -1,5 +1,6 @@
 ﻿using BPMS.GUI;
 using FontAwesome.Sharp;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,12 @@ namespace BPMS
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, btnImport.Height);
             panelMenu.Controls.Add(leftBorderBtn);
+
+            //Border form
+            //Guna2Elipse elipse = new Guna2Elipse();
+            //elipse.TargetControl = this;
+            //elipse.BorderRadius = 45;
+
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;

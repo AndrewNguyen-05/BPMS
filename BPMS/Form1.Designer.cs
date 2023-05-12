@@ -278,7 +278,7 @@
             this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(56, 21);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -309,7 +309,7 @@
             // 
             // BorderlessForm
             // 
-            this.BorderlessForm.BorderRadius = 16;
+            this.BorderlessForm.BorderRadius = 45;
             this.BorderlessForm.ContainerControl = this;
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
