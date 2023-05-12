@@ -17,7 +17,7 @@ namespace BPMS.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Publisher()
         {
-            this.ReceiptReports = new HashSet<ReceiptReport>();
+            this.ImportReports = new HashSet<ImportReport>();
         }
     
         public int id { get; set; }
@@ -27,6 +27,6 @@ namespace BPMS.DTO
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ReceiptReport> ReceiptReports { get; set; }
+        public virtual ICollection<ImportReport> ImportReports { get; set; }
     }
 }

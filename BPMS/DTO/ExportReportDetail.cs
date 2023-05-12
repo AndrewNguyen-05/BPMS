@@ -12,14 +12,14 @@ namespace BPMS.DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class DeliveryReport
+    public partial class ExportReportDetail
     {
         public int id { get; set; }
-        public int idAgency { get; set; }
-        public System.DateTime DeliveryDate { get; set; }
-        public string DeliveryPerson { get; set; }
-        public string UnitLeader { get; set; }
+        public int idBook { get; set; }
+        public int idExport { get; set; }
+        public int quantity { get; set; }
     
-        public virtual Agency Agency { get; set; }
+        public virtual Book Book { get; set; }
+        public virtual ExportReport ExportReport { get; set; }
     }
 }

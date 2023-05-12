@@ -35,7 +35,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeliveryPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
             this.SuspendLayout();
@@ -54,12 +54,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvImport.ColumnHeadersHeight = 4;
-            this.dtgvImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DisplayName,
-            this.DeliveryDate,
+            this.ExportDate,
             this.DeliveryPerson});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -89,8 +88,8 @@
             this.dtgvImport.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvImport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvImport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvImport.ThemeStyle.HeaderStyle.Height = 4;
+            this.dtgvImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvImport.ThemeStyle.HeaderStyle.Height = 22;
             this.dtgvImport.ThemeStyle.ReadOnly = true;
             this.dtgvImport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -128,12 +127,12 @@
             this.DisplayName.Name = "DisplayName";
             this.DisplayName.ReadOnly = true;
             // 
-            // DeliveryDate
+            // ExportDate
             // 
-            this.DeliveryDate.HeaderText = "Ngày giao";
-            this.DeliveryDate.MinimumWidth = 8;
-            this.DeliveryDate.Name = "DeliveryDate";
-            this.DeliveryDate.ReadOnly = true;
+            this.ExportDate.HeaderText = "Ngày giao";
+            this.ExportDate.MinimumWidth = 8;
+            this.ExportDate.Name = "ExportDate";
+            this.ExportDate.ReadOnly = true;
             // 
             // DeliveryPerson
             // 
@@ -163,7 +162,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DisplayName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryPerson;
     }
 }

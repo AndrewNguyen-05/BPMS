@@ -12,22 +12,23 @@ namespace BPMS.DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class Agency
+    public partial class ImportReport
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Agency()
+        public ImportReport()
         {
-            this.ExportReports = new HashSet<ExportReport>();
+            this.ImportReportDetails = new HashSet<ImportReportDetail>();
         }
     
         public int id { get; set; }
-        public int idAccount { get; set; }
-        public double debt { get; set; }
-        public Nullable<int> BookReceived { get; set; }
-        public Nullable<int> PaidMoney { get; set; }
+        public int idPublisher { get; set; }
+        public string DeliveryPerson { get; set; }
+        public System.DateTime ImportDate { get; set; }
+        public string UnitLeader { get; set; }
+        public int TotalPrice { get; set; }
     
-        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ExportReport> ExportReports { get; set; }
+        public virtual ICollection<ImportReportDetail> ImportReportDetails { get; set; }
+        public virtual Publisher Publisher { get; set; }
     }
 }

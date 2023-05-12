@@ -30,8 +30,10 @@ namespace BPMS.DTO
         public virtual DbSet<Agency> Agencies { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<DeliveryReport> DeliveryReports { get; set; }
+        public virtual DbSet<ExportReport> ExportReports { get; set; }
+        public virtual DbSet<ExportReportDetail> ExportReportDetails { get; set; }
+        public virtual DbSet<ImportReport> ImportReports { get; set; }
+        public virtual DbSet<ImportReportDetail> ImportReportDetails { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
-        public virtual DbSet<ReceiptReport> ReceiptReports { get; set; }
     }
 }

@@ -68,7 +68,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DeliveryReportDAO.cs" />
+    <Compile Include="DAO\ExportReportDAO.cs" />
     <Compile Include="DTO\Account.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
@@ -84,7 +84,16 @@
     <Compile Include="DTO\Book.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DeliveryReport.cs">
+    <Compile Include="DTO\ExportReport.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ExportReportDetail.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ImportReport.cs">
+      <DependentUpon>ModelBPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ImportReportDetail.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ModelBPMS.Context.cs">
@@ -103,9 +112,6 @@
       <DependentUpon>ModelBPMS.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\Publisher.cs">
-      <DependentUpon>ModelBPMS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\ReceiptReport.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
