@@ -22,7 +22,6 @@ namespace BPMS.DTO
     
         public int id { get; set; }
         public int idAccount { get; set; }
-        public string name { get; set; }
         public string AccountNumber { get; set; }
         public string PhoneNumber { get; set; }
     

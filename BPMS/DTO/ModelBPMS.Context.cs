@@ -13,10 +13,10 @@ namespace BPMS.DTO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BPMSDatabase : DbContext
+    public partial class BPMSEntities : DbContext
     {
-        public BPMSDatabase()
-            : base("name=BPMSDatabase")
+        public BPMSEntities()
+            : base("name=BPMSEntities")
         {
         }
     

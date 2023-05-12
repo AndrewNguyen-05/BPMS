@@ -21,7 +21,6 @@ namespace BPMS.DTO
         }
     
         public int id { get; set; }
-        public string name { get; set; }
         public int idAccount { get; set; }
         public double debt { get; set; }
         public Nullable<int> BookReceived { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BPMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BPMSDatabase.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="id" />
@@ -30,7 +30,6 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="idAccount" Type="int" Nullable="false" />
           <Property Name="debt" Type="float" Nullable="false" />
           <Property Name="BookReceived" Type="int" />
@@ -75,7 +74,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idAccount" Type="int" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="AccountNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="PhoneNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -88,7 +86,7 @@
           <Property Name="ReceiptDate" Type="datetime" Nullable="false" />
           <Property Name="ReceiptPerson" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Accountan__idAcc__38996AB5">
+        <Association Name="FK__Accountan__idAcc__30F848ED">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Accountant" Type="Self.Accountant" Multiplicity="*" />
           <ReferentialConstraint>
@@ -100,7 +98,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Agency__idAccoun__3D5E1FD2">
+        <Association Name="FK__Agency__idAccoun__34C8D9D1">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Agency" Type="Self.Agency" Multiplicity="*" />
           <ReferentialConstraint>
@@ -112,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__4CA06362">
+        <Association Name="FK__Bill__idReceiver__440B1D61">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -124,7 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idSender__4D94879B">
+        <Association Name="FK__Bill__idSender__44FF419A">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -136,7 +134,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryR__idAge__4316F928">
+        <Association Name="FK__DeliveryR__idAge__3A81B327">
           <End Role="Agency" Type="Self.Agency" Multiplicity="1" />
           <End Role="DeliveryReport" Type="Self.DeliveryReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +146,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Publisher__idAcc__33D4B598">
+        <Association Name="FK__Publisher__idAcc__2C3393D0">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -160,7 +158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReceiptRe__idPub__47DBAE45">
+        <Association Name="FK__ReceiptRe__idPub__3F466844">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="1" />
           <End Role="ReceiptReport" Type="Self.ReceiptReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +170,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BPMSModelStoreContainer">
+        <EntityContainer Name="BPMSDatabaseStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Accountant" EntityType="Self.Accountant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Agency" EntityType="Self.Agency" Schema="dbo" store:Type="Tables" />
@@ -181,31 +179,31 @@
           <EntitySet Name="DeliveryReport" EntityType="Self.DeliveryReport" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Publisher" EntityType="Self.Publisher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ReceiptReport" EntityType="Self.ReceiptReport" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Accountan__idAcc__38996AB5" Association="Self.FK__Accountan__idAcc__38996AB5">
+          <AssociationSet Name="FK__Accountan__idAcc__30F848ED" Association="Self.FK__Accountan__idAcc__30F848ED">
             <End Role="Account" EntitySet="Account" />
             <End Role="Accountant" EntitySet="Accountant" />
           </AssociationSet>
-          <AssociationSet Name="FK__Agency__idAccoun__3D5E1FD2" Association="Self.FK__Agency__idAccoun__3D5E1FD2">
+          <AssociationSet Name="FK__Agency__idAccoun__34C8D9D1" Association="Self.FK__Agency__idAccoun__34C8D9D1">
             <End Role="Account" EntitySet="Account" />
             <End Role="Agency" EntitySet="Agency" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__4CA06362" Association="Self.FK__Bill__idReceiver__4CA06362">
+          <AssociationSet Name="FK__Bill__idReceiver__440B1D61" Association="Self.FK__Bill__idReceiver__440B1D61">
             <End Role="Account" EntitySet="Account" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__4D94879B" Association="Self.FK__Bill__idSender__4D94879B">
+          <AssociationSet Name="FK__Bill__idSender__44FF419A" Association="Self.FK__Bill__idSender__44FF419A">
             <End Role="Account" EntitySet="Account" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryR__idAge__4316F928" Association="Self.FK__DeliveryR__idAge__4316F928">
+          <AssociationSet Name="FK__DeliveryR__idAge__3A81B327" Association="Self.FK__DeliveryR__idAge__3A81B327">
             <End Role="Agency" EntitySet="Agency" />
             <End Role="DeliveryReport" EntitySet="DeliveryReport" />
           </AssociationSet>
-          <AssociationSet Name="FK__Publisher__idAcc__33D4B598" Association="Self.FK__Publisher__idAcc__33D4B598">
+          <AssociationSet Name="FK__Publisher__idAcc__2C3393D0" Association="Self.FK__Publisher__idAcc__2C3393D0">
             <End Role="Account" EntitySet="Account" />
             <End Role="Publisher" EntitySet="Publisher" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReceiptRe__idPub__47DBAE45" Association="Self.FK__ReceiptRe__idPub__47DBAE45">
+          <AssociationSet Name="FK__ReceiptRe__idPub__3F466844" Association="Self.FK__ReceiptRe__idPub__3F466844">
             <End Role="Publisher" EntitySet="Publisher" />
             <End Role="ReceiptReport" EntitySet="ReceiptReport" />
           </AssociationSet>
@@ -214,7 +212,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BPMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BPMSDatabase" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="id" />
@@ -225,11 +223,11 @@
           <Property Name="PassWord" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="type" Type="Int32" Nullable="false" />
           <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Accountants" Relationship="Self.FK__Accountan__idAcc__38996AB5" FromRole="Account" ToRole="Accountant" />
-          <NavigationProperty Name="Agencies" Relationship="Self.FK__Agency__idAccoun__3D5E1FD2" FromRole="Account" ToRole="Agency" />
-          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idReceiver__4CA06362" FromRole="Account" ToRole="Bill" />
-          <NavigationProperty Name="Bills1" Relationship="Self.FK__Bill__idSender__4D94879B" FromRole="Account" ToRole="Bill" />
-          <NavigationProperty Name="Publishers" Relationship="Self.FK__Publisher__idAcc__33D4B598" FromRole="Account" ToRole="Publisher" />
+          <NavigationProperty Name="Accountants" Relationship="Self.FK__Accountan__idAcc__30F848ED" FromRole="Account" ToRole="Accountant" />
+          <NavigationProperty Name="Agencies" Relationship="Self.FK__Agency__idAccoun__34C8D9D1" FromRole="Account" ToRole="Agency" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idReceiver__440B1D61" FromRole="Account" ToRole="Bill" />
+          <NavigationProperty Name="Bills1" Relationship="Self.FK__Bill__idSender__44FF419A" FromRole="Account" ToRole="Bill" />
+          <NavigationProperty Name="Publishers" Relationship="Self.FK__Publisher__idAcc__2C3393D0" FromRole="Account" ToRole="Publisher" />
         </EntityType>
         <EntityType Name="Accountant">
           <Key>
@@ -239,20 +237,19 @@
           <Property Name="idAccount" Type="Int32" Nullable="false" />
           <Property Name="AccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Accountan__idAcc__38996AB5" FromRole="Accountant" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Accountan__idAcc__30F848ED" FromRole="Accountant" ToRole="Account" />
         </EntityType>
         <EntityType Name="Agency">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="idAccount" Type="Int32" Nullable="false" />
           <Property Name="debt" Type="Double" Nullable="false" />
           <Property Name="BookReceived" Type="Int32" />
           <Property Name="PaidMoney" Type="Int32" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Agency__idAccoun__3D5E1FD2" FromRole="Agency" ToRole="Account" />
-          <NavigationProperty Name="DeliveryReports" Relationship="Self.FK__DeliveryR__idAge__4316F928" FromRole="Agency" ToRole="DeliveryReport" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Agency__idAccoun__34C8D9D1" FromRole="Agency" ToRole="Account" />
+          <NavigationProperty Name="DeliveryReports" Relationship="Self.FK__DeliveryR__idAge__3A81B327" FromRole="Agency" ToRole="DeliveryReport" />
         </EntityType>
         <EntityType Name="Bill">
           <Key>
@@ -265,8 +262,8 @@
           <Property Name="ReceiptPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="isPaid" Type="Int32" />
           <Property Name="isReceived" Type="Int32" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idReceiver__4CA06362" FromRole="Bill" ToRole="Account" />
-          <NavigationProperty Name="Account1" Relationship="Self.FK__Bill__idSender__4D94879B" FromRole="Bill" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idReceiver__440B1D61" FromRole="Bill" ToRole="Account" />
+          <NavigationProperty Name="Account1" Relationship="Self.FK__Bill__idSender__44FF419A" FromRole="Bill" ToRole="Account" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -288,7 +285,7 @@
           <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DeliveryPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UnitLeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Agency" Relationship="Self.FK__DeliveryR__idAge__4316F928" FromRole="DeliveryReport" ToRole="Agency" />
+          <NavigationProperty Name="Agency" Relationship="Self.FK__DeliveryR__idAge__3A81B327" FromRole="DeliveryReport" ToRole="Agency" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
@@ -296,11 +293,10 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idAccount" Type="Int32" Nullable="false" />
-          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Publisher__idAcc__33D4B598" FromRole="Publisher" ToRole="Account" />
-          <NavigationProperty Name="ReceiptReports" Relationship="Self.FK__ReceiptRe__idPub__47DBAE45" FromRole="Publisher" ToRole="ReceiptReport" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Publisher__idAcc__2C3393D0" FromRole="Publisher" ToRole="Account" />
+          <NavigationProperty Name="ReceiptReports" Relationship="Self.FK__ReceiptRe__idPub__3F466844" FromRole="Publisher" ToRole="ReceiptReport" />
         </EntityType>
         <EntityType Name="ReceiptReport">
           <Key>
@@ -310,9 +306,9 @@
           <Property Name="idPublisher" Type="Int32" Nullable="false" />
           <Property Name="ReceiptDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ReceiptPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Publisher" Relationship="Self.FK__ReceiptRe__idPub__47DBAE45" FromRole="ReceiptReport" ToRole="Publisher" />
+          <NavigationProperty Name="Publisher" Relationship="Self.FK__ReceiptRe__idPub__3F466844" FromRole="ReceiptReport" ToRole="Publisher" />
         </EntityType>
-        <Association Name="FK__Accountan__idAcc__38996AB5">
+        <Association Name="FK__Accountan__idAcc__30F848ED">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Accountant" Type="Self.Accountant" Multiplicity="*" />
           <ReferentialConstraint>
@@ -324,7 +320,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Agency__idAccoun__3D5E1FD2">
+        <Association Name="FK__Agency__idAccoun__34C8D9D1">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Agency" Type="Self.Agency" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,7 +332,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__4CA06362">
+        <Association Name="FK__Bill__idReceiver__440B1D61">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -348,7 +344,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idSender__4D94879B">
+        <Association Name="FK__Bill__idSender__44FF419A">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -360,7 +356,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Publisher__idAcc__33D4B598">
+        <Association Name="FK__Publisher__idAcc__2C3393D0">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -372,7 +368,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryR__idAge__4316F928">
+        <Association Name="FK__DeliveryR__idAge__3A81B327">
           <End Role="Agency" Type="Self.Agency" Multiplicity="1" />
           <End Role="DeliveryReport" Type="Self.DeliveryReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -384,7 +380,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReceiptRe__idPub__47DBAE45">
+        <Association Name="FK__ReceiptRe__idPub__3F466844">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="1" />
           <End Role="ReceiptReport" Type="Self.ReceiptReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -396,7 +392,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BPMSDatabase" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BPMSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Accountants" EntityType="Self.Accountant" />
           <EntitySet Name="Agencies" EntityType="Self.Agency" />
@@ -405,31 +401,31 @@
           <EntitySet Name="DeliveryReports" EntityType="Self.DeliveryReport" />
           <EntitySet Name="Publishers" EntityType="Self.Publisher" />
           <EntitySet Name="ReceiptReports" EntityType="Self.ReceiptReport" />
-          <AssociationSet Name="FK__Accountan__idAcc__38996AB5" Association="Self.FK__Accountan__idAcc__38996AB5">
+          <AssociationSet Name="FK__Accountan__idAcc__30F848ED" Association="Self.FK__Accountan__idAcc__30F848ED">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Accountant" EntitySet="Accountants" />
           </AssociationSet>
-          <AssociationSet Name="FK__Agency__idAccoun__3D5E1FD2" Association="Self.FK__Agency__idAccoun__3D5E1FD2">
+          <AssociationSet Name="FK__Agency__idAccoun__34C8D9D1" Association="Self.FK__Agency__idAccoun__34C8D9D1">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Agency" EntitySet="Agencies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__4CA06362" Association="Self.FK__Bill__idReceiver__4CA06362">
+          <AssociationSet Name="FK__Bill__idReceiver__440B1D61" Association="Self.FK__Bill__idReceiver__440B1D61">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__4D94879B" Association="Self.FK__Bill__idSender__4D94879B">
+          <AssociationSet Name="FK__Bill__idSender__44FF419A" Association="Self.FK__Bill__idSender__44FF419A">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__Publisher__idAcc__33D4B598" Association="Self.FK__Publisher__idAcc__33D4B598">
+          <AssociationSet Name="FK__Publisher__idAcc__2C3393D0" Association="Self.FK__Publisher__idAcc__2C3393D0">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Publisher" EntitySet="Publishers" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryR__idAge__4316F928" Association="Self.FK__DeliveryR__idAge__4316F928">
+          <AssociationSet Name="FK__DeliveryR__idAge__3A81B327" Association="Self.FK__DeliveryR__idAge__3A81B327">
             <End Role="Agency" EntitySet="Agencies" />
             <End Role="DeliveryReport" EntitySet="DeliveryReports" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReceiptRe__idPub__47DBAE45" Association="Self.FK__ReceiptRe__idPub__47DBAE45">
+          <AssociationSet Name="FK__ReceiptRe__idPub__3F466844" Association="Self.FK__ReceiptRe__idPub__3F466844">
             <End Role="Publisher" EntitySet="Publishers" />
             <End Role="ReceiptReport" EntitySet="ReceiptReports" />
           </AssociationSet>
@@ -439,9 +435,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BPMSModelStoreContainer" CdmEntityContainer="BPMSDatabase">
+        <EntityContainerMapping StorageEntityContainer="BPMSDatabaseStoreContainer" CdmEntityContainer="BPMSEntities">
           <EntitySetMapping Name="Accounts">
-            <EntityTypeMapping TypeName="BPMSModel.Account">
+            <EntityTypeMapping TypeName="BPMSDatabase.Account">
               <MappingFragment StoreEntitySet="Account">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -453,7 +449,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Accountants">
-            <EntityTypeMapping TypeName="BPMSModel.Accountant">
+            <EntityTypeMapping TypeName="BPMSDatabase.Accountant">
               <MappingFragment StoreEntitySet="Accountant">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idAccount" ColumnName="idAccount" />
@@ -463,10 +459,9 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Agencies">
-            <EntityTypeMapping TypeName="BPMSModel.Agency">
+            <EntityTypeMapping TypeName="BPMSDatabase.Agency">
               <MappingFragment StoreEntitySet="Agency">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="idAccount" ColumnName="idAccount" />
                 <ScalarProperty Name="debt" ColumnName="debt" />
                 <ScalarProperty Name="BookReceived" ColumnName="BookReceived" />
@@ -475,7 +470,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Bills">
-            <EntityTypeMapping TypeName="BPMSModel.Bill">
+            <EntityTypeMapping TypeName="BPMSDatabase.Bill">
               <MappingFragment StoreEntitySet="Bill">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idReceiver" ColumnName="idReceiver" />
@@ -488,7 +483,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Books">
-            <EntityTypeMapping TypeName="BPMSModel.Book">
+            <EntityTypeMapping TypeName="BPMSDatabase.Book">
               <MappingFragment StoreEntitySet="Book">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -500,7 +495,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DeliveryReports">
-            <EntityTypeMapping TypeName="BPMSModel.DeliveryReport">
+            <EntityTypeMapping TypeName="BPMSDatabase.DeliveryReport">
               <MappingFragment StoreEntitySet="DeliveryReport">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idAgency" ColumnName="idAgency" />
@@ -511,18 +506,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Publishers">
-            <EntityTypeMapping TypeName="BPMSModel.Publisher">
+            <EntityTypeMapping TypeName="BPMSDatabase.Publisher">
               <MappingFragment StoreEntitySet="Publisher">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idAccount" ColumnName="idAccount" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ReceiptReports">
-            <EntityTypeMapping TypeName="BPMSModel.ReceiptReport">
+            <EntityTypeMapping TypeName="BPMSDatabase.ReceiptReport">
               <MappingFragment StoreEntitySet="ReceiptReport">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPublisher" ColumnName="idPublisher" />
