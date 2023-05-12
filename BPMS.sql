@@ -58,6 +58,7 @@ CREATE TABLE Agency
 )
 GO
 
+
 CREATE TABLE DeliveryReport
 (
 	id INT IDENTITY PRIMARY KEY,
@@ -110,8 +111,17 @@ INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NV
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('KD', N'Kim Đồng', 'NXB', 0, 'b')
 GO
 
-INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES ()
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (2, 2000000,1,0)
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (3, 3800000,1,0)
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (4, 1500000,0,0)
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (5, 0,1,1)
+INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (6, 0,0,1)
+GO
+
+
 
 SELECT * FROM Account
 SELECT * FROM Agency
+SELECT * FROM Publisher
 SELECT * FROM DeliveryReport
+SELECT * FROM ReceiptReport
