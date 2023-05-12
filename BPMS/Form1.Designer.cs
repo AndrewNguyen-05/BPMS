@@ -321,6 +321,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

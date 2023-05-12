@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +56,11 @@
             this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvImport.ColumnHeadersHeight = 4;
             this.dtgvImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.DisplayName,
+            this.DeliveryDate,
+            this.DeliveryPerson});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +114,34 @@
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "guna2Button1";
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Số phiếu xuất";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // DisplayName
+            // 
+            this.DisplayName.HeaderText = "Đại lý";
+            this.DisplayName.MinimumWidth = 8;
+            this.DisplayName.Name = "DisplayName";
+            this.DisplayName.ReadOnly = true;
+            // 
+            // DeliveryDate
+            // 
+            this.DeliveryDate.HeaderText = "Ngày giao";
+            this.DeliveryDate.MinimumWidth = 8;
+            this.DeliveryDate.Name = "DeliveryDate";
+            this.DeliveryDate.ReadOnly = true;
+            // 
+            // DeliveryPerson
+            // 
+            this.DeliveryPerson.HeaderText = "Người giao";
+            this.DeliveryPerson.MinimumWidth = 8;
+            this.DeliveryPerson.Name = "DeliveryPerson";
+            this.DeliveryPerson.ReadOnly = true;
+            // 
             // FormImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -112,6 +149,7 @@
             this.ClientSize = new System.Drawing.Size(1114, 565);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.dtgvImport);
+            this.DoubleBuffered = true;
             this.Name = "FormImport";
             this.Text = "Import";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).EndInit();
@@ -123,5 +161,9 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dtgvImport;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DisplayName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryPerson;
     }
 }
