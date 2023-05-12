@@ -22,10 +22,18 @@ namespace BPMS.GUI
             InitializeComponent();
             LoadData();
 
-            //Border form
+            #region Border form
+            //Button
             Guna2Elipse elipse = new Guna2Elipse();
             elipse.TargetControl = guna2Button1;
             elipse.BorderRadius = 45;
+
+            //Dtgv
+            Guna2Elipse elipse_dtgv = new Guna2Elipse();
+            elipse_dtgv.TargetControl = dtgvImport;
+            elipse_dtgv.BorderRadius = 20;
+            #endregion
+
         }
         #region Methods
         void LoadData()
