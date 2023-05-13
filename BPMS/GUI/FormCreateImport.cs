@@ -37,6 +37,7 @@ namespace BPMS.GUI
 
         private void btnModify_Click(object sender, EventArgs e)
         {
+            if (TempListDtgv.SelectedRows.Count == 0) return;
             DataGridViewRow dtgvr = TempListDtgv.SelectedRows[0];
             dtgvr.Cells["BookClm"].Value = BookTxt.Text;
             dtgvr.Cells["AuthorClm"].Value = AuthorTxt.Text;
@@ -53,12 +54,12 @@ namespace BPMS.GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow dtgvr in TempListDtgv.Rows)
+            for (int i = TempListDtgv.Rows.Count - 1; i > 0; i--)
             {
-                bool? cbc = dtgvr.Cells["SelectedClm"].Value as bool?;
+                bool? cbc = TempListDtgv.Rows[i].Cells["SelectClm"].Value as bool?;
                 if (cbc == true)
                 {
-                    TempListDtgv.Rows.Remove(dtgvr);
+                    TempListDtgv.Rows.Remove(TempListDtgv.Rows[i]);
                 }
             }
         }
