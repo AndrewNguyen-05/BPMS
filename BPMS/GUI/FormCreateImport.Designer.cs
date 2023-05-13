@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.PublisherTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.DeliveryPersonTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.DateTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.SignatureTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.UnitLeaderTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.IDTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.BookTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.AuthorTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.QualityTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,15 +47,14 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TempListDtgv = new Guna.UI2.WinForms.Guna2DataGridView();
             this.SelectClm = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.IDClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AuthorClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuantityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QualityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TempListDtgv)).BeginInit();
             this.SuspendLayout();
             // 
             // NameTxt
@@ -203,30 +201,6 @@
             this.UnitLeaderTxt.Size = new System.Drawing.Size(405, 40);
             this.UnitLeaderTxt.TabIndex = 5;
             // 
-            // IDTxt
-            // 
-            this.IDTxt.BorderColor = System.Drawing.Color.Black;
-            this.IDTxt.BorderRadius = 8;
-            this.IDTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.IDTxt.DefaultText = "";
-            this.IDTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.IDTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.IDTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.IDTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.IDTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.IDTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.IDTxt.ForeColor = System.Drawing.Color.Black;
-            this.IDTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.IDTxt.Location = new System.Drawing.Point(13, 199);
-            this.IDTxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.IDTxt.Name = "IDTxt";
-            this.IDTxt.PasswordChar = '\0';
-            this.IDTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.IDTxt.PlaceholderText = "ID";
-            this.IDTxt.SelectedText = "";
-            this.IDTxt.Size = new System.Drawing.Size(236, 40);
-            this.IDTxt.TabIndex = 6;
-            // 
             // BookTxt
             // 
             this.BookTxt.BorderColor = System.Drawing.Color.Black;
@@ -241,14 +215,14 @@
             this.BookTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.BookTxt.ForeColor = System.Drawing.Color.Black;
             this.BookTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BookTxt.Location = new System.Drawing.Point(257, 199);
+            this.BookTxt.Location = new System.Drawing.Point(13, 199);
             this.BookTxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.BookTxt.Name = "BookTxt";
             this.BookTxt.PasswordChar = '\0';
             this.BookTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.BookTxt.PlaceholderText = "Book";
             this.BookTxt.SelectedText = "";
-            this.BookTxt.Size = new System.Drawing.Size(447, 40);
+            this.BookTxt.Size = new System.Drawing.Size(691, 40);
             this.BookTxt.TabIndex = 7;
             // 
             // AuthorTxt
@@ -442,66 +416,68 @@
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // guna2DataGridView1
+            // TempListDtgv
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.guna2DataGridView1.ColumnHeadersHeight = 24;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TempListDtgv.AllowUserToAddRows = false;
+            this.TempListDtgv.AllowUserToDeleteRows = false;
+            this.TempListDtgv.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.TempListDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TempListDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.TempListDtgv.ColumnHeadersHeight = 24;
+            this.TempListDtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SelectClm,
-            this.IDClm,
             this.BookClm,
             this.AuthorClm,
             this.QuantityClm,
             this.QualityClm,
             this.PriceClm});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 340);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.ReadOnly = true;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.guna2DataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(991, 204);
-            this.guna2DataGridView1.TabIndex = 18;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TempListDtgv.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TempListDtgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.TempListDtgv.Location = new System.Drawing.Point(12, 340);
+            this.TempListDtgv.Name = "TempListDtgv";
+            this.TempListDtgv.RowHeadersVisible = false;
+            this.TempListDtgv.RowHeadersWidth = 51;
+            this.TempListDtgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.TempListDtgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempListDtgv.RowTemplate.Height = 24;
+            this.TempListDtgv.Size = new System.Drawing.Size(991, 204);
+            this.TempListDtgv.TabIndex = 18;
+            this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.TempListDtgv.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.TempListDtgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.TempListDtgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
+            this.TempListDtgv.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TempListDtgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempListDtgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.TempListDtgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.TempListDtgv.ThemeStyle.HeaderStyle.Height = 24;
+            this.TempListDtgv.ThemeStyle.ReadOnly = false;
+            this.TempListDtgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.TempListDtgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TempListDtgv.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempListDtgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TempListDtgv.ThemeStyle.RowsStyle.Height = 24;
+            this.TempListDtgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.TempListDtgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // SelectClm
             // 
@@ -509,19 +485,7 @@
             this.SelectClm.HeaderText = "Select";
             this.SelectClm.MinimumWidth = 6;
             this.SelectClm.Name = "SelectClm";
-            this.SelectClm.ReadOnly = true;
             this.SelectClm.Width = 71;
-            // 
-            // IDClm
-            // 
-            this.IDClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.IDClm.HeaderText = "ID";
-            this.IDClm.MinimumWidth = 6;
-            this.IDClm.Name = "IDClm";
-            this.IDClm.ReadOnly = true;
-            this.IDClm.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IDClm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.IDClm.Width = 35;
             // 
             // BookClm
             // 
@@ -575,7 +539,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1018, 612);
-            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.TempListDtgv);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
@@ -586,7 +550,6 @@
             this.Controls.Add(this.QualityTxt);
             this.Controls.Add(this.AuthorTxt);
             this.Controls.Add(this.BookTxt);
-            this.Controls.Add(this.IDTxt);
             this.Controls.Add(this.UnitLeaderTxt);
             this.Controls.Add(this.SignatureTxt);
             this.Controls.Add(this.DateTxt);
@@ -595,7 +558,7 @@
             this.Controls.Add(this.NameTxt);
             this.Name = "FormCreateImport";
             this.Text = "Create Import";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TempListDtgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,7 +571,6 @@
         private Guna.UI2.WinForms.Guna2TextBox DateTxt;
         private Guna.UI2.WinForms.Guna2TextBox SignatureTxt;
         private Guna.UI2.WinForms.Guna2TextBox UnitLeaderTxt;
-        private Guna.UI2.WinForms.Guna2TextBox IDTxt;
         private Guna.UI2.WinForms.Guna2TextBox BookTxt;
         private Guna.UI2.WinForms.Guna2TextBox AuthorTxt;
         private Guna.UI2.WinForms.Guna2TextBox QualityTxt;
@@ -619,9 +581,8 @@
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnConfirm;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView TempListDtgv;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SelectClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDClm;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookClm;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorClm;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityClm;

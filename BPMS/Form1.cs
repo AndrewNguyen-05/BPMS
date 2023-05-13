@@ -152,8 +152,19 @@ namespace BPMS
 
         private void Formimport_InnerFormNavigating(object sender, NavigationEventArgs e)
         {
+            FormCreateImport formCreateImport = e.NavigatingForm as FormCreateImport;
+            formCreateImport.NavigateBack += FormCreateImport_NavigateBack;
             OpenChildForm(e.NavigatingForm);
         }
+
+        private void FormCreateImport_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnImport, RGBColors.color5);
+            FormImport formimport = e.NavigatingForm as FormImport;
+            formimport.InnerFormNavigating += Formimport_InnerFormNavigating;
+            OpenChildForm(formimport);
+        }
+
 
         private void btnExport_Click(object sender, EventArgs e)
         {
