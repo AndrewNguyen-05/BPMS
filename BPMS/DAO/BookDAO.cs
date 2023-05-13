@@ -28,5 +28,12 @@ namespace BPMS.DAO
             if (price.Count() == 0) return 0;
             return price.First();
         }
+        public int GetBookID(string BookName)
+        {
+            var id = from bk in db.Books
+                       where bk.name == BookName
+                       select bk.id;
+            return id.First();
+        }
     }
 }

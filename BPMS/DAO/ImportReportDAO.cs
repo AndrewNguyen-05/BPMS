@@ -21,8 +21,16 @@ namespace BPMS.DAO
             set { instance = value; }
         }
 
-        public void CreateImportReport()
+        public int CreateImportReport(ImportReport ir)
         {
+            db.ImportReports.Add(ir);
+            return db.ImportReports.Last().id;
+            
+        }
+
+        public void CreateImportReportDetail(ImportReportDetail ird)
+        {
+            db.ImportReportDetails.Add(ird);
         }
     }
 }
