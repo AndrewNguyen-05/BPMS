@@ -103,7 +103,7 @@ namespace BPMS.GUI
             importReport.DeliveryPerson = DeliveryPersonTxt.Text;
             importReport.ImportDate = CreateDateDtp.Value;
             importReport.UnitLeader = UnitLeaderTxt.Text;
-            //importReport.TotalPrice = double.Parse(TotalPriceTxt.Text);  //silent answer
+            importReport.TotalPrice = double.Parse(TotalPriceTxt.Text);  //silent answer
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
             foreach (DataGridViewRow dtgvr in TempListDtgv.Rows)
             {
