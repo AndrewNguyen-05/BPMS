@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -212,6 +213,19 @@ namespace BPMS
 
         #endregion
 
+        #endregion
+
+        #region Handler
+        public delegate void InnerFormClickedHandler(object sender, EventArgs e);
+        public event InnerFormClickedHandler InnerFormClicked;
+        public void RaiseInnerForm(Form form)
+        {
+            InnerFormClicked?.Invoke(form, EventArgs.Empty);
+        }
+        private void OnInnerFormClicked(object sender, EventArgs e)
+        {
+            Type tmp = sender.GetType();
+        }
         #endregion
 
 

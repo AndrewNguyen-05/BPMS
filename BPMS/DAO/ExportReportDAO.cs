@@ -26,7 +26,7 @@ namespace BPMS.DAO
         public dynamic GetExportReports()
         {
             var result = db.ExportReports.Select(r => new { r.id, r.Agency.Account.DisplayName, r.ExportDate, r.ReceiptPerson }).ToList();
-
+            
             return result;
         }
     }

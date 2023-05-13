@@ -38,7 +38,7 @@ namespace BPMS.GUI
         #region Methods
         void LoadData()
         {
-            // Gọi hàm để lấy dữ liệu từ database
+            // Gọi hàm để lấy dữ liệu từ database (?)
             dynamic result = ExportReportDAO.Instance.GetExportReports();
 
             if (result != null)
@@ -66,6 +66,17 @@ namespace BPMS.GUI
         #endregion
 
         #region Events
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Control tmp = this;
+            while (tmp.GetType() != typeof(FormMainMenu))
+            {
+                tmp = tmp.Parent;
+                if (tmp == null) return;
+            }
+            (tmp as FormMainMenu).RaiseInnerForm(new FormCreateImport());
+        }
         #endregion
+
     }
 }
