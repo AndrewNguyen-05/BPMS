@@ -59,7 +59,7 @@
             this.ClientSize = new System.Drawing.Size(1018, 492);
             this.Controls.Add(this.guna2TextBox1);
             this.Name = "FormCreateImport";
-            this.Text = "FormCreateImport";
+            this.Text = "Create Import";
             this.ResumeLayout(false);
 
         }

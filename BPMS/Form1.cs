@@ -1,4 +1,5 @@
-﻿using BPMS.GUI;
+﻿using BPMS.Classes;
+using BPMS.GUI;
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
 using System;
@@ -121,6 +122,7 @@ namespace BPMS
             childForm.BringToFront();
             childForm.Show();
             lblTitleChildForm.Text = childForm.Text;
+
         }
         private void Reset()
         {
@@ -143,7 +145,14 @@ namespace BPMS
         private void btnImport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new FormImport());
+            FormImport formimport = new FormImport();
+            formimport.InnerFormNavigating += Formimport_InnerFormNavigating;
+            OpenChildForm(formimport);
+        }
+
+        private void Formimport_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            OpenChildForm(e.NavigatingForm);
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -215,18 +224,6 @@ namespace BPMS
 
         #endregion
 
-        #region Handler
-        public delegate void InnerFormClickedHandler(object sender, EventArgs e);
-        public event InnerFormClickedHandler InnerFormClicked;
-        public void RaiseInnerForm(Form form)
-        {
-            InnerFormClicked?.Invoke(form, EventArgs.Empty);
-        }
-        private void OnInnerFormClicked(object sender, EventArgs e)
-        {
-            Type tmp = sender.GetType();
-        }
-        #endregion
 
 
     }

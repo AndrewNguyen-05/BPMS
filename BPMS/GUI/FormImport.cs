@@ -1,4 +1,5 @@
-﻿using BPMS.DAO;
+﻿using BPMS.Classes;
+using BPMS.DAO;
 using BPMS.DTO;
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
@@ -35,6 +36,13 @@ namespace BPMS.GUI
             #endregion
 
         }
+
+        #region Handler
+        public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
+        public event InnerFormNavigatingHandler InnerFormNavigating;
+        #endregion
+
+
         #region Methods
         void LoadData()
         {
@@ -59,24 +67,15 @@ namespace BPMS.GUI
             //{
             //    dtgvImport.Rows.Add(res.);
             //}
-
-
-
         }
         #endregion
 
         #region Events
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            Control tmp = this;
-            while (tmp.GetType() != typeof(FormMainMenu))
-            {
-                tmp = tmp.Parent;
-                if (tmp == null) return;
-            }
-            (tmp as FormMainMenu).RaiseInnerForm(new FormCreateImport());
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
         }
         #endregion
-
     }
 }
