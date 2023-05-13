@@ -69,7 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\NavigationEventArgs.cs" />
+    <Compile Include="DAO\BookDAO.cs" />
     <Compile Include="DAO\ExportReportDAO.cs" />
+    <Compile Include="DAO\ImportReportDAO.cs" />
+    <Compile Include="DAO\PublisherDAO.cs" />
     <Compile Include="DTO\Account.cs">
       <DependentUpon>ModelBPMS.tt</DependentUpon>
     </Compile>

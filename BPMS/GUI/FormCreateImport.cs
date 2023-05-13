@@ -1,4 +1,5 @@
 ﻿using BPMS.Classes;
+using BPMS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
+using BPMS.DAO;
+using System.Windows.Controls;
 
 namespace BPMS.GUI
 {
@@ -23,7 +26,15 @@ namespace BPMS.GUI
         public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
         public event InnerFormNavigatingHandler NavigateBack;
         #endregion
-
+        private void UpdateTotalPrice()
+        {
+            double total = 0;
+            foreach(DataGridViewRow dtgvr in TempListDtgv.Rows)
+            {
+                total += double.Parse(dtgvr.Cells["PriceClm"].Value as string);
+            }
+            TotalPriceTxt.Text = total.ToString();
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             TempListDtgv.Rows.Add();
@@ -32,7 +43,9 @@ namespace BPMS.GUI
             tmp.Cells["AuthorClm"].Value = AuthorTxt.Text;
             tmp.Cells["QuantityClm"].Value = QuantityTxt.Text;
             tmp.Cells["QualityClm"].Value = QualityTxt.Text;
-            tmp.Cells["PriceClm"].Value = TotalPriceTxt.Text;
+            double? bookprice = BookDAO.Instance.GetBookPrice(BookTxt.Text) * double.Parse(QuantityTxt.Text);
+            tmp.Cells["PriceClm"].Value = bookprice.ToString();
+            UpdateTotalPrice();
         }
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -43,7 +56,10 @@ namespace BPMS.GUI
             dtgvr.Cells["AuthorClm"].Value = AuthorTxt.Text;
             dtgvr.Cells["QuantityClm"].Value = QuantityTxt.Text;
             dtgvr.Cells["QualityClm"].Value = QualityTxt.Text;
-            dtgvr.Cells["PriceClm"].Value = TotalPriceTxt.Text;
+            double? bookprice = BookDAO.Instance.GetBookPrice(BookTxt.Text) * double.Parse(QuantityTxt.Text);
+            dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+            UpdateTotalPrice();
+
             //IDTxt.Text = dtgvr.Cells["IDClm"].Value.ToString();
             //BookTxt.Text = dtgvr.Cells["BookClm"].Value.ToString();
             //AuthorTxt.Text = dtgvr.Cells["AuthorClm"].Value.ToString();
@@ -74,7 +90,12 @@ namespace BPMS.GUI
         {
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
             NavigateBack?.Invoke(this, navigationE);
+            ImportReport importReport = new ImportReport();
+            importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(PublisherTxt.Text);
+            importReport.DeliveryPerson = DeliveryPersonTxt.Text;
+            importReport.ImportDate = CreateDateDtp.Value;
+            importReport.UnitLeader = UnitLeaderTxt.Text;
+            importReport.TotalPrice = int.Parse(TotalPriceTxt.Text);
         }
-
     }
 }
