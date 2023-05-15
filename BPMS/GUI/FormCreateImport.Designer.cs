@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PublisherTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.DeliveryPersonTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.UnitLeaderTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,17 +66,17 @@
             this.PublisherTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.PublisherTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.PublisherTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PublisherTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PublisherTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PublisherTxt.ForeColor = System.Drawing.Color.Black;
             this.PublisherTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PublisherTxt.Location = new System.Drawing.Point(14, 19);
+            this.PublisherTxt.Location = new System.Drawing.Point(12, 18);
             this.PublisherTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.PublisherTxt.Name = "PublisherTxt";
             this.PublisherTxt.PasswordChar = '\0';
             this.PublisherTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.PublisherTxt.PlaceholderText = "Publisher";
             this.PublisherTxt.SelectedText = "";
-            this.PublisherTxt.Size = new System.Drawing.Size(1117, 50);
+            this.PublisherTxt.Size = new System.Drawing.Size(1083, 50);
             this.PublisherTxt.TabIndex = 1;
             // 
             // DeliveryPersonTxt
@@ -90,17 +90,17 @@
             this.DeliveryPersonTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.DeliveryPersonTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.DeliveryPersonTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DeliveryPersonTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DeliveryPersonTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliveryPersonTxt.ForeColor = System.Drawing.Color.Black;
             this.DeliveryPersonTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DeliveryPersonTxt.Location = new System.Drawing.Point(15, 84);
+            this.DeliveryPersonTxt.Location = new System.Drawing.Point(12, 83);
             this.DeliveryPersonTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.DeliveryPersonTxt.Name = "DeliveryPersonTxt";
             this.DeliveryPersonTxt.PasswordChar = '\0';
             this.DeliveryPersonTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.DeliveryPersonTxt.PlaceholderText = "DeliveryPerson";
             this.DeliveryPersonTxt.SelectedText = "";
-            this.DeliveryPersonTxt.Size = new System.Drawing.Size(724, 50);
+            this.DeliveryPersonTxt.Size = new System.Drawing.Size(695, 50);
             this.DeliveryPersonTxt.TabIndex = 2;
             // 
             // UnitLeaderTxt
@@ -114,17 +114,17 @@
             this.UnitLeaderTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.UnitLeaderTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.UnitLeaderTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UnitLeaderTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.UnitLeaderTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UnitLeaderTxt.ForeColor = System.Drawing.Color.Black;
             this.UnitLeaderTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UnitLeaderTxt.Location = new System.Drawing.Point(15, 149);
+            this.UnitLeaderTxt.Location = new System.Drawing.Point(12, 149);
             this.UnitLeaderTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.UnitLeaderTxt.Name = "UnitLeaderTxt";
             this.UnitLeaderTxt.PasswordChar = '\0';
             this.UnitLeaderTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.UnitLeaderTxt.PlaceholderText = "Unit Leader";
             this.UnitLeaderTxt.SelectedText = "";
-            this.UnitLeaderTxt.Size = new System.Drawing.Size(724, 50);
+            this.UnitLeaderTxt.Size = new System.Drawing.Size(695, 50);
             this.UnitLeaderTxt.TabIndex = 5;
             // 
             // BookTxt
@@ -138,17 +138,17 @@
             this.BookTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.BookTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.BookTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BookTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.BookTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookTxt.ForeColor = System.Drawing.Color.Black;
             this.BookTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BookTxt.Location = new System.Drawing.Point(15, 249);
+            this.BookTxt.Location = new System.Drawing.Point(12, 215);
             this.BookTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.BookTxt.Name = "BookTxt";
             this.BookTxt.PasswordChar = '\0';
             this.BookTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.BookTxt.PlaceholderText = "Book";
             this.BookTxt.SelectedText = "";
-            this.BookTxt.Size = new System.Drawing.Size(1114, 50);
+            this.BookTxt.Size = new System.Drawing.Size(1083, 50);
             this.BookTxt.TabIndex = 7;
             // 
             // AuthorTxt
@@ -162,17 +162,17 @@
             this.AuthorTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.AuthorTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.AuthorTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AuthorTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.AuthorTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AuthorTxt.ForeColor = System.Drawing.Color.Black;
             this.AuthorTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AuthorTxt.Location = new System.Drawing.Point(14, 314);
+            this.AuthorTxt.Location = new System.Drawing.Point(12, 281);
             this.AuthorTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.AuthorTxt.Name = "AuthorTxt";
             this.AuthorTxt.PasswordChar = '\0';
             this.AuthorTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.AuthorTxt.PlaceholderText = "Author";
             this.AuthorTxt.SelectedText = "";
-            this.AuthorTxt.Size = new System.Drawing.Size(505, 50);
+            this.AuthorTxt.Size = new System.Drawing.Size(462, 50);
             this.AuthorTxt.TabIndex = 8;
             // 
             // QualityTxt
@@ -186,17 +186,17 @@
             this.QualityTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.QualityTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.QualityTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.QualityTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.QualityTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QualityTxt.ForeColor = System.Drawing.Color.Black;
             this.QualityTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.QualityTxt.Location = new System.Drawing.Point(528, 314);
+            this.QualityTxt.Location = new System.Drawing.Point(482, 281);
             this.QualityTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.QualityTxt.Name = "QualityTxt";
             this.QualityTxt.PasswordChar = '\0';
             this.QualityTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.QualityTxt.PlaceholderText = "Quality";
             this.QualityTxt.SelectedText = "";
-            this.QualityTxt.Size = new System.Drawing.Size(414, 50);
+            this.QualityTxt.Size = new System.Drawing.Size(425, 50);
             this.QualityTxt.TabIndex = 9;
             // 
             // QuantityTxt
@@ -210,17 +210,17 @@
             this.QuantityTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.QuantityTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.QuantityTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.QuantityTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.QuantityTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantityTxt.ForeColor = System.Drawing.Color.Black;
             this.QuantityTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.QuantityTxt.Location = new System.Drawing.Point(955, 314);
+            this.QuantityTxt.Location = new System.Drawing.Point(915, 281);
             this.QuantityTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.QuantityTxt.Name = "QuantityTxt";
             this.QuantityTxt.PasswordChar = '\0';
             this.QuantityTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.QuantityTxt.PlaceholderText = "Quantity";
             this.QuantityTxt.SelectedText = "";
-            this.QuantityTxt.Size = new System.Drawing.Size(176, 50);
+            this.QuantityTxt.Size = new System.Drawing.Size(180, 50);
             this.QuantityTxt.TabIndex = 10;
             // 
             // TotalPriceTxt
@@ -228,24 +228,23 @@
             this.TotalPriceTxt.BorderColor = System.Drawing.Color.Black;
             this.TotalPriceTxt.BorderRadius = 8;
             this.TotalPriceTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TotalPriceTxt.DefaultText = "0";
+            this.TotalPriceTxt.DefaultText = "";
             this.TotalPriceTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TotalPriceTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TotalPriceTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TotalPriceTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TotalPriceTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TotalPriceTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TotalPriceTxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalPriceTxt.ForeColor = System.Drawing.Color.Black;
             this.TotalPriceTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TotalPriceTxt.Location = new System.Drawing.Point(747, 149);
+            this.TotalPriceTxt.Location = new System.Drawing.Point(721, 149);
             this.TotalPriceTxt.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.TotalPriceTxt.Name = "TotalPriceTxt";
             this.TotalPriceTxt.PasswordChar = '\0';
             this.TotalPriceTxt.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.TotalPriceTxt.PlaceholderText = "TotalPrice";
-            this.TotalPriceTxt.ReadOnly = true;
             this.TotalPriceTxt.SelectedText = "";
-            this.TotalPriceTxt.Size = new System.Drawing.Size(381, 50);
+            this.TotalPriceTxt.Size = new System.Drawing.Size(374, 50);
             this.TotalPriceTxt.TabIndex = 11;
             // 
             // btnAdd
@@ -258,7 +257,7 @@
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(575, 374);
+            this.btnAdd.Location = new System.Drawing.Point(543, 341);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 45);
@@ -278,7 +277,7 @@
             this.btnModify.FillColor = System.Drawing.Color.White;
             this.btnModify.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
-            this.btnModify.Location = new System.Drawing.Point(764, 374);
+            this.btnModify.Location = new System.Drawing.Point(729, 341);
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(180, 45);
@@ -297,7 +296,7 @@
             this.btnDelete.FillColor = System.Drawing.Color.White;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.btnDelete.Location = new System.Drawing.Point(951, 374);
+            this.btnDelete.Location = new System.Drawing.Point(915, 341);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(180, 45);
@@ -317,7 +316,7 @@
             this.btnCancel.FillColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
-            this.btnCancel.Location = new System.Drawing.Point(762, 710);
+            this.btnCancel.Location = new System.Drawing.Point(729, 509);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(180, 45);
@@ -335,7 +334,7 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(950, 710);
+            this.btnConfirm.Location = new System.Drawing.Point(915, 509);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(180, 45);
@@ -348,16 +347,16 @@
             this.TempListDtgv.AllowUserToAddRows = false;
             this.TempListDtgv.AllowUserToDeleteRows = false;
             this.TempListDtgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.TempListDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TempListDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.TempListDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TempListDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.TempListDtgv.ColumnHeadersHeight = 24;
             this.TempListDtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SelectClm,
@@ -366,16 +365,16 @@
             this.QuantityClm,
             this.QualityClm,
             this.PriceClm});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TempListDtgv.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TempListDtgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.TempListDtgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.TempListDtgv.Location = new System.Drawing.Point(14, 425);
+            this.TempListDtgv.Location = new System.Drawing.Point(12, 392);
             this.TempListDtgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TempListDtgv.Name = "TempListDtgv";
             this.TempListDtgv.RowHeadersVisible = false;
@@ -383,7 +382,7 @@
             this.TempListDtgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.TempListDtgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempListDtgv.RowTemplate.Height = 24;
-            this.TempListDtgv.Size = new System.Drawing.Size(1115, 255);
+            this.TempListDtgv.Size = new System.Drawing.Size(1083, 105);
             this.TempListDtgv.TabIndex = 18;
             this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.TempListDtgv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -470,14 +469,14 @@
             this.CreateDateDtp.BorderThickness = 1;
             this.CreateDateDtp.Checked = true;
             this.CreateDateDtp.FillColor = System.Drawing.Color.White;
-            this.CreateDateDtp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateDateDtp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateDateDtp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.CreateDateDtp.Location = new System.Drawing.Point(747, 84);
+            this.CreateDateDtp.Location = new System.Drawing.Point(721, 83);
             this.CreateDateDtp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CreateDateDtp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.CreateDateDtp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.CreateDateDtp.Name = "CreateDateDtp";
-            this.CreateDateDtp.Size = new System.Drawing.Size(381, 45);
+            this.CreateDateDtp.Size = new System.Drawing.Size(374, 45);
             this.CreateDateDtp.TabIndex = 19;
             this.CreateDateDtp.Value = new System.DateTime(2023, 5, 13, 20, 57, 45, 837);
             // 
@@ -486,7 +485,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1145, 765);
+            this.ClientSize = new System.Drawing.Size(1114, 565);
             this.Controls.Add(this.CreateDateDtp);
             this.Controls.Add(this.TempListDtgv);
             this.Controls.Add(this.btnConfirm);

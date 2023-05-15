@@ -130,6 +130,12 @@
     <Compile Include="GUI\FormAnalytic.Designer.cs">
       <DependentUpon>FormAnalytic.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormCreateExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCreateExport.Designer.cs">
+      <DependentUpon>FormCreateExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormCreateImport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,8 +171,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCreateExport.resx">
+      <DependentUpon>FormCreateExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCreateImport.resx">
       <DependentUpon>FormCreateImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormExport.resx">
+      <DependentUpon>FormExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
