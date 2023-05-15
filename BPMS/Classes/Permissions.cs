@@ -8,10 +8,10 @@ namespace BPMS.Classes
 {
     enum Permissions
     {
-        All,
-        Manager,
-        Accountant,
-        Publisher,
-        Agency,
+        Admin = 0,
+        Manager = 1,
+        Accountant = 2,
+        Publisher = 3,
+        Agency = 4
     }
 }

@@ -130,17 +130,17 @@ INSERT INTO Book (name, type, author, price) VALUES (N'Cuộc sống không gi�
 INSERT INTO Book (name, type, author, price) VALUES (N'Tuổi trẻ đáng giá bao nhiêu', 'Self Help', N'Rosie Nguyen', 25000)
 GO
 
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 1, 'a')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 0, 'c')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phương Nam Book City', 'DL', 0, 'd')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('MK', N'Minh Khai', 'DL', 0, 'e')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('VL', N'Văn Lang', 'DL', 0, 'f')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NVC', N'Nguyễn Văn Cừ', 'DL', 0, 'g')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('KD', N'Kim Đồng', 'NXB', 0, 'b')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('LD', N'Lao Động', 'NXB', 0, 'd')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NN', N'Nhã Nam', 'NXB', 0, 's')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phụ nữ Việt Nam', 'NXB', 0, 'b')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('DA', N'Đông A', 'NXB', 0, 'l')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 0, 'a')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 3, 'c')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phương Nam Book City', 'DL', 3, 'd')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('MK', N'Minh Khai', 'DL', 3, 'e')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('VL', N'Văn Lang', 'DL', 3, 'f')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NVC', N'Nguyễn Văn Cừ', 'DL', 3, 'g')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('KD', N'Kim Đồng', 'NXB', 3, 'b')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('LD', N'Lao Động', 'NXB', 3, 'd')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NN', N'Nhã Nam', 'NXB', 3, 's')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phụ nữ Việt Nam', 'NXB', 3, 'b')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('DA', N'Đông A', 'NXB', 3, 'l')
 GO
 
 INSERT INTO Agency (idAccount, debt, BookReceived, PaidMoney) VALUES (2, 2000000,1,0)

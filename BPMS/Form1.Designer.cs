@@ -47,6 +47,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.cbViewAs = new System.Windows.Forms.ComboBox();
             this.panelMenu.SuspendLayout();
             this.panelLogOut.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -97,6 +98,7 @@
             // 
             // panelLogOut
             // 
+            this.panelLogOut.Controls.Add(this.cbViewAs);
             this.panelLogOut.Controls.Add(this.btnLogOut);
             this.panelLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelLogOut.Location = new System.Drawing.Point(0, 600);
@@ -317,6 +319,21 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
             // 
+            // cbViewAs
+            // 
+            this.cbViewAs.FormattingEnabled = true;
+            this.cbViewAs.Items.AddRange(new object[] {
+            "Manager",
+            "Accountant",
+            "Publisher",
+            "Agency"});
+            this.cbViewAs.Location = new System.Drawing.Point(40, 22);
+            this.cbViewAs.Name = "cbViewAs";
+            this.cbViewAs.Size = new System.Drawing.Size(192, 27);
+            this.cbViewAs.TabIndex = 1;
+            this.cbViewAs.Visible = false;
+            this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -359,6 +376,7 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private FontAwesome.Sharp.IconButton btnMainPage;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private System.Windows.Forms.ComboBox cbViewAs;
     }
 }
 

@@ -26,10 +26,12 @@ namespace BPMS.GUI
             if (result)
             {
                 LoginAccount = AccountDAO.Instance.GetAccountId(UsernameTxt.Text);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
+                this.DialogResult = DialogResult.Cancel;
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!", "Error");
             }
         }
