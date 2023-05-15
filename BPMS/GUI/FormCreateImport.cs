@@ -108,7 +108,7 @@ namespace BPMS.GUI
                 System.Windows.Forms.MessageBox.Show("Lỗi! Tổng giá tiền không đúng định dạng!", "Thông báo lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
-            importReport.TotalPrice = double.Parse(TotalPriceTxt.Text);  //silent answer
+            importReport.TotalPrice = double.Parse(TotalPriceTxt.Text); 
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
             foreach (DataGridViewRow dtgvr in TempListDtgv.Rows)
             {

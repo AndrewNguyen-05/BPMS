@@ -22,9 +22,11 @@ namespace BPMS
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private int AccountType;
         //Constructor
-        public FormMainMenu()
+        public FormMainMenu(int accountType)
         {
+            AccountType = accountType;
             InitializeComponent();
             OpenChildForm(new FormHome());
             leftBorderBtn = new Panel();
@@ -54,6 +56,7 @@ namespace BPMS
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            AccountType = accountType;
         }
         //Structs
         private struct RGBColors
