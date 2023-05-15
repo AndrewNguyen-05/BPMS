@@ -63,10 +63,7 @@ namespace BPMS.GUI
                 }
             }
 
-            //foreach (var item in res)
-            //{
-            //    dtgvImport.Rows.Add(res.);
-            //}
+            
         }
         #endregion
 

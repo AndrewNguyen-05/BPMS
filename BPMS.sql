@@ -72,6 +72,7 @@ CREATE TABLE ExportReport
 GO
 
 
+
 CREATE TABLE ExportReportDetail
 (
 	id INT IDENTITY PRIMARY KEY,

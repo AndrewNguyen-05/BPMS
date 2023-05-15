@@ -190,6 +190,14 @@ namespace BPMS
             OpenChildForm(formimport);
         }
 
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            FormExport formExport = new FormExport();
+            formExport.InnerFormNavigating +=FormExport_InnerFormNavigating;
+            OpenChildForm(formExport);
+        }
+
         private void Formimport_InnerFormNavigating(object sender, NavigationEventArgs e)
         {
             FormCreateImport formCreateImport = e.NavigatingForm as FormCreateImport;
@@ -205,12 +213,21 @@ namespace BPMS
             OpenChildForm(formimport);
         }
 
-
-        private void btnExport_Click(object sender, EventArgs e)
+        private void FormExport_InnerFormNavigating(object sender, NavigationEventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormExport());
+            FormCreateExport formCreateExport = e.NavigatingForm as FormCreateExport;
+            formCreateExport.NavigateBack +=FormCreateExport_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
         }
+
+        private void FormCreateExport_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnExport, RGBColors.color5);
+            FormExport formExport = e.NavigatingForm as FormExport;
+            formExport.InnerFormNavigating +=FormExport_InnerFormNavigating;
+            OpenChildForm(formExport);
+        }
+
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
