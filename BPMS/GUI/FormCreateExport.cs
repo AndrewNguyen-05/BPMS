@@ -29,13 +29,13 @@ namespace BPMS.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormExport(), this);
             NavigateBack?.Invoke(this, navigationE);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormExport(), this);
             NavigateBack?.Invoke(this, navigationE);
         }
     }
