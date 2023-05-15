@@ -126,6 +126,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Agency\FormAgencyCreateImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Agency\FormAgencyCreateImport.Designer.cs">
+      <DependentUpon>FormAgencyCreateImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Agency\FormAgencyImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Agency\FormAgencyImport.Designer.cs">
+      <DependentUpon>FormAgencyImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Agency\FormAgencyPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Agency\FormAgencyPayment.Designer.cs">
+      <DependentUpon>FormAgencyPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAnalytic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +185,18 @@
     </Compile>
     <Compile Include="GUI\FormPayment.Designer.cs">
       <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherExport.Designer.cs">
+      <DependentUpon>FormPublisherExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherPayment.Designer.cs">
+      <DependentUpon>FormPublisherPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

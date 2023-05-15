@@ -70,6 +70,12 @@ namespace BPMS
             public static Color color5 = Color.FromArgb(17, 164, 35);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        //Disable All
+        private void DisableAll()
+        {
+
+        }
+
         //Permission
         private void CheckPermisison()
         {
@@ -83,13 +89,18 @@ namespace BPMS
 
                     return;
                 case Permissions.Accountant:
-
+                    btnAnalytic.Visible = false;
+                    btnExport.Visible = false;
+                    btnImport.Visible = false;
+                    btnPayment.Visible = false;
                     return;
                 case Permissions.Publisher:
-
+                    btnImport.Visible = false;
+                    btnAnalytic.Visible = false;
                     return;
                 case Permissions.Agency:
-
+                    btnExport.Visible = false;
+                    btnAnalytic.Visible = false;
                     return;
             }
         }
