@@ -31,7 +31,6 @@ namespace BPMS.GUI
             }
             else
             {
-                this.DialogResult = DialogResult.Cancel;
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!", "Error");
             }
         }
