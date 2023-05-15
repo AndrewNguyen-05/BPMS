@@ -84,6 +84,7 @@ namespace BPMS
             if (type == Permissions.Admin)
             {
                 cbViewAs.Visible = true;
+                cbViewAs.SelectedIndex = 0;
             }
             CheckPermisison();
         }
