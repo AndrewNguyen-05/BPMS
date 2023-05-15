@@ -1,4 +1,5 @@
-﻿using BPMS.DTO;
+﻿using BPMS.Classes;
+using BPMS.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,20 @@ namespace BPMS.DAO
             }
             set { instance = value; }
         }
-        public int GetAccountType(string userName)
+        public Permissions GetAccountType(string userName)
         {
             var accountType = from acc in db.Accounts
                               where acc.UserName == userName
                               select acc.type;
-            return accountType.First();
+            return (Permissions)accountType.First();
+        }
+
+        public Permissions GetAccountType(int id)
+        {
+            var accountType = from acc in db.Accounts
+                              where acc.id == id
+                              select acc.type;
+            return (Permissions)accountType.First();
         }
 
         public bool CheckPassword(string userName, string password)

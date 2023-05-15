@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\NavigationEventArgs.cs" />
+    <Compile Include="Classes\Permissions.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BookDAO.cs" />
     <Compile Include="DAO\ExportReportDAO.cs" />

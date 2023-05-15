@@ -1,4 +1,5 @@
 ﻿using BPMS.Classes;
+using BPMS.DAO;
 using BPMS.GUI;
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
@@ -22,11 +23,10 @@ namespace BPMS
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        private int AccountType;
+        private int AccountId;
         //Constructor
-        public FormMainMenu(int accountType)
+        public FormMainMenu(int accountId)
         {
-            AccountType = accountType;
             InitializeComponent();
             OpenChildForm(new FormHome());
             leftBorderBtn = new Panel();
@@ -56,7 +56,9 @@ namespace BPMS
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            AccountType = accountType;
+
+            //Account & Perm
+            AccountId = accountId;
         }
         //Structs
         private struct RGBColors
@@ -68,6 +70,30 @@ namespace BPMS
             public static Color color5 = Color.FromArgb(17, 164, 35);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        //Permission
+        private void CheckPermisison()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            switch (type)
+            {
+                case Permissions.All:
+                    
+                    return;
+                case Permissions.Manager:
+
+                    return;
+                case Permissions.Accountant:
+
+                    return;
+                case Permissions.Publisher:
+
+                    return;
+                case Permissions.Agency:
+
+                    return;
+            }
+        }
+
         #region Methods
         private void ActivateButton(object senderBtn, Color color)
         {

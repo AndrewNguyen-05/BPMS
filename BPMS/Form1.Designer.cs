@@ -83,7 +83,7 @@
             this.btnMainPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnMainPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMainPage.Location = new System.Drawing.Point(2, 149);
+            this.btnMainPage.Location = new System.Drawing.Point(2, 150);
             this.btnMainPage.Margin = new System.Windows.Forms.Padding(2);
             this.btnMainPage.Name = "btnMainPage";
             this.btnMainPage.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -281,7 +281,7 @@
             this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 

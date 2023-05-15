@@ -62,15 +62,14 @@ namespace BPMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainMenu(0));
-            //try
-            //{
-            //    Application.Run(new BPMSApplicationContext());
-            //}
-            //catch
-            //{
-            //    Application.Exit();
-            //}
+            try
+            {
+                Application.Run(new BPMSApplicationContext());
+            }
+            catch
+            {
+                Application.Exit();
+            }
         }
     }
 }
