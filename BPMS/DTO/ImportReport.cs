@@ -25,7 +25,7 @@ namespace BPMS.DTO
         public string DeliveryPerson { get; set; }
         public System.DateTime ImportDate { get; set; }
         public string UnitLeader { get; set; }
-        public int TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ImportReportDetail> ImportReportDetails { get; set; }

@@ -65,7 +65,7 @@
           <Property Name="idAgency" Type="int" Nullable="false" />
           <Property Name="ReceiptPerson" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="ExportDate" Type="datetime" Nullable="false" />
-          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="ExportReportDetail">
           <Key>
@@ -85,7 +85,7 @@
           <Property Name="DeliveryPerson" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="ImportDate" Type="datetime" Nullable="false" />
           <Property Name="UnitLeader" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="ImportReportDetail">
           <Key>
@@ -370,7 +370,7 @@
           <Property Name="idAgency" Type="Int32" Nullable="false" />
           <Property Name="ReceiptPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ExportDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="TotalPrice" Type="Double" Nullable="false" />
           <NavigationProperty Name="Agency" Relationship="Self.FK__ExportRep__idAge__403A8C7D" FromRole="ExportReport" ToRole="Agency" />
           <NavigationProperty Name="ExportReportDetails" Relationship="Self.FK__ExportRep__idExp__440B1D61" FromRole="ExportReport" ToRole="ExportReportDetail" />
         </EntityType>
@@ -394,7 +394,7 @@
           <Property Name="DeliveryPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UnitLeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="TotalPrice" Type="Double" Nullable="false" />
           <NavigationProperty Name="ImportReportDetails" Relationship="Self.FK__ImportRep__idImp__4E88ABD4" FromRole="ImportReport" ToRole="ImportReportDetail" />
           <NavigationProperty Name="Publisher" Relationship="Self.FK__ImportRep__idPub__4AB81AF0" FromRole="ImportReport" ToRole="Publisher" />
         </EntityType>

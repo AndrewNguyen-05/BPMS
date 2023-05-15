@@ -24,7 +24,7 @@ namespace BPMS.DTO
         public int idAgency { get; set; }
         public string ReceiptPerson { get; set; }
         public System.DateTime ExportDate { get; set; }
-        public int TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
     
         public virtual Agency Agency { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

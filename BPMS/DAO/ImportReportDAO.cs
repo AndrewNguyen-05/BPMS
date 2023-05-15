@@ -32,5 +32,12 @@ namespace BPMS.DAO
         {
             db.ImportReportDetails.Add(ird);
         }
+
+        public dynamic GetImportReports()
+        {
+            var result = db.ImportReports.Select(r => new {r.id, r.Publisher.Account.DisplayName, r.ImportDate, r.DeliveryPerson, r.UnitLeader }).ToList();
+
+            return result;
+        }
     }
 }

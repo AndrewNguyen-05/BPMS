@@ -47,14 +47,14 @@ namespace BPMS.GUI
         void LoadData()
         {
             // Gọi hàm để lấy dữ liệu từ database (?)
-            dynamic result = ExportReportDAO.Instance.GetExportReports();
+            dynamic result = ImportReportDAO.Instance.GetImportReports();
 
             if (result != null)
             {
                 List<object> dataList = new List<object>();
                 foreach (var item in result)
                 {
-                    dataList.Add(new object[] { item.id, item.DisplayName, item.ExportDate, item.ReceiptPerson });
+                    dataList.Add(new object[] { item.id, item.DisplayName, item.ImportDate, item.DeliveryPerson, item.UnitLeader });
                 }
                 dtgvImport.Rows.Clear();
                 foreach (var row in dataList)

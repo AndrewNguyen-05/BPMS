@@ -66,7 +66,7 @@ CREATE TABLE ExportReport
 	idAgency INT NOT NULL,
 	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
 	ExportDate DATETIME NOT NULL DEFAULT GETDATE(),
-	TotalPrice INT NOT NULL DEFAULT 0,
+	TotalPrice FLOAT NOT NULL DEFAULT 0,
 	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id)
 )
 GO
@@ -91,7 +91,7 @@ CREATE TABLE ImportReport
 	DeliveryPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người giao',
 	ImportDate DATETIME NOT NULL DEFAULT GETDATE(),
 	UnitLeader NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thủ trưởng',
-	TotalPrice INT NOT NULL DEFAULT 0,
+	TotalPrice FLOAT NOT NULL DEFAULT 0,
 	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
 )
 GO
