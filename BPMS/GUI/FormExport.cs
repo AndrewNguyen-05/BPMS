@@ -1,4 +1,7 @@
-﻿using BPMS.DAO;
+﻿using BPMS.Classes;
+using BPMS.DAO;
+using BPMS.DTO;
+using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace BPMS.GUI
 {
@@ -32,8 +36,8 @@ namespace BPMS.GUI
         }
 
         #region Handler
-        //public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
-        //public event InnerFormNavigatingHandler InnerFormNavigating;
+        public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
+        public event InnerFormNavigatingHandler InnerFormNavigating;
         #endregion
 
 
@@ -58,5 +62,11 @@ namespace BPMS.GUI
             }
         }
         #endregion
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        { 
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
     }
 }
