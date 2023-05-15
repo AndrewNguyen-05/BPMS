@@ -103,6 +103,11 @@ namespace BPMS.GUI
             importReport.DeliveryPerson = DeliveryPersonTxt.Text;
             importReport.ImportDate = CreateDateDtp.Value;
             importReport.UnitLeader = UnitLeaderTxt.Text;
+            if(!double.TryParse(TotalPriceTxt.Text, out double totalPrice))
+            {
+                System.Windows.Forms.MessageBox.Show("Lỗi! Tổng giá tiền không đúng định dạng!", "Thông báo lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
             importReport.TotalPrice = double.Parse(TotalPriceTxt.Text);  //silent answer
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
             foreach (DataGridViewRow dtgvr in TempListDtgv.Rows)
