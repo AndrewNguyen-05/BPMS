@@ -37,8 +37,8 @@
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ContainerControl = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,8 +153,8 @@
             // ContainerControl
             // 
             this.ContainerControl.BackColor = System.Drawing.Color.Transparent;
-            this.ContainerControl.Controls.Add(this.guna2ControlBox2);
-            this.ContainerControl.Controls.Add(this.guna2ControlBox1);
+            this.ContainerControl.Controls.Add(this.controlMinimize);
+            this.ContainerControl.Controls.Add(this.controlClose);
             this.ContainerControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ContainerControl.FillColor = System.Drawing.Color.Transparent;
             this.ContainerControl.Location = new System.Drawing.Point(0, 0);
@@ -163,30 +163,30 @@
             this.ContainerControl.TabIndex = 11;
             this.ContainerControl.UseTransparentBackground = true;
             // 
-            // guna2ControlBox2
+            // controlMinimize
             // 
-            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(927, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 39);
-            this.guna2ControlBox2.TabIndex = 1;
+            this.controlMinimize.BorderColor = System.Drawing.Color.Transparent;
+            this.controlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.controlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.controlMinimize.IconColor = System.Drawing.Color.Black;
+            this.controlMinimize.Location = new System.Drawing.Point(927, 0);
+            this.controlMinimize.Name = "controlMinimize";
+            this.controlMinimize.Size = new System.Drawing.Size(45, 39);
+            this.controlMinimize.TabIndex = 1;
             // 
-            // guna2ControlBox1
+            // controlClose
             // 
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(972, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 39);
-            this.guna2ControlBox1.TabIndex = 0;
+            this.controlClose.BackColor = System.Drawing.Color.Transparent;
+            this.controlClose.BorderColor = System.Drawing.Color.Transparent;
+            this.controlClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.controlClose.ForeColor = System.Drawing.Color.Black;
+            this.controlClose.IconColor = System.Drawing.Color.Black;
+            this.controlClose.Location = new System.Drawing.Point(972, 0);
+            this.controlClose.Name = "controlClose";
+            this.controlClose.Size = new System.Drawing.Size(45, 39);
+            this.controlClose.TabIndex = 0;
             // 
             // guna2PictureBox1
             // 
@@ -258,8 +258,8 @@
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private Guna.UI2.WinForms.Guna2DragControl DragControl;
         private Guna.UI2.WinForms.Guna2ContainerControl ContainerControl;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox controlMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox controlClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnExit;
     }
