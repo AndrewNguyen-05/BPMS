@@ -66,7 +66,7 @@ namespace BPMS
             AccountId = accountId; 
             InitialPerm();
         }
-        //Structs
+        #region Structs
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -76,8 +76,9 @@ namespace BPMS
             public static Color color5 = Color.FromArgb(17, 164, 35);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        #endregion
 
-        //Permission
+        #region Permission
         void InitialPerm()
         {
             Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
@@ -133,107 +134,7 @@ namespace BPMS
                     return;
             }
         }
-        //Get Form
-        private Form GetBtnImportForm()
-        {
-            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
-            if (type == Permissions.Admin)
-            {
-                type = GetCbViewAsValue();
-            }
-            switch (type)
-            {
-                case Permissions.Manager:
-                    FormImport formImport = new FormImport();
-                    formImport.InnerFormNavigating += Formimport_InnerFormNavigating;
-                    return formImport;
-                case Permissions.Agency:
-                    return new FormAgencyImport();
-            }
-            return null;
-        }
-        private Form GetBtnExportForm()
-        {
-            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
-            if (type == Permissions.Admin)
-            {
-                type = GetCbViewAsValue();
-            }
-            switch (type)
-            {
-                case Permissions.Manager:
-                    FormExport formExport = new FormExport();
-                    formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
-                    return formExport;
-                case Permissions.Publisher:
-                    return new FormPublisherExport();
-            }
-            return null;
-        }
-        private Form GetBtnPaymentForm()
-        {
-            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
-            if (type == Permissions.Admin)
-            {
-                type = GetCbViewAsValue();
-            }
-            switch (type)
-            {
-                case Permissions.Manager:
-                    return new FormPayment();
-                case Permissions.Agency:
-                    return new FormAgencyPayment();
-                case Permissions.Publisher:
-                    return new FormPublisherPayment();
-            }
-            return null;
-        }
-        private Form GetBtnAnalyticForm()
-        {
-            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
-            if (type == Permissions.Admin)
-            {
-                type = GetCbViewAsValue();
-            }
-            switch (type)
-            {
-                case Permissions.Manager:
-                    return new FormAnalytic();
-            }
-            return null;
-        }
-        //Inner navigate
-
-        private void Formimport_InnerFormNavigating(object sender, NavigationEventArgs e)
-        {
-            FormCreateImport formCreateImport = e.NavigatingForm as FormCreateImport;
-            formCreateImport.NavigateBack += FormCreateImport_NavigateBack;
-            OpenChildForm(e.NavigatingForm);
-        }
-
-        private void FormCreateImport_NavigateBack(object sender, NavigationEventArgs e)
-        {
-            ActivateButton(btnImport, RGBColors.color5);
-            FormImport formimport = e.NavigatingForm as FormImport;
-            formimport.InnerFormNavigating += Formimport_InnerFormNavigating;
-            OpenChildForm(formimport);
-        }
-
-        private void FormExport_InnerFormNavigating(object sender, NavigationEventArgs e)
-        {
-            FormCreateExport formCreateExport = e.NavigatingForm as FormCreateExport;
-            formCreateExport.NavigateBack += FormCreateExport_NavigateBack;
-            OpenChildForm(e.NavigatingForm);
-        }
-
-        private void FormCreateExport_NavigateBack(object sender, NavigationEventArgs e)
-        {
-            ActivateButton(btnExport, RGBColors.color5);
-            FormExport formExport = e.NavigatingForm as FormExport;
-            formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
-            OpenChildForm(formExport);
-        }
-
+        #endregion
 
         #region Methods
         private void ActivateButton(object senderBtn, Color color)
@@ -302,6 +203,78 @@ namespace BPMS
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitleChildForm.Text = "Home";
         }
+
+        #region Get Form
+        private Form GetBtnImportForm()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                type = GetCbViewAsValue();
+            }
+            switch (type)
+            {
+                case Permissions.Manager:
+                    FormImport formImport = new FormImport();
+                    formImport.InnerFormNavigating += Formimport_InnerFormNavigating;
+                    return formImport;
+                case Permissions.Agency:
+                    return new FormAgencyImport();
+            }
+            return null;
+        }
+        private Form GetBtnExportForm()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                type = GetCbViewAsValue();
+            }
+            switch (type)
+            {
+                case Permissions.Manager:
+                    FormExport formExport = new FormExport();
+                    formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
+                    return formExport;
+                case Permissions.Publisher:
+                    return new FormPublisherExport();
+            }
+            return null;
+        }
+        private Form GetBtnPaymentForm()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                type = GetCbViewAsValue();
+            }
+            switch (type)
+            {
+                case Permissions.Manager:
+                    return new FormPayment();
+                case Permissions.Agency:
+                    return new FormAgencyPayment();
+                case Permissions.Publisher:
+                    return new FormPublisherPayment();
+            }
+            return null;
+        }
+        private Form GetBtnAnalyticForm()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                type = GetCbViewAsValue();
+            }
+            switch (type)
+            {
+                case Permissions.Manager:
+                    return new FormAnalytic();
+            }
+            return null;
+        }
+        #endregion
+
         #endregion
 
         #region Events
@@ -345,6 +318,39 @@ namespace BPMS
         private void pbLogo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormHome());
+        }
+        #endregion
+
+        #region Inner navigate
+
+        private void Formimport_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            FormCreateImport formCreateImport = e.NavigatingForm as FormCreateImport;
+            formCreateImport.NavigateBack += FormCreateImport_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
+        }
+
+        private void FormCreateImport_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnImport, RGBColors.color5);
+            FormImport formimport = e.NavigatingForm as FormImport;
+            formimport.InnerFormNavigating += Formimport_InnerFormNavigating;
+            OpenChildForm(formimport);
+        }
+
+        private void FormExport_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            FormCreateExport formCreateExport = e.NavigatingForm as FormCreateExport;
+            formCreateExport.NavigateBack += FormCreateExport_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
+        }
+
+        private void FormCreateExport_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnExport, RGBColors.color5);
+            FormExport formExport = e.NavigatingForm as FormExport;
+            formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
+            OpenChildForm(formExport);
         }
         #endregion
 
