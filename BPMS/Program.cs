@@ -11,14 +11,14 @@ namespace BPMS
     {
         class BPMSApplicationContext : ApplicationContext
         {
-            private FormLogin formLogin;
+            private frmLogin formLogin;
             private FormMainMenu[] formMainMenu;
             private int formNumber;
             public BPMSApplicationContext()
             {
                 formMainMenu = new FormMainMenu[2];
                 formNumber = 0;
-                formLogin = new FormLogin();
+                formLogin = new frmLogin();
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {
                     formMainMenu[formNumber] = new FormMainMenu(formLogin.LoginAccount);
@@ -34,7 +34,7 @@ namespace BPMS
             {
                 this.formMainMenuClosed -= QLNHApplicationContext_formMainMenuClosed;
                 formNumber = (formNumber + 1) % 2;
-                formLogin = new FormLogin();
+                formLogin = new frmLogin();
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {
                     formMainMenu[formNumber] = new FormMainMenu(formLogin.LoginAccount);

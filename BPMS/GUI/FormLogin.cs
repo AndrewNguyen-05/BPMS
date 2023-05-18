@@ -12,28 +12,36 @@ using System.Windows.Forms;
 
 namespace BPMS.GUI
 {
-    public partial class FormLogin : Form
+    public partial class frmLogin : Form
     {
         internal int LoginAccount = -1;
-        public FormLogin()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            bool result = AccountDAO.Instance.CheckPassword(UsernameTxt.Text, PasswordTxt.Text);
+            bool result = AccountDAO.Instance.CheckPassword(txtUsername.Text, txtPassword.Text);
             if (result)
             {
-                LoginAccount = AccountDAO.Instance.GetAccountId(UsernameTxt.Text);
+                LoginAccount = AccountDAO.Instance.GetAccountId(txtUsername.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!", "Error");
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
