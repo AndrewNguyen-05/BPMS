@@ -392,7 +392,26 @@ namespace BPMS
 
         #endregion
 
+        #region Closing Form
+        private void FormMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (currentChildForm is null) return;
+            currentChildForm.Close();
+            if (currentChildForm.IsHandleCreated)
+            {
+                e.Cancel = true;
+                return;
+            }
+        }
+        private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+        }
         #endregion
+
+
+        #endregion
+
 
     }
 }

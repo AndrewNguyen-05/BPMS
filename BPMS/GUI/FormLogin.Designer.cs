@@ -65,14 +65,14 @@
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(8, 0);
-            this.txtUsername.Location = new System.Drawing.Point(888, 271);
+            this.txtUsername.Location = new System.Drawing.Point(542, 254);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(576, 74);
+            this.txtUsername.Size = new System.Drawing.Size(317, 57);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
@@ -94,14 +94,14 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(8, 0);
-            this.txtPassword.Location = new System.Drawing.Point(888, 372);
+            this.txtPassword.Location = new System.Drawing.Point(542, 321);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(576, 74);
+            this.txtPassword.Size = new System.Drawing.Size(317, 57);
             this.txtPassword.TabIndex = 2;
             // 
             // btnLogin
@@ -118,9 +118,9 @@
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(888, 509);
+            this.btnLogin.Location = new System.Drawing.Point(542, 402);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(576, 72);
+            this.btnLogin.Size = new System.Drawing.Size(317, 51);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.Click += new System.EventHandler(this.LoginBtn_Click);
@@ -130,9 +130,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(888, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(459, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(570, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(468, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -154,12 +154,11 @@
             this.ContainerControl.BackColor = System.Drawing.Color.Transparent;
             this.ContainerControl.Controls.Add(this.controlMinimize);
             this.ContainerControl.Controls.Add(this.controlClose);
-            this.ContainerControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ContainerControl.FillColor = System.Drawing.Color.Transparent;
-            this.ContainerControl.Location = new System.Drawing.Point(0, 0);
+            this.ContainerControl.Location = new System.Drawing.Point(716, 0);
             this.ContainerControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ContainerControl.Name = "ContainerControl";
-            this.ContainerControl.Size = new System.Drawing.Size(1526, 60);
+            this.ContainerControl.Size = new System.Drawing.Size(211, 38);
             this.ContainerControl.TabIndex = 11;
             this.ContainerControl.UseTransparentBackground = true;
             this.ContainerControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ContainerControl_MouseDown);
@@ -171,10 +170,10 @@
             this.controlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlMinimize.IconColor = System.Drawing.Color.Black;
-            this.controlMinimize.Location = new System.Drawing.Point(1390, 0);
+            this.controlMinimize.Location = new System.Drawing.Point(75, 0);
             this.controlMinimize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.controlMinimize.Name = "controlMinimize";
-            this.controlMinimize.Size = new System.Drawing.Size(68, 60);
+            this.controlMinimize.Size = new System.Drawing.Size(68, 38);
             this.controlMinimize.TabIndex = 1;
             // 
             // controlClose
@@ -185,21 +184,22 @@
             this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlClose.ForeColor = System.Drawing.Color.Black;
             this.controlClose.IconColor = System.Drawing.Color.Black;
-            this.controlClose.Location = new System.Drawing.Point(1458, 0);
+            this.controlClose.Location = new System.Drawing.Point(143, 0);
             this.controlClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.controlClose.Name = "controlClose";
-            this.controlClose.Size = new System.Drawing.Size(68, 60);
+            this.controlClose.Size = new System.Drawing.Size(68, 38);
             this.controlClose.TabIndex = 0;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(807, 768);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(452, 522);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 12;
             this.guna2PictureBox1.TabStop = false;
@@ -222,19 +222,21 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(888, 605);
+            this.btnExit.Location = new System.Drawing.Point(542, 459);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(576, 72);
+            this.btnExit.Size = new System.Drawing.Size(317, 51);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "EXIT";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1526, 760);
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(929, 522);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pictureBox1);

@@ -33,6 +33,7 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnMainPage = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
+            this.cbViewAs = new System.Windows.Forms.ComboBox();
             this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.btnAnalytic = new FontAwesome.Sharp.IconButton();
             this.btnPayment = new FontAwesome.Sharp.IconButton();
@@ -47,7 +48,6 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.cbViewAs = new System.Windows.Forms.ComboBox();
             this.panelMenu.SuspendLayout();
             this.panelLogOut.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -105,6 +105,21 @@
             this.panelLogOut.Name = "panelLogOut";
             this.panelLogOut.Size = new System.Drawing.Size(279, 141);
             this.panelLogOut.TabIndex = 5;
+            // 
+            // cbViewAs
+            // 
+            this.cbViewAs.FormattingEnabled = true;
+            this.cbViewAs.Items.AddRange(new object[] {
+            "Manager",
+            "Accountant",
+            "Publisher",
+            "Agency"});
+            this.cbViewAs.Location = new System.Drawing.Point(40, 22);
+            this.cbViewAs.Name = "cbViewAs";
+            this.cbViewAs.Size = new System.Drawing.Size(192, 31);
+            this.cbViewAs.TabIndex = 1;
+            this.cbViewAs.Visible = false;
+            this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
             // 
             // btnLogOut
             // 
@@ -283,7 +298,7 @@
             this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -319,24 +334,10 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
             // 
-            // cbViewAs
-            // 
-            this.cbViewAs.FormattingEnabled = true;
-            this.cbViewAs.Items.AddRange(new object[] {
-            "Manager",
-            "Accountant",
-            "Publisher",
-            "Agency"});
-            this.cbViewAs.Location = new System.Drawing.Point(40, 22);
-            this.cbViewAs.Name = "cbViewAs";
-            this.cbViewAs.Size = new System.Drawing.Size(192, 27);
-            this.cbViewAs.TabIndex = 1;
-            this.cbViewAs.Visible = false;
-            this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
-            // 
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnLogOut;
             this.ClientSize = new System.Drawing.Size(1415, 741);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
@@ -346,6 +347,8 @@
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMainMenu_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainMenu_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panelLogOut.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
