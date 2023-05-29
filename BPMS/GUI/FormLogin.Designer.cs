@@ -35,7 +35,6 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ContainerControl = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.controlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -143,12 +142,6 @@
             this.Elipse.BorderRadius = 16;
             this.Elipse.TargetControl = this;
             // 
-            // DragControl
-            // 
-            this.DragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.DragControl.TargetControl = this;
-            this.DragControl.UseTransparentDrag = true;
-            // 
             // ContainerControl
             // 
             this.ContainerControl.BackColor = System.Drawing.Color.Transparent;
@@ -214,6 +207,7 @@
             this.btnExit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.btnExit.BorderRadius = 4;
             this.btnExit.BorderThickness = 1;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -262,7 +256,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
-        private Guna.UI2.WinForms.Guna2DragControl DragControl;
         private Guna.UI2.WinForms.Guna2ContainerControl ContainerControl;
         private Guna.UI2.WinForms.Guna2ControlBox controlMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox controlClose;

@@ -32,7 +32,7 @@ namespace BPMS.GUI
             //Dtgv
             Guna2Elipse elipse_dtgv = new Guna2Elipse();
             elipse_dtgv.TargetControl = dtgvImport;
-            elipse_dtgv.BorderRadius = 20;
+            elipse_dtgv.BorderRadius = 15;
             #endregion
 
         }

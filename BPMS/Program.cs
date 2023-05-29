@@ -27,7 +27,7 @@ namespace BPMS
                 }
                 else
                 {
-                    throw new Exception("exit");
+                    //throw new Exception("exit");
                 }
             }
             private void QLNHApplicationContext_formMainMenuClosed(object sender, FormClosedEventArgs e)
