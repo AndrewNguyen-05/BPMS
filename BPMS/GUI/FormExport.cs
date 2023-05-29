@@ -68,5 +68,10 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+
+        private void btnCreate_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
