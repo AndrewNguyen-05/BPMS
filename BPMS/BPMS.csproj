@@ -231,6 +231,12 @@
     <EmbeddedResource Include="GUI\FormPayment.resx">
       <DependentUpon>FormPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Publisher\FormPublisherExport.resx">
+      <DependentUpon>FormPublisherExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Publisher\FormPublisherPayment.resx">
+      <DependentUpon>FormPublisherPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

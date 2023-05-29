@@ -18,9 +18,15 @@ namespace BPMS.GUI
     public partial class FormCreateImport : Form
     {
         bool IsAddMode = false;
+        List<DTO.Account> CurrentPublisherList = PublisherDAO.Instance.GetPublisherAccountList();
+        List<DTO.Book> CurrentBookList = BookDAO.Instance.GetBookList();
         public FormCreateImport()
         {
             InitializeComponent();
+            cbPublisher.DataSource = CurrentPublisherList;
+            cbPublisher.DisplayMember = "DisplayName";
+            cbBook.DataSource = CurrentBookList;
+            cbBook.DisplayMember = "name";
         }
 
         #region Handler
@@ -42,11 +48,10 @@ namespace BPMS.GUI
             if (IsAddMode) return;
             DataGridViewRow dtgvr = dtgvBookList.SelectedRows[0];
             if (dtgvr is null) return;
-            txbBook.Text = dtgvr.Cells["BookClm"].Value.ToString();
+            cbBook.SelectedIndex = cbBook.Items.IndexOf(dtgvr.Cells["BookClm"].Tag);
             txbAuthor.Text = dtgvr.Cells["AuthorClm"].Value.ToString();
-            txbQuantity.Text = dtgvr.Cells["QuantityClm"].Value.ToString();
+            nudQuantity.Value = decimal.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
             txbQuality.Text = dtgvr.Cells["QualityClm"].Value.ToString();
-            txbTotalPrice.Text = dtgvr.Cells["PriceClm"].Value.ToString();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -54,11 +59,13 @@ namespace BPMS.GUI
             dtgvBookList.Rows.Add();
             IsAddMode = false;
             DataGridViewRow tmp = dtgvBookList.Rows[dtgvBookList.Rows.Count - 1];
-            tmp.Cells["BookClm"].Value = txbBook.Text;
+            Book selectedBook = cbBook.SelectedItem as Book;
+            tmp.Cells["BookClm"].Value = selectedBook.name;
+            tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
             tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
-            tmp.Cells["QuantityClm"].Value = txbQuantity.Text;
+            tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
             tmp.Cells["QualityClm"].Value = txbQuality.Text;
-            double? bookprice = BookDAO.Instance.GetBookPrice(txbBook.Text) * double.Parse(txbQuantity.Text);
+            double? bookprice = selectedBook.price * (double)nudQuantity.Value;
             tmp.Cells["PriceClm"].Value = bookprice.ToString();
             UpdateTotalPrice();
         }
@@ -66,25 +73,24 @@ namespace BPMS.GUI
         private void btnModify_Click(object sender, EventArgs e)
         {
             if (dtgvBookList.SelectedRows.Count == 0) return;
-            DataGridViewRow dtgvr = dtgvBookList.SelectedRows[0];
-            dtgvr.Cells["BookClm"].Value = txbBook.Text;
-            dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
-            dtgvr.Cells["QuantityClm"].Value = txbQuantity.Text;
-            dtgvr.Cells["QualityClm"].Value = txbQuality.Text;
-            double? bookprice = BookDAO.Instance.GetBookPrice(txbBook.Text) * double.Parse(txbQuantity.Text);
-            dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+            Book selectedBook = cbBook.SelectedItem as Book;
+            foreach (DataGridViewRow dtgvr in dtgvBookList.SelectedRows)
+            {
+                dtgvr.Cells["BookClm"].Value = selectedBook.name;
+                dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
+                dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+                dtgvr.Cells["QualityClm"].Value = txbQuality.Text;
+                double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+                dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+            }
             UpdateTotalPrice();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            for (int i = dtgvBookList.Rows.Count - 1; i > 0; i--)
+            foreach (DataGridViewRow dtgvr in dtgvBookList.SelectedRows)
             {
-                bool? cbc = dtgvBookList.Rows[i].Cells["SelectClm"].Value as bool?;
-                if (cbc == true)
-                {
-                    dtgvBookList.Rows.Remove(dtgvBookList.Rows[i]);
-                }
+                dtgvBookList.Rows.Remove(dtgvr);
             }
         }
 
@@ -96,10 +102,10 @@ namespace BPMS.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
-            NavigateBack?.Invoke(this, navigationE);
             ImportReport importReport = new ImportReport();
-            importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(txbPublisher.Text);
+            if (cbPublisher.SelectedItem == null) return;
+            Account account = cbPublisher.SelectedItem as Account; 
+            importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(account.UserName);
             importReport.DeliveryPerson = txbDeliveryPerson.Text;
             importReport.ImportDate = dtpCreateDate.Value;
             importReport.UnitLeader = txbUnitLeader.Text;
@@ -108,17 +114,24 @@ namespace BPMS.GUI
                 System.Windows.Forms.MessageBox.Show("Lỗi! Tổng giá tiền không đúng định dạng!", "Thông báo lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
+            Book selectedBook = cbBook.SelectedItem as Book;
             importReport.TotalPrice = double.Parse(txbTotalPrice.Text); 
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
             foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
                 ImportReportDetail importReportDetail = new ImportReportDetail();
-                importReportDetail.idBook = BookDAO.Instance.GetBookID(txbBook.Text);
+                importReportDetail.idBook = selectedBook.id;
                 importReportDetail.idImport = idImport;
-                importReportDetail.quantity = int.Parse(txbQuantity.Text);
+                importReportDetail.quantity = (int)nudQuantity.Value;
                 ImportReportDAO.Instance.CreateImportReportDetail(importReportDetail);
             }
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
+            NavigateBack?.Invoke(this, navigationE);
         }
 
+        private void cbBook_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbAuthor.Text = (cbBook.SelectedItem as Book).author;
+        }
     }
 }

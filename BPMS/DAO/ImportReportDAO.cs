@@ -24,13 +24,15 @@ namespace BPMS.DAO
         public int CreateImportReport(ImportReport ir)
         {
             db.ImportReports.Add(ir);
-            return db.ImportReports.Last().id;
+            db.SaveChanges();
+            return db.ImportReports.ToList().Last().id;
             
         }
 
         public void CreateImportReportDetail(ImportReportDetail ird)
         {
             db.ImportReportDetails.Add(ird);
+            db.SaveChanges();
         }
 
         public dynamic GetImportReports()

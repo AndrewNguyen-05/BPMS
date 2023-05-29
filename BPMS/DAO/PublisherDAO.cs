@@ -36,5 +36,13 @@ namespace BPMS.DAO
             }
             return matchedPublisher.First();
         }
+
+        public List<Account> GetPublisherAccountList()
+        {
+            var allPublisher = from pb in db.Publishers
+                               join acc in db.Accounts on pb.idAccount equals acc.id
+                               select acc;
+            return allPublisher.ToList();
+        }
     }
 }

@@ -20,6 +20,10 @@ namespace BPMS.DAO
             }
             set { instance = value; }
         }
+        public List<Book> GetBookList()
+        {
+            return db.Books.ToList();
+        }
         public double? GetBookPrice(string BookName)
         {
             var price = from bk in db.Books
@@ -34,6 +38,14 @@ namespace BPMS.DAO
                        where bk.name == BookName
                        select bk.id;
             return id.First();
+        }
+
+        public Book GetBookByName(string bookName)
+        {
+            var book = from bk in db.Books
+                       where bookName == bk.name
+                       select bk;
+            return book.First();
         }
     }
 }
