@@ -57,6 +57,8 @@
             // 
             // txbPublisher
             // 
+            this.txbPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbPublisher.BorderColor = System.Drawing.Color.Black;
             this.txbPublisher.BorderRadius = 8;
             this.txbPublisher.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -69,18 +71,20 @@
             this.txbPublisher.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPublisher.ForeColor = System.Drawing.Color.Black;
             this.txbPublisher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPublisher.Location = new System.Drawing.Point(12, 18);
-            this.txbPublisher.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbPublisher.Location = new System.Drawing.Point(11, 14);
+            this.txbPublisher.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbPublisher.Name = "txbPublisher";
             this.txbPublisher.PasswordChar = '\0';
             this.txbPublisher.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPublisher.PlaceholderText = "Publisher";
             this.txbPublisher.SelectedText = "";
-            this.txbPublisher.Size = new System.Drawing.Size(1083, 50);
+            this.txbPublisher.Size = new System.Drawing.Size(963, 40);
             this.txbPublisher.TabIndex = 1;
             // 
             // txbDeliveryPerson
             // 
+            this.txbDeliveryPerson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbDeliveryPerson.BorderColor = System.Drawing.Color.Black;
             this.txbDeliveryPerson.BorderRadius = 8;
             this.txbDeliveryPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -93,18 +97,20 @@
             this.txbDeliveryPerson.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbDeliveryPerson.ForeColor = System.Drawing.Color.Black;
             this.txbDeliveryPerson.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDeliveryPerson.Location = new System.Drawing.Point(12, 83);
-            this.txbDeliveryPerson.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbDeliveryPerson.Location = new System.Drawing.Point(11, 66);
+            this.txbDeliveryPerson.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbDeliveryPerson.Name = "txbDeliveryPerson";
             this.txbDeliveryPerson.PasswordChar = '\0';
             this.txbDeliveryPerson.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbDeliveryPerson.PlaceholderText = "DeliveryPerson";
             this.txbDeliveryPerson.SelectedText = "";
-            this.txbDeliveryPerson.Size = new System.Drawing.Size(695, 50);
+            this.txbDeliveryPerson.Size = new System.Drawing.Size(618, 40);
             this.txbDeliveryPerson.TabIndex = 2;
             // 
             // txbUnitLeader
             // 
+            this.txbUnitLeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbUnitLeader.BorderColor = System.Drawing.Color.Black;
             this.txbUnitLeader.BorderRadius = 8;
             this.txbUnitLeader.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -117,18 +123,20 @@
             this.txbUnitLeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUnitLeader.ForeColor = System.Drawing.Color.Black;
             this.txbUnitLeader.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUnitLeader.Location = new System.Drawing.Point(12, 149);
-            this.txbUnitLeader.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbUnitLeader.Location = new System.Drawing.Point(11, 119);
+            this.txbUnitLeader.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbUnitLeader.Name = "txbUnitLeader";
             this.txbUnitLeader.PasswordChar = '\0';
             this.txbUnitLeader.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbUnitLeader.PlaceholderText = "Unit Leader";
             this.txbUnitLeader.SelectedText = "";
-            this.txbUnitLeader.Size = new System.Drawing.Size(695, 50);
+            this.txbUnitLeader.Size = new System.Drawing.Size(618, 40);
             this.txbUnitLeader.TabIndex = 5;
             // 
             // txbBook
             // 
+            this.txbBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbBook.BorderColor = System.Drawing.Color.Black;
             this.txbBook.BorderRadius = 8;
             this.txbBook.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -141,18 +149,20 @@
             this.txbBook.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbBook.ForeColor = System.Drawing.Color.Black;
             this.txbBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbBook.Location = new System.Drawing.Point(12, 215);
-            this.txbBook.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbBook.Location = new System.Drawing.Point(11, 172);
+            this.txbBook.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbBook.Name = "txbBook";
             this.txbBook.PasswordChar = '\0';
             this.txbBook.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbBook.PlaceholderText = "Book";
             this.txbBook.SelectedText = "";
-            this.txbBook.Size = new System.Drawing.Size(1083, 50);
+            this.txbBook.Size = new System.Drawing.Size(963, 40);
             this.txbBook.TabIndex = 7;
             // 
             // txbAuthor
             // 
+            this.txbAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbAuthor.BorderColor = System.Drawing.Color.Black;
             this.txbAuthor.BorderRadius = 8;
             this.txbAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -165,18 +175,19 @@
             this.txbAuthor.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAuthor.ForeColor = System.Drawing.Color.Black;
             this.txbAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbAuthor.Location = new System.Drawing.Point(12, 281);
-            this.txbAuthor.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbAuthor.Location = new System.Drawing.Point(11, 225);
+            this.txbAuthor.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbAuthor.Name = "txbAuthor";
             this.txbAuthor.PasswordChar = '\0';
             this.txbAuthor.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbAuthor.PlaceholderText = "Author";
             this.txbAuthor.SelectedText = "";
-            this.txbAuthor.Size = new System.Drawing.Size(462, 50);
+            this.txbAuthor.Size = new System.Drawing.Size(411, 40);
             this.txbAuthor.TabIndex = 8;
             // 
             // txbQuality
             // 
+            this.txbQuality.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txbQuality.BorderColor = System.Drawing.Color.Black;
             this.txbQuality.BorderRadius = 8;
             this.txbQuality.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -189,18 +200,19 @@
             this.txbQuality.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbQuality.ForeColor = System.Drawing.Color.Black;
             this.txbQuality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbQuality.Location = new System.Drawing.Point(482, 281);
-            this.txbQuality.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbQuality.Location = new System.Drawing.Point(428, 225);
+            this.txbQuality.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbQuality.Name = "txbQuality";
             this.txbQuality.PasswordChar = '\0';
             this.txbQuality.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbQuality.PlaceholderText = "Quality";
             this.txbQuality.SelectedText = "";
-            this.txbQuality.Size = new System.Drawing.Size(425, 50);
+            this.txbQuality.Size = new System.Drawing.Size(378, 40);
             this.txbQuality.TabIndex = 9;
             // 
             // txbQuantity
             // 
+            this.txbQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txbQuantity.BorderColor = System.Drawing.Color.Black;
             this.txbQuantity.BorderRadius = 8;
             this.txbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -213,18 +225,19 @@
             this.txbQuantity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbQuantity.ForeColor = System.Drawing.Color.Black;
             this.txbQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbQuantity.Location = new System.Drawing.Point(915, 281);
-            this.txbQuantity.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbQuantity.Location = new System.Drawing.Point(813, 225);
+            this.txbQuantity.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbQuantity.Name = "txbQuantity";
             this.txbQuantity.PasswordChar = '\0';
             this.txbQuantity.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbQuantity.PlaceholderText = "Quantity";
             this.txbQuantity.SelectedText = "";
-            this.txbQuantity.Size = new System.Drawing.Size(180, 50);
+            this.txbQuantity.Size = new System.Drawing.Size(160, 40);
             this.txbQuantity.TabIndex = 10;
             // 
             // txbTotalPrice
             // 
+            this.txbTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txbTotalPrice.BorderColor = System.Drawing.Color.Black;
             this.txbTotalPrice.BorderRadius = 8;
             this.txbTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -237,18 +250,19 @@
             this.txbTotalPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTotalPrice.ForeColor = System.Drawing.Color.Black;
             this.txbTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbTotalPrice.Location = new System.Drawing.Point(721, 149);
-            this.txbTotalPrice.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txbTotalPrice.Location = new System.Drawing.Point(641, 119);
+            this.txbTotalPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.PasswordChar = '\0';
             this.txbTotalPrice.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbTotalPrice.PlaceholderText = "TotalPrice";
             this.txbTotalPrice.SelectedText = "";
-            this.txbTotalPrice.Size = new System.Drawing.Size(374, 50);
+            this.txbTotalPrice.Size = new System.Drawing.Size(332, 40);
             this.txbTotalPrice.TabIndex = 11;
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BorderRadius = 4;
             this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -257,16 +271,17 @@
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(543, 341);
+            this.btnAdd.Location = new System.Drawing.Point(483, 273);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(180, 45);
+            this.btnAdd.Size = new System.Drawing.Size(160, 36);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnModify
             // 
+            this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModify.BackColor = System.Drawing.Color.White;
             this.btnModify.BorderRadius = 4;
             this.btnModify.BorderThickness = 1;
@@ -277,16 +292,17 @@
             this.btnModify.FillColor = System.Drawing.Color.White;
             this.btnModify.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
-            this.btnModify.Location = new System.Drawing.Point(729, 341);
+            this.btnModify.Location = new System.Drawing.Point(648, 273);
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(180, 45);
+            this.btnModify.Size = new System.Drawing.Size(160, 36);
             this.btnModify.TabIndex = 13;
             this.btnModify.Text = "MODIFY";
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BorderRadius = 4;
             this.btnDelete.BorderThickness = 1;
             this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -296,16 +312,17 @@
             this.btnDelete.FillColor = System.Drawing.Color.White;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.btnDelete.Location = new System.Drawing.Point(915, 341);
+            this.btnDelete.Location = new System.Drawing.Point(813, 273);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(180, 45);
+            this.btnDelete.Size = new System.Drawing.Size(160, 36);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.BorderRadius = 4;
             this.btnCancel.BorderThickness = 1;
@@ -316,16 +333,17 @@
             this.btnCancel.FillColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
-            this.btnCancel.Location = new System.Drawing.Point(729, 509);
+            this.btnCancel.Location = new System.Drawing.Point(648, 407);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 45);
+            this.btnCancel.Size = new System.Drawing.Size(160, 36);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
+            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirm.BorderRadius = 4;
             this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -334,10 +352,10 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(238)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(915, 509);
+            this.btnConfirm.Location = new System.Drawing.Point(813, 407);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(180, 45);
+            this.btnConfirm.Size = new System.Drawing.Size(160, 36);
             this.btnConfirm.TabIndex = 17;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -349,6 +367,9 @@
             this.dtgvBookList.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvBookList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvBookList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,15 +395,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvBookList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvBookList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgvBookList.Location = new System.Drawing.Point(12, 392);
-            this.dtgvBookList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtgvBookList.Location = new System.Drawing.Point(11, 314);
             this.dtgvBookList.Name = "dtgvBookList";
             this.dtgvBookList.RowHeadersVisible = false;
             this.dtgvBookList.RowHeadersWidth = 51;
             this.dtgvBookList.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dtgvBookList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvBookList.RowTemplate.Height = 24;
-            this.dtgvBookList.Size = new System.Drawing.Size(1083, 105);
+            this.dtgvBookList.Size = new System.Drawing.Size(963, 84);
             this.dtgvBookList.TabIndex = 18;
             this.dtgvBookList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvBookList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -413,7 +433,7 @@
             this.SelectClm.HeaderText = "Select";
             this.SelectClm.MinimumWidth = 6;
             this.SelectClm.Name = "SelectClm";
-            this.SelectClm.Width = 85;
+            this.SelectClm.Width = 71;
             // 
             // BookClm
             // 
@@ -442,7 +462,7 @@
             this.QuantityClm.MinimumWidth = 6;
             this.QuantityClm.Name = "QuantityClm";
             this.QuantityClm.ReadOnly = true;
-            this.QuantityClm.Width = 134;
+            this.QuantityClm.Width = 112;
             // 
             // QualityClm
             // 
@@ -452,7 +472,6 @@
             this.QualityClm.MinimumWidth = 6;
             this.QualityClm.Name = "QualityClm";
             this.QualityClm.ReadOnly = true;
-            this.QualityClm.Width = 121;
             // 
             // PriceClm
             // 
@@ -464,6 +483,7 @@
             // 
             // dtpCreateDate
             // 
+            this.dtpCreateDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpCreateDate.BackColor = System.Drawing.Color.White;
             this.dtpCreateDate.BorderRadius = 4;
             this.dtpCreateDate.BorderThickness = 1;
@@ -471,21 +491,20 @@
             this.dtpCreateDate.FillColor = System.Drawing.Color.White;
             this.dtpCreateDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCreateDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCreateDate.Location = new System.Drawing.Point(721, 83);
-            this.dtpCreateDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpCreateDate.Location = new System.Drawing.Point(641, 66);
             this.dtpCreateDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCreateDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCreateDate.Name = "dtpCreateDate";
-            this.dtpCreateDate.Size = new System.Drawing.Size(374, 45);
+            this.dtpCreateDate.Size = new System.Drawing.Size(332, 36);
             this.dtpCreateDate.TabIndex = 19;
             this.dtpCreateDate.Value = new System.DateTime(2023, 5, 13, 20, 57, 45, 837);
             // 
             // FormCreateImport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1114, 565);
+            this.ClientSize = new System.Drawing.Size(990, 452);
             this.Controls.Add(this.dtpCreateDate);
             this.Controls.Add(this.dtgvBookList);
             this.Controls.Add(this.btnConfirm);
@@ -501,7 +520,6 @@
             this.Controls.Add(this.txbUnitLeader);
             this.Controls.Add(this.txbDeliveryPerson);
             this.Controls.Add(this.txbPublisher);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCreateImport";
             this.Text = "Create Import";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBookList)).EndInit();
