@@ -79,6 +79,7 @@ CREATE TABLE ExportReportDetail
 	idBook INT NOT NULL,
 	idExport INT NOT NULL,
 	quantity INT NOT NULL,
+	quality NVARCHAR(100) NOT NULL DEFAULT N'Chưa đạt yêu cầu',--Đạt yêu cầu, Chưa đạt yêu cầu
 	FOREIGN KEY (idBook) REFERENCES dbo.Book(id),
 	FOREIGN KEY (idExport) REFERENCES dbo.ExportReport(id)
 )
@@ -103,6 +104,7 @@ CREATE TABLE ImportReportDetail
 	idBook INT NOT NULL,
 	idImport INT NOT NULL,
 	quantity INT NOT NULL,
+	quality NVARCHAR(100) NOT NULL DEFAULT N'Chưa đạt yêu cầu',--Đạt yêu cầu, Chưa đạt yêu cầu
 	FOREIGN KEY (idBook) REFERENCES dbo.Book(id),
 	FOREIGN KEY (idImport) REFERENCES dbo.ImportReport(id)
 )
@@ -185,38 +187,38 @@ INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (5, '12/20
 INSERT INTO ExportReport (idAgency, ExportDate, ReceiptPerson) VALUES (1, '02/01/2023', N'Hoàng Đức S')
 GO
 
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 1)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 15, 1)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 8, 1)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 2)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 2)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 2)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 3)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 3)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 3)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 4)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 4)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 4)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (1, 10, 5)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (2, 10, 5)
-INSERT INTO ImportReportDetail (idBook, quantity, idImport) VALUES (3, 10, 5)
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (1, 10, 1, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (2, 15, 1, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (3, 11, 1, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (1, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (2, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (3, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (1, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (2, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (3, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (1, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (2, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (3, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (1, 10, 5, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (2, 10, 5, N'Đạt yêu cầu')
+INSERT INTO ImportReportDetail (idBook, quantity, idImport, quality) VALUES (3, 10, 5, N'Đạt yêu cầu')
 GO
 
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 1)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 15, 1)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 8, 1)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 2)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 2)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 2)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 3)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 3)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 3)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 4)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 4)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 4)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (1, 10, 5)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (2, 10, 5)
-INSERT INTO ExportReportDetail (idBook, quantity, idExport) VALUES (3, 10, 5)
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (1, 10, 1, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (2, 15, 1, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (3, 13, 1, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (1, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (2, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (3, 10, 2, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (1, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (2, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (3, 10, 3, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (1, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (2, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (3, 10, 4, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (1, 10, 5, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (2, 10, 5, N'Đạt yêu cầu')
+INSERT INTO ExportReportDetail (idBook, quantity, idExport, quality) VALUES (3, 10, 5, N'Đạt yêu cầu')
 GO
 
 

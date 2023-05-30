@@ -4,28 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b1de813dcfbf48279dbd4ef64f9dc446" Name="Diagram1">
+      <Diagram DiagramId="4f2725fa777d4930a682923d47d14269" Name="Diagram1">
         <EntityTypeShape EntityType="BPMSModel.Account" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.Accountant" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.Agency" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.Bill" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.Book" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.ExportReport" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BPMSModel.ExportReportDetail" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BPMSModel.ExportReportDetail" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.ImportReport" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.ImportReportDetail" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BPMSModel.Publisher" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
         <AssociationConnector Association="BPMSModel.FK__Accountan__idAcc__36B12243" ManuallyRouted="false" />
         <AssociationConnector Association="BPMSModel.FK__Agency__idAccoun__3A81B327" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__Bill__idReceiver__534D60F1" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__Bill__idSender__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__Bill__idReceiver__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__Bill__idSender__5629CD9C" ManuallyRouted="false" />
         <AssociationConnector Association="BPMSModel.FK__Publisher__idAcc__31EC6D26" ManuallyRouted="false" />
         <AssociationConnector Association="BPMSModel.FK__ExportRep__idAge__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__ExportRep__idBoo__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__ImportRep__idBoo__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__ExportRep__idExp__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__ImportRep__idImp__4E88ABD4" ManuallyRouted="false" />
-        <AssociationConnector Association="BPMSModel.FK__ImportRep__idPub__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__ExportRep__idBoo__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__ImportRep__idBoo__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__ExportRep__idExp__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__ImportRep__idImp__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BPMSModel.FK__ImportRep__idPub__4BAC3F29" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

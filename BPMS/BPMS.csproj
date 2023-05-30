@@ -55,6 +55,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,6 +72,7 @@
     <Compile Include="Classes\NavigationEventArgs.cs" />
     <Compile Include="Classes\Permissions.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\AnalyticDAO.cs" />
     <Compile Include="DAO\BookDAO.cs" />
     <Compile Include="DAO\ExportReportDAO.cs" />
     <Compile Include="DAO\ImportReportDAO.cs" />
@@ -208,6 +210,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAnalytic.resx">
+      <DependentUpon>FormAnalytic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCreateExport.resx">
       <DependentUpon>FormCreateExport.cs</DependentUpon>

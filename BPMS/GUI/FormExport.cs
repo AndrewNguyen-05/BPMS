@@ -26,12 +26,12 @@ namespace BPMS.GUI
             //Button
             Guna2Elipse elipse = new Guna2Elipse();
             elipse.TargetControl = btnCreate;
-            elipse.BorderRadius = 25;
+            elipse.BorderRadius = 15;
 
             //Dtgv
             Guna2Elipse elipse_dtgv = new Guna2Elipse();
             elipse_dtgv.TargetControl = dtgvExport;
-            elipse_dtgv.BorderRadius = 20;
+            elipse_dtgv.BorderRadius = 15;
             #endregion
         }
 
@@ -64,14 +64,9 @@ namespace BPMS.GUI
         #endregion
 
         private void btnCreate_Click(object sender, EventArgs e)
-        { 
+        {
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
-        }
-
-        private void btnCreate_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

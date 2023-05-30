@@ -35,7 +35,6 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ContainerControl = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.controlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -130,9 +129,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(459, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(418, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(468, 185);
+            this.pictureBox1.Size = new System.Drawing.Size(499, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -142,12 +141,6 @@
             // 
             this.Elipse.BorderRadius = 16;
             this.Elipse.TargetControl = this;
-            // 
-            // DragControl
-            // 
-            this.DragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.DragControl.TargetControl = this;
-            this.DragControl.UseTransparentDrag = true;
             // 
             // ContainerControl
             // 
@@ -199,7 +192,7 @@
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(452, 522);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(411, 522);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 12;
             this.guna2PictureBox1.TabStop = false;
@@ -214,6 +207,7 @@
             this.btnExit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.btnExit.BorderRadius = 4;
             this.btnExit.BorderThickness = 1;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -262,7 +256,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
-        private Guna.UI2.WinForms.Guna2DragControl DragControl;
         private Guna.UI2.WinForms.Guna2ContainerControl ContainerControl;
         private Guna.UI2.WinForms.Guna2ControlBox controlMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox controlClose;

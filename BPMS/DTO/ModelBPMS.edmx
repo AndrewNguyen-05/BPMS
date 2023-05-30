@@ -75,6 +75,7 @@
           <Property Name="idBook" Type="int" Nullable="false" />
           <Property Name="idExport" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="quality" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="ImportReport">
           <Key>
@@ -95,6 +96,7 @@
           <Property Name="idBook" Type="int" Nullable="false" />
           <Property Name="idImport" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="quality" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
@@ -129,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__534D60F1">
+        <Association Name="FK__Bill__idReceiver__5535A963">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -141,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idSender__5441852A">
+        <Association Name="FK__Bill__idSender__5629CD9C">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -165,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExportRep__idBoo__4316F928">
+        <Association Name="FK__ExportRep__idBoo__440B1D61">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="ExportReportDetail" Type="Self.ExportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -177,7 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExportRep__idExp__440B1D61">
+        <Association Name="FK__ExportRep__idExp__44FF419A">
           <End Role="ExportReport" Type="Self.ExportReport" Multiplicity="1" />
           <End Role="ExportReportDetail" Type="Self.ExportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -189,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idBoo__4D94879B">
+        <Association Name="FK__ImportRep__idBoo__4F7CD00D">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="ImportReportDetail" Type="Self.ImportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +203,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idImp__4E88ABD4">
+        <Association Name="FK__ImportRep__idImp__5070F446">
           <End Role="ImportReport" Type="Self.ImportReport" Multiplicity="1" />
           <End Role="ImportReportDetail" Type="Self.ImportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +215,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idPub__4AB81AF0">
+        <Association Name="FK__ImportRep__idPub__4BAC3F29">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="1" />
           <End Role="ImportReport" Type="Self.ImportReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -256,11 +258,11 @@
             <End Role="Account" EntitySet="Account" />
             <End Role="Agency" EntitySet="Agency" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__534D60F1" Association="Self.FK__Bill__idReceiver__534D60F1">
+          <AssociationSet Name="FK__Bill__idReceiver__5535A963" Association="Self.FK__Bill__idReceiver__5535A963">
             <End Role="Account" EntitySet="Account" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__5441852A" Association="Self.FK__Bill__idSender__5441852A">
+          <AssociationSet Name="FK__Bill__idSender__5629CD9C" Association="Self.FK__Bill__idSender__5629CD9C">
             <End Role="Account" EntitySet="Account" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
@@ -268,23 +270,23 @@
             <End Role="Agency" EntitySet="Agency" />
             <End Role="ExportReport" EntitySet="ExportReport" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExportRep__idBoo__4316F928" Association="Self.FK__ExportRep__idBoo__4316F928">
+          <AssociationSet Name="FK__ExportRep__idBoo__440B1D61" Association="Self.FK__ExportRep__idBoo__440B1D61">
             <End Role="Book" EntitySet="Book" />
             <End Role="ExportReportDetail" EntitySet="ExportReportDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExportRep__idExp__440B1D61" Association="Self.FK__ExportRep__idExp__440B1D61">
+          <AssociationSet Name="FK__ExportRep__idExp__44FF419A" Association="Self.FK__ExportRep__idExp__44FF419A">
             <End Role="ExportReport" EntitySet="ExportReport" />
             <End Role="ExportReportDetail" EntitySet="ExportReportDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idBoo__4D94879B" Association="Self.FK__ImportRep__idBoo__4D94879B">
+          <AssociationSet Name="FK__ImportRep__idBoo__4F7CD00D" Association="Self.FK__ImportRep__idBoo__4F7CD00D">
             <End Role="Book" EntitySet="Book" />
             <End Role="ImportReportDetail" EntitySet="ImportReportDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idImp__4E88ABD4" Association="Self.FK__ImportRep__idImp__4E88ABD4">
+          <AssociationSet Name="FK__ImportRep__idImp__5070F446" Association="Self.FK__ImportRep__idImp__5070F446">
             <End Role="ImportReport" EntitySet="ImportReport" />
             <End Role="ImportReportDetail" EntitySet="ImportReportDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idPub__4AB81AF0" Association="Self.FK__ImportRep__idPub__4AB81AF0">
+          <AssociationSet Name="FK__ImportRep__idPub__4BAC3F29" Association="Self.FK__ImportRep__idPub__4BAC3F29">
             <End Role="Publisher" EntitySet="Publisher" />
             <End Role="ImportReport" EntitySet="ImportReport" />
           </AssociationSet>
@@ -310,8 +312,8 @@
           <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Accountants" Relationship="Self.FK__Accountan__idAcc__36B12243" FromRole="Account" ToRole="Accountant" />
           <NavigationProperty Name="Agencies" Relationship="Self.FK__Agency__idAccoun__3A81B327" FromRole="Account" ToRole="Agency" />
-          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idReceiver__534D60F1" FromRole="Account" ToRole="Bill" />
-          <NavigationProperty Name="Bills1" Relationship="Self.FK__Bill__idSender__5441852A" FromRole="Account" ToRole="Bill" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idReceiver__5535A963" FromRole="Account" ToRole="Bill" />
+          <NavigationProperty Name="Bills1" Relationship="Self.FK__Bill__idSender__5629CD9C" FromRole="Account" ToRole="Bill" />
           <NavigationProperty Name="Publishers" Relationship="Self.FK__Publisher__idAcc__31EC6D26" FromRole="Account" ToRole="Publisher" />
         </EntityType>
         <EntityType Name="Accountant">
@@ -347,8 +349,8 @@
           <Property Name="ReceiptPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="isPaid" Type="Int32" />
           <Property Name="isReceived" Type="Int32" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idReceiver__534D60F1" FromRole="Bill" ToRole="Account" />
-          <NavigationProperty Name="Account1" Relationship="Self.FK__Bill__idSender__5441852A" FromRole="Bill" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idReceiver__5535A963" FromRole="Bill" ToRole="Account" />
+          <NavigationProperty Name="Account1" Relationship="Self.FK__Bill__idSender__5629CD9C" FromRole="Bill" ToRole="Account" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -359,8 +361,8 @@
           <Property Name="type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="price" Type="Double" />
-          <NavigationProperty Name="ExportReportDetails" Relationship="Self.FK__ExportRep__idBoo__4316F928" FromRole="Book" ToRole="ExportReportDetail" />
-          <NavigationProperty Name="ImportReportDetails" Relationship="Self.FK__ImportRep__idBoo__4D94879B" FromRole="Book" ToRole="ImportReportDetail" />
+          <NavigationProperty Name="ExportReportDetails" Relationship="Self.FK__ExportRep__idBoo__440B1D61" FromRole="Book" ToRole="ExportReportDetail" />
+          <NavigationProperty Name="ImportReportDetails" Relationship="Self.FK__ImportRep__idBoo__4F7CD00D" FromRole="Book" ToRole="ImportReportDetail" />
         </EntityType>
         <EntityType Name="ExportReport">
           <Key>
@@ -372,7 +374,7 @@
           <Property Name="ExportDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TotalPrice" Type="Double" Nullable="false" />
           <NavigationProperty Name="Agency" Relationship="Self.FK__ExportRep__idAge__403A8C7D" FromRole="ExportReport" ToRole="Agency" />
-          <NavigationProperty Name="ExportReportDetails" Relationship="Self.FK__ExportRep__idExp__440B1D61" FromRole="ExportReport" ToRole="ExportReportDetail" />
+          <NavigationProperty Name="ExportReportDetails" Relationship="Self.FK__ExportRep__idExp__44FF419A" FromRole="ExportReport" ToRole="ExportReportDetail" />
         </EntityType>
         <EntityType Name="ExportReportDetail">
           <Key>
@@ -382,8 +384,9 @@
           <Property Name="idBook" Type="Int32" Nullable="false" />
           <Property Name="idExport" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Book" Relationship="Self.FK__ExportRep__idBoo__4316F928" FromRole="ExportReportDetail" ToRole="Book" />
-          <NavigationProperty Name="ExportReport" Relationship="Self.FK__ExportRep__idExp__440B1D61" FromRole="ExportReportDetail" ToRole="ExportReport" />
+          <Property Name="quality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__ExportRep__idBoo__440B1D61" FromRole="ExportReportDetail" ToRole="Book" />
+          <NavigationProperty Name="ExportReport" Relationship="Self.FK__ExportRep__idExp__44FF419A" FromRole="ExportReportDetail" ToRole="ExportReport" />
         </EntityType>
         <EntityType Name="ImportReport">
           <Key>
@@ -395,8 +398,8 @@
           <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UnitLeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TotalPrice" Type="Double" Nullable="false" />
-          <NavigationProperty Name="ImportReportDetails" Relationship="Self.FK__ImportRep__idImp__4E88ABD4" FromRole="ImportReport" ToRole="ImportReportDetail" />
-          <NavigationProperty Name="Publisher" Relationship="Self.FK__ImportRep__idPub__4AB81AF0" FromRole="ImportReport" ToRole="Publisher" />
+          <NavigationProperty Name="ImportReportDetails" Relationship="Self.FK__ImportRep__idImp__5070F446" FromRole="ImportReport" ToRole="ImportReportDetail" />
+          <NavigationProperty Name="Publisher" Relationship="Self.FK__ImportRep__idPub__4BAC3F29" FromRole="ImportReport" ToRole="Publisher" />
         </EntityType>
         <EntityType Name="ImportReportDetail">
           <Key>
@@ -406,8 +409,9 @@
           <Property Name="idBook" Type="Int32" Nullable="false" />
           <Property Name="idImport" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Book" Relationship="Self.FK__ImportRep__idBoo__4D94879B" FromRole="ImportReportDetail" ToRole="Book" />
-          <NavigationProperty Name="ImportReport" Relationship="Self.FK__ImportRep__idImp__4E88ABD4" FromRole="ImportReportDetail" ToRole="ImportReport" />
+          <Property Name="quality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__ImportRep__idBoo__4F7CD00D" FromRole="ImportReportDetail" ToRole="Book" />
+          <NavigationProperty Name="ImportReport" Relationship="Self.FK__ImportRep__idImp__5070F446" FromRole="ImportReportDetail" ToRole="ImportReport" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
@@ -418,7 +422,7 @@
           <Property Name="AccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Account" Relationship="Self.FK__Publisher__idAcc__31EC6D26" FromRole="Publisher" ToRole="Account" />
-          <NavigationProperty Name="ImportReports" Relationship="Self.FK__ImportRep__idPub__4AB81AF0" FromRole="Publisher" ToRole="ImportReport" />
+          <NavigationProperty Name="ImportReports" Relationship="Self.FK__ImportRep__idPub__4BAC3F29" FromRole="Publisher" ToRole="ImportReport" />
         </EntityType>
         <Association Name="FK__Accountan__idAcc__36B12243">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
@@ -444,7 +448,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__534D60F1">
+        <Association Name="FK__Bill__idReceiver__5535A963">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -456,7 +460,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idSender__5441852A">
+        <Association Name="FK__Bill__idSender__5629CD9C">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -492,7 +496,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExportRep__idBoo__4316F928">
+        <Association Name="FK__ExportRep__idBoo__440B1D61">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="ExportReportDetail" Type="Self.ExportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -504,7 +508,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idBoo__4D94879B">
+        <Association Name="FK__ImportRep__idBoo__4F7CD00D">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="ImportReportDetail" Type="Self.ImportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -516,7 +520,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExportRep__idExp__440B1D61">
+        <Association Name="FK__ExportRep__idExp__44FF419A">
           <End Role="ExportReport" Type="Self.ExportReport" Multiplicity="1" />
           <End Role="ExportReportDetail" Type="Self.ExportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -528,7 +532,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idImp__4E88ABD4">
+        <Association Name="FK__ImportRep__idImp__5070F446">
           <End Role="ImportReport" Type="Self.ImportReport" Multiplicity="1" />
           <End Role="ImportReportDetail" Type="Self.ImportReportDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -540,7 +544,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ImportRep__idPub__4AB81AF0">
+        <Association Name="FK__ImportRep__idPub__4BAC3F29">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="1" />
           <End Role="ImportReport" Type="Self.ImportReport" Multiplicity="*" />
           <ReferentialConstraint>
@@ -571,11 +575,11 @@
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Agency" EntitySet="Agencies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__534D60F1" Association="Self.FK__Bill__idReceiver__534D60F1">
+          <AssociationSet Name="FK__Bill__idReceiver__5535A963" Association="Self.FK__Bill__idReceiver__5535A963">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__5441852A" Association="Self.FK__Bill__idSender__5441852A">
+          <AssociationSet Name="FK__Bill__idSender__5629CD9C" Association="Self.FK__Bill__idSender__5629CD9C">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
@@ -587,23 +591,23 @@
             <End Role="Agency" EntitySet="Agencies" />
             <End Role="ExportReport" EntitySet="ExportReports" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExportRep__idBoo__4316F928" Association="Self.FK__ExportRep__idBoo__4316F928">
+          <AssociationSet Name="FK__ExportRep__idBoo__440B1D61" Association="Self.FK__ExportRep__idBoo__440B1D61">
             <End Role="Book" EntitySet="Books" />
             <End Role="ExportReportDetail" EntitySet="ExportReportDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idBoo__4D94879B" Association="Self.FK__ImportRep__idBoo__4D94879B">
+          <AssociationSet Name="FK__ImportRep__idBoo__4F7CD00D" Association="Self.FK__ImportRep__idBoo__4F7CD00D">
             <End Role="Book" EntitySet="Books" />
             <End Role="ImportReportDetail" EntitySet="ImportReportDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExportRep__idExp__440B1D61" Association="Self.FK__ExportRep__idExp__440B1D61">
+          <AssociationSet Name="FK__ExportRep__idExp__44FF419A" Association="Self.FK__ExportRep__idExp__44FF419A">
             <End Role="ExportReport" EntitySet="ExportReports" />
             <End Role="ExportReportDetail" EntitySet="ExportReportDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idImp__4E88ABD4" Association="Self.FK__ImportRep__idImp__4E88ABD4">
+          <AssociationSet Name="FK__ImportRep__idImp__5070F446" Association="Self.FK__ImportRep__idImp__5070F446">
             <End Role="ImportReport" EntitySet="ImportReports" />
             <End Role="ImportReportDetail" EntitySet="ImportReportDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__ImportRep__idPub__4AB81AF0" Association="Self.FK__ImportRep__idPub__4AB81AF0">
+          <AssociationSet Name="FK__ImportRep__idPub__4BAC3F29" Association="Self.FK__ImportRep__idPub__4BAC3F29">
             <End Role="Publisher" EntitySet="Publishers" />
             <End Role="ImportReport" EntitySet="ImportReports" />
           </AssociationSet>
@@ -689,6 +693,7 @@
                 <ScalarProperty Name="idBook" ColumnName="idBook" />
                 <ScalarProperty Name="idExport" ColumnName="idExport" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="quality" ColumnName="quality" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -711,6 +716,7 @@
                 <ScalarProperty Name="idBook" ColumnName="idBook" />
                 <ScalarProperty Name="idImport" ColumnName="idImport" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="quality" ColumnName="quality" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
