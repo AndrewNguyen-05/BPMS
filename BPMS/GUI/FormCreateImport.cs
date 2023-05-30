@@ -61,7 +61,7 @@ namespace BPMS.GUI
                 cbBook.SelectedIndex = cbBook.Items.IndexOf(currentBook);
                 txbAuthor.Text = currentBook.author;
                 nudQuantity.Value = ird.quantity;
-                txbQuality.Text = 
+                txbQuality.Text = ird.quality; 
             }
         }
         private void UpdateTotalPrice()
@@ -154,6 +154,7 @@ namespace BPMS.GUI
                 importReportDetail.idBook = selectedBook.id;
                 importReportDetail.idImport = idImport;
                 importReportDetail.quantity = (int)nudQuantity.Value;
+                importReportDetail.quality = txbQuality.Text;
                 ImportReportDAO.Instance.CreateImportReportDetail(importReportDetail);
             }
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
