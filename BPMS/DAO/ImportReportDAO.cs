@@ -49,5 +49,13 @@ namespace BPMS.DAO
                        select ird;
             return list.ToList();
         }
+
+        public ImportReport GetImportReport(int id)
+        {
+            var list = from ir in db.ImportReports
+                       where ir.id == id
+                       select ir;
+            return list.FirstOrDefault();
+        }
     }
 }

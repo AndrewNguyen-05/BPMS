@@ -73,13 +73,15 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
-        #endregion
-
         private void btnModify_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(), this);
+            if (dtgvImport.SelectedRows.Count == 0) return;
+            ImportReport importReport = ImportReportDAO.Instance.GetImportReport(int.Parse(dtgvImport.SelectedRows[0].Cells["id"].Value.ToString()));
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(importReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+        #endregion
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {

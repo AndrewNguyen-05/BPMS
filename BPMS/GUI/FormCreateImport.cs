@@ -49,7 +49,13 @@ namespace BPMS.GUI
         #endregion
         private void LoadImportReportInformation()
         {
-            cbPublisher.SelectedIndex = cbPublisher.Items.IndexOf(CurrentImportReport.Publisher.Account);
+            foreach (DTO.Account acc in CurrentPublisherList) 
+            {
+                if (acc.id == CurrentImportReport.Publisher.Account.id)
+                {
+                    cbPublisher.SelectedIndex = CurrentPublisherList.IndexOf(acc); break;
+                }
+            }
             txbDeliveryPerson.Text = CurrentImportReport.DeliveryPerson;
             txbUnitLeader.Text = CurrentImportReport.UnitLeader;
             dtpCreateDate.Value = CurrentImportReport.ImportDate;
