@@ -38,8 +38,16 @@ namespace BPMS.DAO
         public dynamic GetImportReports()
         {
             var result = db.ImportReports.Select(r => new {r.id, r.Publisher.Account.DisplayName, r.ImportDate, r.DeliveryPerson, r.UnitLeader }).ToList();
-
             return result;
+        }
+
+        public List<ImportReportDetail> GetImportDetail(ImportReport currentir)
+        {
+            var list = from ird in db.ImportReportDetails
+                       join ir in db.ImportReports on ird.idImport equals ir.id
+                       where ir.id == currentir.id
+                       select ird;
+            return list.ToList();
         }
     }
 }

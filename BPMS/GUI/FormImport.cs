@@ -74,5 +74,16 @@ namespace BPMS.GUI
             InnerFormNavigating?.Invoke(this, navigationE);
         }
         #endregion
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

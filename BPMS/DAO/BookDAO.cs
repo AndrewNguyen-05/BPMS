@@ -47,5 +47,13 @@ namespace BPMS.DAO
                        select bk;
             return book.First();
         }
+
+        public Book GetBookById(int id)
+        {
+            var book = from bk in db.Books
+                       where bk.id == id
+                       select bk;
+            return book.First();
+        }
     }
 }

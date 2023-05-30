@@ -18,6 +18,7 @@ namespace BPMS.GUI
     public partial class FormCreateImport : Form
     {
         bool IsAddMode = false;
+        ImportReport CurrentImportReport = null;
         List<DTO.Account> CurrentPublisherList = PublisherDAO.Instance.GetPublisherAccountList();
         List<DTO.Book> CurrentBookList = BookDAO.Instance.GetBookList();
         public FormCreateImport()
@@ -27,12 +28,42 @@ namespace BPMS.GUI
             cbPublisher.DisplayMember = "DisplayName";
             cbBook.DataSource = CurrentBookList;
             cbBook.DisplayMember = "name";
+            CurrentImportReport = null;
         }
+
+        public FormCreateImport(ImportReport ir)
+        {
+            InitializeComponent();
+            cbPublisher.DataSource = CurrentPublisherList;
+            cbPublisher.DisplayMember = "DisplayName";
+            cbBook.DataSource = CurrentBookList;
+            cbBook.DisplayMember = "name";
+            CurrentImportReport = ir;
+            LoadImportReportInformation();
+        }
+
 
         #region Handler
         public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
         public event InnerFormNavigatingHandler NavigateBack;
         #endregion
+        private void LoadImportReportInformation()
+        {
+            cbPublisher.SelectedIndex = cbPublisher.Items.IndexOf(CurrentImportReport.Publisher.Account);
+            txbDeliveryPerson.Text = CurrentImportReport.DeliveryPerson;
+            txbUnitLeader.Text = CurrentImportReport.UnitLeader;
+            dtpCreateDate.Value = CurrentImportReport.ImportDate;
+
+            List<ImportReportDetail> detail = ImportReportDAO.Instance.GetImportDetail(CurrentImportReport);
+            foreach (ImportReportDetail ird in detail)
+            {
+                Book currentBook = BookDAO.Instance.GetBookById(ird.idBook);
+                cbBook.SelectedIndex = cbBook.Items.IndexOf(currentBook);
+                txbAuthor.Text = currentBook.author;
+                nudQuantity.Value = ird.quantity;
+                txbQuality.Text = 
+            }
+        }
         private void UpdateTotalPrice()
         {
             double total = 0;
