@@ -91,10 +91,12 @@ namespace BPMS.GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.dtgvImport.SelectedRows.Count > 0)
+            foreach (DataGridViewRow dtgvr in dtgvImport.SelectedRows)
             {
-                dtgvImport.Rows.RemoveAt(this.dtgvImport.SelectedRows[0].Index);
+                int id = int.Parse(dtgvImport.SelectedRows[0].Cells["id"].Value.ToString());
+                ImportReportDAO.Instance.DeleteImportReport(id);
             }
+            LoadData();
         }
         #endregion
 

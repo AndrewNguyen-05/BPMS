@@ -65,12 +65,25 @@ namespace BPMS.DAO
 
         public void RemoveAllDetailInImportReport(int id)
         {
-                var list = from ird in db.ImportReportDetails
-                           where ird.idImport == id
-                           select ird;
+            var list = from ird in db.ImportReportDetails
+                        where ird.idImport == id
+                        select ird;
             foreach (ImportReportDetail item in list)
             {
                 db.ImportReportDetails.Remove(item);
+            }
+            db.SaveChanges();
+        }
+
+        public void DeleteImportReport(int id)
+        {
+            RemoveAllDetailInImportReport(id);
+            var item = from ir in db.ImportReports
+                       where ir.id == id
+                       select ir;
+            if (item != null)
+            {
+                db.ImportReports.Remove(item.First());
             }
             db.SaveChanges();
         }
