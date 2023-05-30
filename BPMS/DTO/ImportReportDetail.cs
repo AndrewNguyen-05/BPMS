@@ -18,6 +18,7 @@ namespace BPMS.DTO
         public int idBook { get; set; }
         public int idImport { get; set; }
         public int quantity { get; set; }
+        public string quality { get; set; }
     
         public virtual Book Book { get; set; }
         public virtual ImportReport ImportReport { get; set; }
