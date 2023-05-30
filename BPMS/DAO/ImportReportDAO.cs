@@ -23,20 +23,21 @@ namespace BPMS.DAO
             set { instance = value; }
         }
 
-        public int CreateImportReport(ImportReport ir)
+        public int CreateImportReport(ImportReport ir, bool isUpdate)
         {
             db.ImportReports.AddOrUpdate(ir);
             db.SaveChanges();
             db.Entry(ir).Reference(c => c.Publisher).Load();
-            return db.ImportReports.ToList().Last().id;
+            return (isUpdate ? ir.id : db.ImportReports.ToList().Last().id);
             
         }
-       
+
         public void CreateImportReportDetail(ImportReportDetail ird)
         {
             db.ImportReportDetails.Add(ird);
             db.SaveChanges();
             db.Entry(ird).Reference(c => c.ImportReport).Load();
+            db.Entry(ird).Reference(c => c.Book).Load();
         }
 
         public dynamic GetImportReports()

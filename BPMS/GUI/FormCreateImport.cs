@@ -117,6 +117,7 @@ namespace BPMS.GUI
             foreach (DataGridViewRow dtgvr in dtgvBookList.SelectedRows)
             {
                 dtgvr.Cells["BookClm"].Value = selectedBook.name;
+                dtgvr.Cells["BookClm"].Tag = selectedBook;
                 dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
                 dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
                 dtgvr.Cells["QualityClm"].Value = txbQuality.Text;
@@ -160,12 +161,13 @@ namespace BPMS.GUI
             importReport.UnitLeader = txbUnitLeader.Text;
 
             importReport.TotalPrice = double.Parse(txbTotalPrice.Text);
-            int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
+            int idImport = ImportReportDAO.Instance.CreateImportReport(importReport, CurrentImportReport != null);
             ImportReportDAO.Instance.RemoveAllDetailInImportReport(importReport.id);
             foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
                 ImportReportDetail importReportDetail = new ImportReportDetail();
-                importReportDetail.idBook = BookDAO.Instance.GetBookByName(dtgvr.Cells["BookClm"].Value.ToString()).id;
+                Book currentBook = dtgvr.Cells["BookClm"].Tag as Book;
+                importReportDetail.idBook = currentBook.id;
                 importReportDetail.idImport = idImport; 
                 importReportDetail.quantity = int.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
                 importReportDetail.quality = dtgvr.Cells["QualityClm"].Value.ToString();
