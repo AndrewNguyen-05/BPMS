@@ -41,7 +41,6 @@ namespace BPMS.GUI
             cbBook.DisplayMember = "name";
             CurrentImportReport = ir;
             LoadImportReportInformation();
-            
         }
 
 
@@ -51,9 +50,10 @@ namespace BPMS.GUI
         #endregion
         private void LoadImportReportInformation()
         {
+            int id = CurrentImportReport.Publisher.Account.id;
             foreach (DTO.Account acc in CurrentPublisherList) 
             {
-                if (acc.id == CurrentImportReport.Publisher.Account.id)
+                if (acc.id == id)
                 {
                     cbPublisher.SelectedIndex = CurrentPublisherList.IndexOf(acc); break;
                 }
@@ -152,29 +152,26 @@ namespace BPMS.GUI
                 importReport = CurrentImportReport;
             }
             if (cbPublisher.SelectedItem == null) return;
+
             Account account = cbPublisher.SelectedItem as Account; 
             importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(account.UserName);
             importReport.DeliveryPerson = txbDeliveryPerson.Text;
             importReport.ImportDate = dtpCreateDate.Value;
             importReport.UnitLeader = txbUnitLeader.Text;
-            if(!double.TryParse(txbTotalPrice.Text, out double totalPrice))
-            {
-                System.Windows.Forms.MessageBox.Show("Lỗi! Tổng giá tiền không đúng định dạng!", "Thông báo lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return;
-            }
-            Book selectedBook = cbBook.SelectedItem as Book;
+
             importReport.TotalPrice = double.Parse(txbTotalPrice.Text);
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
             ImportReportDAO.Instance.RemoveAllDetailInImportReport(importReport.id);
             foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
                 ImportReportDetail importReportDetail = new ImportReportDetail();
-                importReportDetail.idBook = selectedBook.id;
-                importReportDetail.idImport = idImport;
-                importReportDetail.quantity = (int)nudQuantity.Value;
-                importReportDetail.quality = txbQuality.Text;
+                importReportDetail.idBook = BookDAO.Instance.GetBookByName(dtgvr.Cells["BookClm"].Value.ToString()).id;
+                importReportDetail.idImport = idImport; 
+                importReportDetail.quantity = int.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
+                importReportDetail.quality = dtgvr.Cells["QualityClm"].Value.ToString();
                 ImportReportDAO.Instance.CreateImportReportDetail(importReportDetail);
             }
+
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormImport(), this);
             NavigateBack?.Invoke(this, navigationE);
         }

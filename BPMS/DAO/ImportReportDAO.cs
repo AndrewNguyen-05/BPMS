@@ -27,6 +27,7 @@ namespace BPMS.DAO
         {
             db.ImportReports.AddOrUpdate(ir);
             db.SaveChanges();
+            db.Entry(ir).Reference(c => c.Publisher).Load();
             return db.ImportReports.ToList().Last().id;
             
         }
@@ -35,6 +36,7 @@ namespace BPMS.DAO
         {
             db.ImportReportDetails.Add(ird);
             db.SaveChanges();
+            db.Entry(ird).Reference(c => c.ImportReport).Load();
         }
 
         public dynamic GetImportReports()

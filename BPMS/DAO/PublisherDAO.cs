@@ -27,7 +27,7 @@ namespace BPMS.DAO
             
             var matchedPublisher = from pub in db.Publishers
                                    join acc in db.Accounts on pub.idAccount equals acc.id
-                                   where acc.UserName == publisherName || acc.DisplayName == publisherName
+                                   where acc.UserName == publisherName
                                    select pub.id;
             if(matchedPublisher.Count() == 0 ) 
             {
