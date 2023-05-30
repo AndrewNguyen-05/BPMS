@@ -41,6 +41,7 @@ namespace BPMS.GUI
             cbBook.DisplayMember = "name";
             CurrentImportReport = ir;
             LoadImportReportInformation();
+            this.Text = "Modify Import";
         }
 
 
