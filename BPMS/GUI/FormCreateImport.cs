@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
 using BPMS.DAO;
 using System.Windows.Controls;
+using System.Windows.Media.Media3D;
 
 namespace BPMS.GUI
 {
@@ -40,6 +41,7 @@ namespace BPMS.GUI
             cbBook.DisplayMember = "name";
             CurrentImportReport = ir;
             LoadImportReportInformation();
+            
         }
 
 
@@ -67,7 +69,8 @@ namespace BPMS.GUI
                 cbBook.SelectedIndex = cbBook.Items.IndexOf(currentBook);
                 txbAuthor.Text = currentBook.author;
                 nudQuantity.Value = ird.quantity;
-                txbQuality.Text = ird.quality; 
+                txbQuality.Text = ird.quality;
+                btnAdd_Click(null, null);
             }
         }
         private void UpdateTotalPrice()
@@ -139,7 +142,15 @@ namespace BPMS.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            ImportReport importReport = new ImportReport();
+            ImportReport importReport;
+            if (CurrentImportReport == null)
+            {
+                importReport = new ImportReport();
+            }
+            else
+            {
+                importReport = CurrentImportReport;
+            }
             if (cbPublisher.SelectedItem == null) return;
             Account account = cbPublisher.SelectedItem as Account; 
             importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(account.UserName);
@@ -152,8 +163,9 @@ namespace BPMS.GUI
                 return;
             }
             Book selectedBook = cbBook.SelectedItem as Book;
-            importReport.TotalPrice = double.Parse(txbTotalPrice.Text); 
+            importReport.TotalPrice = double.Parse(txbTotalPrice.Text);
             int idImport = ImportReportDAO.Instance.CreateImportReport(importReport);
+            ImportReportDAO.Instance.RemoveAllDetailInImportReport(importReport.id);
             foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
                 ImportReportDetail importReportDetail = new ImportReportDetail();

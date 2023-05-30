@@ -1,7 +1,9 @@
 ﻿using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,12 +25,12 @@ namespace BPMS.DAO
 
         public int CreateImportReport(ImportReport ir)
         {
-            db.ImportReports.Add(ir);
+            db.ImportReports.AddOrUpdate(ir);
             db.SaveChanges();
             return db.ImportReports.ToList().Last().id;
             
         }
-
+       
         public void CreateImportReportDetail(ImportReportDetail ird)
         {
             db.ImportReportDetails.Add(ird);
@@ -56,6 +58,18 @@ namespace BPMS.DAO
                        where ir.id == id
                        select ir;
             return list.FirstOrDefault();
+        }
+
+        public void RemoveAllDetailInImportReport(int id)
+        {
+                var list = from ird in db.ImportReportDetails
+                           where ird.idImport == id
+                           select ird;
+            foreach (ImportReportDetail item in list)
+            {
+                db.ImportReportDetails.Remove(item);
+            }
+            db.SaveChanges();
         }
     }
 }
