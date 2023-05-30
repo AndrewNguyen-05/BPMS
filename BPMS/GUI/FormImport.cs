@@ -24,10 +24,18 @@ namespace BPMS.GUI
             LoadData();
 
             #region Border form
-            //Button
-            Guna2Elipse elipse = new Guna2Elipse();
-            elipse.TargetControl = btnCreate;
-            elipse.BorderRadius = 25;
+            //Buttons
+            Guna2Elipse elipse_create = new Guna2Elipse();
+            elipse_create.TargetControl = btnCreate;
+            elipse_create.BorderRadius = 25;
+
+            Guna2Elipse elipse_modify = new Guna2Elipse();
+            elipse_modify.TargetControl = btnModify;
+            elipse_modify.BorderRadius = 25;
+
+            Guna2Elipse elipse_del = new Guna2Elipse();
+            elipse_del.TargetControl = btnDelete;
+            elipse_del.BorderRadius = 25;
 
             //Dtgv
             Guna2Elipse elipse_dtgv = new Guna2Elipse();
@@ -80,12 +88,16 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateImport(importReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dtgvImport.SelectedRows.Count > 0)
+            {
+                dtgvImport.Rows.RemoveAt(this.dtgvImport.SelectedRows[0].Index);
+            }
+        }
         #endregion
 
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
