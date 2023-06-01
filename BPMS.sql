@@ -59,15 +59,30 @@ CREATE TABLE Agency
 )
 GO
 
+CREATE TABLE Bill
+(
+	id INT IDENTITY PRIMARY KEY,
+	idReceiver INT NOT NULL,
+	idSender INT NOT NULL,
+	ReceiptDate DATETIME NOT NULL DEFAULT GETDATE(),
+	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	isPaid INT, --1: đã trả, 0: chưa trả 
+	isReceived INT, --1: đã nhận, 0: chưa nhận 
+	FOREIGN KEY (idReceiver) REFERENCES dbo.Account(id),
+	FOREIGN KEY (idSender) REFERENCES dbo.Account(id)
+)
+GO
 
 CREATE TABLE ExportReport
 (
 	id INT IDENTITY PRIMARY KEY,
 	idAgency INT NOT NULL,
+	idBill INT,
 	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
 	ExportDate DATETIME NOT NULL DEFAULT GETDATE(),
 	TotalPrice FLOAT NOT NULL DEFAULT 0,
-	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id)
+	FOREIGN KEY (idAgency) REFERENCES dbo.Agency(id),
+	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id)
 )
 GO
 
@@ -90,11 +105,13 @@ CREATE TABLE ImportReport
 (
 	id INT IDENTITY PRIMARY KEY,
 	idPublisher INT NOT NULL,
+	idBill INT,
 	DeliveryPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người giao',
 	ImportDate DATETIME NOT NULL DEFAULT GETDATE(),
 	UnitLeader NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thủ trưởng',
 	TotalPrice FLOAT NOT NULL DEFAULT 0,
-	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
+	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id),
+	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id)
 )
 GO
 
@@ -111,19 +128,6 @@ CREATE TABLE ImportReportDetail
 GO
 
 
-CREATE TABLE Bill
-(
-	id INT IDENTITY PRIMARY KEY,
-	idReceiver INT NOT NULL,
-	idSender INT NOT NULL,
-	ReceiptDate DATETIME NOT NULL DEFAULT GETDATE(),
-	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
-	isPaid INT, --1: đã trả, 0: chưa trả 
-	isReceived INT, --1: đã nhận, 0: chưa nhận 
-	FOREIGN KEY (idReceiver) REFERENCES dbo.Account(id),
-	FOREIGN KEY (idSender) REFERENCES dbo.Account(id)
-)
-GO
 
 INSERT INTO Book (name, type, author, price) VALUES (N'Nhà Giả Kim', 'Tiểu thuyết', N'Paulo Coelho', 50000)
 INSERT INTO Book (name, type, author, price) VALUES (N'Đắc nhân tâm', 'Self Help', N'Dale Carnegie', 75000)

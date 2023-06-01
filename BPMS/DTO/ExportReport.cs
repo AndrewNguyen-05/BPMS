@@ -22,11 +22,13 @@ namespace BPMS.DTO
     
         public int id { get; set; }
         public int idAgency { get; set; }
+        public Nullable<int> idBill { get; set; }
         public string ReceiptPerson { get; set; }
         public System.DateTime ExportDate { get; set; }
         public double TotalPrice { get; set; }
     
         public virtual Agency Agency { get; set; }
+        public virtual Bill Bill { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExportReportDetail> ExportReportDetails { get; set; }
     }

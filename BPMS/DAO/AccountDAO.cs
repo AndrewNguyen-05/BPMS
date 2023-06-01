@@ -21,6 +21,10 @@ namespace BPMS.DAO
             }
             set { instance = value; }
         }
+        public Account GetAccount(int Id)
+        {
+            return db.Accounts.Where(e => e.id == Id).FirstOrDefault();
+        }
         public Permissions GetAccountType(string userName)
         {
             var accountType = from acc in db.Accounts
