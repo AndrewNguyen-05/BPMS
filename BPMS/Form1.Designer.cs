@@ -34,6 +34,7 @@
             this.btnMainPage = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
             this.cbViewAs = new System.Windows.Forms.ComboBox();
+            this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.btnAnalytic = new FontAwesome.Sharp.IconButton();
             this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.btnExport = new FontAwesome.Sharp.IconButton();
@@ -47,7 +48,6 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogOut.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -120,6 +120,27 @@
             this.cbViewAs.TabIndex = 1;
             this.cbViewAs.Visible = false;
             this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
+            this.btnLogOut.IconColor = System.Drawing.Color.White;
+            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogOut.IconSize = 40;
+            this.btnLogOut.Location = new System.Drawing.Point(20, 72);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(238, 57);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "LOGOUT";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnAnalytic
             // 
@@ -310,26 +331,6 @@
             // 
             this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.White;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogOut.IconSize = 42;
-            this.btnLogOut.Location = new System.Drawing.Point(43, 59);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(192, 50);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "LOG OUT";
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // FormMainMenu
             // 
