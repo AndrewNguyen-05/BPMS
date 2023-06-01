@@ -42,7 +42,6 @@ namespace BPMS.GUI
             elipse_dtgv.TargetControl = dtgvImport;
             elipse_dtgv.BorderRadius = 15;
             #endregion
-
         }
 
         #region Handler
@@ -70,8 +69,6 @@ namespace BPMS.GUI
                     dtgvImport.Rows.Add((object[])row);
                 }
             }
-
-            
         }
         #endregion
 
@@ -99,7 +96,5 @@ namespace BPMS.GUI
             LoadData();
         }
         #endregion
-
-
     }
 }
