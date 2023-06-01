@@ -75,6 +75,7 @@ namespace BPMS
             public static Color color4 = Color.FromArgb(98, 0, 238);
             public static Color color5 = Color.FromArgb(17, 164, 35);
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color7 = Color.FromArgb(208, 0, 250);
         }
         #endregion
 
@@ -111,6 +112,7 @@ namespace BPMS
                 btnExport.Visible = true;
                 btnImport.Visible = true;
                 btnPayment.Visible = true;
+                btnAccount.Visible = true;
                 type = GetCbViewAsValue();
             }
             switch (type)
@@ -273,6 +275,15 @@ namespace BPMS
             }
             return null;
         }
+        private Form GetBtnAccount()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                return new FormAccount();
+            }
+            return null;
+        }
         #endregion
 
         #endregion
@@ -307,6 +318,11 @@ namespace BPMS
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(GetBtnAnalyticForm());
+        }
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color7);
+            OpenChildForm(GetBtnAccount());
         }
         #endregion
 
@@ -412,5 +428,6 @@ namespace BPMS
         #endregion
 
         #endregion
+
     }
 }

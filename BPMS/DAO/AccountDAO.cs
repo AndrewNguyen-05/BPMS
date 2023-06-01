@@ -21,6 +21,11 @@ namespace BPMS.DAO
             }
             set { instance = value; }
         }
+
+        public List<Account> GetListAccount()
+        {
+            return db.Accounts.ToList();
+        }
         public Account GetAccount(int Id)
         {
             return db.Accounts.Where(e => e.id == Id).FirstOrDefault();

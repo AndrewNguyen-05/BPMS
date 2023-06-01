@@ -34,6 +34,7 @@
             this.btnMainPage = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
             this.cbViewAs = new System.Windows.Forms.ComboBox();
+            this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.btnAnalytic = new FontAwesome.Sharp.IconButton();
             this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.btnExport = new FontAwesome.Sharp.IconButton();
@@ -47,7 +48,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnLogOut = new FontAwesome.Sharp.IconButton();
+            this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogOut.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -59,6 +60,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.panelMenu.Controls.Add(this.btnAccount);
             this.panelMenu.Controls.Add(this.btnMainPage);
             this.panelMenu.Controls.Add(this.panelLogOut);
             this.panelMenu.Controls.Add(this.btnAnalytic);
@@ -116,10 +118,30 @@
             "Agency"});
             this.cbViewAs.Location = new System.Drawing.Point(20, 22);
             this.cbViewAs.Name = "cbViewAs";
-            this.cbViewAs.Size = new System.Drawing.Size(238, 31);
+            this.cbViewAs.Size = new System.Drawing.Size(238, 27);
             this.cbViewAs.TabIndex = 1;
             this.cbViewAs.Visible = false;
             this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.White;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogOut.IconSize = 42;
+            this.btnLogOut.Location = new System.Drawing.Point(43, 59);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(192, 50);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "LOG OUT";
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnAnalytic
             // 
@@ -277,7 +299,7 @@
             this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -311,25 +333,28 @@
             this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
             // 
-            // btnLogOut
+            // btnAccount
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.White;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogOut.IconSize = 42;
-            this.btnLogOut.Location = new System.Drawing.Point(43, 59);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(192, 50);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "LOG OUT";
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.Location = new System.Drawing.Point(2, 529);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(275, 72);
+            this.btnAccount.TabIndex = 6;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Visible = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // FormMainMenu
             // 
@@ -376,6 +401,7 @@
         private System.Windows.Forms.ComboBox cbViewAs;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private FontAwesome.Sharp.IconButton btnLogOut;
+        private FontAwesome.Sharp.IconButton btnAccount;
     }
 }
 

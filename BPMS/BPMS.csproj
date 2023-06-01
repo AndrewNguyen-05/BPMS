@@ -148,6 +148,12 @@
     <Compile Include="GUI\Agency\FormAgencyPayment.Designer.cs">
       <DependentUpon>FormAgencyPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAccount.Designer.cs">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAnalytic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAccount.resx">
+      <DependentUpon>FormAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAnalytic.resx">
       <DependentUpon>FormAnalytic.cs</DependentUpon>
