@@ -50,9 +50,9 @@ namespace BPMS
             elipse_minimize.BorderRadius = 35;
 
             //Log out
-            //Guna2Elipse elipse_out = new Guna2Elipse();
-            //elipse_out.TargetControl = btnLogOut;
-            //elipse_out.BorderRadius = 4;
+            Guna2Elipse elipse_out = new Guna2Elipse();
+            elipse_out.TargetControl = btnLogOut;
+            elipse_out.BorderRadius = 35;
             #endregion
 
 
@@ -407,11 +407,10 @@ namespace BPMS
         {
             this.Hide();
         }
-        #endregion
 
 
         #endregion
 
-
+        #endregion
     }
 }
