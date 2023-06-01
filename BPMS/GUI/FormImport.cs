@@ -25,22 +25,22 @@ namespace BPMS.GUI
 
             #region Border form
             //Buttons
-            Guna2Elipse elipse_create = new Guna2Elipse();
-            elipse_create.TargetControl = btnCreate;
-            elipse_create.BorderRadius = 25;
+            //Guna2Elipse elipse_create = new Guna2Elipse();
+            //elipse_create.TargetControl = btnCreate;
+            //elipse_create.BorderRadius = 4;
 
-            Guna2Elipse elipse_modify = new Guna2Elipse();
-            elipse_modify.TargetControl = btnModify;
-            elipse_modify.BorderRadius = 25;
+            //Guna2Elipse elipse_modify = new Guna2Elipse();
+            //elipse_modify.TargetControl = btnModify;
+            //elipse_modify.BorderRadius = 4;
 
-            Guna2Elipse elipse_del = new Guna2Elipse();
-            elipse_del.TargetControl = btnDelete;
-            elipse_del.BorderRadius = 25;
+            //Guna2Elipse elipse_del = new Guna2Elipse();
+            //elipse_del.TargetControl = btnDelete;
+            //elipse_del.BorderRadius = 4;
 
             //Dtgv
             Guna2Elipse elipse_dtgv = new Guna2Elipse();
             elipse_dtgv.TargetControl = dtgvImport;
-            elipse_dtgv.BorderRadius = 15;
+            elipse_dtgv.BorderRadius = 4;
             #endregion
 
         }
