@@ -39,5 +39,13 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateAccount(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dtgvAccount.SelectedRows[0].Cells["clmId"].Value.ToString());
+            Account acc = AccountDAO.Instance.GetAccount(id);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateAccount(acc), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
     }
 }

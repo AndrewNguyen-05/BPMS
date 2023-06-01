@@ -88,7 +88,7 @@
             this.lblNewAccount.AutoSize = true;
             this.lblNewAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblNewAccount.Location = new System.Drawing.Point(428, 47);
+            this.lblNewAccount.Location = new System.Drawing.Point(415, 46);
             this.lblNewAccount.Name = "lblNewAccount";
             this.lblNewAccount.Size = new System.Drawing.Size(147, 23);
             this.lblNewAccount.TabIndex = 3;
@@ -137,7 +137,7 @@
             this.txbPassword.Location = new System.Drawing.Point(25, 111);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '\0';
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPassword.PlaceholderText = "Password";
             this.txbPassword.SelectedText = "";

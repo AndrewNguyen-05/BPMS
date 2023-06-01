@@ -2,6 +2,7 @@
 using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,10 @@ namespace BPMS.DAO
         public Account GetAccount(int Id)
         {
             return db.Accounts.Where(e => e.id == Id).FirstOrDefault();
+        }
+        public Account GetAccount(string userName)
+        {
+            return db.Accounts.Where(e => e.UserName == userName).FirstOrDefault();
         }
         public Permissions GetAccountType(string userName)
         {
@@ -61,6 +66,12 @@ namespace BPMS.DAO
                               where acc.UserName == userName
                               select acc.id;
             return AccountId.First();
+        }
+
+        public void CreateAccount(Account acc)
+        {
+            db.Accounts.AddOrUpdate(acc);
+            db.SaveChanges();
         }
     }
 }
