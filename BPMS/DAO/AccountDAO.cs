@@ -76,6 +76,22 @@ namespace BPMS.DAO
 
         public void DeleteAccount(Account acc)
         {
+            var tmp = from pub in db.Publishers
+                      where pub.idAccount == acc.id
+                      select pub;
+            if (tmp.Count() != 0) db.Publishers.Remove(tmp.First());
+
+            var tmp2 = from act in db.Accountants
+                      where act.idAccount == acc.id
+                      select act;
+            if (tmp2.Count() != 0) db.Accountants.Remove(tmp2.First());
+
+            var tmp3 = from agc in db.Agencies
+                       where agc.idAccount == acc.id
+                       select agc;
+            if (tmp3.Count() != 0)  db.Agencies.Remove(tmp3.First());
+
+            db.SaveChanges();
             db.Accounts.Remove(acc);
             db.SaveChanges();
         }
