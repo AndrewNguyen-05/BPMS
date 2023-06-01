@@ -80,6 +80,11 @@ namespace BPMS.GUI
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do you want to delete this export form?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             foreach (DataGridViewRow dtgvr in dtgvExport.SelectedRows)
             {
                 int id = int.Parse(dtgvExport.SelectedRows[0].Cells["id"].Value.ToString());

@@ -47,6 +47,7 @@ namespace BPMS.DAO
             return result;
         }
 
+
         public List<ImportReportDetail> GetImportDetail(ImportReport currentir)
         {
             var list = from ird in db.ImportReportDetails

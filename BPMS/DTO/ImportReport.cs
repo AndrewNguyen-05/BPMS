@@ -22,11 +22,13 @@ namespace BPMS.DTO
     
         public int id { get; set; }
         public int idPublisher { get; set; }
+        public Nullable<int> idBill { get; set; }
         public string DeliveryPerson { get; set; }
         public System.DateTime ImportDate { get; set; }
         public string UnitLeader { get; set; }
         public double TotalPrice { get; set; }
     
+        public virtual Bill Bill { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ImportReportDetail> ImportReportDetails { get; set; }
         public virtual Publisher Publisher { get; set; }

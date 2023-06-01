@@ -74,6 +74,7 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\AgencyDAO.cs" />
     <Compile Include="DAO\AnalyticDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BookDAO.cs" />
     <Compile Include="DAO\ExportReportDAO.cs" />
     <Compile Include="DAO\ImportReportDAO.cs" />
