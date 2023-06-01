@@ -13,6 +13,7 @@ using System.Windows.Media.TextFormatting;
 using BPMS.DAO;
 using System.Windows.Controls;
 using System.Windows.Media.Media3D;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BPMS.GUI
 {
@@ -49,10 +50,12 @@ namespace BPMS.GUI
         public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
         public event InnerFormNavigatingHandler NavigateBack;
         #endregion
+
+        #region Methods
         private void LoadImportReportInformation()
         {
             int id = CurrentImportReport.Publisher.Account.id;
-            foreach (DTO.Account acc in CurrentPublisherList) 
+            foreach (DTO.Account acc in CurrentPublisherList)
             {
                 if (acc.id == id)
                 {
@@ -70,19 +73,22 @@ namespace BPMS.GUI
                 cbBook.SelectedIndex = cbBook.Items.IndexOf(currentBook);
                 txbAuthor.Text = currentBook.author;
                 nudQuantity.Value = ird.quantity;
-                txbQuality.Text = ird.quality;
+                cbQuality.Text = ird.quality;
                 btnAdd_Click(null, null);
             }
         }
         private void UpdateTotalPrice()
         {
             double total = 0;
-            foreach(DataGridViewRow dtgvr in dtgvBookList.Rows)
+            foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
                 total += double.Parse(dtgvr.Cells["PriceClm"].Value as string);
             }
             txbTotalPrice.Text = total.ToString();
         }
+        #endregion
+
+        #region Events
         private void TempListDtgv_SelectionChanged(object sender, EventArgs e)
         {
             if (dtgvBookList.SelectedRows.Count == 0) return;
@@ -92,7 +98,7 @@ namespace BPMS.GUI
             cbBook.SelectedIndex = cbBook.Items.IndexOf(dtgvr.Cells["BookClm"].Tag);
             txbAuthor.Text = dtgvr.Cells["AuthorClm"].Value.ToString();
             nudQuantity.Value = decimal.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
-            txbQuality.Text = dtgvr.Cells["QualityClm"].Value.ToString();
+            cbQuality.Text = dtgvr.Cells["QualityClm"].Value.ToString();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -105,7 +111,7 @@ namespace BPMS.GUI
             tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
             tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
             tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
-            tmp.Cells["QualityClm"].Value = txbQuality.Text;
+            tmp.Cells["QualityClm"].Value = cbQuality.Text;
             double? bookprice = selectedBook.price * (double)nudQuantity.Value;
             tmp.Cells["PriceClm"].Value = bookprice.ToString();
             UpdateTotalPrice();
@@ -121,7 +127,7 @@ namespace BPMS.GUI
                 dtgvr.Cells["BookClm"].Tag = selectedBook;
                 dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
                 dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
-                dtgvr.Cells["QualityClm"].Value = txbQuality.Text;
+                dtgvr.Cells["QualityClm"].Value = cbQuality.Text;
                 double? bookprice = selectedBook.price * (double)nudQuantity.Value;
                 dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
             }
@@ -155,7 +161,7 @@ namespace BPMS.GUI
             }
             if (cbPublisher.SelectedItem == null) return;
 
-            Account account = cbPublisher.SelectedItem as Account; 
+            Account account = cbPublisher.SelectedItem as Account;
             importReport.idPublisher = PublisherDAO.Instance.GetPublisherID(account.UserName);
             importReport.DeliveryPerson = txbDeliveryPerson.Text;
             importReport.ImportDate = dtpCreateDate.Value;
@@ -169,7 +175,7 @@ namespace BPMS.GUI
                 ImportReportDetail importReportDetail = new ImportReportDetail();
                 Book currentBook = dtgvr.Cells["BookClm"].Tag as Book;
                 importReportDetail.idBook = currentBook.id;
-                importReportDetail.idImport = idImport; 
+                importReportDetail.idImport = idImport;
                 importReportDetail.quantity = int.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
                 importReportDetail.quality = dtgvr.Cells["QualityClm"].Value.ToString();
                 ImportReportDAO.Instance.CreateImportReportDetail(importReportDetail);
@@ -183,5 +189,7 @@ namespace BPMS.GUI
         {
             txbAuthor.Text = (cbBook.SelectedItem as Book).author;
         }
+        #endregion
+
     }
 }
