@@ -73,5 +73,11 @@ namespace BPMS.DAO
             db.Accounts.AddOrUpdate(acc);
             db.SaveChanges();
         }
+
+        public void DeleteAccount(Account acc)
+        {
+            db.Accounts.Remove(acc);
+            db.SaveChanges();
+        }
     }
 }

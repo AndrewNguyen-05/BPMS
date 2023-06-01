@@ -27,7 +27,7 @@ namespace BPMS
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        private int AccountId;
+        internal int AccountId;
         //Constructor
         public FormMainMenu(int accountId)
         {

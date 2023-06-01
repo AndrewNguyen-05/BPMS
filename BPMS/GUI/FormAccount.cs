@@ -47,5 +47,23 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateAccount(acc), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dtgvAccount.SelectedRows[0].Cells["clmId"].Value.ToString());
+            Control t = this;
+            while (t.GetType() != typeof(FormMainMenu))
+            {
+                t = t.Parent;
+            }
+            if (id == (t as FormMainMenu).AccountId)
+            {
+                MessageBox.Show("Can't delete current login account");
+                return;
+            }
+
+            Account acc = AccountDAO.Instance.GetAccount(id);
+            AccountDAO.Instance.DeleteAccount(acc);
+        }
     }
 }
