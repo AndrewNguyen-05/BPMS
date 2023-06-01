@@ -43,6 +43,7 @@ namespace BPMS.GUI
             {
                 return;
             }
+            Application.Exit();
         }
         #region Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

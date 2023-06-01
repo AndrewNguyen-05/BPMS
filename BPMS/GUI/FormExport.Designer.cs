@@ -49,6 +49,8 @@
             // 
             this.dtgvExport.AllowUserToAddRows = false;
             this.dtgvExport.AllowUserToDeleteRows = false;
+            this.dtgvExport.AllowUserToResizeColumns = false;
+            this.dtgvExport.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -62,8 +64,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvExport.ColumnHeadersHeight = 22;
-            this.dtgvExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvExport.ColumnHeadersHeight = 30;
             this.dtgvExport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DisplayName,
@@ -80,10 +81,12 @@
             this.dtgvExport.GridColor = System.Drawing.Color.RoyalBlue;
             this.dtgvExport.Location = new System.Drawing.Point(12, 120);
             this.dtgvExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvExport.MultiSelect = false;
             this.dtgvExport.Name = "dtgvExport";
             this.dtgvExport.ReadOnly = true;
             this.dtgvExport.RowHeadersVisible = false;
             this.dtgvExport.RowHeadersWidth = 62;
+            this.dtgvExport.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgvExport.RowTemplate.Height = 28;
             this.dtgvExport.Size = new System.Drawing.Size(1088, 434);
             this.dtgvExport.TabIndex = 3;
@@ -98,8 +101,8 @@
             this.dtgvExport.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvExport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvExport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvExport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvExport.ThemeStyle.HeaderStyle.Height = 22;
+            this.dtgvExport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgvExport.ThemeStyle.HeaderStyle.Height = 30;
             this.dtgvExport.ThemeStyle.ReadOnly = true;
             this.dtgvExport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
