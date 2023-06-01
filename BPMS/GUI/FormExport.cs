@@ -22,6 +22,7 @@ namespace BPMS.GUI
         {
             InitializeComponent();
             LoadData();
+
             #region Border form
             //Button
             Guna2Elipse elipse = new Guna2Elipse();
@@ -63,10 +64,32 @@ namespace BPMS.GUI
         }
         #endregion
 
+        #region Events
         private void btnCreate_Click(object sender, EventArgs e)
         {
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dtgvExport.SelectedRows.Count == 0) return;
+            ExportReport exportReport = ExportReportDAO.Instance.GetExportReport(int.Parse(dtgvExport.SelectedRows[0].Cells["id"].Value.ToString()));
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(exportReport), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dtgvr in dtgvExport.SelectedRows)
+            {
+                int id = int.Parse(dtgvExport.SelectedRows[0].Cells["id"].Value.ToString());
+                ExportReportDAO.Instance.DeleteExportReport(id);
+            }
+            LoadData();
+        }
+
+        #endregion
+
+
     }
 }
