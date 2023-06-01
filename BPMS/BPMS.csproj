@@ -160,6 +160,12 @@
     <Compile Include="GUI\FormAnalytic.Designer.cs">
       <DependentUpon>FormAnalytic.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCreateAccount.Designer.cs">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormCreateExport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAnalytic.resx">
       <DependentUpon>FormAnalytic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCreateAccount.resx">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCreateExport.resx">
       <DependentUpon>FormCreateExport.cs</DependentUpon>

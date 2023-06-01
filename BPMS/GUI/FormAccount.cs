@@ -21,6 +21,11 @@ namespace BPMS.GUI
             LoadData();
         }
 
+        #region Handler
+        public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
+        public event InnerFormNavigatingHandler InnerFormNavigating;
+        #endregion
+
         public void LoadData()
         {
             foreach (Account a in AccountDAO.Instance.GetListAccount())
@@ -29,5 +34,10 @@ namespace BPMS.GUI
             }
         }
 
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateAccount(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
     }
 }

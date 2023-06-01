@@ -280,10 +280,13 @@ namespace BPMS
             Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
             if (type == Permissions.Admin)
             {
-                return new FormAccount();
+                FormAccount formAccount = new FormAccount();
+                formAccount.InnerFormNavigating += FormAccount_InnerFormNavigating;
+                return formAccount;
             }
             return null;
         }
+
         #endregion
 
         #endregion
@@ -368,6 +371,22 @@ namespace BPMS
             formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
             OpenChildForm(formExport);
         }
+        private void FormAccount_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            FormCreateAccount formCreateAccount = e.NavigatingForm as FormCreateAccount;
+            formCreateAccount.NavigateBack += FormCreateAccount_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
+        }
+
+        private void FormCreateAccount_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnAccount, RGBColors.color5);
+            FormAccount formAccount = e.NavigatingForm as FormAccount;
+            formAccount.InnerFormNavigating += FormExport_InnerFormNavigating;
+            OpenChildForm(formAccount);
+        }
+
+
         #endregion
 
         #region Drag Form
