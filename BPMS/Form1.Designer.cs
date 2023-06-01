@@ -308,7 +308,7 @@
             // 
             // Elipse
             // 
-            this.Elipse.BorderRadius = 16;
+            this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
             // 
             // btnLogOut
@@ -321,6 +321,7 @@
             this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
             this.btnLogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogOut.IconSize = 42;
             this.btnLogOut.Location = new System.Drawing.Point(43, 59);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(192, 50);

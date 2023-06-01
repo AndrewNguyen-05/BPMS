@@ -1,5 +1,6 @@
 ﻿using BPMS.DAO;
 using BPMS.DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +20,21 @@ namespace BPMS.GUI
         public FormLogin()
         {
             InitializeComponent();
+
+            #region Border
+            //Login
+            Guna2Elipse elipse_login = new Guna2Elipse();
+            elipse_login.TargetControl = btnLogin;
+            elipse_login.BorderRadius = 18;
+            #endregion
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool result = AccountDAO.Instance.CheckPassword(txtUsername.Text, txtPassword.Text);
+            bool result = AccountDAO.Instance.CheckPassword(txbUsername.Text, txbPassword.Text);
             if (result)
             {
-                LoginAccount = AccountDAO.Instance.GetAccountId(txtUsername.Text);
+                LoginAccount = AccountDAO.Instance.GetAccountId(txbUsername.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -78,6 +86,7 @@ namespace BPMS.GUI
 
 
         #endregion
+
 
     }
 }
