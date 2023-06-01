@@ -16,6 +16,8 @@ namespace BPMS.GUI
         public FormCreateAccount()
         {
             InitializeComponent();
+            cbType.DataSource = Enum.GetValues(typeof(Permissions));
+            cbType.DisplayMember = "Name";
         }
 
         #region Handler
@@ -27,7 +29,6 @@ namespace BPMS.GUI
         private void btnCreate_Click(object sender, EventArgs e)
         {
             
-
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormAccount(), this);
             NavigateBack?.Invoke(this, navigationE);
         }

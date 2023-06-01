@@ -382,7 +382,7 @@ namespace BPMS
         {
             ActivateButton(btnAccount, RGBColors.color5);
             FormAccount formAccount = e.NavigatingForm as FormAccount;
-            formAccount.InnerFormNavigating += FormExport_InnerFormNavigating;
+            formAccount.InnerFormNavigating += FormAccount_InnerFormNavigating;
             OpenChildForm(formAccount);
         }
 
