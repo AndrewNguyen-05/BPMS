@@ -69,7 +69,7 @@ namespace BPMS.GUI
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvImport.ColumnHeadersHeight = 30;
+            this.dtgvImport.ColumnHeadersHeight = 35;
             this.dtgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DisplayName,
@@ -118,7 +118,7 @@ namespace BPMS.GUI
             this.dtgvImport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvImport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgvImport.ThemeStyle.HeaderStyle.Height = 30;
+            this.dtgvImport.ThemeStyle.HeaderStyle.Height = 35;
             this.dtgvImport.ThemeStyle.ReadOnly = true;
             this.dtgvImport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

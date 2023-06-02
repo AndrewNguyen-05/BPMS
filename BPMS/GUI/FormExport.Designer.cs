@@ -65,7 +65,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvExport.ColumnHeadersHeight = 30;
+            this.dtgvExport.ColumnHeadersHeight = 35;
             this.dtgvExport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DisplayName,
@@ -105,7 +105,7 @@
             this.dtgvExport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvExport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgvExport.ThemeStyle.HeaderStyle.Height = 30;
+            this.dtgvExport.ThemeStyle.HeaderStyle.Height = 35;
             this.dtgvExport.ThemeStyle.ReadOnly = true;
             this.dtgvExport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
