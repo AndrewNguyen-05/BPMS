@@ -159,7 +159,7 @@
             this.txbReceiver.BorderColor = System.Drawing.Color.Black;
             this.txbReceiver.BorderRadius = 8;
             this.txbReceiver.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbReceiver.DefaultText = "";
+            this.txbReceiver.DefaultText = "Hoàng Đức B";
             this.txbReceiver.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbReceiver.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbReceiver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -185,7 +185,7 @@
             this.txbUsername.BorderColor = System.Drawing.Color.Black;
             this.txbUsername.BorderRadius = 8;
             this.txbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUsername.DefaultText = "";
+            this.txbUsername.DefaultText = "Nguyễn Văn A";
             this.txbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
