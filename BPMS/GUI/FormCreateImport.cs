@@ -107,14 +107,35 @@ namespace BPMS.GUI
             IsAddMode = false;
             DataGridViewRow tmp = dtgvBookList.Rows[dtgvBookList.Rows.Count - 1];
             Book selectedBook = cbBook.SelectedItem as Book;
-            tmp.Cells["BookClm"].Value = selectedBook.name;
-            tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
-            tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
-            tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
-            tmp.Cells["QualityClm"].Value = cbQuality.Text;
-            double? bookprice = selectedBook.price * (double)nudQuantity.Value;
-            tmp.Cells["PriceClm"].Value = bookprice.ToString();
-            UpdateTotalPrice();
+
+            bool isUpdate = false;
+            foreach(DataGridViewRow row in dtgvBookList.Rows)
+            {
+                if (row.Cells["BookClm"].Value == selectedBook.name)
+                {
+                    isUpdate = true;
+                    int quantity = int.Parse(row.Cells["QuantityClm"].Value as string) + (int)nudQuantity.Value;
+                    row.Cells["QuantityClm"].Value = quantity.ToString();
+                    double? bookPrice = selectedBook.price * int.Parse(row.Cells["QuantityClm"].Value as string);
+                    row.Cells["PriceClm"].Value = bookPrice.ToString();
+                    dtgvBookList.Rows.Remove(tmp);
+
+                    UpdateTotalPrice();
+                    break;
+                }
+            }
+
+            if (!isUpdate)
+            {
+                tmp.Cells["BookClm"].Value = selectedBook.name;
+                tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
+                tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
+                tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+                tmp.Cells["QualityClm"].Value = cbQuality.Text;
+                double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+                tmp.Cells["PriceClm"].Value = bookprice.ToString();
+                UpdateTotalPrice();
+            }
         }
 
         private void btnModify_Click(object sender, EventArgs e)
