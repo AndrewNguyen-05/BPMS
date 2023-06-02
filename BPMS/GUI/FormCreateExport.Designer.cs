@@ -146,7 +146,7 @@
             this.SelectClm.MinimumWidth = 6;
             this.SelectClm.Name = "SelectClm";
             this.SelectClm.Visible = false;
-            this.SelectClm.Width = 71;
+            this.SelectClm.Width = 68;
             // 
             // cbBook
             // 
@@ -321,7 +321,7 @@
             this.btnCancel.Size = new System.Drawing.Size(160, 36);
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "CANCEL";
-            this.btnCancel.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 

@@ -386,6 +386,22 @@ namespace BPMS
             OpenChildForm(formAccount);
         }
 
+        private void FormPayment_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            FormCreateBill formCreateBill = e.NavigatingForm as FormCreateBill;
+            formCreateBill.NavigateBack += FormCreateBill_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
+        }
+
+        private void FormCreateBill_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnPayment, RGBColors.color5);
+            FormPayment formAccount = e.NavigatingForm as FormPayment;
+            formAccount.InnerFormNavigating += FormPayment_InnerFormNavigating;
+            OpenChildForm(formAccount);
+        }
+
+
 
         #endregion
 

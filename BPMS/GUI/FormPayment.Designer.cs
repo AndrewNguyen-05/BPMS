@@ -43,7 +43,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabImport = new System.Windows.Forms.TabPage();
-            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCreateImport = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +51,7 @@
             this.clmTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilled = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabExport = new System.Windows.Forms.TabPage();
+            this.btnCreateExport = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvExport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmIdExport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -77,17 +77,15 @@
             // 
             // tabPayment
             // 
-            this.tabPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabPayment.Controls.Add(this.tabImport);
             this.tabPayment.Controls.Add(this.tabExport);
             this.tabPayment.Controls.Add(this.tabBill);
+            this.tabPayment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPayment.ItemSize = new System.Drawing.Size(180, 40);
-            this.tabPayment.Location = new System.Drawing.Point(0, 36);
+            this.tabPayment.Location = new System.Drawing.Point(0, 0);
             this.tabPayment.Name = "tabPayment";
             this.tabPayment.SelectedIndex = 0;
-            this.tabPayment.Size = new System.Drawing.Size(1184, 614);
+            this.tabPayment.Size = new System.Drawing.Size(1194, 660);
             this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -111,7 +109,7 @@
             // 
             // tabImport
             // 
-            this.tabImport.Controls.Add(this.btnCreate);
+            this.tabImport.Controls.Add(this.btnCreateImport);
             this.tabImport.Controls.Add(this.dtgvImport);
             this.tabImport.Location = new System.Drawing.Point(4, 44);
             this.tabImport.Name = "tabImport";
@@ -121,26 +119,26 @@
             this.tabImport.Text = "Import";
             this.tabImport.UseVisualStyleBackColor = true;
             // 
-            // btnCreate
+            // btnCreateImport
             // 
-            this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.Animated = true;
-            this.btnCreate.BorderRadius = 4;
-            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.Location = new System.Drawing.Point(924, 5);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(245, 44);
-            this.btnCreate.TabIndex = 7;
-            this.btnCreate.Text = "Create bill";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnCreateImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateImport.Animated = true;
+            this.btnCreateImport.BorderRadius = 4;
+            this.btnCreateImport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateImport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateImport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateImport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreateImport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnCreateImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCreateImport.ForeColor = System.Drawing.Color.White;
+            this.btnCreateImport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateImport.Image")));
+            this.btnCreateImport.Location = new System.Drawing.Point(924, 5);
+            this.btnCreateImport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreateImport.Name = "btnCreateImport";
+            this.btnCreateImport.Size = new System.Drawing.Size(245, 44);
+            this.btnCreateImport.TabIndex = 7;
+            this.btnCreateImport.Text = "Create bill";
+            this.btnCreateImport.Click += new System.EventHandler(this.btnCreateImport_Click);
             // 
             // dtgvImport
             // 
@@ -248,15 +246,36 @@
             // 
             // tabExport
             // 
-            this.tabExport.Controls.Add(this.guna2Button1);
+            this.tabExport.Controls.Add(this.btnCreateExport);
             this.tabExport.Controls.Add(this.dtgvExport);
             this.tabExport.Location = new System.Drawing.Point(4, 44);
             this.tabExport.Name = "tabExport";
             this.tabExport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabExport.Size = new System.Drawing.Size(1176, 566);
+            this.tabExport.Size = new System.Drawing.Size(1186, 612);
             this.tabExport.TabIndex = 1;
             this.tabExport.Text = "Export";
             this.tabExport.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateExport
+            // 
+            this.btnCreateExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateExport.Animated = true;
+            this.btnCreateExport.BorderRadius = 4;
+            this.btnCreateExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreateExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnCreateExport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCreateExport.ForeColor = System.Drawing.Color.White;
+            this.btnCreateExport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateExport.Image")));
+            this.btnCreateExport.Location = new System.Drawing.Point(924, 5);
+            this.btnCreateExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreateExport.Name = "btnCreateExport";
+            this.btnCreateExport.Size = new System.Drawing.Size(245, 44);
+            this.btnCreateExport.TabIndex = 8;
+            this.btnCreateExport.Text = "Create bill";
+            this.btnCreateExport.Click += new System.EventHandler(this.btnCreateExport_Click);
             // 
             // dtgvExport
             // 
@@ -303,7 +322,7 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.dtgvExport.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgvExport.RowTemplate.Height = 32;
-            this.dtgvExport.Size = new System.Drawing.Size(1150, 460);
+            this.dtgvExport.Size = new System.Drawing.Size(1160, 506);
             this.dtgvExport.TabIndex = 3;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -486,26 +505,6 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 4;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(914, 5);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(245, 44);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Create bill";
-            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -551,7 +550,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private Guna.UI2.WinForms.Guna2Button btnCreate;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCreateImport;
+        private Guna.UI2.WinForms.Guna2Button btnCreateExport;
     }
 }

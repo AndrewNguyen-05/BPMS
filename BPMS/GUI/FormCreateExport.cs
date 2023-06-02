@@ -121,10 +121,10 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormExport(), this);
             NavigateBack?.Invoke(this, navigationE);
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormExport(), this);
+            NavigateBack?.Invoke(this, navigationE);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -202,5 +202,7 @@ namespace BPMS.GUI
         }
 
         #endregion
+
+        
     }
 }

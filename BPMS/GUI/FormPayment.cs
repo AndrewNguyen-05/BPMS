@@ -92,14 +92,21 @@ namespace BPMS.GUI
             }
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+
+        private void btnCreateImport_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
+
+
+        private void btnCreateExport_Click(object sender, EventArgs e)
+        {
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
 
         #endregion
-
 
 
 
