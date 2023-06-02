@@ -25,6 +25,7 @@ namespace BPMS.DTO
         public double debt { get; set; }
         public Nullable<int> BookReceived { get; set; }
         public Nullable<int> PaidMoney { get; set; }
+        public Nullable<int> isHidden { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

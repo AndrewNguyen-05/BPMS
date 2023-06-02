@@ -41,6 +41,7 @@ namespace BPMS.DAO
         {
             var allPublisher = from pb in db.Publishers
                                join acc in db.Accounts on pb.idAccount equals acc.id
+                               where pb.isHidden == 0
                                select acc;
             return allPublisher.ToList();
         }

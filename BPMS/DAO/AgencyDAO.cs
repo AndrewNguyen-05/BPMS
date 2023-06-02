@@ -40,6 +40,7 @@ namespace BPMS.DAO
         {
             var allAgency = from agen in db.Agencies
                                join acc in db.Accounts on agen.idAccount equals acc.id
+                               where agen.isHidden == 0
                                select acc;
             return allAgency.ToList();
         }
