@@ -109,10 +109,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(619, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(614, 27);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(656, 183);
+            this.pictureBox1.Size = new System.Drawing.Size(660, 244);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -129,10 +129,10 @@
             this.ContainerControl.Controls.Add(this.controlMinimize);
             this.ContainerControl.Controls.Add(this.controlClose);
             this.ContainerControl.FillColor = System.Drawing.Color.Transparent;
-            this.ContainerControl.Location = new System.Drawing.Point(1097, 11);
-            this.ContainerControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ContainerControl.Location = new System.Drawing.Point(1144, 0);
+            this.ContainerControl.Margin = new System.Windows.Forms.Padding(4);
             this.ContainerControl.Name = "ContainerControl";
-            this.ContainerControl.Size = new System.Drawing.Size(188, 30);
+            this.ContainerControl.Size = new System.Drawing.Size(151, 30);
             this.ContainerControl.TabIndex = 11;
             this.ContainerControl.UseTransparentBackground = true;
             this.ContainerControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ContainerControl_MouseDown);
@@ -144,8 +144,8 @@
             this.controlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlMinimize.IconColor = System.Drawing.Color.Black;
-            this.controlMinimize.Location = new System.Drawing.Point(68, 0);
-            this.controlMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlMinimize.Location = new System.Drawing.Point(31, 0);
+            this.controlMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.controlMinimize.Name = "controlMinimize";
             this.controlMinimize.Size = new System.Drawing.Size(60, 30);
             this.controlMinimize.TabIndex = 1;
@@ -158,8 +158,8 @@
             this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlClose.ForeColor = System.Drawing.Color.Black;
             this.controlClose.IconColor = System.Drawing.Color.Black;
-            this.controlClose.Location = new System.Drawing.Point(128, 0);
-            this.controlClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlClose.Location = new System.Drawing.Point(91, 0);
+            this.controlClose.Margin = new System.Windows.Forms.Padding(4);
             this.controlClose.Name = "controlClose";
             this.controlClose.Size = new System.Drawing.Size(60, 30);
             this.controlClose.TabIndex = 0;
@@ -171,9 +171,9 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(595, 650);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(551, 650);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 12;
             this.guna2PictureBox1.TabStop = false;
@@ -227,6 +227,7 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

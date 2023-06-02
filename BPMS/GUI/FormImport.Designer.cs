@@ -43,7 +43,6 @@ namespace BPMS.GUI
             this.UnitLeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.labelImport = new System.Windows.Forms.Label();
             this.btnModify = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -176,17 +175,6 @@ namespace BPMS.GUI
             // 
             this.guna2Elipse1.BorderRadius = 2;
             // 
-            // labelImport
-            // 
-            this.labelImport.AutoSize = true;
-            this.labelImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.labelImport.Location = new System.Drawing.Point(17, 25);
-            this.labelImport.Name = "labelImport";
-            this.labelImport.Size = new System.Drawing.Size(185, 30);
-            this.labelImport.TabIndex = 2;
-            this.labelImport.Text = "Import Reports";
-            // 
             // btnModify
             // 
             this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -241,7 +229,6 @@ namespace BPMS.GUI
             this.ClientSize = new System.Drawing.Size(1124, 572);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnModify);
-            this.Controls.Add(this.labelImport);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dtgvImport);
             this.DoubleBuffered = true;
@@ -250,7 +237,6 @@ namespace BPMS.GUI
             this.Text = "Import";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -264,7 +250,6 @@ namespace BPMS.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryPerson;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitLeader;
-        private System.Windows.Forms.Label labelImport;
         private Guna.UI2.WinForms.Guna2Button btnModify;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
     }
