@@ -72,7 +72,7 @@
             this.panelMenu.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(279, 741);
+            this.panelMenu.Size = new System.Drawing.Size(279, 791);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
@@ -126,7 +126,7 @@
             this.panelLogOut.Controls.Add(this.cbViewAs);
             this.panelLogOut.Controls.Add(this.btnLogOut);
             this.panelLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLogOut.Location = new System.Drawing.Point(0, 600);
+            this.panelLogOut.Location = new System.Drawing.Point(0, 650);
             this.panelLogOut.Name = "panelLogOut";
             this.panelLogOut.Size = new System.Drawing.Size(279, 141);
             this.panelLogOut.TabIndex = 5;
@@ -141,7 +141,7 @@
             "Agency"});
             this.cbViewAs.Location = new System.Drawing.Point(20, 22);
             this.cbViewAs.Name = "cbViewAs";
-            this.cbViewAs.Size = new System.Drawing.Size(238, 31);
+            this.cbViewAs.Size = new System.Drawing.Size(238, 27);
             this.cbViewAs.TabIndex = 1;
             this.cbViewAs.Visible = false;
             this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
@@ -287,7 +287,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(279, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1136, 120);
+            this.panelTitleBar.Size = new System.Drawing.Size(1212, 84);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -297,7 +297,7 @@
             this.controlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.controlMinimize.FillColor = System.Drawing.Color.White;
             this.controlMinimize.IconColor = System.Drawing.Color.Black;
-            this.controlMinimize.Location = new System.Drawing.Point(1037, 3);
+            this.controlMinimize.Location = new System.Drawing.Point(1113, 3);
             this.controlMinimize.Name = "controlMinimize";
             this.controlMinimize.Size = new System.Drawing.Size(45, 40);
             this.controlMinimize.TabIndex = 3;
@@ -310,7 +310,7 @@
             this.controlClose.FillColor = System.Drawing.Color.White;
             this.controlClose.ForeColor = System.Drawing.Color.Black;
             this.controlClose.IconColor = System.Drawing.Color.Black;
-            this.controlClose.Location = new System.Drawing.Point(1088, 3);
+            this.controlClose.Location = new System.Drawing.Point(1164, 3);
             this.controlClose.Name = "controlClose";
             this.controlClose.Size = new System.Drawing.Size(45, 40);
             this.controlClose.TabIndex = 2;
@@ -320,10 +320,10 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.lblTitleChildForm.Location = new System.Drawing.Point(70, 42);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(68, 20);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -335,7 +335,7 @@
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 48;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(16, 31);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(16, 20);
             this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(48, 48);
@@ -346,9 +346,9 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.White;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(279, 120);
+            this.panelDesktop.Location = new System.Drawing.Point(279, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1136, 621);
+            this.panelDesktop.Size = new System.Drawing.Size(1212, 707);
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDesktop_MouseDown);
             // 
@@ -360,7 +360,7 @@
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1415, 741);
+            this.ClientSize = new System.Drawing.Size(1491, 791);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

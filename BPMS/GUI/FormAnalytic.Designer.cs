@@ -48,13 +48,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(167, 65);
+            this.chart1.Location = new System.Drawing.Point(148, 52);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(719, 231);
+            this.chart1.Size = new System.Drawing.Size(639, 185);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,13 +69,14 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(167, 302);
+            this.chart2.Location = new System.Drawing.Point(148, 242);
+            this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(719, 231);
+            this.chart2.Size = new System.Drawing.Size(639, 185);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart1";
             title2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,11 +86,12 @@
             // 
             // FormAnalytic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 565);
+            this.ClientSize = new System.Drawing.Size(1194, 660);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAnalytic";
             this.Text = "FormAnalytic";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

@@ -83,7 +83,7 @@
             this.tabPayment.Location = new System.Drawing.Point(0, 36);
             this.tabPayment.Name = "tabPayment";
             this.tabPayment.SelectedIndex = 0;
-            this.tabPayment.Size = new System.Drawing.Size(980, 406);
+            this.tabPayment.Size = new System.Drawing.Size(1184, 614);
             this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -111,8 +111,8 @@
             this.tabImport.Controls.Add(this.dtgvImport);
             this.tabImport.Location = new System.Drawing.Point(4, 44);
             this.tabImport.Name = "tabImport";
-            this.tabImport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabImport.Size = new System.Drawing.Size(972, 358);
+            this.tabImport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabImport.Size = new System.Drawing.Size(1176, 566);
             this.tabImport.TabIndex = 0;
             this.tabImport.Text = "Import";
             this.tabImport.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.Location = new System.Drawing.Point(720, 5);
+            this.btnCreate.Location = new System.Drawing.Point(924, 5);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(245, 44);
@@ -181,7 +181,7 @@
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
             this.dtgvImport.RowTemplate.Height = 28;
-            this.dtgvImport.Size = new System.Drawing.Size(959, 292);
+            this.dtgvImport.Size = new System.Drawing.Size(1163, 500);
             this.dtgvImport.TabIndex = 1;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -245,7 +245,7 @@
             this.tabExport.Controls.Add(this.dtgvExport);
             this.tabExport.Location = new System.Drawing.Point(4, 44);
             this.tabExport.Name = "tabExport";
-            this.tabExport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabExport.Padding = new System.Windows.Forms.Padding(3);
             this.tabExport.Size = new System.Drawing.Size(972, 358);
             this.tabExport.TabIndex = 1;
             this.tabExport.Text = "Export";
@@ -358,7 +358,7 @@
             this.tabBill.Controls.Add(this.dtgvBill);
             this.tabBill.Location = new System.Drawing.Point(4, 44);
             this.tabBill.Name = "tabBill";
-            this.tabBill.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabBill.Padding = new System.Windows.Forms.Padding(3);
             this.tabBill.Size = new System.Drawing.Size(972, 358);
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "Bill";
@@ -479,7 +479,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(990, 452);
+            this.ClientSize = new System.Drawing.Size(1194, 660);
             this.Controls.Add(this.tabPayment);
             this.Name = "FormPayment";
             this.Text = "Payment";

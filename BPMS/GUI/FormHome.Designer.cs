@@ -42,7 +42,7 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblTime.Location = new System.Drawing.Point(502, 338);
+            this.lblTime.Location = new System.Drawing.Point(604, 478);
             this.lblTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(3, 2);
@@ -53,10 +53,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(764, 316);
+            this.pictureBox1.Size = new System.Drawing.Size(919, 456);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1010, 497);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1212, 707);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // FormHome
@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1010, 497);
+            this.ClientSize = new System.Drawing.Size(1212, 707);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

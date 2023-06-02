@@ -79,7 +79,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvExport.GridColor = System.Drawing.Color.RoyalBlue;
-            this.dtgvExport.Location = new System.Drawing.Point(16, 91);
+            this.dtgvExport.Location = new System.Drawing.Point(14, 73);
             this.dtgvExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvExport.MultiSelect = false;
             this.dtgvExport.Name = "dtgvExport";
@@ -88,7 +88,7 @@
             this.dtgvExport.RowHeadersWidth = 62;
             this.dtgvExport.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgvExport.RowTemplate.Height = 28;
-            this.dtgvExport.Size = new System.Drawing.Size(1088, 434);
+            this.dtgvExport.Size = new System.Drawing.Size(1171, 555);
             this.dtgvExport.TabIndex = 3;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,10 +159,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(891, 15);
+            this.btnDelete.Location = new System.Drawing.Point(996, 12);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(207, 55);
+            this.btnDelete.Size = new System.Drawing.Size(184, 44);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -182,10 +182,10 @@
             this.btnModify.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
-            this.btnModify.Location = new System.Drawing.Point(678, 15);
+            this.btnModify.Location = new System.Drawing.Point(807, 12);
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(207, 55);
+            this.btnModify.Size = new System.Drawing.Size(184, 44);
             this.btnModify.TabIndex = 7;
             this.btnModify.Text = "Modify";
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
@@ -203,25 +203,26 @@
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.Location = new System.Drawing.Point(465, 15);
+            this.btnCreate.Location = new System.Drawing.Point(617, 12);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(207, 55);
+            this.btnCreate.Size = new System.Drawing.Size(184, 44);
             this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Create";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // FormExport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1114, 565);
+            this.ClientSize = new System.Drawing.Size(1194, 660);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dtgvExport);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormExport";
             this.Text = "Export";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvExport)).EndInit();
