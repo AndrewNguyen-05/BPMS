@@ -166,6 +166,12 @@
     <Compile Include="GUI\FormCreateAccount.Designer.cs">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormCreateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCreateBill.Designer.cs">
+      <DependentUpon>FormCreateBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormCreateExport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCreateAccount.resx">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCreateBill.resx">
+      <DependentUpon>FormCreateBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCreateExport.resx">
       <DependentUpon>FormCreateExport.cs</DependentUpon>

@@ -1,5 +1,8 @@
-﻿using BPMS.DAO;
+﻿using BPMS.Classes;
+using BPMS.DAO;
 using BPMS.DTO;
+using FontAwesome.Sharp;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,8 +11,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows.Forms;
+using System.Xml.Linq;
+
 
 namespace BPMS.GUI
 {
@@ -21,22 +25,12 @@ namespace BPMS.GUI
             tabPayment_SelectedIndexChanged(null, null);
         }
 
-        private void tabPayment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tabPayment.SelectedTab.Text == "Import")
-            {
-                LoadImportInfo();
-            }
-            else if (tabPayment.SelectedTab.Text == "Export")
-            {
-                LoadExportInfo();
-            }
-            else if (tabPayment.SelectedTab.Text == "Bill")
-            {
-                LoadBillInfo();
-            }
-        }
+        #region Handler
+        public delegate void InnerFormNavigatingHandler(object sender, NavigationEventArgs e);
+        public event InnerFormNavigatingHandler InnerFormNavigating;
+        #endregion
 
+        #region Methods
         private void LoadImportInfo()
         {
             List<ImportReport> listIr = BillDAO.Instance.GetListImportBill();
@@ -76,8 +70,38 @@ namespace BPMS.GUI
                                                     , AccountDAO.Instance.GetAccount(b.idReceiver).DisplayName
                                                     , b.ReceiptDate
                                                     , b.isPaid == 1 ? "yes" : "no"
-                                                    , b.isReceived == 1 ? "yes" : "no" }); 
+                                                    , b.isReceived == 1 ? "yes" : "no" });
             }
         }
+        #endregion
+
+        #region Events
+        private void tabPayment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabPayment.SelectedTab.Text == "Import")
+            {
+                LoadImportInfo();
+            }
+            else if (tabPayment.SelectedTab.Text == "Export")
+            {
+                LoadExportInfo();
+            }
+            else if (tabPayment.SelectedTab.Text == "Bill")
+            {
+                LoadBillInfo();
+            }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateExport(), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
+
+        #endregion
+
+
+
+
     }
 }
