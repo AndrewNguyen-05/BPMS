@@ -12,6 +12,7 @@ namespace BPMS.Classes
         Manager = 1,
         Accountant = 2,
         Publisher = 3,
-        Agency = 4
+        Agency = 4,
+        None = 5
     }
 }

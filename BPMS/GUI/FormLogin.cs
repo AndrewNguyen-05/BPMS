@@ -85,8 +85,21 @@ namespace BPMS.GUI
 
 
 
+
         #endregion
 
-
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.DialogResult == DialogResult.OK) return;
+            DialogResult result = MessageBox.Show("Do you want to exit the app?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.Cancel; 
+            }    
+        }
     }
 }
