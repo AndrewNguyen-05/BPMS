@@ -10,7 +10,8 @@ CREATE TABLE Book
 	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
 	type NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thể loại',
 	author NVARCHAR(100) NOT NULL DEFAULT N'Chưa có tác giả',
-	price FLOAT DEFAULT 0
+	price FLOAT DEFAULT 0,
+	isHidden INT DEFAULT 0
 )
 GO
 
@@ -22,7 +23,8 @@ CREATE TABLE Account
 	DisplayName NVARCHAR(100) NOT NULL DEFAULT N'Admin',
 	PassWord NVARCHAR(1000) NOT NULL DEFAULT 0,
 	type INT NOT NULL DEFAULT 0,
-	address NVARCHAR(100) NOT NULL DEFAULT N'Chưa có địa chỉ'
+	address NVARCHAR(100) NOT NULL DEFAULT N'Chưa có địa chỉ',
+	isHidden INT DEFAULT 0
 )
 GO
 
@@ -33,7 +35,8 @@ CREATE TABLE Publisher
 	idAccount INT NOT NULL,
 	AccountNumber NVARCHAR(100) NOT NULL DEFAULT N'Chưa có số tài khoản',
 	PhoneNumber NVARCHAR(100) NOT NULL DEFAULT N'Chưa có số điện thoại',
-	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id)
+	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id),
+	isHidden INT DEFAULT 0
 )
 GO
 
@@ -44,7 +47,8 @@ CREATE TABLE Accountant
 	idAccount INT NOT NULL,
 	AccountNumber NVARCHAR(100) NOT NULL DEFAULT N'Chưa có số tài khoản',
 	PhoneNumber NVARCHAR(100) NOT NULL DEFAULT N'Chưa có số điện thoại',
-	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id)
+	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id),
+	isHidden INT DEFAULT 0
 )
 GO
 
@@ -55,7 +59,8 @@ CREATE TABLE Agency
 	debt FLOAT NOT NULL DEFAULT 0,
 	BookReceived INT, --1: true, 0: false
 	PaidMoney INT, --1: true, 0: false
-	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id)
+	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id),
+	isHidden INT DEFAULT 0
 )
 GO
 

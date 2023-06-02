@@ -24,6 +24,7 @@ namespace BPMS.DTO
         public int idAccount { get; set; }
         public string AccountNumber { get; set; }
         public string PhoneNumber { get; set; }
+        public Nullable<int> isHidden { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

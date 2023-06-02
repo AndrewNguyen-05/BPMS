@@ -28,6 +28,7 @@ namespace BPMS.GUI
 
         public void LoadData()
         {
+            dtgvAccount.Rows.Clear();
             foreach (Account a in AccountDAO.Instance.GetListAccount())
             {
                 dtgvAccount.Rows.Add(new object[] { a.id, a.UserName, a.DisplayName, (Permissions) a.type, a.address });
@@ -64,6 +65,7 @@ namespace BPMS.GUI
 
             Account acc = AccountDAO.Instance.GetAccount(id);
             AccountDAO.Instance.DeleteAccount(acc);
+            LoadData();
         }
     }
 }

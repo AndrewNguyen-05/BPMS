@@ -30,6 +30,7 @@ namespace BPMS.DTO
         public string PassWord { get; set; }
         public int type { get; set; }
         public string address { get; set; }
+        public Nullable<int> isHidden { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accountant> Accountants { get; set; }

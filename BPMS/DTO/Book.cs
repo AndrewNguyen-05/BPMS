@@ -26,6 +26,7 @@ namespace BPMS.DTO
         public string type { get; set; }
         public string author { get; set; }
         public Nullable<double> price { get; set; }
+        public Nullable<int> isHidden { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExportReportDetail> ExportReportDetails { get; set; }
