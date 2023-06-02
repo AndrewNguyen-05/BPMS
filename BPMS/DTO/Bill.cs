@@ -24,8 +24,8 @@ namespace BPMS.DTO
         public int id { get; set; }
         public int idReceiver { get; set; }
         public int idSender { get; set; }
-        public System.DateTime ReceiptDate { get; set; }
-        public string ReceiptPerson { get; set; }
+        public System.DateTime CreateDate { get; set; }
+        public string CreatePerson { get; set; }
         public Nullable<int> isPaid { get; set; }
         public Nullable<int> isReceived { get; set; }
     

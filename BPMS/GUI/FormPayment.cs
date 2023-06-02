@@ -68,7 +68,7 @@ namespace BPMS.GUI
                 dtgvExport.Rows.Add(new object[] { b.id
                                                     , AccountDAO.Instance.GetAccount(b.idSender).DisplayName
                                                     , AccountDAO.Instance.GetAccount(b.idReceiver).DisplayName
-                                                    , b.ReceiptDate
+                                                    , b.CreateDate
                                                     , b.isPaid == 1 ? "yes" : "no"
                                                     , b.isReceived == 1 ? "yes" : "no" });
             }
@@ -92,7 +92,7 @@ namespace BPMS.GUI
             }
         }
 
-
+        #region Navigation
         private void btnCreateImport_Click(object sender, EventArgs e)
         {
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
@@ -108,7 +108,6 @@ namespace BPMS.GUI
 
         #endregion
 
-
-
+        #endregion
     }
 }

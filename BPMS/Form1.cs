@@ -253,7 +253,9 @@ namespace BPMS
             switch (type)
             {
                 case Permissions.Manager:
-                    return new FormPayment();
+                    FormPayment formPayment = new FormPayment();
+                    formPayment.InnerFormNavigating += FormPayment_InnerFormNavigating; 
+                    return formPayment;
                 case Permissions.Agency:
                     return new FormAgencyPayment();
                 case Permissions.Publisher:
@@ -261,6 +263,7 @@ namespace BPMS
             }
             return null;
         }
+
         private Form GetBtnAnalyticForm()
         {
             Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
@@ -366,7 +369,7 @@ namespace BPMS
 
         private void FormCreateExport_NavigateBack(object sender, NavigationEventArgs e)
         {
-            ActivateButton(btnExport, RGBColors.color5);
+            ActivateButton(btnExport, RGBColors.color2);
             FormExport formExport = e.NavigatingForm as FormExport;
             formExport.InnerFormNavigating += FormExport_InnerFormNavigating;
             OpenChildForm(formExport);
@@ -380,7 +383,7 @@ namespace BPMS
 
         private void FormCreateAccount_NavigateBack(object sender, NavigationEventArgs e)
         {
-            ActivateButton(btnAccount, RGBColors.color5);
+            ActivateButton(btnAccount, RGBColors.color7);
             FormAccount formAccount = e.NavigatingForm as FormAccount;
             formAccount.InnerFormNavigating += FormAccount_InnerFormNavigating;
             OpenChildForm(formAccount);
@@ -395,10 +398,10 @@ namespace BPMS
 
         private void FormCreateBill_NavigateBack(object sender, NavigationEventArgs e)
         {
-            ActivateButton(btnPayment, RGBColors.color5);
-            FormPayment formAccount = e.NavigatingForm as FormPayment;
-            formAccount.InnerFormNavigating += FormPayment_InnerFormNavigating;
-            OpenChildForm(formAccount);
+            ActivateButton(btnPayment, RGBColors.color3);
+            FormPayment formPayment = e.NavigatingForm as FormPayment;
+            formPayment.InnerFormNavigating += FormPayment_InnerFormNavigating;
+            OpenChildForm(formPayment);
         }
 
 

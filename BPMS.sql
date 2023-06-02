@@ -69,8 +69,8 @@ CREATE TABLE Bill
 	id INT IDENTITY PRIMARY KEY,
 	idReceiver INT NOT NULL,
 	idSender INT NOT NULL,
-	ReceiptDate DATETIME NOT NULL DEFAULT GETDATE(),
-	ReceiptPerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	CreateDate DATETIME NOT NULL DEFAULT GETDATE(),
+	CreatePerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
 	isPaid INT, --1: đã trả, 0: chưa trả 
 	isReceived INT, --1: đã nhận, 0: chưa nhận 
 	FOREIGN KEY (idReceiver) REFERENCES dbo.Account(id),
