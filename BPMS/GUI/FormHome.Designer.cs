@@ -42,18 +42,19 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblTime.Location = new System.Drawing.Point(535, 484);
+            this.lblTime.Location = new System.Drawing.Point(566, 423);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(3, 2);
             this.lblTime.TabIndex = 0;
+            this.lblTime.Text = null;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, 163);
+            this.pictureBox1.Location = new System.Drawing.Point(137, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(613, 294);
+            this.pictureBox1.Size = new System.Drawing.Size(861, 394);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabImport = new System.Windows.Forms.TabPage();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +62,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelImport = new System.Windows.Forms.Label();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -79,10 +80,11 @@
             this.tabPayment.Controls.Add(this.tabExport);
             this.tabPayment.Controls.Add(this.tabBill);
             this.tabPayment.ItemSize = new System.Drawing.Size(180, 40);
-            this.tabPayment.Location = new System.Drawing.Point(12, 66);
+            this.tabPayment.Location = new System.Drawing.Point(0, 45);
+            this.tabPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPayment.Name = "tabPayment";
             this.tabPayment.SelectedIndex = 0;
-            this.tabPayment.Size = new System.Drawing.Size(966, 374);
+            this.tabPayment.Size = new System.Drawing.Size(1102, 507);
             this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -106,14 +108,36 @@
             // 
             // tabImport
             // 
+            this.tabImport.Controls.Add(this.btnCreate);
             this.tabImport.Controls.Add(this.dtgvImport);
             this.tabImport.Location = new System.Drawing.Point(4, 44);
+            this.tabImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabImport.Name = "tabImport";
-            this.tabImport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabImport.Size = new System.Drawing.Size(958, 326);
+            this.tabImport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabImport.Size = new System.Drawing.Size(1094, 459);
             this.tabImport.TabIndex = 0;
             this.tabImport.Text = "Import";
             this.tabImport.UseVisualStyleBackColor = true;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreate.Animated = true;
+            this.btnCreate.BorderRadius = 4;
+            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
+            this.btnCreate.Location = new System.Drawing.Point(810, 6);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(276, 55);
+            this.btnCreate.TabIndex = 7;
+            this.btnCreate.Text = "Create bill";
             // 
             // dtgvImport
             // 
@@ -150,7 +174,7 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle12;
             this.dtgvImport.GridColor = System.Drawing.Color.RoyalBlue;
-            this.dtgvImport.Location = new System.Drawing.Point(6, 4);
+            this.dtgvImport.Location = new System.Drawing.Point(7, 77);
             this.dtgvImport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvImport.MultiSelect = false;
             this.dtgvImport.Name = "dtgvImport";
@@ -158,7 +182,7 @@
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
             this.dtgvImport.RowTemplate.Height = 28;
-            this.dtgvImport.Size = new System.Drawing.Size(946, 318);
+            this.dtgvImport.Size = new System.Drawing.Size(1079, 365);
             this.dtgvImport.TabIndex = 1;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -221,9 +245,10 @@
             // 
             this.tabExport.Controls.Add(this.dtgvExport);
             this.tabExport.Location = new System.Drawing.Point(4, 44);
+            this.tabExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabExport.Name = "tabExport";
-            this.tabExport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabExport.Size = new System.Drawing.Size(958, 326);
+            this.tabExport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabExport.Size = new System.Drawing.Size(1094, 459);
             this.tabExport.TabIndex = 1;
             this.tabExport.Text = "Export";
             this.tabExport.UseVisualStyleBackColor = true;
@@ -263,7 +288,7 @@
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtgvExport.GridColor = System.Drawing.Color.RoyalBlue;
-            this.dtgvExport.Location = new System.Drawing.Point(9, 4);
+            this.dtgvExport.Location = new System.Drawing.Point(10, 5);
             this.dtgvExport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvExport.MultiSelect = false;
             this.dtgvExport.Name = "dtgvExport";
@@ -271,7 +296,7 @@
             this.dtgvExport.RowHeadersVisible = false;
             this.dtgvExport.RowHeadersWidth = 62;
             this.dtgvExport.RowTemplate.Height = 28;
-            this.dtgvExport.Size = new System.Drawing.Size(946, 318);
+            this.dtgvExport.Size = new System.Drawing.Size(1064, 398);
             this.dtgvExport.TabIndex = 3;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -334,9 +359,10 @@
             // 
             this.tabBill.Controls.Add(this.dtgvBill);
             this.tabBill.Location = new System.Drawing.Point(4, 44);
+            this.tabBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBill.Name = "tabBill";
-            this.tabBill.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabBill.Size = new System.Drawing.Size(958, 326);
+            this.tabBill.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBill.Size = new System.Drawing.Size(1094, 459);
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "Bill";
             this.tabBill.UseVisualStyleBackColor = true;
@@ -377,7 +403,7 @@
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvBill.DefaultCellStyle = dataGridViewCellStyle18;
             this.dtgvBill.GridColor = System.Drawing.Color.RoyalBlue;
-            this.dtgvBill.Location = new System.Drawing.Point(6, 4);
+            this.dtgvBill.Location = new System.Drawing.Point(7, 42);
             this.dtgvBill.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvBill.MultiSelect = false;
             this.dtgvBill.Name = "dtgvBill";
@@ -385,7 +411,7 @@
             this.dtgvBill.RowHeadersVisible = false;
             this.dtgvBill.RowHeadersWidth = 62;
             this.dtgvBill.RowTemplate.Height = 28;
-            this.dtgvBill.Size = new System.Drawing.Size(946, 318);
+            this.dtgvBill.Size = new System.Drawing.Size(1079, 400);
             this.dtgvBill.TabIndex = 4;
             this.dtgvBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvBill.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -451,27 +477,16 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // labelImport
-            // 
-            this.labelImport.AutoSize = true;
-            this.labelImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.labelImport.Location = new System.Drawing.Point(12, 9);
-            this.labelImport.Name = "labelImport";
-            this.labelImport.Size = new System.Drawing.Size(98, 23);
-            this.labelImport.TabIndex = 3;
-            this.labelImport.Text = "Payment";
-            // 
             // FormPayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(990, 452);
-            this.Controls.Add(this.labelImport);
+            this.ClientSize = new System.Drawing.Size(1114, 565);
             this.Controls.Add(this.tabPayment);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPayment";
-            this.Text = "FormPayment";
+            this.Text = "Payment";
             this.tabPayment.ResumeLayout(false);
             this.tabImport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).EndInit();
@@ -480,7 +495,6 @@
             this.tabBill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -489,7 +503,6 @@
         private Guna.UI2.WinForms.Guna2TabControl tabPayment;
         private System.Windows.Forms.TabPage tabImport;
         private System.Windows.Forms.TabPage tabExport;
-        private System.Windows.Forms.Label labelImport;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvImport;
         private System.Windows.Forms.TabPage tabBill;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvExport;
@@ -510,5 +523,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private Guna.UI2.WinForms.Guna2Button btnCreate;
     }
 }

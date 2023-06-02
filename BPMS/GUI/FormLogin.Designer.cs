@@ -65,14 +65,14 @@
             this.txbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbUsername.IconLeft")));
             this.txbUsername.IconLeftOffset = new System.Drawing.Point(8, 0);
-            this.txbUsername.Location = new System.Drawing.Point(614, 288);
-            this.txbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbUsername.Location = new System.Drawing.Point(691, 360);
+            this.txbUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.PasswordChar = '\0';
             this.txbUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.txbUsername.PlaceholderText = "Username";
             this.txbUsername.SelectedText = "";
-            this.txbUsername.Size = new System.Drawing.Size(660, 69);
+            this.txbUsername.Size = new System.Drawing.Size(742, 86);
             this.txbUsername.TabIndex = 1;
             // 
             // txbPassword
@@ -94,14 +94,14 @@
             this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbPassword.IconLeft")));
             this.txbPassword.IconLeftOffset = new System.Drawing.Point(8, 0);
-            this.txbPassword.Location = new System.Drawing.Point(614, 408);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbPassword.Location = new System.Drawing.Point(691, 510);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
             this.txbPassword.PlaceholderText = "Password";
             this.txbPassword.SelectedText = "";
-            this.txbPassword.Size = new System.Drawing.Size(660, 69);
+            this.txbPassword.Size = new System.Drawing.Size(742, 86);
             this.txbPassword.TabIndex = 2;
             // 
             // pictureBox1
@@ -109,10 +109,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(619, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(696, 60);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(656, 183);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 229);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -129,10 +129,10 @@
             this.ContainerControl.Controls.Add(this.controlMinimize);
             this.ContainerControl.Controls.Add(this.controlClose);
             this.ContainerControl.FillColor = System.Drawing.Color.Transparent;
-            this.ContainerControl.Location = new System.Drawing.Point(1097, 11);
-            this.ContainerControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ContainerControl.Location = new System.Drawing.Point(1234, 14);
+            this.ContainerControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ContainerControl.Name = "ContainerControl";
-            this.ContainerControl.Size = new System.Drawing.Size(188, 30);
+            this.ContainerControl.Size = new System.Drawing.Size(212, 38);
             this.ContainerControl.TabIndex = 11;
             this.ContainerControl.UseTransparentBackground = true;
             this.ContainerControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ContainerControl_MouseDown);
@@ -144,10 +144,10 @@
             this.controlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.controlMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlMinimize.IconColor = System.Drawing.Color.Black;
-            this.controlMinimize.Location = new System.Drawing.Point(68, 0);
-            this.controlMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlMinimize.Location = new System.Drawing.Point(76, 0);
+            this.controlMinimize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.controlMinimize.Name = "controlMinimize";
-            this.controlMinimize.Size = new System.Drawing.Size(60, 30);
+            this.controlMinimize.Size = new System.Drawing.Size(68, 38);
             this.controlMinimize.TabIndex = 1;
             // 
             // controlClose
@@ -158,10 +158,10 @@
             this.controlClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.controlClose.ForeColor = System.Drawing.Color.Black;
             this.controlClose.IconColor = System.Drawing.Color.Black;
-            this.controlClose.Location = new System.Drawing.Point(128, 0);
-            this.controlClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlClose.Location = new System.Drawing.Point(144, 0);
+            this.controlClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.controlClose.Name = "controlClose";
-            this.controlClose.Size = new System.Drawing.Size(60, 30);
+            this.controlClose.Size = new System.Drawing.Size(68, 38);
             this.controlClose.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -171,9 +171,9 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(595, 650);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(669, 812);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 12;
             this.guna2PictureBox1.TabStop = false;
@@ -192,10 +192,10 @@
             this.btnLogin.IconColor = System.Drawing.Color.White;
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogin.IconSize = 30;
-            this.btnLogin.Location = new System.Drawing.Point(614, 522);
+            this.btnLogin.Location = new System.Drawing.Point(691, 652);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(660, 69);
+            this.btnLogin.Size = new System.Drawing.Size(742, 86);
             this.btnLogin.TabIndex = 14;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -208,9 +208,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.label1.Location = new System.Drawing.Point(613, 378);
+            this.label1.Location = new System.Drawing.Point(690, 472);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 28);
+            this.label1.Size = new System.Drawing.Size(122, 32);
             this.label1.TabIndex = 16;
             this.label1.Text = "Password";
             // 
@@ -219,18 +219,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.label2.Location = new System.Drawing.Point(613, 258);
+            this.label2.Location = new System.Drawing.Point(690, 322);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 28);
+            this.label2.Size = new System.Drawing.Size(128, 32);
             this.label2.TabIndex = 16;
             this.label2.Text = "Username";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1297, 650);
+            this.ClientSize = new System.Drawing.Size(1459, 812);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
