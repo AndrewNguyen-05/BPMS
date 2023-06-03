@@ -33,7 +33,7 @@ namespace BPMS.GUI
         #region Methods
         private void LoadImportInfo()
         {
-            List<ImportReport> listIr = BillDAO.Instance.GetListImportBill();
+            List<ImportReport> listIr = ImportReportDAO.Instance.GetListImportBill();
             dtgvImport.Rows.Clear();
             foreach (ImportReport ir in listIr)
             {
@@ -47,7 +47,7 @@ namespace BPMS.GUI
 
         private void LoadExportInfo()
         {
-            List<ExportReport> listEr = BillDAO.Instance.GetListExportBill();
+            List<ExportReport> listEr = ExportReportDAO.Instance.GetListExportBill();
             dtgvExport.Rows.Clear();
             foreach (ExportReport er in listEr)
             {

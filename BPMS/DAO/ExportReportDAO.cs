@@ -95,5 +95,12 @@ namespace BPMS.DAO
                 db.Entry(item).Reference(b => b.Bill).Load();
             }
         }
+        public List<ExportReport> GetListExportBill()
+        {
+            var list = from er in db.ExportReports
+                       select er;
+            return list.ToList();
+
+        }
     }
 }

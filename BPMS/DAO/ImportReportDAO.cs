@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -92,14 +93,22 @@ namespace BPMS.DAO
         
         public void UpdateIdBill(int id, int idBill)
         {
-            var item = db.ImportReports.FirstOrDefault(ir => ir.id == id);
+            ImportReport item = GetImportReport(id);
             if (item != null) 
             {
                 item.idBill = idBill;
                 db.SaveChanges();
-                db.Entry(item).Reference(b => b.Bill).Load();
+                db.Entry(item).Reference(c => c.Bill).Load();
             }
         }
-       
+
+        public List<ImportReport> GetListImportBill()
+        {
+            var list = from ir in db.ImportReports
+                       select ir;
+            return list.ToList();
+
+        }
+
     }
 }

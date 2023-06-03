@@ -75,6 +75,7 @@ namespace BPMS.GUI
             BillDAO.Instance.CreateBill(CurrentBill);
             if(CurrentBill.type == 0)
             {
+                
                 ImportReportDAO.Instance.UpdateIdBill(currentImportID, CurrentBill.id);
             }
             else

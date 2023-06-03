@@ -24,21 +24,6 @@ namespace BPMS.DAO
             set { instance = value; }
         }
 
-        public List<ImportReport> GetListImportBill()
-        {
-            var list = from ir in db.ImportReports
-                       select ir;
-            return list.ToList();
-
-        }
-        public List<ExportReport> GetListExportBill()
-        {
-            var list = from er in db.ExportReports
-                       select er;
-            return list.ToList();
-
-        }
-
         public List<Bill> GetBills()
         {
             return db.Bills.Where(e => e.isHidden == 0).ToList();
@@ -74,7 +59,7 @@ namespace BPMS.DAO
                     {
                         ImportReport irt = tmp.First();
                         irt.idBill = null;
-                        //db.ImportReports.AddOrUpdate(irt);
+                        db.ImportReports.AddOrUpdate(irt);
                         db.Entry(irt).State = EntityState.Modified;
                     }
                 }
@@ -87,7 +72,7 @@ namespace BPMS.DAO
                     {
                         ExportReport ert = tmp.First();
                         ert.idBill = null;
-                        //db.ExportReports.AddOrUpdate(ert);
+                        db.ExportReports.AddOrUpdate(ert);
                         db.Entry(ert).State = EntityState.Modified;
                     }
                 }
