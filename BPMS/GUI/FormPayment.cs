@@ -62,15 +62,17 @@ namespace BPMS.GUI
         private void LoadBillInfo()
         {
             List<Bill> listB = BillDAO.Instance.GetBills();
-            dtgvExport.Rows.Clear();
-            foreach (Bill b in listB)
+            dtgvBill.Rows.Clear();
+            foreach (Bill bi in listB)
             {
-                dtgvExport.Rows.Add(new object[] { b.id
-                                                    , AccountDAO.Instance.GetAccount(b.Sender).DisplayName
-                                                    , AccountDAO.Instance.GetAccount(b.Receiver).DisplayName
-                                                    , b.CreateDate
-                                                    , b.isPaid == 1 ? "yes" : "no"
-                                                    , b.isReceived == 1 ? "yes" : "no" });
+                dtgvBill.Rows.Add(new object[] { bi.id
+                                                    , bi.type == 1 ? "Export" : "Import"
+                                                    , bi.Sender
+                                                    , bi.Receiver
+                                                    , bi.CreateDate
+                                                    , bi.Account.DisplayName
+                                                    , bi.isPaid == 1 ? "yes" : "no"
+                                                    , bi.isReceived == 1 ? "yes" : "no" });
             }
         }
         #endregion
@@ -96,20 +98,45 @@ namespace BPMS.GUI
         private void btnCreateImport_Click(object sender, EventArgs e)
         {
             if (dtgvImport.Rows.Count == 0) return;
-            ImportReport importReport = ImportReportDAO.Instance.GetImportReport(int.Parse(dtgvImport.SelectedRows[0].Cells["clmId"].Value.ToString()));
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
+            ImportReport importReport = ImportReportDAO.Instance.GetImportReport(int.Parse(dtgvImport.SelectedRows[0].Cells["clmIdImport"].Value.ToString()));
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(importReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
 
+        #endregion
 
         private void btnCreateExport_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
+            if (dtgvExport.Rows.Count == 0) return;
+            ExportReport exportReport = ExportReportDAO.Instance.GetExportReport(int.Parse(dtgvExport.SelectedRows[0].Cells["clmIdExport"].Value.ToString()));
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(exportReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dtgvBill.SelectedRows.Count == 0) return;
+            Bill bill = BillDAO.Instance.GetBill(int.Parse(dtgvBill.SelectedRows[0].Cells["clmIdBill"].Value.ToString()));
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(bill), this);
+            InnerFormNavigating?.Invoke(this, navigationE);
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to delete this import form?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int id = int.Parse(dtgvBill.SelectedRows[0].Cells["clmIdBill"].Value.ToString());
+                BillDAO.Instance.DeleteBill(id);
+            }
+            LoadBillInfo();
         }
 
         #endregion
 
-        #endregion
+
     }
 }

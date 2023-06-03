@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbReceiver = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txbUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbSender = new Guna.UI2.WinForms.Guna2TextBox();
             this.grbBillCreate.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.grbBillCreate.Controls.Add(this.label2);
             this.grbBillCreate.Controls.Add(this.label1);
             this.grbBillCreate.Controls.Add(this.txbReceiver);
-            this.grbBillCreate.Controls.Add(this.txbUsername);
+            this.grbBillCreate.Controls.Add(this.txbSender);
             this.grbBillCreate.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.grbBillCreate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbBillCreate.ForeColor = System.Drawing.Color.White;
@@ -178,31 +178,31 @@
             this.txbReceiver.Size = new System.Drawing.Size(1120, 89);
             this.txbReceiver.TabIndex = 10;
             // 
-            // txbUsername
+            // txbSender
             // 
-            this.txbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbSender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbUsername.BorderColor = System.Drawing.Color.Black;
-            this.txbUsername.BorderRadius = 8;
-            this.txbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUsername.DefaultText = "Nguyễn Văn A";
-            this.txbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txbUsername.ForeColor = System.Drawing.Color.Black;
-            this.txbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Location = new System.Drawing.Point(25, 101);
-            this.txbUsername.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
-            this.txbUsername.Name = "txbUsername";
-            this.txbUsername.PasswordChar = '\0';
-            this.txbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txbUsername.PlaceholderText = "";
-            this.txbUsername.SelectedText = "";
-            this.txbUsername.Size = new System.Drawing.Size(1125, 89);
-            this.txbUsername.TabIndex = 10;
+            this.txbSender.BorderColor = System.Drawing.Color.Black;
+            this.txbSender.BorderRadius = 8;
+            this.txbSender.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbSender.DefaultText = "Nguyễn Văn A";
+            this.txbSender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbSender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbSender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSender.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txbSender.ForeColor = System.Drawing.Color.Black;
+            this.txbSender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSender.Location = new System.Drawing.Point(25, 101);
+            this.txbSender.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
+            this.txbSender.Name = "txbSender";
+            this.txbSender.PasswordChar = '\0';
+            this.txbSender.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txbSender.PlaceholderText = "";
+            this.txbSender.SelectedText = "";
+            this.txbSender.Size = new System.Drawing.Size(1125, 89);
+            this.txbSender.TabIndex = 10;
             // 
             // FormCreateBill
             // 
@@ -222,7 +222,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2GroupBox grbBillCreate;
-        private Guna.UI2.WinForms.Guna2TextBox txbUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txbSender;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txbReceiver;

@@ -49,6 +49,7 @@
           <Property Name="idCreatePerson" Type="int" Nullable="false" />
           <Property Name="isPaid" Type="int" />
           <Property Name="isReceived" Type="int" />
+          <Property Name="type" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -374,6 +375,7 @@
           <Property Name="idCreatePerson" Type="Int32" Nullable="false" />
           <Property Name="isPaid" Type="Int32" />
           <Property Name="isReceived" Type="Int32" />
+          <Property Name="type" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idCreatePe__44FF419A" FromRole="Bill" ToRole="Account" />
           <NavigationProperty Name="ExportReports" Relationship="Self.FK__ExportRep__idBil__4BAC3F29" FromRole="Bill" ToRole="ExportReport" />
           <NavigationProperty Name="ImportReports" Relationship="Self.FK__ImportRep__idBil__5812160E" FromRole="Bill" ToRole="ImportReport" />
@@ -712,6 +714,7 @@
                 <ScalarProperty Name="idCreatePerson" ColumnName="idCreatePerson" />
                 <ScalarProperty Name="isPaid" ColumnName="isPaid" />
                 <ScalarProperty Name="isReceived" ColumnName="isReceived" />
+                <ScalarProperty Name="type" ColumnName="type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

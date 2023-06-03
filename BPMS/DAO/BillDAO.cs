@@ -41,12 +41,32 @@ namespace BPMS.DAO
         {
             return db.Bills.ToList();
         }
+        public Bill GetBill(int id)
+        {
+            var list = from bi in db.Bills
+                       where bi.id == id
+                       select bi;
+            return list.FirstOrDefault();
+        }
 
         public void CreateBill(Bill bi)
         {
             db.Bills.AddOrUpdate(bi);
             db.SaveChanges();
+            db.Entry(bi).Reference(c => c.Account).Load();
+        }
 
+        public void DeleteBill(int id)
+        {
+
+            var item = from bi in db.Bills
+                       where bi.id == id
+                       select bi;
+            if (item != null)
+            {
+                db.Bills.Remove(item.First());
+            }
+            db.SaveChanges();
         }
     }
 }
