@@ -215,6 +215,7 @@
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(501, 36);
             this.cbType.TabIndex = 8;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // txbAddress
             // 

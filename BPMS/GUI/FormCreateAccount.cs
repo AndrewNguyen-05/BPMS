@@ -101,5 +101,20 @@ namespace BPMS.GUI
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormAccount(), this);
             NavigateBack?.Invoke(this, navigationE);
         }
+
+        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((Permissions)cbType.SelectedValue == Permissions.Publisher 
+                || (Permissions)cbType.SelectedValue == Permissions.Accountant)
+            {
+                txbBankAccount.Enabled = true;
+                txbPhone.Enabled = true;
+            }
+            else
+            {
+                txbBankAccount.Enabled = false;
+                txbPhone.Enabled = false;
+            }
+        }
     }
 }
