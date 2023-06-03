@@ -11,7 +11,7 @@ namespace BPMS.DAO
     internal class AgencyDAO
     {
         private static AgencyDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static AgencyDAO Instance
         {
             get

@@ -16,7 +16,7 @@ namespace BPMS.DAO
     internal class PublisherDAO
     {
         private static PublisherDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static PublisherDAO Instance
         {
             get

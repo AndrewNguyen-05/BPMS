@@ -10,7 +10,7 @@ namespace BPMS.DAO
     internal class BookDAO
     {
         private static BookDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static BookDAO Instance
         {
             get

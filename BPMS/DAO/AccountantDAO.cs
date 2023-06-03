@@ -11,7 +11,7 @@ namespace BPMS.DAO
     internal class AccountantDAO
     {
         private static AccountantDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static AccountantDAO Instance
         {
             get

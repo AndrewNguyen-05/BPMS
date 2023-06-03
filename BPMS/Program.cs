@@ -1,4 +1,5 @@
-﻿using BPMS.GUI;
+﻿using BPMS.DTO;
+using BPMS.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace BPMS
 {
     internal static class Program
     {
+        public static BPMSEntities db = new BPMSEntities();
         class BPMSApplicationContext : ApplicationContext
         {
             private FormLogin formLogin;

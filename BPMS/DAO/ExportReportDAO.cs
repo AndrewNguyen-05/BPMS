@@ -11,7 +11,7 @@ namespace BPMS.DAO
     internal class ExportReportDAO
     {
         private static ExportReportDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static ExportReportDAO Instance
         {
             get

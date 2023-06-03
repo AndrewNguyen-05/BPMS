@@ -13,7 +13,7 @@ namespace BPMS.DAO
     internal class BillDAO
     {
         private static BillDAO instance;
-        private BPMSEntities db = new BPMSEntities();
+        private BPMSEntities db = Program.db;
         internal static BillDAO Instance
         {
             get
