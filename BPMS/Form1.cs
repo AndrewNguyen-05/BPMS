@@ -102,6 +102,7 @@ namespace BPMS
         private void cbViewAs_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckPermisison();
+            btnMainPage_Click(btnMainPage, null);
         }
         private void CheckPermisison()
         {
@@ -156,7 +157,7 @@ namespace BPMS
 
                 //Left border button
                 leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y + flpnlButton.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
 
@@ -466,6 +467,5 @@ namespace BPMS
         #endregion
 
         #endregion
-
     }
 }

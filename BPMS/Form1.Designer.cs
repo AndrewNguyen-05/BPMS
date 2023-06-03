@@ -31,15 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnAccount = new FontAwesome.Sharp.IconButton();
-            this.btnMainPage = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
             this.cbViewAs = new System.Windows.Forms.ComboBox();
             this.btnLogOut = new FontAwesome.Sharp.IconButton();
-            this.btnAnalytic = new FontAwesome.Sharp.IconButton();
-            this.btnPayment = new FontAwesome.Sharp.IconButton();
-            this.btnExport = new FontAwesome.Sharp.IconButton();
-            this.btnImport = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -49,24 +43,27 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.flpnlButton = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAccount = new FontAwesome.Sharp.IconButton();
+            this.btnMainPage = new FontAwesome.Sharp.IconButton();
+            this.btnAnalytic = new FontAwesome.Sharp.IconButton();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
+            this.btnExport = new FontAwesome.Sharp.IconButton();
+            this.btnImport = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogOut.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.flpnlButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
-            this.panelMenu.Controls.Add(this.btnAccount);
-            this.panelMenu.Controls.Add(this.btnMainPage);
+            this.panelMenu.Controls.Add(this.flpnlButton);
             this.panelMenu.Controls.Add(this.panelLogOut);
-            this.panelMenu.Controls.Add(this.btnAnalytic);
-            this.panelMenu.Controls.Add(this.btnPayment);
-            this.panelMenu.Controls.Add(this.btnExport);
-            this.panelMenu.Controls.Add(this.btnImport);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,51 +72,6 @@
             this.panelMenu.Size = new System.Drawing.Size(279, 791);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(2, 529);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(275, 72);
-            this.btnAccount.TabIndex = 6;
-            this.btnAccount.Text = "Account";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccount.UseVisualStyleBackColor = true;
-            this.btnAccount.Visible = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnMainPage
-            // 
-            this.btnMainPage.FlatAppearance.BorderSize = 0;
-            this.btnMainPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainPage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnMainPage.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnMainPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnMainPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMainPage.Location = new System.Drawing.Point(2, 150);
-            this.btnMainPage.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMainPage.Name = "btnMainPage";
-            this.btnMainPage.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnMainPage.Size = new System.Drawing.Size(277, 72);
-            this.btnMainPage.TabIndex = 2;
-            this.btnMainPage.Text = "Home";
-            this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMainPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMainPage.UseVisualStyleBackColor = true;
-            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // panelLogOut
             // 
@@ -166,94 +118,6 @@
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnAnalytic
-            // 
-            this.btnAnalytic.FlatAppearance.BorderSize = 0;
-            this.btnAnalytic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalytic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalytic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnAnalytic.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
-            this.btnAnalytic.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnAnalytic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAnalytic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalytic.Location = new System.Drawing.Point(2, 453);
-            this.btnAnalytic.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAnalytic.Name = "btnAnalytic";
-            this.btnAnalytic.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAnalytic.Size = new System.Drawing.Size(275, 72);
-            this.btnAnalytic.TabIndex = 4;
-            this.btnAnalytic.Text = "Analytic";
-            this.btnAnalytic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalytic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAnalytic.UseVisualStyleBackColor = true;
-            this.btnAnalytic.Click += new System.EventHandler(this.btnAnalytic_Click);
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.FlatAppearance.BorderSize = 0;
-            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
-            this.btnPayment.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.Location = new System.Drawing.Point(2, 377);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnPayment.Size = new System.Drawing.Size(275, 72);
-            this.btnPayment.TabIndex = 3;
-            this.btnPayment.Text = "Payment";
-            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnExport.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.btnExport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(0, 301);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnExport.Size = new System.Drawing.Size(277, 72);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.Text = "Export";
-            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.btnImport.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.btnImport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnImport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.Location = new System.Drawing.Point(0, 225);
-            this.btnImport.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnImport.Size = new System.Drawing.Size(277, 72);
-            this.btnImport.TabIndex = 1;
-            this.btnImport.Text = "Import";
-            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // panelLogo
             // 
@@ -357,6 +221,153 @@
             this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
             // 
+            // flpnlButton
+            // 
+            this.flpnlButton.Controls.Add(this.btnMainPage);
+            this.flpnlButton.Controls.Add(this.btnImport);
+            this.flpnlButton.Controls.Add(this.btnExport);
+            this.flpnlButton.Controls.Add(this.btnPayment);
+            this.flpnlButton.Controls.Add(this.btnAnalytic);
+            this.flpnlButton.Controls.Add(this.btnAccount);
+            this.flpnlButton.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpnlButton.Location = new System.Drawing.Point(0, 160);
+            this.flpnlButton.Name = "flpnlButton";
+            this.flpnlButton.Size = new System.Drawing.Size(279, 484);
+            this.flpnlButton.TabIndex = 6;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.Location = new System.Drawing.Point(2, 382);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(275, 72);
+            this.btnAccount.TabIndex = 12;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Visible = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnMainPage
+            // 
+            this.btnMainPage.FlatAppearance.BorderSize = 0;
+            this.btnMainPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainPage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnMainPage.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnMainPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnMainPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMainPage.Location = new System.Drawing.Point(2, 2);
+            this.btnMainPage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMainPage.Name = "btnMainPage";
+            this.btnMainPage.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMainPage.Size = new System.Drawing.Size(277, 72);
+            this.btnMainPage.TabIndex = 8;
+            this.btnMainPage.Text = "Home";
+            this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMainPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMainPage.UseVisualStyleBackColor = true;
+            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
+            // 
+            // btnAnalytic
+            // 
+            this.btnAnalytic.FlatAppearance.BorderSize = 0;
+            this.btnAnalytic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalytic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalytic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnAnalytic.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
+            this.btnAnalytic.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnAnalytic.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnalytic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalytic.Location = new System.Drawing.Point(2, 306);
+            this.btnAnalytic.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnalytic.Name = "btnAnalytic";
+            this.btnAnalytic.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAnalytic.Size = new System.Drawing.Size(275, 72);
+            this.btnAnalytic.TabIndex = 11;
+            this.btnAnalytic.Text = "Analytic";
+            this.btnAnalytic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalytic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnalytic.UseVisualStyleBackColor = true;
+            this.btnAnalytic.Click += new System.EventHandler(this.btnAnalytic_Click);
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
+            this.btnPayment.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(2, 230);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPayment.Size = new System.Drawing.Size(275, 72);
+            this.btnPayment.TabIndex = 10;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnExport.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
+            this.btnExport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(2, 154);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnExport.Size = new System.Drawing.Size(277, 72);
+            this.btnExport.TabIndex = 9;
+            this.btnExport.Text = "Export";
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnImport.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnImport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnImport.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.Location = new System.Drawing.Point(2, 78);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnImport.Size = new System.Drawing.Size(277, 72);
+            this.btnImport.TabIndex = 7;
+            this.btnImport.Text = "Import";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -378,6 +389,7 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.flpnlButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -385,10 +397,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnAnalytic;
-        private FontAwesome.Sharp.IconButton btnPayment;
-        private FontAwesome.Sharp.IconButton btnExport;
-        private FontAwesome.Sharp.IconButton btnImport;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelLogOut;
         private System.Windows.Forms.Label lblTitleChildForm;
@@ -398,10 +406,15 @@
         private Guna.UI2.WinForms.Guna2ControlBox controlClose;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pbLogo;
-        private FontAwesome.Sharp.IconButton btnMainPage;
         private System.Windows.Forms.ComboBox cbViewAs;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private FontAwesome.Sharp.IconButton btnLogOut;
+        private System.Windows.Forms.FlowLayoutPanel flpnlButton;
+        private FontAwesome.Sharp.IconButton btnMainPage;
+        private FontAwesome.Sharp.IconButton btnImport;
+        private FontAwesome.Sharp.IconButton btnExport;
+        private FontAwesome.Sharp.IconButton btnPayment;
+        private FontAwesome.Sharp.IconButton btnAnalytic;
         private FontAwesome.Sharp.IconButton btnAccount;
     }
 }
