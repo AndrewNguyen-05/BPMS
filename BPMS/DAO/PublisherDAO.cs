@@ -45,5 +45,21 @@ namespace BPMS.DAO
                                select acc;
             return allPublisher.ToList();
         }
+
+        public Publisher GetPublisherByAccId(int accID)
+        {
+            var result = from pb in db.Publishers
+                         join acc in db.Accounts on pb.idAccount equals acc.id
+                         where pb.isHidden == 0
+                         select pb;
+            return result.FirstOrDefault();
+        }
+
+        public void CreatePublisher(Publisher pb)
+        {
+            db.Publishers.Add(pb);
+            db.SaveChanges();
+            db.Entry(pb).Reference(c => c.Account).Load();
+        }
     }
 }
