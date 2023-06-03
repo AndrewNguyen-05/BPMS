@@ -51,6 +51,7 @@ namespace BPMS.GUI
         {
             txbBankAccount.Text = "";
             txbPhone.Text = "";
+            if (CurrentAcc is null) return;
             switch ((Permissions)cbType.SelectedValue)
             {
                 case Permissions.Publisher:

@@ -70,9 +70,9 @@
             this.grbNewAccount.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.grbNewAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbNewAccount.ForeColor = System.Drawing.Color.White;
-            this.grbNewAccount.Location = new System.Drawing.Point(0, 0);
+            this.grbNewAccount.Location = new System.Drawing.Point(12, 12);
             this.grbNewAccount.Name = "grbNewAccount";
-            this.grbNewAccount.Size = new System.Drawing.Size(1194, 583);
+            this.grbNewAccount.Size = new System.Drawing.Size(1170, 577);
             this.grbNewAccount.TabIndex = 21;
             this.grbNewAccount.Text = "New Account";
             // 
@@ -89,7 +89,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1170, 439);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1146, 439);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -99,7 +99,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(579, 433);
+            this.panel1.Size = new System.Drawing.Size(567, 433);
             this.panel1.TabIndex = 0;
             // 
             // lblAccountInfo
@@ -108,7 +108,7 @@
             this.lblAccountInfo.AutoSize = true;
             this.lblAccountInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccountInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.lblAccountInfo.Location = new System.Drawing.Point(206, 6);
+            this.lblAccountInfo.Location = new System.Drawing.Point(200, 6);
             this.lblAccountInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountInfo.Name = "lblAccountInfo";
             this.lblAccountInfo.Size = new System.Drawing.Size(137, 23);
@@ -135,7 +135,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(26, 20);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(20, 5, 10, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(543, 379);
+            this.guna2Panel1.Size = new System.Drawing.Size(531, 379);
             this.guna2Panel1.TabIndex = 14;
             // 
             // lblType
@@ -213,7 +213,7 @@
             this.cbType.Location = new System.Drawing.Point(26, 323);
             this.cbType.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(501, 36);
+            this.cbType.Size = new System.Drawing.Size(489, 36);
             this.cbType.TabIndex = 8;
             this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
@@ -240,7 +240,7 @@
             this.txbAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbAddress.PlaceholderText = "";
             this.txbAddress.SelectedText = "";
-            this.txbAddress.Size = new System.Drawing.Size(501, 53);
+            this.txbAddress.Size = new System.Drawing.Size(489, 53);
             this.txbAddress.TabIndex = 7;
             // 
             // txbPassword
@@ -266,7 +266,7 @@
             this.txbPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPassword.PlaceholderText = "";
             this.txbPassword.SelectedText = "";
-            this.txbPassword.Size = new System.Drawing.Size(501, 53);
+            this.txbPassword.Size = new System.Drawing.Size(489, 53);
             this.txbPassword.TabIndex = 5;
             // 
             // txbDisplayname
@@ -292,7 +292,7 @@
             this.txbDisplayname.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbDisplayname.PlaceholderText = "";
             this.txbDisplayname.SelectedText = "";
-            this.txbDisplayname.Size = new System.Drawing.Size(501, 53);
+            this.txbDisplayname.Size = new System.Drawing.Size(489, 53);
             this.txbDisplayname.TabIndex = 4;
             // 
             // txbUsername
@@ -318,7 +318,7 @@
             this.txbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbUsername.PlaceholderText = "";
             this.txbUsername.SelectedText = "";
-            this.txbUsername.Size = new System.Drawing.Size(501, 53);
+            this.txbUsername.Size = new System.Drawing.Size(489, 53);
             this.txbUsername.TabIndex = 0;
             // 
             // panel2
@@ -326,9 +326,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(588, 3);
+            this.panel2.Location = new System.Drawing.Point(576, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 433);
+            this.panel2.Size = new System.Drawing.Size(567, 433);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -337,7 +337,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.label1.Location = new System.Drawing.Point(214, 6);
+            this.label1.Location = new System.Drawing.Point(208, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 23);
@@ -358,7 +358,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(10, 20);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(10, 5, 20, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(543, 186);
+            this.guna2Panel2.Size = new System.Drawing.Size(531, 186);
             this.guna2Panel2.TabIndex = 19;
             // 
             // lblPhone
@@ -406,7 +406,7 @@
             this.txbPhone.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPhone.PlaceholderText = "";
             this.txbPhone.SelectedText = "";
-            this.txbPhone.Size = new System.Drawing.Size(501, 53);
+            this.txbPhone.Size = new System.Drawing.Size(489, 53);
             this.txbPhone.TabIndex = 4;
             // 
             // txbBankAccount
@@ -432,7 +432,7 @@
             this.txbBankAccount.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbBankAccount.PlaceholderText = "";
             this.txbBankAccount.SelectedText = "";
-            this.txbBankAccount.Size = new System.Drawing.Size(501, 53);
+            this.txbBankAccount.Size = new System.Drawing.Size(489, 53);
             this.txbBankAccount.TabIndex = 0;
             // 
             // btnCreate
@@ -446,7 +446,7 @@
             this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(356, 523);
+            this.btnCreate.Location = new System.Drawing.Point(344, 517);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(501, 45);
             this.btnCreate.TabIndex = 9;
