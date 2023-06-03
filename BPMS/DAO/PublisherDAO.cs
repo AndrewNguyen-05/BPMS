@@ -1,7 +1,10 @@
 ﻿using BPMS.DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,7 +54,7 @@ namespace BPMS.DAO
         {
             var result = from pb in db.Publishers
                          join acc in db.Accounts on pb.idAccount equals acc.id
-                         where pb.isHidden == 0
+                         where pb.isHidden == 0 && acc.id == accID
                          select pb;
             return result.FirstOrDefault();
         }

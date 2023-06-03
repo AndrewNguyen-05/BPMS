@@ -45,6 +45,32 @@ namespace BPMS.GUI
             txbPassword.Text = CurrentAcc.PassWord;
             txbAddress.Text = CurrentAcc.address;
             cbType.SelectedIndex = cbType.Items.IndexOf((Permissions)CurrentAcc.type);
+            switch ((Permissions)CurrentAcc.type)
+            {
+                case Permissions.Publisher:
+                    if (CurrentAcc.Publishers.Where(c => c.isHidden == 0).FirstOrDefault() != null)
+                    {
+                        txbBankAccount.Text = CurrentAcc.Publishers.Where(c => c.isHidden == 0)
+                                                                   .FirstOrDefault()
+                                                                   .AccountNumber;
+                        txbPhone.Text = CurrentAcc.Publishers.Where(c => c.isHidden == 0)
+                                                            .FirstOrDefault()
+                                                            .PhoneNumber;
+                    }
+                    break;
+                case Permissions.Accountant:
+                    if (CurrentAcc.Accountants.Where(c => c.isHidden == 0).FirstOrDefault() != null)
+                    {
+                        txbBankAccount.Text = CurrentAcc.Accountants.Where(c => c.isHidden == 0)
+                                                                    .FirstOrDefault()
+                                                                    .AccountNumber;
+                        txbPhone.Text = CurrentAcc.Accountants.Where(c => c.isHidden == 0)
+                                                              .FirstOrDefault()
+                                                              .PhoneNumber;
+                    }
+                    break;
+
+            }
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -83,7 +109,7 @@ namespace BPMS.GUI
                     DTO.Publisher tmp = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
                     if (tmp != null)
                     {
-                        pb.idAccount = tmp.id;
+                        pb.id = tmp.id;
                     }
                     PublisherDAO.Instance.CreatePublisher(pb);
                     break;
@@ -98,7 +124,7 @@ namespace BPMS.GUI
                     DTO.Accountant tmpact = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
                     if (tmpact != null)
                     {
-                        act.idAccount = tmpact.id;
+                        act.id = tmpact.id;
                     }
                     AccountantDAO.Instance.CreateAccountant(act);
                     break;

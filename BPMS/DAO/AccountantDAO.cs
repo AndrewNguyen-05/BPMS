@@ -26,16 +26,16 @@ namespace BPMS.DAO
         {
             var result = from ac in db.Accountants
                          join acc in db.Accounts on ac.idAccount equals acc.id
-                         where ac.isHidden == 0
+                         where ac.isHidden == 0 && acc.id == accID
                          select ac;
             return result.FirstOrDefault();
         }
 
-        public void CreateAccountant(Accountant ac)
+        public void CreateAccountant(Accountant act)
         {
-            db.Accountants.AddOrUpdate(ac);
+            db.Accountants.AddOrUpdate(act);
             db.SaveChanges();
-            db.Entry(ac).Reference(c => c.Account).Load();
+            db.Entry(act).Reference(c => c.Account).Load();
         }
     }
 }
