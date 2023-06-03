@@ -43,10 +43,10 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idReceiver" Type="int" Nullable="false" />
-          <Property Name="idSender" Type="int" Nullable="false" />
+          <Property Name="Receiver" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sender" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
-          <Property Name="CreatePerson" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="idCreatePerson" Type="int" Nullable="false" />
           <Property Name="isPaid" Type="int" />
           <Property Name="isReceived" Type="int" />
         </EntityType>
@@ -138,7 +138,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__440B1D61">
+        <Association Name="FK__Bill__idCreatePe__44FF419A">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,19 +146,7 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Bill">
-              <PropertyRef Name="idReceiver" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Bill__idSender__44FF419A">
-          <End Role="Account" Type="Self.Account" Multiplicity="1" />
-          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Account">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Bill">
-              <PropertyRef Name="idSender" />
+              <PropertyRef Name="idCreatePerson" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -289,11 +277,7 @@
             <End Role="Account" EntitySet="Account" />
             <End Role="Agency" EntitySet="Agency" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__440B1D61" Association="Self.FK__Bill__idReceiver__440B1D61">
-            <End Role="Account" EntitySet="Account" />
-            <End Role="Bill" EntitySet="Bill" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__44FF419A" Association="Self.FK__Bill__idSender__44FF419A">
+          <AssociationSet Name="FK__Bill__idCreatePe__44FF419A" Association="Self.FK__Bill__idCreatePe__44FF419A">
             <End Role="Account" EntitySet="Account" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
@@ -352,8 +336,7 @@
           <Property Name="isHidden" Type="Int32" />
           <NavigationProperty Name="Accountants" Relationship="Self.FK__Accountan__idAcc__398D8EEE" FromRole="Account" ToRole="Accountant" />
           <NavigationProperty Name="Agencies" Relationship="Self.FK__Agency__idAccoun__3E52440B" FromRole="Account" ToRole="Agency" />
-          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idReceiver__440B1D61" FromRole="Account" ToRole="Bill" />
-          <NavigationProperty Name="Bills1" Relationship="Self.FK__Bill__idSender__44FF419A" FromRole="Account" ToRole="Bill" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idCreatePe__44FF419A" FromRole="Account" ToRole="Bill" />
           <NavigationProperty Name="Publishers" Relationship="Self.FK__Publisher__idAcc__33D4B598" FromRole="Account" ToRole="Publisher" />
         </EntityType>
         <EntityType Name="Accountant">
@@ -385,14 +368,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idReceiver" Type="Int32" Nullable="false" />
-          <Property Name="idSender" Type="Int32" Nullable="false" />
+          <Property Name="Receiver" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sender" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="CreatePerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="idCreatePerson" Type="Int32" Nullable="false" />
           <Property Name="isPaid" Type="Int32" />
           <Property Name="isReceived" Type="Int32" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idReceiver__440B1D61" FromRole="Bill" ToRole="Account" />
-          <NavigationProperty Name="Account1" Relationship="Self.FK__Bill__idSender__44FF419A" FromRole="Bill" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Bill__idCreatePe__44FF419A" FromRole="Bill" ToRole="Account" />
           <NavigationProperty Name="ExportReports" Relationship="Self.FK__ExportRep__idBil__4BAC3F29" FromRole="Bill" ToRole="ExportReport" />
           <NavigationProperty Name="ImportReports" Relationship="Self.FK__ImportRep__idBil__5812160E" FromRole="Bill" ToRole="ImportReport" />
         </EntityType>
@@ -498,7 +480,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__idReceiver__440B1D61">
+        <Association Name="FK__Bill__idCreatePe__44FF419A">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -506,19 +488,7 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Bill">
-              <PropertyRef Name="idReceiver" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Bill__idSender__44FF419A">
-          <End Role="Account" Type="Self.Account" Multiplicity="1" />
-          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Account">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Bill">
-              <PropertyRef Name="idSender" />
+              <PropertyRef Name="idCreatePerson" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -649,11 +619,7 @@
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Agency" EntitySet="Agencies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__idReceiver__440B1D61" Association="Self.FK__Bill__idReceiver__440B1D61">
-            <End Role="Account" EntitySet="Accounts" />
-            <End Role="Bill" EntitySet="Bills" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Bill__idSender__44FF419A" Association="Self.FK__Bill__idSender__44FF419A">
+          <AssociationSet Name="FK__Bill__idCreatePe__44FF419A" Association="Self.FK__Bill__idCreatePe__44FF419A">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
@@ -740,10 +706,10 @@
             <EntityTypeMapping TypeName="BPMSModel.Bill">
               <MappingFragment StoreEntitySet="Bill">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idReceiver" ColumnName="idReceiver" />
-                <ScalarProperty Name="idSender" ColumnName="idSender" />
+                <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+                <ScalarProperty Name="Sender" ColumnName="Sender" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="idCreatePerson" ColumnName="idCreatePerson" />
                 <ScalarProperty Name="isPaid" ColumnName="isPaid" />
                 <ScalarProperty Name="isReceived" ColumnName="isReceived" />
               </MappingFragment>

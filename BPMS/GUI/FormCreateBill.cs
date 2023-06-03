@@ -19,6 +19,7 @@ namespace BPMS.GUI
 {
     public partial class FormCreateBill : Form
     {
+        Bill CurrentBill = null;
         public FormCreateBill()
         {
             InitializeComponent();
@@ -31,6 +32,16 @@ namespace BPMS.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            Bill bill;
+            if(CurrentBill == null)
+            {
+                bill = new Bill();
+            }
+            else
+            {
+                bill = CurrentBill;
+            }
+            Account account = new Account();
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormPayment(), this);
             NavigateBack?.Invoke(this, navigationE);
         }

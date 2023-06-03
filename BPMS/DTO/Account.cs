@@ -20,7 +20,6 @@ namespace BPMS.DTO
             this.Accountants = new HashSet<Accountant>();
             this.Agencies = new HashSet<Agency>();
             this.Bills = new HashSet<Bill>();
-            this.Bills1 = new HashSet<Bill>();
             this.Publishers = new HashSet<Publisher>();
         }
     
@@ -38,8 +37,6 @@ namespace BPMS.DTO
         public virtual ICollection<Agency> Agencies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bill> Bills1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Publisher> Publishers { get; set; }
     }

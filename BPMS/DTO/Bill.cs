@@ -22,15 +22,14 @@ namespace BPMS.DTO
         }
     
         public int id { get; set; }
-        public int idReceiver { get; set; }
-        public int idSender { get; set; }
+        public string Receiver { get; set; }
+        public string Sender { get; set; }
         public System.DateTime CreateDate { get; set; }
-        public string CreatePerson { get; set; }
+        public int idCreatePerson { get; set; }
         public Nullable<int> isPaid { get; set; }
         public Nullable<int> isReceived { get; set; }
     
         public virtual Account Account { get; set; }
-        public virtual Account Account1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExportReport> ExportReports { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,6 +1,7 @@
 ﻿using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,13 @@ namespace BPMS.DAO
         public List<Bill> GetBills()
         {
             return db.Bills.ToList();
+        }
+
+        public void CreateBill(Bill bi)
+        {
+            db.Bills.AddOrUpdate(bi);
+            db.SaveChanges();
+
         }
     }
 }

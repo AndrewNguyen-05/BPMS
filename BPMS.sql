@@ -67,14 +67,13 @@ GO
 CREATE TABLE Bill
 (
 	id INT IDENTITY PRIMARY KEY,
-	idReceiver INT NOT NULL,
-	idSender INT NOT NULL,
+	Receiver NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	Sender NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người gửi',
 	CreateDate DATETIME NOT NULL DEFAULT GETDATE(),
-	CreatePerson NVARCHAR(100) NOT NULL DEFAULT N'Chưa có người nhận',
+	idCreatePerson INT NOT NULL,
 	isPaid INT, --1: đã trả, 0: chưa trả 
 	isReceived INT, --1: đã nhận, 0: chưa nhận 
-	FOREIGN KEY (idReceiver) REFERENCES dbo.Account(id),
-	FOREIGN KEY (idSender) REFERENCES dbo.Account(id)
+	FOREIGN KEY (idCreatePerson) REFERENCES dbo.Account(id)
 )
 GO
 
@@ -142,11 +141,11 @@ INSERT INTO Book (name, type, author, price) VALUES (N'Tuổi trẻ đáng giá 
 GO
 
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 0, 'a')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 3, 'c')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phương Nam Book City', 'DL', 3, 'd')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('MK', N'Minh Khai', 'DL', 3, 'e')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('VL', N'Văn Lang', 'DL', 3, 'f')
-INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NVC', N'Nguyễn Văn Cừ', 'DL', 3, 'g')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 4, 'c')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('PN', N'Phương Nam Book City', 'DL', 4, 'd')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('MK', N'Minh Khai', 'DL', 4, 'e')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('VL', N'Văn Lang', 'DL', 4, 'f')
+INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NVC', N'Nguyễn Văn Cừ', 'DL', 4, 'g')
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('KD', N'Kim Đồng', 'NXB', 3, 'b')
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('LD', N'Lao Động', 'NXB', 3, 'd')
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('NN', N'Nhã Nam', 'NXB', 3, 's')

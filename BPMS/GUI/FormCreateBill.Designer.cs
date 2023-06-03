@@ -134,7 +134,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.label2.Location = new System.Drawing.Point(19, 224);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 32);
+            this.label2.Size = new System.Drawing.Size(126, 38);
             this.label2.TabIndex = 16;
             this.label2.Text = "Receiver";
             // 
@@ -148,7 +148,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.label1.Location = new System.Drawing.Point(19, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
+            this.label1.Size = new System.Drawing.Size(108, 38);
             this.label1.TabIndex = 16;
             this.label1.Text = "Sender";
             // 

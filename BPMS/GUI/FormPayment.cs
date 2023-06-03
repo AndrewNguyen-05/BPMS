@@ -66,8 +66,8 @@ namespace BPMS.GUI
             foreach (Bill b in listB)
             {
                 dtgvExport.Rows.Add(new object[] { b.id
-                                                    , AccountDAO.Instance.GetAccount(b.idSender).DisplayName
-                                                    , AccountDAO.Instance.GetAccount(b.idReceiver).DisplayName
+                                                    , AccountDAO.Instance.GetAccount(b.Sender).DisplayName
+                                                    , AccountDAO.Instance.GetAccount(b.Receiver).DisplayName
                                                     , b.CreateDate
                                                     , b.isPaid == 1 ? "yes" : "no"
                                                     , b.isReceived == 1 ? "yes" : "no" });
@@ -95,6 +95,8 @@ namespace BPMS.GUI
         #region Navigation
         private void btnCreateImport_Click(object sender, EventArgs e)
         {
+            if (dtgvImport.Rows.Count == 0) return;
+            ImportReport importReport = ImportReportDAO.Instance.GetImportReport(int.Parse(dtgvImport.SelectedRows[0].Cells["clmId"].Value.ToString()));
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
