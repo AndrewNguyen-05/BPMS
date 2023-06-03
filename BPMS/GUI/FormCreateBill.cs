@@ -18,6 +18,8 @@ namespace BPMS.GUI
     public partial class FormCreateBill : Form
     {
         Bill CurrentBill = new Bill();
+        int currentImportID;
+        int currentExportID;
         public FormCreateBill()
         {
             InitializeComponent();
@@ -26,14 +28,14 @@ namespace BPMS.GUI
         public FormCreateBill(ImportReport ir)
         {
             InitializeComponent();
-            ir.idBill = CurrentBill.id;
+            currentImportID = ir.id;
             CurrentBill.type = 0;
         }
 
         public FormCreateBill(ExportReport er)
         {
             InitializeComponent();
-            er.idBill = CurrentBill.id;
+            currentExportID = er.id;
             CurrentBill.type = 1;
         }
 
@@ -68,9 +70,17 @@ namespace BPMS.GUI
             CurrentBill.isPaid = 0;
             CurrentBill.isReceived = 0;
 
-
             BillDAO.Instance.CreateBill(CurrentBill);
+            if(CurrentBill.type == 0)
+            {
+                ImportReportDAO.Instance.UpdateIdBill(currentImportID, CurrentBill.id);
+            }
+            else
+            {
+                ExportReportDAO.Instance.UpdateIdBill(currentExportID, CurrentBill.id);
+            }
 
+            
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormPayment(), this);
             NavigateBack?.Invoke(this, navigationE);
         }

@@ -85,5 +85,15 @@ namespace BPMS.DAO
             }
             db.SaveChanges();
         }
+        public void UpdateIdBill(int id, int idBill)
+        {
+            var item = db.ExportReports.FirstOrDefault(er => er.id == id);
+            if (item != null)
+            {
+                item.idBill = idBill;
+                db.SaveChanges();
+                db.Entry(item).Reference(b => b.Bill).Load();
+            }
+        }
     }
 }

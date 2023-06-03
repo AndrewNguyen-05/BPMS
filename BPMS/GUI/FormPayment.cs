@@ -41,7 +41,7 @@ namespace BPMS.GUI
                                                     , ir.Publisher.Account.DisplayName
                                                     , ir.ImportDate
                                                     , ir.TotalPrice
-                                                    , ir.idBill != null ? ir.Bill.ToString() : "none"});
+                                                    , ir.idBill != null ? "Number " + ir.idBill.ToString() : "None"});
             }
         }
 
@@ -55,7 +55,7 @@ namespace BPMS.GUI
                                                     , er.Agency.Account.DisplayName
                                                     , er.ExportDate
                                                     , er.TotalPrice
-                                                    , er.idBill != null ? er.Bill.ToString() : "none"});
+                                                    , er.idBill != null ?"Number " + er.idBill.ToString() : "None"});
             }
         }
 
@@ -101,6 +101,7 @@ namespace BPMS.GUI
             ImportReport importReport = ImportReportDAO.Instance.GetImportReport(int.Parse(dtgvImport.SelectedRows[0].Cells["clmIdImport"].Value.ToString()));
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(importReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
+            
         }
 
         #endregion
@@ -111,6 +112,7 @@ namespace BPMS.GUI
             ExportReport exportReport = ExportReportDAO.Instance.GetExportReport(int.Parse(dtgvExport.SelectedRows[0].Cells["clmIdExport"].Value.ToString()));
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormCreateBill(exportReport), this);
             InnerFormNavigating?.Invoke(this, navigationE);
+           
         }
 
         private void btnModify_Click(object sender, EventArgs e)
