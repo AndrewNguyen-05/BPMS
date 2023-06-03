@@ -35,7 +35,7 @@ namespace BPMS.GUI
         public FormCreateBill(ExportReport er)
         {
             InitializeComponent();
-            currentImportID = er.id;
+            currentExportID = er.id;
             CurrentBill.type = 1;
         }
 
@@ -79,7 +79,7 @@ namespace BPMS.GUI
             {
                 ExportReportDAO.Instance.UpdateIdBill(currentExportID, CurrentBill.id);
             }
-            ImportReportDAO.Instance.UpdateIdBill(currentImportID, CurrentBill.id);
+
             
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormPayment(), this);
             NavigateBack?.Invoke(this, navigationE);
