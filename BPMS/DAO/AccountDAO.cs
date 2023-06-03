@@ -60,14 +60,10 @@ namespace BPMS.DAO
             return AccountId.First();
         }
 
-        public void CreateAccount(ref Account acc, bool isUpdate)
+        public void CreateAccount(ref Account acc)
         {
             db.Accounts.AddOrUpdate(acc);
             db.SaveChanges();
-            if (!isUpdate)
-            {
-                acc.id = db.Accounts.LastOrDefault().id;
-            }
         }
 
         public void DeleteAccount(Account acc)

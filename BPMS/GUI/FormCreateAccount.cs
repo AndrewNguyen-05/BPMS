@@ -68,7 +68,7 @@ namespace BPMS.GUI
                 }
             }
 
-            AccountDAO.Instance.CreateAccount(ref acc, CurrentAcc == null); //ref id
+            AccountDAO.Instance.CreateAccount(ref acc); //ref id
 
             switch ((Permissions)acc.type)
             {
