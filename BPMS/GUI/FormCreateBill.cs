@@ -17,7 +17,7 @@ namespace BPMS.GUI
 {
     public partial class FormCreateBill : Form
     {
-        Bill CurrentBill = new Bill();
+        Bill CurrentBill = new Bill() { isHidden = 0 };
         int currentImportID;
         int currentExportID;
         public FormCreateBill()

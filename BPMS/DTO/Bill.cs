@@ -29,6 +29,7 @@ namespace BPMS.DTO
         public Nullable<int> isPaid { get; set; }
         public Nullable<int> isReceived { get; set; }
         public int type { get; set; }
+        public Nullable<int> isHidden { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

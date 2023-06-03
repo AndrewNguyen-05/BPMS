@@ -74,6 +74,7 @@ CREATE TABLE Bill
 	isPaid INT, --1: đã trả, 0: chưa trả 
 	isReceived INT, --1: đã nhận, 0: chưa nhận 
 	type INT NOT NULL, --0: Import, 1: Export
+	isHidden INT,
 	FOREIGN KEY (idCreatePerson) REFERENCES dbo.Account(id)
 )
 GO
