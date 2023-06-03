@@ -211,6 +211,5 @@ namespace BPMS.GUI
             txbAuthor.Text = (cbBook.SelectedItem as Book).author;
         }
         #endregion
-
     }
 }

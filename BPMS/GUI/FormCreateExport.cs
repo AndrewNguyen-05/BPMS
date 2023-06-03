@@ -201,8 +201,12 @@ namespace BPMS.GUI
             cbQuality.Text = dtgvr.Cells["QualityClm"].Value.ToString();
         }
 
+        private void cbBook_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbAuthor.Text = (cbBook.SelectedItem as Book).author;
+        }
         #endregion
 
-        
+
     }
 }
