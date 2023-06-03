@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabImport = new System.Windows.Forms.TabPage();
             this.btnCreateImport = new Guna.UI2.WinForms.Guna2Button();
@@ -52,6 +52,14 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnModify = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.clmIdBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTypeReport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmReceiver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCreatePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmIdExport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmAgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmExportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,14 +70,6 @@
             this.clmImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalPriceIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmIdBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTypeReport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmReceiver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCreatePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -153,19 +153,19 @@
             this.dtgvImport.AllowUserToDeleteRows = false;
             this.dtgvImport.AllowUserToResizeColumns = false;
             this.dtgvImport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            this.dtgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvImport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvImport.ColumnHeadersHeight = 35;
             this.dtgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdImport,
@@ -173,14 +173,14 @@
             this.clmImportDate,
             this.clmTotalPriceIm,
             this.clmBilledIm});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
             this.dtgvImport.Location = new System.Drawing.Point(7, 78);
             this.dtgvImport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
@@ -189,8 +189,8 @@
             this.dtgvImport.ReadOnly = true;
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvImport.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvImport.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvImport.RowTemplate.Height = 32;
             this.dtgvImport.Size = new System.Drawing.Size(1320, 682);
             this.dtgvImport.TabIndex = 1;
@@ -256,19 +256,19 @@
             this.dtgvExport.AllowUserToDeleteRows = false;
             this.dtgvExport.AllowUserToResizeColumns = false;
             this.dtgvExport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            this.dtgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dtgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvExport.ColumnHeadersHeight = 35;
             this.dtgvExport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdExport,
@@ -276,14 +276,14 @@
             this.clmExportDate,
             this.clmTotalPriceEx,
             this.clmBilledEx});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle7;
             this.dtgvExport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
             this.dtgvExport.Location = new System.Drawing.Point(6, 65);
             this.dtgvExport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
@@ -292,8 +292,8 @@
             this.dtgvExport.ReadOnly = true;
             this.dtgvExport.RowHeadersVisible = false;
             this.dtgvExport.RowHeadersWidth = 62;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvExport.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvExport.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgvExport.RowTemplate.Height = 32;
             this.dtgvExport.Size = new System.Drawing.Size(1305, 632);
             this.dtgvExport.TabIndex = 3;
@@ -385,19 +385,19 @@
             this.dtgvBill.AllowUserToDeleteRows = false;
             this.dtgvBill.AllowUserToResizeColumns = false;
             this.dtgvBill.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.dtgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dtgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgvBill.ColumnHeadersHeight = 35;
             this.dtgvBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdBill,
@@ -408,14 +408,14 @@
             this.clmCreatePerson,
             this.clmPaid,
             this.clmReceived});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBill.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBill.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
             this.dtgvBill.Location = new System.Drawing.Point(7, 90);
             this.dtgvBill.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
@@ -425,8 +425,8 @@
             this.dtgvBill.RowHeadersVisible = false;
             this.dtgvBill.RowHeadersWidth = 62;
             this.dtgvBill.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvBill.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvBill.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgvBill.RowTemplate.Height = 28;
             this.dtgvBill.Size = new System.Drawing.Size(1308, 612);
             this.dtgvBill.TabIndex = 4;
@@ -451,76 +451,6 @@
             this.dtgvBill.ThemeStyle.RowsStyle.Height = 28;
             this.dtgvBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // clmIdExport
-            // 
-            this.clmIdExport.HeaderText = "Id Export";
-            this.clmIdExport.MinimumWidth = 6;
-            this.clmIdExport.Name = "clmIdExport";
-            this.clmIdExport.ReadOnly = true;
-            // 
-            // clmAgency
-            // 
-            this.clmAgency.HeaderText = "Agency";
-            this.clmAgency.MinimumWidth = 6;
-            this.clmAgency.Name = "clmAgency";
-            this.clmAgency.ReadOnly = true;
-            // 
-            // clmExportDate
-            // 
-            this.clmExportDate.HeaderText = "Export Date";
-            this.clmExportDate.MinimumWidth = 6;
-            this.clmExportDate.Name = "clmExportDate";
-            this.clmExportDate.ReadOnly = true;
-            // 
-            // clmTotalPriceEx
-            // 
-            this.clmTotalPriceEx.HeaderText = "Total Price";
-            this.clmTotalPriceEx.MinimumWidth = 6;
-            this.clmTotalPriceEx.Name = "clmTotalPriceEx";
-            this.clmTotalPriceEx.ReadOnly = true;
-            // 
-            // clmBilledEx
-            // 
-            this.clmBilledEx.HeaderText = "Billed";
-            this.clmBilledEx.MinimumWidth = 6;
-            this.clmBilledEx.Name = "clmBilledEx";
-            this.clmBilledEx.ReadOnly = true;
-            // 
-            // clmIdImport
-            // 
-            this.clmIdImport.HeaderText = "Id Import";
-            this.clmIdImport.MinimumWidth = 6;
-            this.clmIdImport.Name = "clmIdImport";
-            this.clmIdImport.ReadOnly = true;
-            // 
-            // clmPublisher
-            // 
-            this.clmPublisher.HeaderText = "Publisher";
-            this.clmPublisher.MinimumWidth = 6;
-            this.clmPublisher.Name = "clmPublisher";
-            this.clmPublisher.ReadOnly = true;
-            // 
-            // clmImportDate
-            // 
-            this.clmImportDate.HeaderText = "Import Date";
-            this.clmImportDate.MinimumWidth = 6;
-            this.clmImportDate.Name = "clmImportDate";
-            this.clmImportDate.ReadOnly = true;
-            // 
-            // clmTotalPriceIm
-            // 
-            this.clmTotalPriceIm.HeaderText = "Total Price";
-            this.clmTotalPriceIm.MinimumWidth = 6;
-            this.clmTotalPriceIm.Name = "clmTotalPriceIm";
-            this.clmTotalPriceIm.ReadOnly = true;
-            // 
-            // clmBilledIm
-            // 
-            this.clmBilledIm.HeaderText = "Billed";
-            this.clmBilledIm.MinimumWidth = 6;
-            this.clmBilledIm.Name = "clmBilledIm";
-            this.clmBilledIm.ReadOnly = true;
             // 
             // clmIdBill
             // 
@@ -578,6 +508,76 @@
             this.clmReceived.Name = "clmReceived";
             this.clmReceived.ReadOnly = true;
             // 
+            // clmIdExport
+            // 
+            this.clmIdExport.HeaderText = "Id Export";
+            this.clmIdExport.MinimumWidth = 6;
+            this.clmIdExport.Name = "clmIdExport";
+            this.clmIdExport.ReadOnly = true;
+            // 
+            // clmAgency
+            // 
+            this.clmAgency.HeaderText = "Agency";
+            this.clmAgency.MinimumWidth = 6;
+            this.clmAgency.Name = "clmAgency";
+            this.clmAgency.ReadOnly = true;
+            // 
+            // clmExportDate
+            // 
+            this.clmExportDate.HeaderText = "Export Date";
+            this.clmExportDate.MinimumWidth = 6;
+            this.clmExportDate.Name = "clmExportDate";
+            this.clmExportDate.ReadOnly = true;
+            // 
+            // clmTotalPriceEx
+            // 
+            this.clmTotalPriceEx.HeaderText = "Total Price";
+            this.clmTotalPriceEx.MinimumWidth = 6;
+            this.clmTotalPriceEx.Name = "clmTotalPriceEx";
+            this.clmTotalPriceEx.ReadOnly = true;
+            // 
+            // clmBilledEx
+            // 
+            this.clmBilledEx.HeaderText = "Bill";
+            this.clmBilledEx.MinimumWidth = 6;
+            this.clmBilledEx.Name = "clmBilledEx";
+            this.clmBilledEx.ReadOnly = true;
+            // 
+            // clmIdImport
+            // 
+            this.clmIdImport.HeaderText = "Id Import";
+            this.clmIdImport.MinimumWidth = 6;
+            this.clmIdImport.Name = "clmIdImport";
+            this.clmIdImport.ReadOnly = true;
+            // 
+            // clmPublisher
+            // 
+            this.clmPublisher.HeaderText = "Publisher";
+            this.clmPublisher.MinimumWidth = 6;
+            this.clmPublisher.Name = "clmPublisher";
+            this.clmPublisher.ReadOnly = true;
+            // 
+            // clmImportDate
+            // 
+            this.clmImportDate.HeaderText = "Import Date";
+            this.clmImportDate.MinimumWidth = 6;
+            this.clmImportDate.Name = "clmImportDate";
+            this.clmImportDate.ReadOnly = true;
+            // 
+            // clmTotalPriceIm
+            // 
+            this.clmTotalPriceIm.HeaderText = "Total Price";
+            this.clmTotalPriceIm.MinimumWidth = 6;
+            this.clmTotalPriceIm.Name = "clmTotalPriceIm";
+            this.clmTotalPriceIm.ReadOnly = true;
+            // 
+            // clmBilledIm
+            // 
+            this.clmBilledIm.HeaderText = "Bill";
+            this.clmBilledIm.MinimumWidth = 6;
+            this.clmBilledIm.Name = "clmBilledIm";
+            this.clmBilledIm.ReadOnly = true;
+            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -612,6 +612,14 @@
         private Guna.UI2.WinForms.Guna2Button btnCreateExport;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnModify;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdBill;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTypeReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmReceiver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateCreate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatePerson;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmReceived;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmIdImport;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPublisher;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmImportDate;
@@ -622,13 +630,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmExportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPriceEx;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmBilledEx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdBill;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTypeReport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmSender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmReceiver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateCreate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatePerson;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPaid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmReceived;
     }
 }
