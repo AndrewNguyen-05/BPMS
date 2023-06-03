@@ -41,7 +41,7 @@ namespace BPMS.GUI
                                                     , ir.Publisher.Account.DisplayName
                                                     , ir.ImportDate
                                                     , ir.TotalPrice
-                                                    , ir.idBill != null ? "ID: " + ir.idBill.ToString() : "None"});
+                                                    , ir.idBill != null ? "Number " + ir.idBill.ToString() : "None"});
             }
         }
 
@@ -55,7 +55,7 @@ namespace BPMS.GUI
                                                     , er.Agency.Account.DisplayName
                                                     , er.ExportDate
                                                     , er.TotalPrice
-                                                    , er.idBill != null ? er.idBill.ToString() : "None"});
+                                                    , er.idBill != null ?"Number " + er.idBill.ToString() : "None"});
             }
         }
 
