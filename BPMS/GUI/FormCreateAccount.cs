@@ -53,6 +53,7 @@ namespace BPMS.GUI
                                           PassWord = txbPassword.Text,
                                           type = (int)(Permissions)(cbType.SelectedValue),
                                           address = txbAddress.Text,
+                                          isHidden = 0
             };
             if (CurrentAcc != null)
             {
@@ -76,12 +77,13 @@ namespace BPMS.GUI
                     {
                         idAccount = acc.id,
                         AccountNumber = txbBankAccount.Text,
-                        PhoneNumber = txbPhone.Text
+                        PhoneNumber = txbPhone.Text,
+                        isHidden = 0
                     };
                     DTO.Publisher tmp = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
                     if (tmp != null)
                     {
-                        pb.id = tmp.id;
+                        pb.idAccount = tmp.id;
                     }
                     PublisherDAO.Instance.CreatePublisher(pb);
                     break;
@@ -90,12 +92,13 @@ namespace BPMS.GUI
                     {
                         idAccount = acc.id,
                         AccountNumber = txbBankAccount.Text,
-                        PhoneNumber = txbPhone.Text
+                        PhoneNumber = txbPhone.Text,
+                        isHidden = 0
                     };
                     DTO.Accountant tmpact = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
                     if (tmpact != null)
                     {
-                        act.id = tmpact.id;
+                        act.idAccount = tmpact.id;
                     }
                     AccountantDAO.Instance.CreateAccountant(act);
                     break;
