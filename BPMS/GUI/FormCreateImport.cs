@@ -138,18 +138,39 @@ namespace BPMS.GUI
         private void btnModify_Click(object sender, EventArgs e)
         {
             if (dtgvBookList.SelectedRows.Count == 0) return;
+            DataGridViewRow tmp = null;
             Book selectedBook = cbBook.SelectedItem as Book;
-            foreach (DataGridViewRow dtgvr in dtgvBookList.SelectedRows)
+
+            foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
             {
-                dtgvr.Cells["BookClm"].Value = selectedBook.name;
-                dtgvr.Cells["BookClm"].Tag = selectedBook;
-                dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
-                dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
-                dtgvr.Cells["QualityClm"].Value = cbQuality.Text;
-                double? bookprice = selectedBook.price * (double)nudQuantity.Value;
-                dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+                if (dtgvr.Cells["BookClm"].Tag != null)
+                {
+                    if ((dtgvr.Cells["BookClm"].Tag as Book).name == selectedBook.name && dtgvr != dtgvBookList.SelectedRows[0])
+                    {
+                        nudQuantity.Value += decimal.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
+                        dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+                        double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+                        dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+                        tmp = dtgvr;
+                        dtgvBookList.Rows.Remove(dtgvBookList.SelectedRows[0]);
+                        UpdateTotalPrice();
+                        break;
+                    }
+                }
             }
-            UpdateTotalPrice();
+
+            if(tmp is null)
+            {
+                tmp = dtgvBookList.SelectedRows[0];
+                tmp.Cells["BookClm"].Value = selectedBook.name;
+                tmp.Cells["BookClm"].Tag = selectedBook;
+                tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
+                tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+                tmp.Cells["QualityClm"].Value = cbQuality.Text;
+                double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+                tmp.Cells["PriceClm"].Value = bookprice.ToString();
+                UpdateTotalPrice();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
