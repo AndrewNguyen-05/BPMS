@@ -1,6 +1,7 @@
 ﻿using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace BPMS.DAO
 
         public void CreateAccountant(Accountant ac)
         {
-            db.Accountants.Add(ac);
+            db.Accountants.AddOrUpdate(ac);
             db.SaveChanges();
             db.Entry(ac).Reference(c => c.Account).Load();
         }

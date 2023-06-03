@@ -54,6 +54,21 @@ namespace BPMS.GUI
                                           type = (int)(Permissions)(cbType.SelectedValue),
                                           address = txbAddress.Text,
             };
+            if (CurrentAcc != null)
+            {
+                acc.id = CurrentAcc.id;
+            }
+            if (AccountDAO.Instance.GetAccount(acc.UserName) != null)
+            {
+                if (CurrentAcc == null || (CurrentAcc != null && CurrentAcc.UserName != acc.UserName))
+                {
+                    MessageBox.Show("Username existed");
+                    return;
+                }
+            }
+
+            AccountDAO.Instance.CreateAccount(ref acc, CurrentAcc == null); //ref id
+
             switch ((Permissions)acc.type)
             {
                 case Permissions.Publisher:
@@ -71,33 +86,21 @@ namespace BPMS.GUI
                     PublisherDAO.Instance.CreatePublisher(pb);
                     break;
                 case Permissions.Accountant:
-                    DTO.Accountant ac = new DTO.Accountant()
+                    DTO.Accountant act = new DTO.Accountant()
                     {
                         idAccount = acc.id,
                         AccountNumber = txbBankAccount.Text,
                         PhoneNumber = txbPhone.Text
                     };
-                    DTO.Accountant tmpacc = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
-                    if (tmpacc != null)
+                    DTO.Accountant tmpact = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
+                    if (tmpact != null)
                     {
-                        acc.id = tmpacc.id;
+                        act.id = tmpact.id;
                     }
-                    AccountantDAO.Instance.CreateAccountant(ac);
+                    AccountantDAO.Instance.CreateAccountant(act);
                     break;
             }
-            if (CurrentAcc != null)
-            {
-                acc.id = CurrentAcc.id;
-            }
-            if (AccountDAO.Instance.GetAccount(acc.UserName) != null)
-            {
-                if (CurrentAcc == null || (CurrentAcc != null && CurrentAcc.UserName != acc.UserName))
-                {
-                    MessageBox.Show("Username existed");
-                    return;
-                }    
-            }
-            AccountDAO.Instance.CreateAccount(acc);
+
             NavigationEventArgs navigationE = new NavigationEventArgs(new FormAccount(), this);
             NavigateBack?.Invoke(this, navigationE);
         }

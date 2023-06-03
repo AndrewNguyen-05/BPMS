@@ -451,6 +451,7 @@
             this.btnCreate.Size = new System.Drawing.Size(501, 45);
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // FormCreateAccount
             // 

@@ -1,6 +1,7 @@
 ﻿using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +58,7 @@ namespace BPMS.DAO
 
         public void CreatePublisher(Publisher pb)
         {
-            db.Publishers.Add(pb);
+            db.Publishers.AddOrUpdate(pb);
             db.SaveChanges();
             db.Entry(pb).Reference(c => c.Account).Load();
         }
