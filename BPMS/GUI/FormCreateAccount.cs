@@ -45,7 +45,13 @@ namespace BPMS.GUI
             txbPassword.Text = CurrentAcc.PassWord;
             txbAddress.Text = CurrentAcc.address;
             cbType.SelectedIndex = cbType.Items.IndexOf((Permissions)CurrentAcc.type);
-            switch ((Permissions)CurrentAcc.type)
+            LoadAdditional();
+        }
+        void LoadAdditional()
+        {
+            txbBankAccount.Text = "";
+            txbPhone.Text = "";
+            switch ((Permissions)cbType.SelectedValue)
             {
                 case Permissions.Publisher:
                     if (CurrentAcc.Publishers.Where(c => c.isHidden == 0).FirstOrDefault() != null)
@@ -141,11 +147,13 @@ namespace BPMS.GUI
             {
                 txbBankAccount.Enabled = true;
                 txbPhone.Enabled = true;
+                LoadAdditional();
             }
             else
             {
                 txbBankAccount.Enabled = false;
                 txbPhone.Enabled = false;
+                LoadAdditional();
             }
         }
     }
