@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Classes\NavigationEventArgs.cs" />
     <Compile Include="Classes\Permissions.cs" />
+    <Compile Include="DAO\AccountantDAO.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\AgencyDAO.cs" />
     <Compile Include="DAO\AnalyticDAO.cs" />

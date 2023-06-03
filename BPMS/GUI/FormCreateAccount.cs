@@ -28,7 +28,7 @@ namespace BPMS.GUI
             cbType.DataSource = Enum.GetValues(typeof(Permissions));
             cbType.DisplayMember = "Name";
             CurrentAcc = acc;
-            lblNewAccount.Text = "Modify Account";
+            grbNewAccount.Text = "Modify Account";
             btnCreate.Text = "Modify";
             LoadAcc();
         }
@@ -53,7 +53,38 @@ namespace BPMS.GUI
                                           PassWord = txbPassword.Text,
                                           type = (int)(Permissions)(cbType.SelectedValue),
                                           address = txbAddress.Text,
-                                            };
+            };
+            switch ((Permissions)acc.type)
+            {
+                case Permissions.Publisher:
+                    DTO.Publisher pb = new DTO.Publisher()
+                    {
+                        idAccount = acc.id,
+                        AccountNumber = txbBankAccount.Text,
+                        PhoneNumber = txbPhone.Text
+                    };
+                    DTO.Publisher tmp = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
+                    if (tmp != null)
+                    {
+                        pb.id = tmp.id;
+                    }
+                    PublisherDAO.Instance.CreatePublisher(pb);
+                    break;
+                case Permissions.Accountant:
+                    DTO.Accountant ac = new DTO.Accountant()
+                    {
+                        idAccount = acc.id,
+                        AccountNumber = txbBankAccount.Text,
+                        PhoneNumber = txbPhone.Text
+                    };
+                    DTO.Accountant tmpacc = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
+                    if (tmpacc != null)
+                    {
+                        acc.id = tmpacc.id;
+                    }
+                    AccountantDAO.Instance.CreateAccountant(ac);
+                    break;
+            }
             if (CurrentAcc != null)
             {
                 acc.id = CurrentAcc.id;
