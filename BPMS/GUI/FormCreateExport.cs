@@ -129,33 +129,68 @@ namespace BPMS.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            IsAddMode = true;
-            dtgvBookList.Rows.Add();
-            IsAddMode = false;
-            DataGridViewRow tmp = dtgvBookList.Rows[dtgvBookList.Rows.Count - 1];
+            DataGridViewRow tmp = null;
             Book selectedBook = cbBook.SelectedItem as Book;
 
-            bool isUpdate = false;
-            foreach (DataGridViewRow row in dtgvBookList.Rows)
+            foreach (DataGridViewRow dgvr in dtgvBookList.Rows)
             {
-                if (row.Cells["BookClm"].Value == selectedBook.name as object)
+                if (dgvr.Cells["BookClm"].Tag != null)
                 {
-                    isUpdate = true;
-                    int quantity = int.Parse(row.Cells["QuantityClm"].Value as string) + (int)nudQuantity.Value;
-                    row.Cells["QuantityClm"].Value = quantity.ToString();
-                    double? bookPrice = selectedBook.price * int.Parse(row.Cells["QuantityClm"].Value as string);
-                    row.Cells["PriceClm"].Value = bookPrice.ToString();
-                    dtgvBookList.Rows.Remove(tmp);
+                    if ((dgvr.Cells["BookClm"].Tag as Book).name == selectedBook.name)
+                    {
+                        nudQuantity.Value += decimal.Parse(dgvr.Cells["QuantityClm"].Value.ToString());
+                        tmp = dgvr;
+                        break;
+                    }
+                }
+            }
+            if (tmp is null)
+            {
+                IsAddMode = true;
+                dtgvBookList.Rows.Add();
+                IsAddMode = false;
+                tmp = dtgvBookList.Rows[dtgvBookList.Rows.Count - 1];
+            }
 
-                    UpdateTotalPrice();
-                    break;
+            tmp.Cells["BookClm"].Value = selectedBook.name;
+            tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
+            tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
+            tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+            tmp.Cells["QualityClm"].Value = cbQuality.Text;
+            double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+            tmp.Cells["PriceClm"].Value = bookprice.ToString();
+            UpdateTotalPrice();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dtgvBookList.SelectedRows.Count == 0) return;
+            DataGridViewRow tmp = null;
+            Book selectedBook = cbBook.SelectedItem as Book;
+
+            foreach (DataGridViewRow dtgvr in dtgvBookList.Rows)
+            {
+                if (dtgvr.Cells["BookClm"].Tag != null)
+                {
+                    if ((dtgvr.Cells["BookClm"].Tag as Book).name == selectedBook.name && dtgvr != dtgvBookList.SelectedRows[0])
+                    {
+                        nudQuantity.Value += decimal.Parse(dtgvr.Cells["QuantityClm"].Value.ToString());
+                        dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
+                        double? bookprice = selectedBook.price * (double)nudQuantity.Value;
+                        dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
+                        tmp = dtgvr;
+                        dtgvBookList.Rows.Remove(dtgvBookList.SelectedRows[0]);
+                        UpdateTotalPrice();
+                        break;
+                    }
                 }
             }
 
-            if (!isUpdate)
+            if (tmp is null)
             {
+                tmp = dtgvBookList.SelectedRows[0];
                 tmp.Cells["BookClm"].Value = selectedBook.name;
-                tmp.Cells["BookClm"].Tag = cbBook.SelectedItem;
+                tmp.Cells["BookClm"].Tag = selectedBook;
                 tmp.Cells["AuthorClm"].Value = txbAuthor.Text;
                 tmp.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
                 tmp.Cells["QualityClm"].Value = cbQuality.Text;
@@ -163,23 +198,6 @@ namespace BPMS.GUI
                 tmp.Cells["PriceClm"].Value = bookprice.ToString();
                 UpdateTotalPrice();
             }
-        }
-
-        private void btnModify_Click(object sender, EventArgs e)
-        {
-            if (dtgvBookList.SelectedRows.Count == 0) return;
-            Book selectedBook = cbBook.SelectedItem as Book;
-            foreach (DataGridViewRow dtgvr in dtgvBookList.SelectedRows)
-            {
-                dtgvr.Cells["BookClm"].Value = selectedBook.name;
-                dtgvr.Cells["BookClm"].Tag = selectedBook;
-                dtgvr.Cells["AuthorClm"].Value = txbAuthor.Text;
-                dtgvr.Cells["QuantityClm"].Value = nudQuantity.Value.ToString();
-                dtgvr.Cells["QualityClm"].Value = cbQuality.Text;
-                double? bookprice = selectedBook.price * (double)nudQuantity.Value;
-                dtgvr.Cells["PriceClm"].Value = bookprice.ToString();
-            }
-            UpdateTotalPrice();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
