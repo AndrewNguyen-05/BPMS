@@ -138,7 +138,7 @@ namespace BPMS.GUI
             bool isUpdate = false;
             foreach (DataGridViewRow row in dtgvBookList.Rows)
             {
-                if (row.Cells["BookClm"].Value.ToString() == selectedBook.name)
+                if (row.Cells["BookClm"].Value == selectedBook.name as object)
                 {
                     isUpdate = true;
                     int quantity = int.Parse(row.Cells["QuantityClm"].Value as string) + (int)nudQuantity.Value;
