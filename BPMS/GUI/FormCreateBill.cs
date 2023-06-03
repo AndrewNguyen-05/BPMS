@@ -43,6 +43,8 @@ namespace BPMS.GUI
         {
             InitializeComponent();
             CurrentBill = bi;
+            txbReceiver.Text = CurrentBill.Receiver;
+            txbSender.Text = CurrentBill.Sender;
         }
 
         #region Handler
