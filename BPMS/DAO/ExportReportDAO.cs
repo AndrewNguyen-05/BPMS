@@ -33,6 +33,16 @@ namespace BPMS.DAO
 
         }
 
+        public ExportReport GetExportReportFromBill(int idBill)
+        {
+            var list = from er in db.ExportReports
+                       join b in db.Bills
+                       on er.idBill equals b.id
+                       where b.id == idBill
+                       select er;
+            return list.FirstOrDefault();
+        }
+
         public void CreateExportReportDetail(ExportReportDetail erd)
         {
             db.ExportReportDetails.Add(erd);

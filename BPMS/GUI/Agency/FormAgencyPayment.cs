@@ -101,7 +101,38 @@ namespace BPMS.GUI.Agency
             foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
             {
                 int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
-                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                Bill tmp = BillDAO.Instance.GetBill(idBill);                
+                //for label (0 = import, 1 = export)
+                if (tmp.type == 0)
+                {
+                    ImportReport ir = ImportReportDAO.Instance.GetImportReportFromBill(idBill);
+                    if (ir != null)
+                    {
+                        lblBillInfo.Text = string.Format("Import Report number {0}, publisher {1} with total price {2}",
+                                                        ir.id,
+                                                        ir.Publisher.Account.DisplayName,
+                                                        ir.TotalPrice);
+                    }
+                    else
+                    {
+                        lblBillInfo.Text = "";
+                    }
+                }
+                else if (tmp.type == 1)
+                {
+                    ExportReport ir = ExportReportDAO.Instance.GetExportReportFromBill(idBill);
+                    if (ir != null)
+                    {
+                        lblBillInfo.Text = string.Format("Export Report number {0}, agency {1} with total price {2}",
+                                                        ir.id,
+                                                        ir.Agency.Account.DisplayName,
+                                                        ir.TotalPrice);
+                    }
+                    else
+                    {
+                        lblBillInfo.Text = "";
+                    }
+                }
                 if (tmp.isPaid == 1) { btnCancel.Visible = true; btnPay.Visible = false; }
                 else { btnCancel.Visible = false; btnPay.Visible = true; }
             }

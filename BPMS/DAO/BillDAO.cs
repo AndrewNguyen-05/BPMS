@@ -36,14 +36,14 @@ namespace BPMS.DAO
                        on ag.id equals er.idAgency
                        join b in db.Bills
                        on er.idBill equals b.id
-                       where ag.id == agency.id
+                       where ag.id == agency.id && b.isHidden == 0
                        select b;
             return data.ToList();
         }
         public Bill GetBill(int id)
         {
             var list = from bi in db.Bills
-                       where bi.id == id
+                       where bi.id == id && bi.isHidden == 0
                        select bi;
             return list.FirstOrDefault();
         }

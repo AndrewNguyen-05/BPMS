@@ -66,6 +66,16 @@ namespace BPMS.DAO
             return list.FirstOrDefault();
         }
 
+        public ImportReport GetImportReportFromBill(int idBill)
+        {
+            var list = from ir in db.ImportReports
+                       join b in db.Bills
+                       on ir.idBill equals b.id
+                       where b.id == idBill
+                       select ir;
+            return list.FirstOrDefault();
+        }
+
         public void RemoveAllDetailInImportReport(int id)
         {
             var list = from ird in db.ImportReportDetails
