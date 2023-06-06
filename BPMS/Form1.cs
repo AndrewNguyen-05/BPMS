@@ -122,10 +122,8 @@ namespace BPMS
 
                     return;
                 case Permissions.Accountant:
-                    btnAnalytic.Visible = false;
                     btnExport.Visible = false;
                     btnImport.Visible = false;
-                    btnPayment.Visible = false;
                     return;
                 case Permissions.Publisher:
                     btnImport.Visible = false;
@@ -261,6 +259,8 @@ namespace BPMS
                     return new FormAgencyPayment();
                 case Permissions.Publisher:
                     return new FormPublisherPayment();
+                case Permissions.Accountant:
+                    return new FormPayment();
             }
             return null;
         }
@@ -275,6 +275,8 @@ namespace BPMS
             switch (type)
             {
                 case Permissions.Manager:
+                    return new FormAnalytic();
+                case Permissions.Accountant:
                     return new FormAnalytic();
             }
             return null;

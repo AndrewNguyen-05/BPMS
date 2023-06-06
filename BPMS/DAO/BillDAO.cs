@@ -28,6 +28,18 @@ namespace BPMS.DAO
         {
             return db.Bills.Where(e => e.isHidden == 0).ToList();
         }
+        public List<Bill> GetAgencyBills(Agency agency)
+        {
+            if (agency == null) return GetBills();
+            var data = from ag in db.Agencies
+                       join er in db.ExportReports
+                       on ag.id equals er.idAgency
+                       join b in db.Bills
+                       on er.idBill equals b.id
+                       where ag.id == agency.id
+                       select b;
+            return data.ToList();
+        }
         public Bill GetBill(int id)
         {
             var list = from bi in db.Bills
