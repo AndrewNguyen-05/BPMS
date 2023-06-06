@@ -83,7 +83,7 @@ namespace BPMS.GUI.Agency
             LoadBillInfo();
         }
 
-        private void btnPaid_Click(object sender, EventArgs e)
+        private void btnPay_Click(object sender, EventArgs e)
         {
             if (dtgvBill.SelectedRows.Count == 0) return;
             foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
@@ -102,12 +102,11 @@ namespace BPMS.GUI.Agency
             {
                 int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
                 Bill tmp = BillDAO.Instance.GetBill(idBill);
-                if (tmp.isPaid == 1) { btnUnpaid.Visible = true; }
-                else { btnUnpaid.Visible = false; }
+                if (tmp.isPaid == 1) { btnCancel.Visible = true; btnPay.Visible = false; }
+                else { btnCancel.Visible = false; btnPay.Visible = true; }
             }
         }
-
-        private void btnUnpaid_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
             {
