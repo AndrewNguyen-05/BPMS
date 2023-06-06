@@ -60,6 +60,7 @@
             this.clmTotalPriceEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBill = new System.Windows.Forms.TabPage();
+            this.lblBillInfo = new System.Windows.Forms.Label();
             this.btnCancelReceived = new Guna.UI2.WinForms.Guna2Button();
             this.btnConfirmReceived = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -74,7 +75,8 @@
             this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblBillInfo = new System.Windows.Forms.Label();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPay = new Guna.UI2.WinForms.Guna2Button();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -396,12 +398,14 @@
             // 
             // tabBill
             // 
+            this.tabBill.Controls.Add(this.btnPay);
+            this.tabBill.Controls.Add(this.btnCancel);
             this.tabBill.Controls.Add(this.lblBillInfo);
-            this.tabBill.Controls.Add(this.btnCancelReceived);
             this.tabBill.Controls.Add(this.btnConfirmReceived);
             this.tabBill.Controls.Add(this.btnDelete);
             this.tabBill.Controls.Add(this.btnModify);
             this.tabBill.Controls.Add(this.dtgvBill);
+            this.tabBill.Controls.Add(this.btnCancelReceived);
             this.tabBill.Location = new System.Drawing.Point(4, 44);
             this.tabBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBill.Name = "tabBill";
@@ -410,6 +414,15 @@
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "Bill";
             this.tabBill.UseVisualStyleBackColor = true;
+            // 
+            // lblBillInfo
+            // 
+            this.lblBillInfo.AutoSize = true;
+            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBillInfo.Location = new System.Drawing.Point(8, 15);
+            this.lblBillInfo.Name = "lblBillInfo";
+            this.lblBillInfo.Size = new System.Drawing.Size(0, 23);
+            this.lblBillInfo.TabIndex = 13;
             // 
             // btnCancelReceived
             // 
@@ -660,14 +673,53 @@
             // 
             this.guna2Elipse1.BorderRadius = 8;
             // 
-            // lblBillInfo
+            // btnCancel
             // 
-            this.lblBillInfo.AutoSize = true;
-            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblBillInfo.Location = new System.Drawing.Point(8, 15);
-            this.lblBillInfo.Name = "lblBillInfo";
-            this.lblBillInfo.Size = new System.Drawing.Size(0, 23);
-            this.lblBillInfo.TabIndex = 13;
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Animated = true;
+            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.btnCancel.BorderRadius = 4;
+            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(606, 15);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(184, 44);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPay.Animated = true;
+            this.btnPay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.btnPay.BorderRadius = 4;
+            this.btnPay.BorderThickness = 1;
+            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPay.FillColor = System.Drawing.Color.White;
+            this.btnPay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
+            this.btnPay.Location = new System.Drawing.Point(606, 15);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(184, 44);
+            this.btnPay.TabIndex = 15;
+            this.btnPay.Text = "Pay";
+            this.btnPay.Visible = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // FormPayment
             // 
@@ -726,5 +778,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnCancelReceived;
         private System.Windows.Forms.Label lblBillInfo;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2Button btnPay;
     }
 }

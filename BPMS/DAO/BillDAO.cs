@@ -28,9 +28,20 @@ namespace BPMS.DAO
         {
             return db.Bills.Where(e => e.isHidden == 0).ToList();
         }
+        public List<Bill> GetAgencyBills()
+        {
+            var data = from ag in db.Agencies
+                       join er in db.ExportReports
+                       on ag.id equals er.idAgency
+                       join b in db.Bills
+                       on er.idBill equals b.id
+                       where b.isHidden == 0
+                       select b;
+            return data.ToList();
+        }
         public List<Bill> GetAgencyBills(Agency agency)
         {
-            if (agency == null) return GetBills();
+            if (agency == null) return GetAgencyBills();
             var data = from ag in db.Agencies
                        join er in db.ExportReports
                        on ag.id equals er.idAgency
@@ -40,6 +51,30 @@ namespace BPMS.DAO
                        select b;
             return data.ToList();
         }
+        public List<Bill> GetPublisherBill()
+        {
+            var data = from pb in db.Publishers
+                       join ir in db.ImportReports
+                       on pb.id equals ir.idPublisher
+                       join b in db.Bills
+                       on ir.idBill equals b.id
+                       where b.isHidden == 0
+                       select b;
+            return data.ToList();
+        }
+        public List<Bill> GetPublisherBill(Publisher publisher)
+        {
+            if (publisher == null) return GetPublisherBill();
+            var data = from pb in db.Publishers
+                       join ir in db.ImportReports
+                       on pb.id equals ir.idPublisher
+                       join b in db.Bills
+                       on ir.idBill equals b.id
+                       where pb.id == publisher.id && b.isHidden == 0
+                       select b;
+            return data.ToList();
+        }
+
         public Bill GetBill(int id)
         {
             var list = from bi in db.Bills

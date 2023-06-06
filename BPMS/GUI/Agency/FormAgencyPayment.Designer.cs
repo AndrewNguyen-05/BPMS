@@ -40,12 +40,8 @@
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabExport = new System.Windows.Forms.TabPage();
             this.dtgvExport = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.clmIdExport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmExportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalPriceEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmBilledEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPaid = new System.Windows.Forms.TabPage();
+            this.lblBillInfo = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnPay = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -57,7 +53,11 @@
             this.clmCreatePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblBillInfo = new System.Windows.Forms.Label();
+            this.clmIdExport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmExportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTotalPriceEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmBilledEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPayment.SuspendLayout();
             this.tabExport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvExport)).BeginInit();
@@ -106,7 +106,7 @@
             this.tabExport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabExport.Size = new System.Drawing.Size(1185, 612);
             this.tabExport.TabIndex = 1;
-            this.tabExport.Text = "Export";
+            this.tabExport.Text = "Import";
             this.tabExport.UseVisualStyleBackColor = true;
             // 
             // dtgvExport
@@ -178,47 +178,12 @@
             this.dtgvExport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvExport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // clmIdExport
-            // 
-            this.clmIdExport.HeaderText = "Id Export";
-            this.clmIdExport.MinimumWidth = 6;
-            this.clmIdExport.Name = "clmIdExport";
-            this.clmIdExport.ReadOnly = true;
-            // 
-            // clmAgency
-            // 
-            this.clmAgency.HeaderText = "Agency";
-            this.clmAgency.MinimumWidth = 6;
-            this.clmAgency.Name = "clmAgency";
-            this.clmAgency.ReadOnly = true;
-            // 
-            // clmExportDate
-            // 
-            this.clmExportDate.HeaderText = "Export Date";
-            this.clmExportDate.MinimumWidth = 6;
-            this.clmExportDate.Name = "clmExportDate";
-            this.clmExportDate.ReadOnly = true;
-            // 
-            // clmTotalPriceEx
-            // 
-            this.clmTotalPriceEx.HeaderText = "Total Price";
-            this.clmTotalPriceEx.MinimumWidth = 6;
-            this.clmTotalPriceEx.Name = "clmTotalPriceEx";
-            this.clmTotalPriceEx.ReadOnly = true;
-            // 
-            // clmBilledEx
-            // 
-            this.clmBilledEx.HeaderText = "Bill";
-            this.clmBilledEx.MinimumWidth = 6;
-            this.clmBilledEx.Name = "clmBilledEx";
-            this.clmBilledEx.ReadOnly = true;
-            // 
             // tabPaid
             // 
             this.tabPaid.Controls.Add(this.lblBillInfo);
-            this.tabPaid.Controls.Add(this.btnCancel);
             this.tabPaid.Controls.Add(this.btnPay);
             this.tabPaid.Controls.Add(this.dtgvBill);
+            this.tabPaid.Controls.Add(this.btnCancel);
             this.tabPaid.Location = new System.Drawing.Point(4, 44);
             this.tabPaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPaid.Name = "tabPaid";
@@ -227,6 +192,15 @@
             this.tabPaid.TabIndex = 2;
             this.tabPaid.Text = "Bill";
             this.tabPaid.UseVisualStyleBackColor = true;
+            // 
+            // lblBillInfo
+            // 
+            this.lblBillInfo.AutoSize = true;
+            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBillInfo.Location = new System.Drawing.Point(8, 26);
+            this.lblBillInfo.Name = "lblBillInfo";
+            this.lblBillInfo.Size = new System.Drawing.Size(0, 23);
+            this.lblBillInfo.TabIndex = 14;
             // 
             // btnCancel
             // 
@@ -427,14 +401,40 @@
             this.clmReceived.ReadOnly = true;
             this.clmReceived.Width = 90;
             // 
-            // lblBillInfo
+            // clmIdExport
             // 
-            this.lblBillInfo.AutoSize = true;
-            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblBillInfo.Location = new System.Drawing.Point(8, 26);
-            this.lblBillInfo.Name = "lblBillInfo";
-            this.lblBillInfo.Size = new System.Drawing.Size(0, 23);
-            this.lblBillInfo.TabIndex = 14;
+            this.clmIdExport.HeaderText = "Id Import";
+            this.clmIdExport.MinimumWidth = 6;
+            this.clmIdExport.Name = "clmIdExport";
+            this.clmIdExport.ReadOnly = true;
+            // 
+            // clmAgency
+            // 
+            this.clmAgency.HeaderText = "Agency";
+            this.clmAgency.MinimumWidth = 6;
+            this.clmAgency.Name = "clmAgency";
+            this.clmAgency.ReadOnly = true;
+            // 
+            // clmExportDate
+            // 
+            this.clmExportDate.HeaderText = "Export Date";
+            this.clmExportDate.MinimumWidth = 6;
+            this.clmExportDate.Name = "clmExportDate";
+            this.clmExportDate.ReadOnly = true;
+            // 
+            // clmTotalPriceEx
+            // 
+            this.clmTotalPriceEx.HeaderText = "Total Price";
+            this.clmTotalPriceEx.MinimumWidth = 6;
+            this.clmTotalPriceEx.Name = "clmTotalPriceEx";
+            this.clmTotalPriceEx.ReadOnly = true;
+            // 
+            // clmBilledEx
+            // 
+            this.clmBilledEx.HeaderText = "Bill";
+            this.clmBilledEx.MinimumWidth = 6;
+            this.clmBilledEx.Name = "clmBilledEx";
+            this.clmBilledEx.ReadOnly = true;
             // 
             // FormAgencyPayment
             // 
@@ -460,11 +460,6 @@
         private Guna.UI2.WinForms.Guna2TabControl tabPayment;
         private System.Windows.Forms.TabPage tabExport;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvExport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdExport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmAgency;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmExportDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPriceEx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmBilledEx;
         private System.Windows.Forms.TabPage tabPaid;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmIdBill;
@@ -478,5 +473,10 @@
         private Guna.UI2.WinForms.Guna2Button btnPay;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.Label lblBillInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdExport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAgency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmExportDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPriceEx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmBilledEx;
     }
 }

@@ -119,6 +119,16 @@ namespace BPMS.DAO
             return list.ToList();
 
         }
+        public List<ImportReport> GetListImportBill(Publisher publisher)
+        {
+            if (publisher == null) return GetListImportBill();
+            var list = from ir in db.ImportReports
+                       join pb in db.Publishers
+                       on ir.idPublisher equals pb.id
+                       where publisher.id == pb.id
+                       select ir;
+            return list.ToList();
 
+        }
     }
 }

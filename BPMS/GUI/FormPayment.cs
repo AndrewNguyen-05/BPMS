@@ -137,6 +137,7 @@ namespace BPMS.GUI
             }
             LoadBillInfo();
         }
+        //for payment of export type
         private void btnConfirmReceived_Click(object sender, EventArgs e)
         {
             if (dtgvBill.SelectedRows.Count == 0) return;
@@ -150,6 +151,7 @@ namespace BPMS.GUI
             LoadBillInfo();
 
         }
+
         private void btnCancelReceived_Click(object sender, EventArgs e)
         {
             if (dtgvBill.SelectedRows.Count == 0) return;
@@ -162,15 +164,47 @@ namespace BPMS.GUI
             }
             LoadBillInfo();
         }
+
+        //for payment of import type
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (dtgvBill.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                tmp.isPaid = 1;
+                BillDAO.Instance.CreateBill(tmp);
+            }
+            LoadBillInfo();
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                tmp.isPaid = 0;
+                BillDAO.Instance.CreateBill(tmp);
+            }
+            LoadBillInfo();
+        }
+
         private void dtgvBill_SelectionChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
             {
                 int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
                 Bill tmp = BillDAO.Instance.GetBill(idBill);
-                //for label (0 = import, 1 = export)
+                //reset all btn
+                btnCancelReceived.Visible = false;
+                btnConfirmReceived.Visible = false;
+                btnCancel.Visible = false;
+                btnPay.Visible = false;
+                //(0 = import, 1 = export)
                 if (tmp.type == 0)
                 {
+                    //for label 
                     ImportReport ir = ImportReportDAO.Instance.GetImportReportFromBill(idBill);
                     if (ir != null)
                     {
@@ -183,9 +217,13 @@ namespace BPMS.GUI
                     {
                         lblBillInfo.Text = "";
                     }
+                    //for button
+                    if (tmp.isPaid == 1) { btnCancel.Visible = true; btnPay.Visible = false; }
+                    else { btnCancel.Visible = false; btnPay.Visible = true; }
                 }
                 else if (tmp.type == 1)
                 {
+                    //for label 
                     ExportReport ir = ExportReportDAO.Instance.GetExportReportFromBill(idBill);
                     if (ir != null)
                     {
@@ -198,28 +236,24 @@ namespace BPMS.GUI
                     {
                         lblBillInfo.Text = "";
                     }
-                }
-                //for button
-                if (tmp.isPaid == 1)
-                {
-                    if (tmp.isReceived == 1)
+                    //for button
+                    if (tmp.isPaid == 1)
                     {
-                        btnCancelReceived.Visible = true;
-                        btnConfirmReceived.Visible = false;
+                        if (tmp.isReceived == 1)
+                        {
+                            btnCancelReceived.Visible = true;
+                            btnConfirmReceived.Visible = false;
+                        }
+                        else
+                        {
+                            btnCancelReceived.Visible = false;
+                            btnConfirmReceived.Visible = true;
+                        }
                     }
-                    else
-                    {
-                        btnCancelReceived.Visible = false;
-                        btnConfirmReceived.Visible = true;
-                    }
-                }
-                else
-                {
-                    btnCancelReceived.Visible = false;
-                    btnConfirmReceived.Visible = false;
                 }
             }
         }
+
         #endregion
 
 
