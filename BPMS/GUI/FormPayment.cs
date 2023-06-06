@@ -136,7 +136,57 @@ namespace BPMS.GUI
             }
             LoadBillInfo();
         }
+        private void btnConfirmReceived_Click(object sender, EventArgs e)
+        {
+            if (dtgvBill.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                tmp.isReceived = 1;
+                BillDAO.Instance.CreateBill(tmp);
+            }
+            LoadBillInfo();
 
+        }
+        private void btnCancelReceived_Click(object sender, EventArgs e)
+        {
+            if (dtgvBill.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                tmp.isReceived = 0;
+                BillDAO.Instance.CreateBill(tmp);
+            }
+            LoadBillInfo();
+        }
+        private void dtgvBill_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                if (tmp.isPaid == 1)
+                {
+                    if (tmp.isReceived == 1) 
+                    { 
+                        btnCancelReceived.Visible = true; 
+                        btnConfirmReceived.Visible = false;
+                    }
+                    else 
+                    { 
+                        btnCancelReceived.Visible = false; 
+                        btnConfirmReceived.Visible = true; 
+                    }
+                }
+                else
+                {
+                    btnCancelReceived.Visible = false;
+                    btnConfirmReceived.Visible = false;
+                }
+            }
+        }
         #endregion
 
 

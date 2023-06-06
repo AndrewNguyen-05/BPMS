@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabImport = new System.Windows.Forms.TabPage();
             this.btnCreateImport = new Guna.UI2.WinForms.Guna2Button();
@@ -59,6 +60,7 @@
             this.clmTotalPriceEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBill = new System.Windows.Forms.TabPage();
+            this.btnConfirmReceived = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnModify = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -70,6 +72,8 @@
             this.clmCreatePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnCancelReceived = new Guna.UI2.WinForms.Guna2Button();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -88,10 +92,10 @@
             this.tabPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPayment.ItemSize = new System.Drawing.Size(180, 40);
             this.tabPayment.Location = new System.Drawing.Point(0, 0);
-            this.tabPayment.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPayment.Name = "tabPayment";
             this.tabPayment.SelectedIndex = 0;
-            this.tabPayment.Size = new System.Drawing.Size(895, 536);
+            this.tabPayment.Size = new System.Drawing.Size(1193, 660);
             this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -118,10 +122,10 @@
             this.tabImport.Controls.Add(this.btnCreateImport);
             this.tabImport.Controls.Add(this.dtgvImport);
             this.tabImport.Location = new System.Drawing.Point(4, 44);
-            this.tabImport.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabImport.Name = "tabImport";
-            this.tabImport.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabImport.Size = new System.Drawing.Size(887, 488);
+            this.tabImport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabImport.Size = new System.Drawing.Size(1185, 612);
             this.tabImport.TabIndex = 0;
             this.tabImport.Text = "Import";
             this.tabImport.UseVisualStyleBackColor = true;
@@ -139,10 +143,10 @@
             this.btnCreateImport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreateImport.ForeColor = System.Drawing.Color.White;
             this.btnCreateImport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateImport.Image")));
-            this.btnCreateImport.Location = new System.Drawing.Point(701, 4);
-            this.btnCreateImport.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCreateImport.Location = new System.Drawing.Point(935, 5);
+            this.btnCreateImport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnCreateImport.Name = "btnCreateImport";
-            this.btnCreateImport.Size = new System.Drawing.Size(184, 36);
+            this.btnCreateImport.Size = new System.Drawing.Size(245, 44);
             this.btnCreateImport.TabIndex = 7;
             this.btnCreateImport.Text = "Create bill";
             this.btnCreateImport.Click += new System.EventHandler(this.btnCreateImport_Click);
@@ -153,19 +157,19 @@
             this.dtgvImport.AllowUserToDeleteRows = false;
             this.dtgvImport.AllowUserToResizeColumns = false;
             this.dtgvImport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.dtgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvImport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvImport.ColumnHeadersHeight = 35;
             this.dtgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdImport,
@@ -173,26 +177,26 @@
             this.clmImportDate,
             this.clmTotalPriceIm,
             this.clmBilledIm});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvImport.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            this.dtgvImport.Location = new System.Drawing.Point(5, 51);
-            this.dtgvImport.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dtgvImport.Location = new System.Drawing.Point(7, 63);
+            this.dtgvImport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvImport.MultiSelect = false;
             this.dtgvImport.Name = "dtgvImport";
             this.dtgvImport.ReadOnly = true;
             this.dtgvImport.RowHeadersVisible = false;
             this.dtgvImport.RowHeadersWidth = 62;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvImport.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvImport.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvImport.RowTemplate.Height = 32;
-            this.dtgvImport.Size = new System.Drawing.Size(880, 443);
+            this.dtgvImport.Size = new System.Drawing.Size(1173, 545);
             this.dtgvImport.TabIndex = 1;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -256,10 +260,10 @@
             this.tabExport.Controls.Add(this.btnCreateExport);
             this.tabExport.Controls.Add(this.dtgvExport);
             this.tabExport.Location = new System.Drawing.Point(4, 44);
-            this.tabExport.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabExport.Name = "tabExport";
-            this.tabExport.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabExport.Size = new System.Drawing.Size(887, 488);
+            this.tabExport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabExport.Size = new System.Drawing.Size(1185, 612);
             this.tabExport.TabIndex = 1;
             this.tabExport.Text = "Export";
             this.tabExport.UseVisualStyleBackColor = true;
@@ -277,10 +281,10 @@
             this.btnCreateExport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreateExport.ForeColor = System.Drawing.Color.White;
             this.btnCreateExport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateExport.Image")));
-            this.btnCreateExport.Location = new System.Drawing.Point(693, 4);
-            this.btnCreateExport.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCreateExport.Location = new System.Drawing.Point(924, 5);
+            this.btnCreateExport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnCreateExport.Name = "btnCreateExport";
-            this.btnCreateExport.Size = new System.Drawing.Size(184, 36);
+            this.btnCreateExport.Size = new System.Drawing.Size(245, 44);
             this.btnCreateExport.TabIndex = 8;
             this.btnCreateExport.Text = "Create bill";
             this.btnCreateExport.Click += new System.EventHandler(this.btnCreateExport_Click);
@@ -291,19 +295,19 @@
             this.dtgvExport.AllowUserToDeleteRows = false;
             this.dtgvExport.AllowUserToResizeColumns = false;
             this.dtgvExport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.dtgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dtgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvExport.ColumnHeadersHeight = 35;
             this.dtgvExport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdExport,
@@ -311,26 +315,26 @@
             this.clmExportDate,
             this.clmTotalPriceEx,
             this.clmBilledEx});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvExport.DefaultCellStyle = dataGridViewCellStyle7;
             this.dtgvExport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            this.dtgvExport.Location = new System.Drawing.Point(4, 42);
-            this.dtgvExport.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dtgvExport.Location = new System.Drawing.Point(5, 52);
+            this.dtgvExport.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvExport.MultiSelect = false;
             this.dtgvExport.Name = "dtgvExport";
             this.dtgvExport.ReadOnly = true;
             this.dtgvExport.RowHeadersVisible = false;
             this.dtgvExport.RowHeadersWidth = 62;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvExport.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvExport.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgvExport.RowTemplate.Height = 32;
-            this.dtgvExport.Size = new System.Drawing.Size(870, 411);
+            this.dtgvExport.Size = new System.Drawing.Size(1160, 506);
             this.dtgvExport.TabIndex = 3;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvExport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -391,17 +395,43 @@
             // 
             // tabBill
             // 
+            this.tabBill.Controls.Add(this.btnCancelReceived);
+            this.tabBill.Controls.Add(this.btnConfirmReceived);
             this.tabBill.Controls.Add(this.btnDelete);
             this.tabBill.Controls.Add(this.btnModify);
             this.tabBill.Controls.Add(this.dtgvBill);
             this.tabBill.Location = new System.Drawing.Point(4, 44);
-            this.tabBill.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBill.Name = "tabBill";
-            this.tabBill.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabBill.Size = new System.Drawing.Size(887, 488);
+            this.tabBill.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBill.Size = new System.Drawing.Size(1185, 612);
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "Bill";
             this.tabBill.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirmReceived
+            // 
+            this.btnConfirmReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmReceived.Animated = true;
+            this.btnConfirmReceived.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.btnConfirmReceived.BorderRadius = 4;
+            this.btnConfirmReceived.BorderThickness = 1;
+            this.btnConfirmReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmReceived.FillColor = System.Drawing.Color.White;
+            this.btnConfirmReceived.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmReceived.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnConfirmReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmReceived.Image")));
+            this.btnConfirmReceived.Location = new System.Drawing.Point(606, 15);
+            this.btnConfirmReceived.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnConfirmReceived.Name = "btnConfirmReceived";
+            this.btnConfirmReceived.Size = new System.Drawing.Size(184, 44);
+            this.btnConfirmReceived.TabIndex = 11;
+            this.btnConfirmReceived.Text = "Confirm";
+            this.btnConfirmReceived.Visible = false;
+            this.btnConfirmReceived.Click += new System.EventHandler(this.btnConfirmReceived_Click);
             // 
             // btnDelete
             // 
@@ -418,10 +448,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(739, 12);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnDelete.Location = new System.Drawing.Point(985, 15);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(138, 36);
+            this.btnDelete.Size = new System.Drawing.Size(184, 44);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -441,10 +471,10 @@
             this.btnModify.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
-            this.btnModify.Location = new System.Drawing.Point(597, 12);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnModify.Location = new System.Drawing.Point(796, 15);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(138, 36);
+            this.btnModify.Size = new System.Drawing.Size(184, 44);
             this.btnModify.TabIndex = 9;
             this.btnModify.Text = "Modify";
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
@@ -455,19 +485,19 @@
             this.dtgvBill.AllowUserToDeleteRows = false;
             this.dtgvBill.AllowUserToResizeColumns = false;
             this.dtgvBill.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dtgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dtgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgvBill.ColumnHeadersHeight = 35;
             this.dtgvBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmIdBill,
@@ -478,27 +508,27 @@
             this.clmCreatePerson,
             this.clmPaid,
             this.clmReceived});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBill.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBill.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            this.dtgvBill.Location = new System.Drawing.Point(5, 58);
-            this.dtgvBill.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dtgvBill.Location = new System.Drawing.Point(7, 71);
+            this.dtgvBill.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtgvBill.MultiSelect = false;
             this.dtgvBill.Name = "dtgvBill";
             this.dtgvBill.ReadOnly = true;
             this.dtgvBill.RowHeadersVisible = false;
             this.dtgvBill.RowHeadersWidth = 62;
             this.dtgvBill.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.dtgvBill.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.dtgvBill.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgvBill.RowTemplate.Height = 28;
-            this.dtgvBill.Size = new System.Drawing.Size(872, 398);
+            this.dtgvBill.Size = new System.Drawing.Size(1163, 490);
             this.dtgvBill.TabIndex = 4;
             this.dtgvBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvBill.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -521,6 +551,7 @@
             this.dtgvBill.ThemeStyle.RowsStyle.Height = 28;
             this.dtgvBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgvBill.SelectionChanged += new System.EventHandler(this.dtgvBill_SelectionChanged);
             // 
             // clmIdBill
             // 
@@ -540,6 +571,7 @@
             this.clmTypeReport.MinimumWidth = 8;
             this.clmTypeReport.Name = "clmTypeReport";
             this.clmTypeReport.ReadOnly = true;
+            this.clmTypeReport.Width = 125;
             // 
             // clmSender
             // 
@@ -598,14 +630,42 @@
             this.clmReceived.ReadOnly = true;
             this.clmReceived.Width = 90;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 8;
+            // 
+            // btnCancelReceived
+            // 
+            this.btnCancelReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelReceived.Animated = true;
+            this.btnCancelReceived.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.btnCancelReceived.BorderRadius = 4;
+            this.btnCancelReceived.BorderThickness = 1;
+            this.btnCancelReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelReceived.FillColor = System.Drawing.Color.White;
+            this.btnCancelReceived.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelReceived.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.btnCancelReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelReceived.Image")));
+            this.btnCancelReceived.Location = new System.Drawing.Point(606, 15);
+            this.btnCancelReceived.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnCancelReceived.Name = "btnCancelReceived";
+            this.btnCancelReceived.Size = new System.Drawing.Size(184, 44);
+            this.btnCancelReceived.TabIndex = 12;
+            this.btnCancelReceived.Text = "Cancel";
+            this.btnCancelReceived.Visible = false;
+            this.btnCancelReceived.Click += new System.EventHandler(this.btnCancelReceived_Click);
+            // 
             // FormPayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(895, 536);
+            this.ClientSize = new System.Drawing.Size(1193, 660);
             this.Controls.Add(this.tabPayment);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPayment";
             this.Text = "Payment";
             this.tabPayment.ResumeLayout(false);
@@ -650,5 +710,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatePerson;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmReceived;
+        private Guna.UI2.WinForms.Guna2Button btnConfirmReceived;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button btnCancelReceived;
     }
 }
