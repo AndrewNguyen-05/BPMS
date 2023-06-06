@@ -102,5 +102,17 @@ namespace BPMS.DAO
             return list.ToList();
 
         }
+
+        public List<ExportReport> GetListExportBill(Agency agency)
+        {
+            if (agency == null) return GetListExportBill();
+            var list = from er in db.ExportReports
+                       join ag in db.Agencies
+                       on er.idAgency equals ag.id
+                       where agency.id == ag.id
+                       select er;
+            return list.ToList();
+
+        }
     }
 }
