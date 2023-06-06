@@ -106,33 +106,19 @@ namespace BPMS.GUI
             switch ((Permissions)acc.type)
             {
                 case Permissions.Publisher:
-                    DTO.Publisher pb = new DTO.Publisher()
-                    {
-                        idAccount = acc.id,
-                        AccountNumber = txbBankAccount.Text,
-                        PhoneNumber = txbPhone.Text,
-                        isHidden = 0
-                    };
-                    DTO.Publisher tmp = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
-                    if (tmp != null)
-                    {
-                        pb.id = tmp.id;
-                    }
+                    DTO.Publisher pb = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
+                    pb.idAccount = acc.id;
+                    pb.AccountNumber = txbBankAccount.Text;
+                    pb.PhoneNumber = txbPhone.Text;
+                    pb.isHidden = 0;
                     PublisherDAO.Instance.CreatePublisher(pb);
                     break;
                 case Permissions.Accountant:
-                    DTO.Accountant act = new DTO.Accountant()
-                    {
-                        idAccount = acc.id,
-                        AccountNumber = txbBankAccount.Text,
-                        PhoneNumber = txbPhone.Text,
-                        isHidden = 0
-                    };
-                    DTO.Accountant tmpact = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
-                    if (tmpact != null)
-                    {
-                        act.id = tmpact.id;
-                    }
+                    DTO.Accountant act = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
+                    act.idAccount = acc.id;
+                    act.AccountNumber = txbBankAccount.Text;
+                    act.PhoneNumber = txbPhone.Text;
+                    act.isHidden = 0;
                     AccountantDAO.Instance.CreateAccountant(act);
                     break;
             }
