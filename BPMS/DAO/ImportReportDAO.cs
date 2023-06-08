@@ -128,7 +128,44 @@ namespace BPMS.DAO
                        where publisher.id == pb.id
                        select ir;
             return list.ToList();
+        }
 
+
+        public DateTime GetNext(DateTime current, int GroupBy)
+        {
+            switch (GroupBy)
+            {
+                case 0:
+                    return current.Add(-current.TimeOfDay).AddDays(1);
+                case 1: 
+                    return current.Add(-current.TimeOfDay).AddDays(-current.Day + 1).AddMonths(1);
+                case 2:
+                    return current.Add(-current.TimeOfDay).AddDays(-current.Day + 1).AddMonths(-current.Month + 1).AddYears(1);
+
+            }
+            return current;
+        }
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfImportedBook(DateTime startDate, DateTime endDate, int GroupBy)
+        {
+            List<int> result = new List<int>();
+            //By month
+            for (DateTime start = startDate;
+                 start < endDate;
+                 start = GetNext(start, GroupBy)
+                )
+            {
+                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                var list = from ir in db.ImportReports
+                           join ird in db.ImportReportDetails
+                           on ir.id equals ird.idImport
+                           where start < ir.ImportDate && ir.ImportDate < end
+                           select ird.quantity;
+                result.Add(Enumerable.Sum(list));
+            }
+            return result;
         }
     }
 }
