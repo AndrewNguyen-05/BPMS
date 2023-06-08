@@ -158,6 +158,7 @@ namespace BPMS.DAO
                 )
             {
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                end = end.AddMilliseconds(-1);
                 var list = from ir in db.ImportReports
                            join ird in db.ImportReportDetails
                            on ir.id equals ird.idImport
@@ -166,6 +167,25 @@ namespace BPMS.DAO
                 result.Add(Enumerable.Sum(list));
             }
             return result;
+        }
+
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfImportedBook(int number, int mode, int GroupBy)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetNumberOfImportedBook(DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                case 1:
+                    return GetNumberOfImportedBook(DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                case 2:
+                    return GetNumberOfImportedBook(DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+            }
+            return null;
         }
     }
 }
