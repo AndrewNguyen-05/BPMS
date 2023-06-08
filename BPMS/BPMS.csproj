@@ -242,6 +242,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Agency\FormAgencyImport.resx">
+      <DependentUpon>FormAgencyImport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Agency\FormAgencyPayment.resx">
       <DependentUpon>FormAgencyPayment.cs</DependentUpon>
     </EmbeddedResource>
