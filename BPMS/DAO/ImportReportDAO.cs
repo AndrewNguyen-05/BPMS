@@ -226,5 +226,47 @@ namespace BPMS.DAO
             }
             return null;
         }
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfImportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
+        {
+            List<int> result = new List<int>();
+            //By month
+            for (DateTime start = startDate;
+                 start < endDate;
+                 start = GetNext(start, GroupBy)
+                )
+            {
+                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                end = end.AddMilliseconds(-1);
+                var list = from ir in db.ImportReports
+                           join ird in db.ImportReportDetails
+                           on ir.id equals ird.idImport
+                           where start < ir.ImportDate && ir.ImportDate < end && bk.id == ird.idBook
+                           select ird.quantity;
+                result.Add(Enumerable.Sum(list));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfImportedBookByBook(Book bk, int number, int mode, int GroupBy)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                case 1:
+                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                case 2:
+                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+            }
+            return null;
+        }
     }
 }
