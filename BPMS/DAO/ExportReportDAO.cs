@@ -180,5 +180,42 @@ namespace BPMS.DAO
             }
             return null;
         }
+        public List<double> GetRevenueOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
+        {
+            List<double> result = new List<double>();
+            //By month
+            for (DateTime start = startDate;
+                 start < endDate;
+                 start = GetNext(start, GroupBy)
+                )
+            {
+                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                end = end.AddMilliseconds(-1);
+                var list = from ir in db.ExportReports
+                           where start < ir.ExportDate && ir.ExportDate < end
+                           select ir.TotalPrice;
+                result.Add(Enumerable.Sum(list));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<double> GetRevenueOfExportedBook(int number, int mode, int GroupBy)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetRevenueOfExportedBook(DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                case 1:
+                    return GetRevenueOfExportedBook(DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                case 2:
+                    return GetRevenueOfExportedBook(DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+            }
+            return null;
+        }
     }
 }

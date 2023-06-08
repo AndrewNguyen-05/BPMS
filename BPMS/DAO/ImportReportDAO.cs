@@ -187,5 +187,44 @@ namespace BPMS.DAO
             }
             return null;
         }
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<double> GetTotalPriceOfImportedBook(DateTime startDate, DateTime endDate, int GroupBy)
+        {
+            List<double> result = new List<double>();
+            //By month
+            for (DateTime start = startDate;
+                 start < endDate;
+                 start = GetNext(start, GroupBy)
+                )
+            {
+                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                end = end.AddMilliseconds(-1);
+                var list = from ir in db.ImportReports
+                           where start < ir.ImportDate && ir.ImportDate < end
+                           select ir.TotalPrice;
+                result.Add(Enumerable.Sum(list));
+            }
+            return result;
+        }
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<double> GetTotalPriceOfImportedBook(int number, int mode, int GroupBy)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetTotalPriceOfImportedBook(DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                case 1:
+                    return GetTotalPriceOfImportedBook(DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                case 2:
+                    return GetTotalPriceOfImportedBook(DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+            }
+            return null;
+        }
     }
 }
