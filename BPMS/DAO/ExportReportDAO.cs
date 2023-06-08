@@ -179,7 +179,10 @@ namespace BPMS.DAO
                     return GetNumberOfExportedBook(DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
             }
             return null;
-        }
+        }        
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
         public List<double> GetRevenueOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
         {
             List<double> result = new List<double>();
@@ -214,6 +217,48 @@ namespace BPMS.DAO
                     return GetRevenueOfExportedBook(DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
                 case 2:
                     return GetRevenueOfExportedBook(DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+            }
+            return null;
+        } 
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfExportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
+        {
+            List<int> result = new List<int>();
+            //By month
+            for (DateTime start = startDate;
+                 start < endDate;
+                 start = GetNext(start, GroupBy)
+                )
+            {
+                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
+                end = end.AddMilliseconds(-1);
+                var list = from ir in db.ExportReports
+                           join ird in db.ExportReportDetails
+                           on ir.id equals ird.idExport
+                           where start < ir.ExportDate && ir.ExportDate < end && bk.id == ird.idBook
+                           select ird.quantity;
+                result.Add(Enumerable.Sum(list));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public List<int> GetNumberOfExportedBookByBook(Book bk, int number, int mode, int GroupBy)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                case 1:
+                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                case 2:
+                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
             }
             return null;
         }
