@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 using System.Web.Caching;
 using System.Windows.Forms;
 using BPMS.DAO;
+using BPMS.DTO;
 
 namespace BPMS.GUI
 {
     public partial class FormAnalytic : Form
     {
+        private List<Book> listBook = BookDAO.Instance.GetBookList(); 
         public FormAnalytic()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace BPMS.GUI
 
         private void FormAnalytic_Load(object sender, EventArgs e)
         {
-            LoadData(12,1,2);
+            LoadData(1,1,1);
         }
 
         private void LoadData(int number, int mode, int GroupBy)
@@ -39,15 +41,45 @@ namespace BPMS.GUI
                 chartAmountOfBook.Series[1].Points.AddXY(item.Key, item.Value);
             }
             chartBookName.Series[0].Points.Clear();
+
+            //foreach (var item in listBook)
+            //{
+            //    chartBookName.DataSource = ExportReportDAO.Instance.GetNumberOfExportedBookByBook();
+            //    chartBookName.Series[0].XValueMember = "Key";
+            //    chartBookName.Series[0].YValueMembers = "Value";
+            //    chartBookName.DataBind();
+            //}
+            
             chartBookName.Series[0].Points.Add(1, 1);
             chartBookName.Series[0].Points.Add(4, 2);
             chartBookName.Series[0].Points.Add(3, 4);
             chartBookName.Series[0].Points.Add(2, 1);
 
-            chartTotalMoney.Series[0].Points.AddXY(1, 2);
-            chartTotalMoney.Series[0].Points.AddXY(3, 4);
-            chartTotalMoney.Series[0].Points.AddXY(2, 1);
-            chartTotalMoney.Series[0].Points.AddXY(0, 3);
+            chartTotalMoney.Series[0].Points.Clear();
+            chartTotalMoney.DataSource = ExportReportDAO.Instance.GetRevenueOfExportedBook(number, mode, GroupBy);
+            chartTotalMoney.Series[0].XValueMember = "Key";
+            chartTotalMoney.Series[0].YValueMembers = "Value";
+            chartTotalMoney.DataBind();
+
+            //chartTotalMoney.Series[0].Points.AddXY(1, 2);
+            //chartTotalMoney.Series[0].Points.AddXY(3, 4);
+            //chartTotalMoney.Series[0].Points.AddXY(2, 1);
+            //chartTotalMoney.Series[0].Points.AddXY(0, 3);
+        }
+
+        private void btnDay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnYear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

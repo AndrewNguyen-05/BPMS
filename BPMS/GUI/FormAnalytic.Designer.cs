@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chartBookName = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,9 +60,9 @@
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDay = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMonth = new Guna.UI2.WinForms.Guna2Button();
+            this.btnYear = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookName)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTotalMoney)).BeginInit();
@@ -79,26 +79,27 @@
             // 
             // chartBookName
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBookName.ChartAreas.Add(chartArea1);
+            this.chartBookName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
+            chartArea13.Name = "ChartArea1";
+            this.chartBookName.ChartAreas.Add(chartArea13);
             this.chartBookName.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartBookName.Legends.Add(legend1);
+            legend13.Name = "Legend1";
+            this.chartBookName.Legends.Add(legend13);
             this.chartBookName.Location = new System.Drawing.Point(0, 0);
             this.chartBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartBookName.Name = "chartBookName";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartBookName.Series.Add(series1);
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series17.Legend = "Legend1";
+            series17.Name = "Series1";
+            this.chartBookName.Series.Add(series17);
             this.chartBookName.Size = new System.Drawing.Size(617, 114);
             this.chartBookName.TabIndex = 0;
             this.chartBookName.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "The Number of Exported Books";
-            this.chartBookName.Titles.Add(title1);
+            title13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title13.Name = "Title1";
+            title13.Text = "The Number of Exported Books";
+            this.chartBookName.Titles.Add(title13);
             // 
             // entityCommand1
             // 
@@ -149,59 +150,61 @@
             // 
             // chartTotalMoney
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartTotalMoney.ChartAreas.Add(chartArea2);
+            this.chartTotalMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
+            chartArea14.Name = "ChartArea1";
+            this.chartTotalMoney.ChartAreas.Add(chartArea14);
             this.chartTotalMoney.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartTotalMoney.Legends.Add(legend2);
+            legend14.Name = "Legend1";
+            this.chartTotalMoney.Legends.Add(legend14);
             this.chartTotalMoney.Location = new System.Drawing.Point(0, 0);
             this.chartTotalMoney.Name = "chartTotalMoney";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Money";
-            this.chartTotalMoney.Series.Add(series2);
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Money";
+            this.chartTotalMoney.Series.Add(series18);
             this.chartTotalMoney.Size = new System.Drawing.Size(543, 111);
             this.chartTotalMoney.TabIndex = 4;
             this.chartTotalMoney.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Total Amount of Money";
-            this.chartTotalMoney.Titles.Add(title2);
+            title14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title14.Name = "Title1";
+            title14.Text = "Total Amount of Money";
+            this.chartTotalMoney.Titles.Add(title14);
             // 
             // chartAmountOfBook
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartAmountOfBook.ChartAreas.Add(chartArea3);
+            this.chartAmountOfBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
+            chartArea15.Name = "ChartArea1";
+            this.chartAmountOfBook.ChartAreas.Add(chartArea15);
             this.chartAmountOfBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartAmountOfBook.Legends.Add(legend3);
+            legend15.Name = "Legend1";
+            this.chartAmountOfBook.Legends.Add(legend15);
             this.chartAmountOfBook.Location = new System.Drawing.Point(0, 0);
             this.chartAmountOfBook.Name = "chartAmountOfBook";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 6;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Imported Book";
-            series3.YValuesPerPoint = 3;
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.MarkerSize = 6;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Exported Book";
-            series4.YValuesPerPoint = 3;
-            this.chartAmountOfBook.Series.Add(series3);
-            this.chartAmountOfBook.Series.Add(series4);
+            series19.BorderWidth = 3;
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series19.Legend = "Legend1";
+            series19.MarkerSize = 6;
+            series19.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series19.Name = "Imported Book";
+            series19.YValuesPerPoint = 3;
+            series20.BorderWidth = 3;
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series20.Legend = "Legend1";
+            series20.MarkerSize = 6;
+            series20.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series20.Name = "Exported Book";
+            series20.YValuesPerPoint = 3;
+            this.chartAmountOfBook.Series.Add(series19);
+            this.chartAmountOfBook.Series.Add(series20);
             this.chartAmountOfBook.Size = new System.Drawing.Size(943, 430);
             this.chartAmountOfBook.TabIndex = 5;
             this.chartAmountOfBook.Text = "chart2";
-            title3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Amount Of Imported/Exported Books";
-            this.chartAmountOfBook.Titles.Add(title3);
+            title15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title15.Name = "Title1";
+            title15.Text = "Amount Of Imported/Exported Books";
+            this.chartAmountOfBook.Titles.Add(title15);
             // 
             // panel1
             // 
@@ -341,50 +344,53 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "VND";
             // 
-            // guna2Button1
+            // btnDay
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(517, 15);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(203, 71);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Day";
+            this.btnDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDay.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnDay.ForeColor = System.Drawing.Color.White;
+            this.btnDay.Location = new System.Drawing.Point(517, 15);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(203, 71);
+            this.btnDay.TabIndex = 12;
+            this.btnDay.Text = "Day";
+            this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
             // 
-            // guna2Button2
+            // btnMonth
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(748, 15);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(195, 71);
-            this.guna2Button2.TabIndex = 12;
-            this.guna2Button2.Text = "Month";
+            this.btnMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMonth.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnMonth.ForeColor = System.Drawing.Color.White;
+            this.btnMonth.Location = new System.Drawing.Point(748, 15);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(195, 71);
+            this.btnMonth.TabIndex = 12;
+            this.btnMonth.Text = "Month";
+            this.btnMonth.Click += new System.EventHandler(this.btnMonth_Click);
             // 
-            // guna2Button3
+            // btnYear
             // 
-            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(975, 15);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(200, 71);
-            this.guna2Button3.TabIndex = 12;
-            this.guna2Button3.Text = "Year";
+            this.btnYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYear.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnYear.ForeColor = System.Drawing.Color.White;
+            this.btnYear.Location = new System.Drawing.Point(975, 15);
+            this.btnYear.Name = "btnYear";
+            this.btnYear.Size = new System.Drawing.Size(200, 71);
+            this.btnYear.TabIndex = 12;
+            this.btnYear.Text = "Year";
+            this.btnYear.Click += new System.EventHandler(this.btnYear_Click);
             // 
             // FormAnalytic
             // 
@@ -392,9 +398,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1190, 651);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnYear);
+            this.Controls.Add(this.btnMonth);
+            this.Controls.Add(this.btnDay);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -444,8 +450,8 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnDay;
+        private Guna.UI2.WinForms.Guna2Button btnMonth;
+        private Guna.UI2.WinForms.Guna2Button btnYear;
     }
 }
