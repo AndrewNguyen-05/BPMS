@@ -16,31 +16,52 @@ namespace BPMS.GUI
 {
     public partial class FormAnalytic : Form
     {
+
         private List<Book> listBook = BookDAO.Instance.GetBookList(); 
+        
         public FormAnalytic()
         {
             InitializeComponent();
-
-        }
-
-        private void FormAnalytic_Load(object sender, EventArgs e)
-        {
-            LoadData(1,1,3);
+            LoadData(1, 1, 3);
         }
 
         private void LoadData(int number, int mode, int GroupBy)
         {
+            List<KeyValuePair<DateTime, int>> listExportedBook = ExportReportDAO.Instance.GetNumberOfExportedBook(number, mode, GroupBy);
+            List<KeyValuePair<DateTime, int>> listImportedBook = ImportReportDAO.Instance.GetNumberOfImportedBook(number, mode, GroupBy);
+            List<KeyValuePair<DateTime, double>> listRevenue = ExportReportDAO.Instance.GetRevenueOfExportedBook(number, mode, GroupBy);
+
             chartAmountOfBook.Series[0].Points.Clear();
             chartAmountOfBook.Series[1].Points.Clear();
-            foreach (var item in ExportReportDAO.Instance.GetNumberOfExportedBook(number, mode, GroupBy))
+            chartBookName.Series[0].Points.Clear();
+            chartTotalMoney.Series[0].Points.Clear();
+            switch (number)
+            {
+                case 1:
+                    chartTotalMoney.DataSource = ListKeyDayConverter(listRevenue, 1);
+                    ListKeyDayConverter(listExportedBook, 1);
+                    ListKeyDayConverter(listImportedBook, 1);
+                    break;
+                case 7:
+                    chartTotalMoney.DataSource = listRevenue;
+                    ListKeyDayConverter(listExportedBook, 2);
+                    ListKeyDayConverter(listImportedBook, 1);
+                    break;
+                case 12:
+                    chartTotalMoney.DataSource = ListKeyDayConverter(listRevenue, 3);
+                    ListKeyDayConverter(listExportedBook, 3);
+                    ListKeyDayConverter(listImportedBook, 3);
+                    break;
+            }
+            foreach (var item in listExportedBook)
             {
                 chartAmountOfBook.Series[0].Points.AddXY(item.Key, item.Value);
             }
-            foreach (var item in ImportReportDAO.Instance.GetNumberOfImportedBook(number, mode, GroupBy))
+            foreach (var item in listImportedBook)
             {
                 chartAmountOfBook.Series[1].Points.AddXY(item.Key, item.Value);
             }
-            chartBookName.Series[0].Points.Clear();
+            
 
             //foreach (var item in listBook)
             //{
@@ -55,31 +76,24 @@ namespace BPMS.GUI
             chartBookName.Series[0].Points.Add(3, 4);
             chartBookName.Series[0].Points.Add(2, 1);
 
-            chartTotalMoney.Series[0].Points.Clear();
-            chartTotalMoney.DataSource = ExportReportDAO.Instance.GetRevenueOfExportedBook(number, mode, GroupBy);
             chartTotalMoney.Series[0].XValueMember = "Key";
             chartTotalMoney.Series[0].YValueMembers = "Value";
             chartTotalMoney.DataBind();
-
-            //chartTotalMoney.Series[0].Points.AddXY(1, 2);
-            //chartTotalMoney.Series[0].Points.AddXY(3, 4);
-            //chartTotalMoney.Series[0].Points.AddXY(2, 1);
-            //chartTotalMoney.Series[0].Points.AddXY(0, 3);
         }
 
         private void btnDay_Click(object sender, EventArgs e)
         {
-
+            LoadData(7, 0, 0);
         }
 
         private void btnMonth_Click(object sender, EventArgs e)
         {
-
+            LoadData(1, 1, 3);
         }
 
         private void btnYear_Click(object sender, EventArgs e)
         {
-
+            LoadData(12, 1, 1);
         }
 
         public List<KeyValuePair<string, T>> ListKeyDayConverter<T>(List<KeyValuePair<DateTime, T>> list, int mode)
@@ -99,6 +113,9 @@ namespace BPMS.GUI
                         break;
                     case 2:
                         converted = string.Format("{0}", item.Key.Year);
+                        break;
+                    case 3:
+                        converted = string.Format("{0}", item.Key.Month);
                         break;
                 }
                 result.Add(new KeyValuePair<string, T>(converted, item.Value));
