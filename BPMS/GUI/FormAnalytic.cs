@@ -20,5 +20,20 @@ namespace BPMS.GUI
             InitializeComponent();
 
         }
+
+        private void FormAnalytic_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadData()
+        {
+            chartAmountOfBook.Series[0].Points.Clear();
+            chartAmountOfBook.Series[1].Points.Clear();
+            foreach (var item in ExportReportDAO.Instance.GetNumberOfExportedBook())
+            {
+                //chartAmountOfBook.Series[0].Points.AddXY(item.Date, item.TotalAmount);
+            }
+        }
     }
 }
