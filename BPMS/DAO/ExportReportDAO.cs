@@ -134,6 +134,8 @@ namespace BPMS.DAO
                     return current.Add(-current.TimeOfDay).AddDays(-current.Day + 1).AddMonths(1);
                 case 2:
                     return current.Add(-current.TimeOfDay).AddDays(-current.Day + 1).AddMonths(-current.Month + 1).AddYears(1);
+                case 3:
+                    return current.Add(-current.TimeOfDay).AddDays(7);
 
             }
             return current;
