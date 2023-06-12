@@ -81,5 +81,29 @@ namespace BPMS.GUI
         {
 
         }
+
+        public List<KeyValuePair<string, T>> ListKeyDayConverter<T>(List<KeyValuePair<DateTime, T>> list, int mode)
+        {
+            List<KeyValuePair<string, T>> result = new List<KeyValuePair<string, T>>();
+            result.Clear();
+            foreach (var item in list)
+            {
+                string converted = "";
+                switch (mode)
+                {
+                    case 0:
+                        converted = string.Format("{0}", item.Key.Date);
+                        break;
+                    case 1:
+                        converted = string.Format("{0}/{1}", item.Key.Month, item.Key.Year);
+                        break;
+                    case 2:
+                        converted = string.Format("{0}", item.Key.Year);
+                        break;
+                }
+                result.Add(new KeyValuePair<string, T>(converted, item.Value));
+            }
+            return result;
+        }
     }
 }
