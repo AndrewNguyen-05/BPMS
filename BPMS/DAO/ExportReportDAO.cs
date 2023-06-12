@@ -141,9 +141,9 @@ namespace BPMS.DAO
         /// <summary>
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<int> GetNumberOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
+        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
         {
-            List<int> result = new List<int>();
+            List<KeyValuePair<DateTime, int>> result = new List<KeyValuePair<DateTime, int>>();
             //By month
             for (DateTime start = startDate;
                  start < endDate;
@@ -152,12 +152,12 @@ namespace BPMS.DAO
             {
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
                 end = end.AddMilliseconds(-1);
-                var list = from ir in db.ExportReports
-                           join ird in db.ExportReportDetails
-                           on ir.id equals ird.idExport
-                           where start < ir.ExportDate && ir.ExportDate < end
-                           select ird.quantity;
-                result.Add(Enumerable.Sum(list));
+                var list = from er in db.ExportReports
+                           join erd in db.ExportReportDetails
+                           on er.id equals erd.idExport
+                           where start < er.ExportDate && er.ExportDate < end
+                           select erd.quantity;
+                result.Add(new KeyValuePair<DateTime, int> (start, Enumerable.Sum(list)));
             }
             return result;
         }
@@ -167,7 +167,7 @@ namespace BPMS.DAO
         /// mode 0 - day, 1 - month, 2 - year
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<int> GetNumberOfExportedBook(int number, int mode, int GroupBy)
+        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBook(int number, int mode, int GroupBy)
         {
             switch (mode)
             {
@@ -183,9 +183,9 @@ namespace BPMS.DAO
         /// <summary>
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<double> GetRevenueOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
+        public List<KeyValuePair<DateTime, double>> GetRevenueOfExportedBook(DateTime startDate, DateTime endDate, int GroupBy)
         {
-            List<double> result = new List<double>();
+            List<KeyValuePair<DateTime, double>> result = new List<KeyValuePair<DateTime, double>>();
             //By month
             for (DateTime start = startDate;
                  start < endDate;
@@ -194,10 +194,10 @@ namespace BPMS.DAO
             {
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
                 end = end.AddMilliseconds(-1);
-                var list = from ir in db.ExportReports
-                           where start < ir.ExportDate && ir.ExportDate < end
-                           select ir.TotalPrice;
-                result.Add(Enumerable.Sum(list));
+                var list = from er in db.ExportReports
+                           where start < er.ExportDate && er.ExportDate < end
+                           select er.TotalPrice;
+                result.Add(new KeyValuePair<DateTime, double> (start, Enumerable.Sum(list)));
             }
             return result;
         }
@@ -207,7 +207,7 @@ namespace BPMS.DAO
         /// mode 0 - day, 1 - month, 2 - year
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<double> GetRevenueOfExportedBook(int number, int mode, int GroupBy)
+        public List<KeyValuePair<DateTime, double>> GetRevenueOfExportedBook(int number, int mode, int GroupBy)
         {
             switch (mode)
             {
@@ -223,9 +223,9 @@ namespace BPMS.DAO
         /// <summary>
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<int> GetNumberOfExportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
+        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
         {
-            List<int> result = new List<int>();
+            List<KeyValuePair<DateTime, int>> result = new List<KeyValuePair<DateTime, int>>();
             //By month
             for (DateTime start = startDate;
                  start < endDate;
@@ -234,12 +234,12 @@ namespace BPMS.DAO
             {
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
                 end = end.AddMilliseconds(-1);
-                var list = from ir in db.ExportReports
-                           join ird in db.ExportReportDetails
-                           on ir.id equals ird.idExport
-                           where start < ir.ExportDate && ir.ExportDate < end && bk.id == ird.idBook
-                           select ird.quantity;
-                result.Add(Enumerable.Sum(list));
+                var list = from er in db.ExportReports
+                           join erd in db.ExportReportDetails
+                           on er.id equals erd.idExport
+                           where start < er.ExportDate && er.ExportDate < end && bk.id == erd.idBook
+                           select erd.quantity;
+                result.Add(new KeyValuePair<DateTime, int>(start, Enumerable.Sum(list)));
             }
             return result;
         }
@@ -249,7 +249,7 @@ namespace BPMS.DAO
         /// mode 0 - day, 1 - month, 2 - year
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<int> GetNumberOfExportedBookByBook(Book bk, int number, int mode, int GroupBy)
+        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBookByBook(Book bk, int number, int mode, int GroupBy)
         {
             switch (mode)
             {
