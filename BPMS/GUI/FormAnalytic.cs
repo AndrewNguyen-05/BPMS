@@ -23,17 +23,31 @@ namespace BPMS.GUI
 
         private void FormAnalytic_Load(object sender, EventArgs e)
         {
-
+            LoadData(12,1,2);
         }
 
-        private void LoadData()
+        private void LoadData(int number, int mode, int GroupBy)
         {
             chartAmountOfBook.Series[0].Points.Clear();
             chartAmountOfBook.Series[1].Points.Clear();
-            foreach (var item in ExportReportDAO.Instance.GetNumberOfExportedBook())
+            foreach (var item in ExportReportDAO.Instance.GetNumberOfExportedBook(number, mode, GroupBy))
             {
-                //chartAmountOfBook.Series[0].Points.AddXY(item.Date, item.TotalAmount);
+                chartAmountOfBook.Series[0].Points.AddXY(item.Key, item.Value);
             }
+            foreach (var item in ImportReportDAO.Instance.GetNumberOfImportedBook(number, mode, GroupBy))
+            {
+                chartAmountOfBook.Series[1].Points.AddXY(item.Key, item.Value);
+            }
+            chartBookName.Series[0].Points.Clear();
+            chartBookName.Series[0].Points.Add(1, 1);
+            chartBookName.Series[0].Points.Add(4, 2);
+            chartBookName.Series[0].Points.Add(3, 4);
+            chartBookName.Series[0].Points.Add(2, 1);
+
+            chartTotalMoney.Series[0].Points.AddXY(1, 2);
+            chartTotalMoney.Series[0].Points.AddXY(3, 4);
+            chartTotalMoney.Series[0].Points.AddXY(2, 1);
+            chartTotalMoney.Series[0].Points.AddXY(0, 3);
         }
     }
 }
