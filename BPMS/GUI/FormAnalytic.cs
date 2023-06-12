@@ -25,7 +25,7 @@ namespace BPMS.GUI
 
         private void FormAnalytic_Load(object sender, EventArgs e)
         {
-            LoadData(1,1,1);
+            LoadData(1,1,3);
         }
 
         private void LoadData(int number, int mode, int GroupBy)
