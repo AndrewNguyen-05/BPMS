@@ -69,6 +69,9 @@
             this.btnYear = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnMonth = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDay = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblEarning = new System.Windows.Forms.Label();
+            this.lblBestSelling = new System.Windows.Forms.Label();
+            this.lblExportedNumber = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAmountOfBook)).BeginInit();
@@ -232,7 +235,10 @@
             chartArea3.Name = "ChartArea1";
             this.chartBookName.ChartAreas.Add(chartArea3);
             this.chartBookName.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            legend3.IsTextAutoFit = false;
             legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartBookName.Legends.Add(legend3);
             this.chartBookName.Location = new System.Drawing.Point(22, 12);
             this.chartBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -240,7 +246,7 @@
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series4.CustomProperties = "PieLabelStyle=Disabled";
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.chartBookName.Series.Add(series4);
@@ -284,6 +290,7 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 20;
+            this.guna2GradientPanel3.Controls.Add(this.lblExportedNumber);
             this.guna2GradientPanel3.Controls.Add(this.lblExportBookNumber);
             this.guna2GradientPanel3.Controls.Add(this.iconPictureBox1);
             this.guna2GradientPanel3.Controls.Add(this.label2);
@@ -304,7 +311,7 @@
             this.lblExportBookNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblExportBookNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblExportBookNumber.ForeColor = System.Drawing.Color.White;
-            this.lblExportBookNumber.Location = new System.Drawing.Point(18, 61);
+            this.lblExportBookNumber.Location = new System.Drawing.Point(18, 55);
             this.lblExportBookNumber.Name = "lblExportBookNumber";
             this.lblExportBookNumber.Size = new System.Drawing.Size(28, 32);
             this.lblExportBookNumber.TabIndex = 1;
@@ -339,6 +346,7 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 20;
+            this.guna2GradientPanel1.Controls.Add(this.lblEarning);
             this.guna2GradientPanel1.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel1.Controls.Add(this.lblMoney);
             this.guna2GradientPanel1.Controls.Add(this.label3);
@@ -356,7 +364,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(124)))), ((int)(((byte)(49)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(249, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(269, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(79, 84);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,6 +400,7 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BorderRadius = 20;
+            this.guna2GradientPanel2.Controls.Add(this.lblBestSelling);
             this.guna2GradientPanel2.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel2.Controls.Add(this.lblBookName);
             this.guna2GradientPanel2.Controls.Add(this.label11);
@@ -409,7 +418,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(379, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(386, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(79, 84);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -457,7 +466,7 @@
             // btnYear
             // 
             this.btnYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnYear.BorderRadius = 14;
+            this.btnYear.BorderRadius = 13;
             this.btnYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -476,7 +485,7 @@
             // btnMonth
             // 
             this.btnMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMonth.BorderRadius = 14;
+            this.btnMonth.BorderRadius = 13;
             this.btnMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -495,7 +504,7 @@
             // btnDay
             // 
             this.btnDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDay.BorderRadius = 14;
+            this.btnDay.BorderRadius = 13;
             this.btnDay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -510,6 +519,45 @@
             this.btnDay.TabIndex = 30;
             this.btnDay.Text = "7 Days";
             this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
+            // 
+            // lblEarning
+            // 
+            this.lblEarning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEarning.AutoSize = true;
+            this.lblEarning.BackColor = System.Drawing.Color.Transparent;
+            this.lblEarning.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblEarning.ForeColor = System.Drawing.Color.White;
+            this.lblEarning.Location = new System.Drawing.Point(19, 55);
+            this.lblEarning.Name = "lblEarning";
+            this.lblEarning.Size = new System.Drawing.Size(134, 28);
+            this.lblEarning.TabIndex = 3;
+            this.lblEarning.Text = "Over the last";
+            // 
+            // lblBestSelling
+            // 
+            this.lblBestSelling.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblBestSelling.AutoSize = true;
+            this.lblBestSelling.BackColor = System.Drawing.Color.Transparent;
+            this.lblBestSelling.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblBestSelling.ForeColor = System.Drawing.Color.White;
+            this.lblBestSelling.Location = new System.Drawing.Point(19, 55);
+            this.lblBestSelling.Name = "lblBestSelling";
+            this.lblBestSelling.Size = new System.Drawing.Size(112, 23);
+            this.lblBestSelling.TabIndex = 4;
+            this.lblBestSelling.Text = "Over the last";
+            // 
+            // lblExportedNumber
+            // 
+            this.lblExportedNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblExportedNumber.AutoSize = true;
+            this.lblExportedNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblExportedNumber.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblExportedNumber.ForeColor = System.Drawing.Color.White;
+            this.lblExportedNumber.Location = new System.Drawing.Point(20, 55);
+            this.lblExportedNumber.Name = "lblExportedNumber";
+            this.lblExportedNumber.Size = new System.Drawing.Size(112, 23);
+            this.lblExportedNumber.TabIndex = 4;
+            this.lblExportedNumber.Text = "Over the last";
             // 
             // FormAnalytic
             // 
@@ -573,5 +621,8 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnYear;
         private Guna.UI2.WinForms.Guna2GradientButton btnMonth;
         private Guna.UI2.WinForms.Guna2GradientButton btnDay;
+        private System.Windows.Forms.Label lblEarning;
+        private System.Windows.Forms.Label lblExportedNumber;
+        private System.Windows.Forms.Label lblBestSelling;
     }
 }

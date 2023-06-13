@@ -21,6 +21,9 @@ namespace BPMS.GUI
         public FormAnalytic()
         {
             InitializeComponent();
+            lblEarning.Text = "Over the last 1 month";
+            lblBestSelling.Text = "Over the last 1 month";
+            lblExportedNumber.Text = "Over the last 1 month";
             LoadData(1, 1, 3);
 
             #region Border 
@@ -99,16 +102,25 @@ namespace BPMS.GUI
         private void btnDay_Click(object sender, EventArgs e)
         {
             LoadData(7, 0, 0);
+            lblEarning.Text = "Over the last 7 days";
+            lblBestSelling.Text = "Over the last 7 days";
+            lblExportedNumber.Text = "Over the last 7 days";
         }
 
         private void btnMonth_Click(object sender, EventArgs e)
         {
             LoadData(1, 1, 3);
+            lblEarning.Text = "Over the last 1 month";
+            lblBestSelling.Text = "Over the last 1 month";
+            lblExportedNumber.Text = "Over the last 1 month";
         }
 
         private void btnYear_Click(object sender, EventArgs e)
         {
             LoadData(1, 2, 1);
+            lblEarning.Text = "Over the last 1 year";
+            lblBestSelling.Text = "Over the last 1 year";
+            lblExportedNumber.Text = "Over the last 1 year";
         }
 
         public List<KeyValuePair<string, T>> ListKeyDayConverter<T>(List<KeyValuePair<DateTime, T>> list, int mode)
