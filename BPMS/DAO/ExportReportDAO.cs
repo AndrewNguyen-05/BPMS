@@ -292,10 +292,11 @@ namespace BPMS.DAO
             var item = from er in db.ExportReports
                        join erd in db.ExportReportDetails
                        on er.id equals erd.idExport
-                       join bk in db.Books
-                       on erd.idBook equals bk.id
                        where start <= er.ExportDate && er.ExportDate <= end
-                       orderby erd.quantity descending
+                       group erd by erd.idBook into allErdOfBook
+                       join bk in db.Books
+                       on allErdOfBook.FirstOrDefault().idBook equals bk.id
+                       orderby allErdOfBook.Sum(x => x.quantity) descending
                        select bk.name;
             return item.FirstOrDefault();
         }

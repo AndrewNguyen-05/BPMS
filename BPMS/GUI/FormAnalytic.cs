@@ -68,6 +68,12 @@ namespace BPMS.GUI
 
             lblMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString();
             lblBookName.Text = ExportReportDAO.Instance.GetBestSellingBook(number, mode);
+            //Debug.WriteLine("{0}", mode);
+
+            //foreach (KeyValuePair<string, int> items in ExportReportDAO.Instance.GetNumberOfExportedBookByBook(number, mode))
+            //{
+            //    Debug.WriteLine("{0} - {1}", items.Key, items.Value);
+            //}
         }
 
         private void btnDay_Click(object sender, EventArgs e)
@@ -82,7 +88,7 @@ namespace BPMS.GUI
 
         private void btnYear_Click(object sender, EventArgs e)
         {
-            LoadData(12, 1, 1);
+            LoadData(1, 2, 1);
         }
 
         public List<KeyValuePair<string, T>> ListKeyDayConverter<T>(List<KeyValuePair<DateTime, T>> list, int mode)
