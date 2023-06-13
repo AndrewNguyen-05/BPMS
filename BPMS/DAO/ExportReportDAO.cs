@@ -5,6 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
 namespace BPMS.DAO
@@ -313,6 +314,34 @@ namespace BPMS.DAO
                     return GetBestSellingBook(DateTime.Now.AddYears(-number), DateTime.Now);
             }
             return "";
+        }
+
+        public int GetLargestAmountExportBook(DateTime start, DateTime end)
+        {
+            var item = from er in db.ExportReports
+                       join erd in db.ExportReportDetails
+                       on er.id equals erd.idExport
+                       where start <= er.ExportDate && er.ExportDate <= end
+                       group erd by erd.idBook into allErdOfBook
+                       join bk in db.Books
+                       on allErdOfBook.FirstOrDefault().idBook equals bk.id
+                       orderby allErdOfBook.Sum(x => x.quantity) descending
+                       select allErdOfBook.Sum(x => x.quantity);
+            return item.FirstOrDefault();
+        }
+
+        public int GetLargestAmountExportBook(int number ,int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetLargestAmountExportBook(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetLargestAmountExportBook(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetLargestAmountExportBook(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return 0;
         }
     }
 }

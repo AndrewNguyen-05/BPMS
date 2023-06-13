@@ -68,6 +68,8 @@ namespace BPMS.GUI
 
             lblMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString();
             lblBookName.Text = ExportReportDAO.Instance.GetBestSellingBook(number, mode);
+            lblExportBookNumber.Text = ExportReportDAO.Instance.GetLargestAmountExportBook(number, mode).ToString();
+            lblImportBookNumber.Text = ImportReportDAO.Instance.GetLargestAmountImportBook(number, mode).ToString();
             //Debug.WriteLine("{0}", mode);
 
             //foreach (KeyValuePair<string, int> items in ExportReportDAO.Instance.GetNumberOfExportedBookByBook(number, mode))

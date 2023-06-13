@@ -270,5 +270,32 @@ namespace BPMS.DAO
             }
             return null;
         }
+        public int GetLargestAmountImportBook(DateTime start, DateTime end)
+        {
+            var item = from ir in db.ImportReports
+                       join ird in db.ImportReportDetails
+                       on ir.id equals ird.idImport
+                       where start <= ir.ImportDate && ir.ImportDate <= end
+                       group ird by ird.idBook into allIrdOfBook
+                       join bk in db.Books
+                       on allIrdOfBook.FirstOrDefault().idBook equals bk.id
+                       orderby allIrdOfBook.Sum(x => x.quantity) descending
+                       select allIrdOfBook.Sum(x => x.quantity);
+            return item.FirstOrDefault();
+        }
+
+        public int GetLargestAmountImportBook(int number, int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetLargestAmountImportBook(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetLargestAmountImportBook(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetLargestAmountImportBook(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return 0;
+        }
     }
 }
