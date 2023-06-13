@@ -40,17 +40,17 @@
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.panelLogOut = new System.Windows.Forms.Panel();
             this.cbViewAs = new System.Windows.Forms.ComboBox();
-            this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.panelLogOut.SuspendLayout();
@@ -223,8 +223,8 @@
             // 
             // panelLogOut
             // 
-            this.panelLogOut.Controls.Add(this.cbViewAs);
             this.panelLogOut.Controls.Add(this.btnLogOut);
+            this.panelLogOut.Controls.Add(this.cbViewAs);
             this.panelLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelLogOut.Location = new System.Drawing.Point(0, 650);
             this.panelLogOut.Name = "panelLogOut";
@@ -245,27 +245,6 @@
             this.cbViewAs.TabIndex = 1;
             this.cbViewAs.Visible = false;
             this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.btnLogOut.IconColor = System.Drawing.Color.White;
-            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogOut.IconSize = 40;
-            this.btnLogOut.Location = new System.Drawing.Point(20, 72);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(238, 57);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "LOGOUT";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // panelLogo
             // 
@@ -303,6 +282,17 @@
             this.panelTitleBar.Size = new System.Drawing.Size(1212, 84);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1113, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 40);
+            this.guna2ControlBox1.TabIndex = 4;
             // 
             // controlMinimize
             // 
@@ -370,16 +360,24 @@
             this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
             // 
-            // guna2ControlBox1
+            // btnLogOut
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1113, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 40);
-            this.guna2ControlBox1.TabIndex = 4;
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogOut.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnLogOut.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(20, 76);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(238, 53);
+            this.btnLogOut.TabIndex = 38;
+            this.btnLogOut.Text = "LOGOUT";
             // 
             // FormMainMenu
             // 
@@ -421,7 +419,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.ComboBox cbViewAs;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
-        private FontAwesome.Sharp.IconButton btnLogOut;
         private System.Windows.Forms.FlowLayoutPanel flpnlButton;
         private FontAwesome.Sharp.IconButton btnMainPage;
         private FontAwesome.Sharp.IconButton btnImport;
@@ -430,6 +427,7 @@
         private FontAwesome.Sharp.IconButton btnAnalytic;
         private FontAwesome.Sharp.IconButton btnAccount;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogOut;
     }
 }
 

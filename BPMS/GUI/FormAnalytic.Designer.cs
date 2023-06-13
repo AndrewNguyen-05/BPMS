@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAnalytic));
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -130,39 +130,39 @@
             // chartAmountOfBook
             // 
             this.chartAmountOfBook.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Emboss;
-            chartArea1.Name = "ChartArea1";
-            this.chartAmountOfBook.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chartAmountOfBook.ChartAreas.Add(chartArea4);
             this.chartAmountOfBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartAmountOfBook.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.chartAmountOfBook.Legends.Add(legend4);
             this.chartAmountOfBook.Location = new System.Drawing.Point(22, 12);
             this.chartAmountOfBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartAmountOfBook.Name = "chartAmountOfBook";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.MarkerSize = 6;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Exported Book";
-            series1.YValuesPerPoint = 3;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.MarkerSize = 6;
-            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series2.Name = "Imported Book";
-            series2.YValuesPerPoint = 3;
-            this.chartAmountOfBook.Series.Add(series1);
-            this.chartAmountOfBook.Series.Add(series2);
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.MarkerSize = 6;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Exported Book";
+            series5.YValuesPerPoint = 3;
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.MarkerSize = 6;
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series6.Name = "Imported Book";
+            series6.YValuesPerPoint = 3;
+            this.chartAmountOfBook.Series.Add(series5);
+            this.chartAmountOfBook.Series.Add(series6);
             this.chartAmountOfBook.Size = new System.Drawing.Size(1293, 285);
             this.chartAmountOfBook.TabIndex = 25;
             this.chartAmountOfBook.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Amount Of Imported/Exported Books";
-            this.chartAmountOfBook.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Amount Of Imported/Exported Books";
+            this.chartAmountOfBook.Titles.Add(title4);
             // 
             // tableLayoutPanel1
             // 
@@ -194,26 +194,26 @@
             // chartTotalMoney
             // 
             this.chartTotalMoney.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Emboss;
-            chartArea2.Name = "ChartArea1";
-            this.chartTotalMoney.ChartAreas.Add(chartArea2);
+            chartArea5.Name = "ChartArea1";
+            this.chartTotalMoney.ChartAreas.Add(chartArea5);
             this.chartTotalMoney.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartTotalMoney.Legends.Add(legend2);
+            legend5.Name = "Legend1";
+            this.chartTotalMoney.Legends.Add(legend5);
             this.chartTotalMoney.Location = new System.Drawing.Point(22, 12);
             this.chartTotalMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartTotalMoney.Name = "chartTotalMoney";
             this.chartTotalMoney.Padding = new System.Windows.Forms.Padding(22, 12, 22, 12);
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Money";
-            this.chartTotalMoney.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Money";
+            this.chartTotalMoney.Series.Add(series7);
             this.chartTotalMoney.Size = new System.Drawing.Size(752, 279);
             this.chartTotalMoney.TabIndex = 17;
             this.chartTotalMoney.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Total Amount of Money";
-            this.chartTotalMoney.Titles.Add(title2);
+            title5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "Total Amount of Money";
+            this.chartTotalMoney.Titles.Add(title5);
             // 
             // panel3
             // 
@@ -229,28 +229,28 @@
             // chartBookName
             // 
             this.chartBookName.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Emboss;
-            chartArea3.Name = "ChartArea1";
-            this.chartBookName.ChartAreas.Add(chartArea3);
+            chartArea6.Name = "ChartArea1";
+            this.chartBookName.ChartAreas.Add(chartArea6);
             this.chartBookName.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartBookName.Legends.Add(legend3);
+            legend6.Name = "Legend1";
+            this.chartBookName.Legends.Add(legend6);
             this.chartBookName.Location = new System.Drawing.Point(22, 12);
             this.chartBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartBookName.Name = "chartBookName";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.CustomProperties = "PieLabelStyle=Disabled";
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartBookName.Series.Add(series4);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.CustomProperties = "PieLabelStyle=Disabled";
+            series8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartBookName.Series.Add(series8);
             this.chartBookName.Size = new System.Drawing.Size(485, 279);
             this.chartBookName.TabIndex = 16;
             this.chartBookName.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "The Number of Exported Books";
-            this.chartBookName.Titles.Add(title3);
+            title6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "The Number of Exported Books";
+            this.chartBookName.Titles.Add(title6);
             // 
             // panel4
             // 

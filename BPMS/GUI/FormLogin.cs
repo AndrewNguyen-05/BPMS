@@ -25,7 +25,7 @@ namespace BPMS.GUI
             //Login
             Guna2Elipse elipse_login = new Guna2Elipse();
             elipse_login.TargetControl = btnLogin;
-            elipse_login.BorderRadius = 18;
+            elipse_login.BorderRadius = 20;
             #endregion
         }
 
@@ -42,16 +42,6 @@ namespace BPMS.GUI
             {
                 MessageBox.Show("Wrong username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Do you want to exit the app?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            Application.Exit();
         }
         #region Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
