@@ -12,6 +12,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using BPMS.DAO;
 using BPMS.DTO;
+using Guna.UI2.WinForms;
 
 namespace BPMS.GUI
 {
@@ -21,6 +22,23 @@ namespace BPMS.GUI
         {
             InitializeComponent();
             LoadData(1, 1, 3);
+
+            #region Border 
+
+            //Buttons
+            Guna2Elipse elipse_day = new Guna2Elipse();
+            elipse_day.TargetControl = btnDay;
+            elipse_day.BorderRadius = 20;
+
+            Guna2Elipse elipse_month = new Guna2Elipse();
+            elipse_month.TargetControl = btnMonth;
+            elipse_month.BorderRadius = 20;
+
+            Guna2Elipse elipse_year = new Guna2Elipse();
+            elipse_year.TargetControl = btnYear;
+            elipse_year.BorderRadius = 20;
+
+            #endregion
         }
 
         private void LoadData(int number, int mode, int GroupBy)
@@ -66,10 +84,10 @@ namespace BPMS.GUI
             chartBookName.Series[0].YValueMembers = "Value";
             chartBookName.DataBind();
 
-            lblMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString();
+            lblMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString() + " VND";
             lblBookName.Text = ExportReportDAO.Instance.GetBestSellingBook(number, mode);
-            lblExportBookNumber.Text = ExportReportDAO.Instance.GetLargestAmountExportBook(number, mode).ToString();
-            lblImportBookNumber.Text = ImportReportDAO.Instance.GetLargestAmountImportBook(number, mode).ToString();
+            lblExportBookNumber.Text = ExportReportDAO.Instance.GetLargestAmountExportBook(number, mode).ToString() + " books";
+            //lblImportBookNumber.Text = ImportReportDAO.Instance.GetLargestAmountImportBook(number, mode).ToString() + " books";
             //Debug.WriteLine("{0}", mode);
 
             //foreach (KeyValuePair<string, int> items in ExportReportDAO.Instance.GetNumberOfExportedBookByBook(number, mode))
@@ -124,11 +142,6 @@ namespace BPMS.GUI
                 result.Add(new KeyValuePair<string, T>(converted, item.Value));
             }
             return result;
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
