@@ -225,6 +225,12 @@
     <Compile Include="GUI\FormPayment.Designer.cs">
       <DependentUpon>FormPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormTemporary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTemporary.Designer.cs">
+      <DependentUpon>FormTemporary.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Publisher\FormPublisherExport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormPayment.resx">
       <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTemporary.resx">
+      <DependentUpon>FormTemporary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Publisher\FormPublisherExport.resx">
       <DependentUpon>FormPublisherExport.cs</DependentUpon>

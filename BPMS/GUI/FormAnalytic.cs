@@ -123,5 +123,10 @@ namespace BPMS.GUI
             }
             return result;
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
