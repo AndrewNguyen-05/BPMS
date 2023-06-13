@@ -293,9 +293,9 @@ namespace BPMS.DAO
                        join erd in db.ExportReportDetails
                        on er.id equals erd.idExport
                        join bk in db.Books
-                       on er.id equals bk.id
-                       where start <= er.ExportDate && end <= er.ExportDate
-                       orderby erd.quantity
+                       on erd.idBook equals bk.id
+                       where start <= er.ExportDate && er.ExportDate <= end
+                       orderby erd.quantity descending
                        select bk.name;
             return item.FirstOrDefault();
         }
