@@ -28,52 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.chartTotalMoney = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chartBookName = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.grbMoney = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblMoney = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.grbAmountOfBookByName = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblBookName = new System.Windows.Forms.Label();
+            this.grbAmountOfBook = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.chartAmountOfBook = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnYear = new Guna.UI2.WinForms.Guna2Button();
             this.btnDay = new Guna.UI2.WinForms.Guna2Button();
             this.btnMonth = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartTotalMoney)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookName)).BeginInit();
-            this.guna2GroupBox6.SuspendLayout();
+            this.grbMoney.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.guna2GroupBox4.SuspendLayout();
-            this.guna2GroupBox5.SuspendLayout();
+            this.grbAmountOfBookByName.SuspendLayout();
+            this.grbAmountOfBook.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAmountOfBook)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -90,25 +89,25 @@
             // 
             // chartTotalMoney
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartTotalMoney.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chartTotalMoney.ChartAreas.Add(chartArea4);
             this.chartTotalMoney.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartTotalMoney.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.chartTotalMoney.Legends.Add(legend4);
             this.chartTotalMoney.Location = new System.Drawing.Point(0, 0);
             this.chartTotalMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartTotalMoney.Name = "chartTotalMoney";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Money";
-            this.chartTotalMoney.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Money";
+            this.chartTotalMoney.Series.Add(series5);
             this.chartTotalMoney.Size = new System.Drawing.Size(929, 318);
             this.chartTotalMoney.TabIndex = 4;
             this.chartTotalMoney.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Total Amount of Money";
-            this.chartTotalMoney.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Total Amount of Money";
+            this.chartTotalMoney.Titles.Add(title4);
             // 
             // panel2
             // 
@@ -132,56 +131,57 @@
             // 
             // chartBookName
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartBookName.ChartAreas.Add(chartArea2);
+            chartArea5.Name = "ChartArea1";
+            this.chartBookName.ChartAreas.Add(chartArea5);
             this.chartBookName.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartBookName.Legends.Add(legend2);
+            legend5.Name = "Legend1";
+            this.chartBookName.Legends.Add(legend5);
             this.chartBookName.Location = new System.Drawing.Point(0, 0);
             this.chartBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartBookName.Name = "chartBookName";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartBookName.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.CustomProperties = "PieLabelStyle=Disabled";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartBookName.Series.Add(series6);
             this.chartBookName.Size = new System.Drawing.Size(396, 318);
             this.chartBookName.TabIndex = 0;
             this.chartBookName.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "The Number of Exported Books";
-            this.chartBookName.Titles.Add(title2);
+            title5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "The Number of Exported Books";
+            this.chartBookName.Titles.Add(title5);
             // 
-            // guna2GroupBox6
+            // grbMoney
             // 
-            this.guna2GroupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbMoney.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox6.Controls.Add(this.label10);
-            this.guna2GroupBox6.Controls.Add(this.label11);
-            this.guna2GroupBox6.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox6.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox6.Location = new System.Drawing.Point(7, 2);
-            this.guna2GroupBox6.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
-            this.guna2GroupBox6.Name = "guna2GroupBox6";
-            this.guna2GroupBox6.Size = new System.Drawing.Size(382, 132);
-            this.guna2GroupBox6.TabIndex = 4;
-            this.guna2GroupBox6.Text = "Highest Earning";
+            this.grbMoney.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbMoney.Controls.Add(this.lblMoney);
+            this.grbMoney.Controls.Add(this.label11);
+            this.grbMoney.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbMoney.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.grbMoney.ForeColor = System.Drawing.Color.White;
+            this.grbMoney.Location = new System.Drawing.Point(7, 2);
+            this.grbMoney.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
+            this.grbMoney.Name = "grbMoney";
+            this.grbMoney.Size = new System.Drawing.Size(382, 132);
+            this.grbMoney.TabIndex = 4;
+            this.grbMoney.Text = "Highest Earning";
             // 
-            // label10
+            // lblMoney
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblMoney.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.label10.Location = new System.Drawing.Point(3, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 32);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "100000";
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.lblMoney.Location = new System.Drawing.Point(3, 80);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(116, 32);
+            this.lblMoney.TabIndex = 1;
+            this.lblMoney.Text = "100000";
             // 
             // label11
             // 
@@ -213,72 +213,60 @@
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel7.Controls.Add(this.guna2GroupBox4);
-            this.panel7.Controls.Add(this.guna2GroupBox5);
-            this.panel7.Controls.Add(this.guna2GroupBox6);
+            this.panel7.Controls.Add(this.grbAmountOfBookByName);
+            this.panel7.Controls.Add(this.grbAmountOfBook);
+            this.panel7.Controls.Add(this.grbMoney);
             this.panel7.Location = new System.Drawing.Point(3, 4);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(394, 479);
             this.panel7.TabIndex = 0;
             // 
-            // guna2GroupBox4
+            // grbAmountOfBookByName
             // 
-            this.guna2GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbAmountOfBookByName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox4.Controls.Add(this.label6);
-            this.guna2GroupBox4.Controls.Add(this.label7);
-            this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox4.Location = new System.Drawing.Point(6, 340);
-            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
-            this.guna2GroupBox4.Name = "guna2GroupBox4";
-            this.guna2GroupBox4.Size = new System.Drawing.Size(382, 135);
-            this.guna2GroupBox4.TabIndex = 6;
-            this.guna2GroupBox4.Text = "Highest Earning";
+            this.grbAmountOfBookByName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbAmountOfBookByName.Controls.Add(this.lblBookName);
+            this.grbAmountOfBookByName.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbAmountOfBookByName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.grbAmountOfBookByName.ForeColor = System.Drawing.Color.White;
+            this.grbAmountOfBookByName.Location = new System.Drawing.Point(6, 340);
+            this.grbAmountOfBookByName.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
+            this.grbAmountOfBookByName.Name = "grbAmountOfBookByName";
+            this.grbAmountOfBookByName.Size = new System.Drawing.Size(382, 135);
+            this.grbAmountOfBookByName.TabIndex = 6;
+            this.grbAmountOfBookByName.Text = "Best-selling Book";
             // 
-            // label6
+            // lblBookName
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblBookName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.label6.Location = new System.Drawing.Point(3, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 32);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "100000";
+            this.lblBookName.AutoSize = true;
+            this.lblBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.lblBookName.Location = new System.Drawing.Point(4, 80);
+            this.lblBookName.Name = "lblBookName";
+            this.lblBookName.Size = new System.Drawing.Size(84, 25);
+            this.lblBookName.TabIndex = 1;
+            this.lblBookName.Text = "100000";
             // 
-            // label7
+            // grbAmountOfBook
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.label7.Location = new System.Drawing.Point(212, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "VND";
-            // 
-            // guna2GroupBox5
-            // 
-            this.guna2GroupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbAmountOfBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox5.Controls.Add(this.label8);
-            this.guna2GroupBox5.Controls.Add(this.label9);
-            this.guna2GroupBox5.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.guna2GroupBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox5.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox5.Location = new System.Drawing.Point(7, 171);
-            this.guna2GroupBox5.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
-            this.guna2GroupBox5.Name = "guna2GroupBox5";
-            this.guna2GroupBox5.Size = new System.Drawing.Size(382, 132);
-            this.guna2GroupBox5.TabIndex = 5;
-            this.guna2GroupBox5.Text = "Highest Earning";
+            this.grbAmountOfBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbAmountOfBook.Controls.Add(this.label8);
+            this.grbAmountOfBook.Controls.Add(this.label9);
+            this.grbAmountOfBook.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.grbAmountOfBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.grbAmountOfBook.ForeColor = System.Drawing.Color.White;
+            this.grbAmountOfBook.Location = new System.Drawing.Point(7, 171);
+            this.grbAmountOfBook.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
+            this.grbAmountOfBook.Name = "grbAmountOfBook";
+            this.grbAmountOfBook.Size = new System.Drawing.Size(382, 132);
+            this.grbAmountOfBook.TabIndex = 5;
+            this.grbAmountOfBook.Text = "Highest Earning";
             // 
             // label8
             // 
@@ -318,43 +306,53 @@
             this.panel8.Size = new System.Drawing.Size(930, 479);
             this.panel8.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(136, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 32);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Analyze by:";
+            // 
             // chartAmountOfBook
             // 
             this.chartAmountOfBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartAmountOfBook.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartAmountOfBook.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.chartAmountOfBook.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartAmountOfBook.Legends.Add(legend6);
             this.chartAmountOfBook.Location = new System.Drawing.Point(3, 82);
             this.chartAmountOfBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartAmountOfBook.Name = "chartAmountOfBook";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 6;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Imported Book";
-            series3.YValuesPerPoint = 3;
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.MarkerSize = 6;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Exported Book";
-            series4.YValuesPerPoint = 3;
-            this.chartAmountOfBook.Series.Add(series3);
-            this.chartAmountOfBook.Series.Add(series4);
+            series7.BorderWidth = 3;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.MarkerSize = 6;
+            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series7.Name = "Exported Book";
+            series7.YValuesPerPoint = 3;
+            series8.BorderWidth = 3;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.MarkerSize = 6;
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series8.Name = "Imported Book";
+            series8.YValuesPerPoint = 3;
+            this.chartAmountOfBook.Series.Add(series7);
+            this.chartAmountOfBook.Series.Add(series8);
             this.chartAmountOfBook.Size = new System.Drawing.Size(923, 384);
             this.chartAmountOfBook.TabIndex = 13;
             this.chartAmountOfBook.Text = "chart2";
-            title3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Amount Of Imported/Exported Books";
-            this.chartAmountOfBook.Titles.Add(title3);
+            title6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "Amount Of Imported/Exported Books";
+            this.chartAmountOfBook.Titles.Add(title6);
             // 
             // btnYear
             // 
@@ -439,16 +437,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1337, 322);
             this.tableLayoutPanel3.TabIndex = 15;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 32);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Analyze by:";
-            // 
             // FormAnalytic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -463,14 +451,14 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartBookName)).EndInit();
-            this.guna2GroupBox6.ResumeLayout(false);
-            this.guna2GroupBox6.PerformLayout();
+            this.grbMoney.ResumeLayout(false);
+            this.grbMoney.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.guna2GroupBox4.ResumeLayout(false);
-            this.guna2GroupBox4.PerformLayout();
-            this.guna2GroupBox5.ResumeLayout(false);
-            this.guna2GroupBox5.PerformLayout();
+            this.grbAmountOfBookByName.ResumeLayout(false);
+            this.grbAmountOfBookByName.PerformLayout();
+            this.grbAmountOfBook.ResumeLayout(false);
+            this.grbAmountOfBook.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAmountOfBook)).EndInit();
@@ -485,15 +473,14 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalMoney;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
-        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2GroupBox grbMoney;
+        private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
+        private Guna.UI2.WinForms.Guna2GroupBox grbAmountOfBookByName;
+        private System.Windows.Forms.Label lblBookName;
+        private Guna.UI2.WinForms.Guna2GroupBox grbAmountOfBook;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel8;

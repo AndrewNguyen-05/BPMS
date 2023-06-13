@@ -5,6 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 namespace BPMS.DAO
 {
@@ -157,7 +158,7 @@ namespace BPMS.DAO
                 var list = from er in db.ExportReports
                            join erd in db.ExportReportDetails
                            on er.id equals erd.idExport
-                           where start < er.ExportDate && er.ExportDate < end
+                           where start <= er.ExportDate && er.ExportDate <= end
                            select erd.quantity;
                 result.Add(new KeyValuePair<DateTime, int> (start, Enumerable.Sum(list)));
             }
@@ -197,7 +198,7 @@ namespace BPMS.DAO
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
                 end = end.AddMilliseconds(-1);
                 var list = from er in db.ExportReports
-                           where start < er.ExportDate && er.ExportDate < end
+                           where start <= er.ExportDate && er.ExportDate <= end
                            select er.TotalPrice;
                 result.Add(new KeyValuePair<DateTime, double> (start, Enumerable.Sum(list)));
             }
@@ -225,23 +226,19 @@ namespace BPMS.DAO
         /// <summary>
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
+        public List<KeyValuePair<string, int>> GetNumberOfExportedBookByBook(DateTime startDate, DateTime endDate)
         {
-            List<KeyValuePair<DateTime, int>> result = new List<KeyValuePair<DateTime, int>>();
+            List<KeyValuePair<string, int>> result = new List<KeyValuePair<string, int>>();
             //By month
-            for (DateTime start = startDate;
-                 start < endDate;
-                 start = GetNext(start, GroupBy)
-                )
+
+            foreach (Book bk in BookDAO.Instance.GetBookList())
             {
-                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
-                end = end.AddMilliseconds(-1);
                 var list = from er in db.ExportReports
                            join erd in db.ExportReportDetails
                            on er.id equals erd.idExport
-                           where start < er.ExportDate && er.ExportDate < end && bk.id == erd.idBook
+                           where startDate <= er.ExportDate && er.ExportDate <= endDate && bk.id == erd.idBook
                            select erd.quantity;
-                result.Add(new KeyValuePair<DateTime, int>(start, Enumerable.Sum(list)));
+                result.Add(new KeyValuePair<string, int>(bk.name, Enumerable.Sum(list)));
             }
             return result;
         }
@@ -251,18 +248,70 @@ namespace BPMS.DAO
         /// mode 0 - day, 1 - month, 2 - year
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<KeyValuePair<DateTime, int>> GetNumberOfExportedBookByBook(Book bk, int number, int mode, int GroupBy)
+        public List<KeyValuePair<string, int>> GetNumberOfExportedBookByBook(int number, int mode)
         {
             switch (mode)
             {
                 case 0:
-                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfExportedBookByBook(DateTime.Now.AddDays(-number), DateTime.Now);
                 case 1:
-                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfExportedBookByBook(DateTime.Now.AddMonths(-number), DateTime.Now);
                 case 2:
-                    return GetNumberOfExportedBookByBook(bk, DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfExportedBookByBook(DateTime.Now.AddYears(-number), DateTime.Now);
             }
             return null;
+        }
+
+        public double GetHighestEarning(DateTime startDate, DateTime endDate)
+        {
+            var item = from er in db.ExportReports
+                       where startDate <= er.ExportDate && er.ExportDate <= endDate
+                       orderby er.TotalPrice descending
+                       select er.TotalPrice;
+
+
+            return item.FirstOrDefault();
+        }
+
+        public double GetHighestEarning(int number, int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetHighestEarning(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetHighestEarning(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetHighestEarning(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return 0;
+        }
+
+        public string GetBestSellingBook(DateTime start, DateTime end)
+        {
+            var item = from er in db.ExportReports
+                       join erd in db.ExportReportDetails
+                       on er.id equals erd.idExport
+                       join bk in db.Books
+                       on er.id equals bk.id
+                       where start <= er.ExportDate && end <= er.ExportDate
+                       orderby erd.quantity
+                       select bk.name;
+            return item.FirstOrDefault();
+        }
+
+        public string GetBestSellingBook(int number, int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetBestSellingBook(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetBestSellingBook(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetBestSellingBook(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return "";
         }
     }
 }

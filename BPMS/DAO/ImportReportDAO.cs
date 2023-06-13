@@ -164,7 +164,7 @@ namespace BPMS.DAO
                 var list = from ir in db.ImportReports
                            join ird in db.ImportReportDetails
                            on ir.id equals ird.idImport
-                           where start < ir.ImportDate && ir.ImportDate < end
+                           where start <= ir.ImportDate && ir.ImportDate <= end
                            select ird.quantity;
                 result.Add(new KeyValuePair<DateTime, int> (start, Enumerable.Sum(list)));
             }
@@ -204,7 +204,7 @@ namespace BPMS.DAO
                 DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
                 end = end.AddMilliseconds(-1);
                 var list = from ir in db.ImportReports
-                           where start < ir.ImportDate && ir.ImportDate < end
+                           where start <= ir.ImportDate && ir.ImportDate <= end
                            select ir.TotalPrice;
                 result.Add(new KeyValuePair<DateTime, double>(start, Enumerable.Sum(list)));
             }
@@ -245,7 +245,7 @@ namespace BPMS.DAO
                 var list = from ir in db.ImportReports
                            join ird in db.ImportReportDetails
                            on ir.id equals ird.idImport
-                           where start < ir.ImportDate && ir.ImportDate < end && bk.id == ird.idBook
+                           where start <= ir.ImportDate && ir.ImportDate <= end && bk.id == ird.idBook
                            select ird.quantity;
                 result.Add(new KeyValuePair<DateTime, int>(start, Enumerable.Sum(list)));
             }
