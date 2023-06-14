@@ -228,26 +228,19 @@ namespace BPMS.DAO
             }
             return null;
         }
-        /// <summary>
-        /// GroupBy mode: 0 - day, 1 - month, 2 - year
-        /// </summary>
-        public List<KeyValuePair<DateTime, int>> GetNumberOfImportedBookByBook(Book bk, DateTime startDate, DateTime endDate, int GroupBy)
+        public List<KeyValuePair<string, int>> GetNumberOfImportedBookByBook(DateTime startDate, DateTime endDate)
         {
-            List<KeyValuePair<DateTime, int>> result = new List<KeyValuePair<DateTime, int>>();
+            List<KeyValuePair<string, int>> result = new List<KeyValuePair<string, int>>();
             //By month
-            for (DateTime start = startDate;
-                 start < endDate;
-                 start = GetNext(start, GroupBy)
-                )
+
+            foreach (Book bk in BookDAO.Instance.GetBookList())
             {
-                DateTime end = GetNext(start, GroupBy) < endDate ? GetNext(start, GroupBy) : endDate;
-                end = end.AddMilliseconds(-1);
                 var list = from ir in db.ImportReports
                            join ird in db.ImportReportDetails
                            on ir.id equals ird.idImport
-                           where start <= ir.ImportDate && ir.ImportDate <= end && bk.id == ird.idBook
+                           where startDate <= ir.ImportDate && ir.ImportDate <= endDate && bk.id == ird.idBook
                            select ird.quantity;
-                result.Add(new KeyValuePair<DateTime, int>(start, Enumerable.Sum(list)));
+                result.Add(new KeyValuePair<string, int>(bk.name, Enumerable.Sum(list)));
             }
             return result;
         }
@@ -257,18 +250,77 @@ namespace BPMS.DAO
         /// mode 0 - day, 1 - month, 2 - year
         /// GroupBy mode: 0 - day, 1 - month, 2 - year
         /// </summary>
-        public List<KeyValuePair<DateTime, int>> GetNumberOfImportedBookByBook(Book bk, int number, int mode, int GroupBy)
+        public List<KeyValuePair<string, int>> GetNumberOfImportedBookByBook(int number, int mode)
         {
             switch (mode)
             {
                 case 0:
-                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddDays(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfImportedBookByBook(DateTime.Now.AddDays(-number), DateTime.Now);
                 case 1:
-                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddMonths(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfImportedBookByBook(DateTime.Now.AddMonths(-number), DateTime.Now);
                 case 2:
-                    return GetNumberOfImportedBookByBook(bk, DateTime.Now.AddYears(-number), DateTime.Now, GroupBy);
+                    return GetNumberOfImportedBookByBook(DateTime.Now.AddYears(-number), DateTime.Now);
             }
             return null;
+        }
+        public double GetHighestSpending(DateTime startDate, DateTime endDate)
+        {
+            var item = from ir in db.ImportReports
+                       where startDate <= ir.ImportDate && ir.ImportDate <= endDate
+                       orderby ir.TotalPrice descending
+                       select ir.TotalPrice;
+
+
+            return item.FirstOrDefault();
+        }
+
+        public double GetHighestSpending(int number, int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetHighestSpending(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetHighestSpending(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetHighestSpending(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return 0;
+        }
+        /// <summary>
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public string GetTheMostImportedBook(DateTime startDate, DateTime endDate)
+        {
+            var item = from ir in db.ImportReports
+                       join ird in db.ImportReportDetails
+                       on ir.id equals ird.idImport
+                       where startDate <= ir.ImportDate && ir.ImportDate <= endDate
+                       group ird by ird.idBook into allIrdOfBook
+                       join bk in db.Books
+                       on allIrdOfBook.FirstOrDefault().idBook equals bk.id
+                       orderby allIrdOfBook.Sum(x => x.quantity) descending
+                       select bk.name;
+            return item.FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Get last number - mode of imported book
+        /// mode 0 - day, 1 - month, 2 - year
+        /// GroupBy mode: 0 - day, 1 - month, 2 - year
+        /// </summary>
+        public string GetTheMostImportedBook(int number, int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    return GetTheMostImportedBook(DateTime.Now.AddDays(-number), DateTime.Now);
+                case 1:
+                    return GetTheMostImportedBook(DateTime.Now.AddMonths(-number), DateTime.Now);
+                case 2:
+                    return GetTheMostImportedBook(DateTime.Now.AddYears(-number), DateTime.Now);
+            }
+            return "";
         }
         public int GetLargestAmountImportBook(DateTime start, DateTime end)
         {

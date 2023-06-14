@@ -249,6 +249,7 @@
             this.btnLogOut.Size = new System.Drawing.Size(238, 53);
             this.btnLogOut.TabIndex = 38;
             this.btnLogOut.Text = "LOGOUT";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // cbViewAs
             // 

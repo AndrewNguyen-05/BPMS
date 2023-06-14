@@ -24,6 +24,14 @@ namespace BPMS.GUI
             lblEarning.Text = "Over the last 1 month";
             lblBestSelling.Text = "Over the last 1 month";
             lblExportedNumber.Text = "Over the last 1 month";
+            lblImportedBook.Visible = false;
+            lblImportedBookNumber.Visible = false;
+            lblImportedBookName.Visible = false;
+            lblBestImportedBook.Visible = false;
+            lblHighestImported.Visible = false;
+            lblImportedMoney.Visible = false;
+            chartImportedBookName.Visible = false;
+            chartTotalImportedMoney.Visible = false;
             LoadData(1, 1, 3);
 
             #region Border 
@@ -46,29 +54,13 @@ namespace BPMS.GUI
 
         private void LoadData(int number, int mode, int GroupBy)
         {
+            #region Amount Exported/Imported Book
             List<Book> listBook = BookDAO.Instance.GetBookList();
             List<KeyValuePair<DateTime, int>> listExportedBook = ExportReportDAO.Instance.GetNumberOfExportedBook(number, mode, GroupBy);
             List<KeyValuePair<DateTime, int>> listImportedBook = ImportReportDAO.Instance.GetNumberOfImportedBook(number, mode, GroupBy);
-            List<KeyValuePair<DateTime, double>> listRevenue = ExportReportDAO.Instance.GetRevenueOfExportedBook(number, mode, GroupBy);
-            List<KeyValuePair<string, int>> listExBookByName = null;
-            listExBookByName = ExportReportDAO.Instance.GetNumberOfExportedBookByBook(number, mode);
 
             chartAmountOfBook.Series[0].Points.Clear();
             chartAmountOfBook.Series[1].Points.Clear();
-            chartBookName.Series[0].Points.Clear();
-            chartTotalMoney.Series[0].Points.Clear();
-            switch (number)
-            {
-                case 1:
-                    chartTotalMoney.DataSource = ListKeyDayConverter(listRevenue, 4);
-                    break;
-                case 7:
-                    chartTotalMoney.DataSource = ListKeyDayConverter(listRevenue, 5);
-                    break;
-                case 12:
-                    chartTotalMoney.DataSource = ListKeyDayConverter(listRevenue, 3);
-                    break;
-            }
             foreach (var item in listExportedBook)
             {
                 chartAmountOfBook.Series[0].Points.AddXY(item.Key, item.Value);
@@ -78,18 +70,72 @@ namespace BPMS.GUI
                 chartAmountOfBook.Series[1].Points.AddXY(item.Key, item.Value);
             }
 
-            chartTotalMoney.Series[0].XValueMember = "Key";
-            chartTotalMoney.Series[0].YValueMembers = "Value";
-            chartTotalMoney.DataBind();
+            #endregion
 
-            chartBookName.DataSource = listExBookByName;
-            chartBookName.Series[0].XValueMember = "Key";
-            chartBookName.Series[0].YValueMembers = "Value";
-            chartBookName.DataBind();
+            #region Export
+            List<KeyValuePair<DateTime, double>> listRevenue = ExportReportDAO.Instance.GetRevenueOfExportedBook(number, mode, GroupBy);
+            List<KeyValuePair<string, int>> listExBookByName = null;
+            listExBookByName = ExportReportDAO.Instance.GetNumberOfExportedBookByBook(number, mode);
+            chartExportedBookName.Series[0].Points.Clear();
+            chartTotalExportedMoney.Series[0].Points.Clear();
+            switch (number)
+            {
+                case 1:
+                    chartTotalExportedMoney.DataSource = ListKeyDayConverter(listRevenue, 4);
+                    break;
+                case 7:
+                    chartTotalExportedMoney.DataSource = ListKeyDayConverter(listRevenue, 5);
+                    break;
+                case 12:
+                    chartTotalExportedMoney.DataSource = ListKeyDayConverter(listRevenue, 3);
+                    break;
+            }
+            chartTotalExportedMoney.Series[0].XValueMember = "Key";
+            chartTotalExportedMoney.Series[0].YValueMembers = "Value";
+            chartTotalExportedMoney.DataBind();
 
-            lblMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString() + " VND";
-            lblBookName.Text = ExportReportDAO.Instance.GetBestSellingBook(number, mode);
-            lblExportBookNumber.Text = ExportReportDAO.Instance.GetLargestAmountExportBook(number, mode).ToString() + " books";
+            chartExportedBookName.DataSource = listExBookByName;
+            chartExportedBookName.Series[0].XValueMember = "Key";
+            chartExportedBookName.Series[0].YValueMembers = "Value";
+            chartExportedBookName.DataBind();
+
+            lblExportedMoney.Text = ExportReportDAO.Instance.GetHighestEarning(number, mode).ToString() + " VND";
+            lblExportedBookName.Text = ExportReportDAO.Instance.GetBestSellingBook(number, mode);
+            lblExportedBookNumber.Text = ExportReportDAO.Instance.GetLargestAmountExportBook(number, mode).ToString() + " books";
+            #endregion
+
+            #region Import
+            List<KeyValuePair<DateTime, double>> listImportedPrices = ImportReportDAO.Instance.GetTotalPriceOfImportedBook(number, mode, GroupBy);
+            List<KeyValuePair<string, int>> listImBookByName = null;
+            listImBookByName = ImportReportDAO.Instance.GetNumberOfImportedBookByBook(number, mode);
+            chartImportedBookName.Series[0].Points.Clear();
+            chartTotalImportedMoney.Series[0].Points.Clear();
+            switch (number)
+            {
+                case 1:
+                    chartTotalImportedMoney.DataSource = ListKeyDayConverter(listImportedPrices, 4);
+                    break;
+                case 7:
+                    chartTotalImportedMoney.DataSource = ListKeyDayConverter(listImportedPrices, 5);
+                    break;
+                case 12:
+                    chartTotalImportedMoney.DataSource = ListKeyDayConverter(listImportedPrices, 3);
+                    break;
+            }
+            chartTotalImportedMoney.Series[0].XValueMember = "Key";
+            chartTotalImportedMoney.Series[0].YValueMembers = "Value";
+            chartTotalImportedMoney.DataBind();
+
+            chartImportedBookName.DataSource = listImBookByName;
+            chartImportedBookName.Series[0].XValueMember = "Key";
+            chartImportedBookName.Series[0].YValueMembers = "Value";
+            chartImportedBookName.DataBind();
+
+            lblImportedMoney.Text = ImportReportDAO.Instance.GetHighestSpending(number, mode).ToString() + " VND";
+            lblImportedBookName.Text = ImportReportDAO.Instance.GetTheMostImportedBook(number, mode);
+            lblImportedBookNumber.Text = ImportReportDAO.Instance.GetLargestAmountImportBook(number, mode).ToString() + " books";
+            #endregion
+
             //lblImportBookNumber.Text = ImportReportDAO.Instance.GetLargestAmountImportBook(number, mode).ToString() + " books";
             //Debug.WriteLine("{0}", mode);
 
@@ -154,6 +200,59 @@ namespace BPMS.GUI
                 result.Add(new KeyValuePair<string, T>(converted, item.Value));
             }
             return result;
+        }
+
+        private void btnSwitchMode_Click(object sender, EventArgs e)
+        {
+            if(btnSwitchMode.Text == "Import Statistics")
+            {
+                //Import
+                lblImportedBook.Visible = true;
+                lblImportedBookNumber.Visible = true;
+                lblImportedBookName.Visible = true;
+                lblBestImportedBook.Visible = true;
+                lblHighestImported.Visible = true;
+                lblImportedMoney.Visible = true;
+                chartImportedBookName.Visible = true;
+                chartTotalImportedMoney.Visible = true;
+
+                //Export
+                lblExportedBook.Visible = false;
+                lblExportedBookNumber.Visible = false;
+                lblExportedBookName.Visible = false;
+                lblBestExportedBook.Visible = false;
+                lblHighestExported.Visible = false;
+                lblExportedMoney.Visible = false;
+                chartExportedBookName.Visible = false;
+                chartTotalExportedMoney.Visible = false;
+
+                btnSwitchMode.Text = "Export Statistics";
+            } 
+            else
+            {
+                //Import
+                lblImportedBook.Visible = false;
+                lblImportedBookNumber.Visible = false;
+                lblImportedBookName.Visible = false;
+                lblBestImportedBook.Visible = false;
+                lblHighestImported.Visible = false;
+                lblImportedMoney.Visible = false;
+                chartImportedBookName.Visible = false;
+                chartTotalImportedMoney.Visible = false;
+
+                //Export
+                lblExportedBook.Visible = true;
+                lblExportedBookNumber.Visible = true;
+                lblExportedBookName.Visible = true;
+                lblBestExportedBook.Visible = true;
+                lblHighestExported.Visible = true;
+                lblExportedMoney.Visible = true;
+                chartExportedBookName.Visible = true;
+                chartTotalExportedMoney.Visible = true;
+
+                btnSwitchMode.Text = "Import Statistics";
+            }
+           
         }
     }
 }
