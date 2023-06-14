@@ -37,13 +37,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
             this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabImport = new System.Windows.Forms.TabPage();
+            this.btnCreateImport = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmIdImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +52,7 @@
             this.clmTotalPriceIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabExport = new System.Windows.Forms.TabPage();
+            this.btnCreateExport = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtgvExport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmIdExport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmAgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +60,12 @@
             this.clmTotalPriceEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBill = new System.Windows.Forms.TabPage();
+            this.btnConfirmReceived = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancelReceived = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnModify = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblBillInfo = new System.Windows.Forms.Label();
             this.dtgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clmIdBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,14 +77,6 @@
             this.clmPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmReceived = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnCreateImport = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnCreateExport = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnModify = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnConfirmReceived = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnCancelReceived = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tabPayment.SuspendLayout();
             this.tabImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).BeginInit();
@@ -132,6 +132,26 @@
             this.tabImport.TabIndex = 0;
             this.tabImport.Text = "Import";
             this.tabImport.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateImport
+            // 
+            this.btnCreateImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateImport.BorderRadius = 17;
+            this.btnCreateImport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateImport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateImport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateImport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateImport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreateImport.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnCreateImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCreateImport.ForeColor = System.Drawing.Color.White;
+            this.btnCreateImport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateImport.Image")));
+            this.btnCreateImport.Location = new System.Drawing.Point(1050, 8);
+            this.btnCreateImport.Name = "btnCreateImport";
+            this.btnCreateImport.Size = new System.Drawing.Size(276, 55);
+            this.btnCreateImport.TabIndex = 36;
+            this.btnCreateImport.Text = "Create bill";
+            this.btnCreateImport.Click += new System.EventHandler(this.btnCreateImport_Click);
             // 
             // dtgvImport
             // 
@@ -249,6 +269,26 @@
             this.tabExport.TabIndex = 1;
             this.tabExport.Text = "Export";
             this.tabExport.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateExport
+            // 
+            this.btnCreateExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateExport.BorderRadius = 17;
+            this.btnCreateExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreateExport.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnCreateExport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCreateExport.ForeColor = System.Drawing.Color.White;
+            this.btnCreateExport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateExport.Image")));
+            this.btnCreateExport.Location = new System.Drawing.Point(1050, 8);
+            this.btnCreateExport.Name = "btnCreateExport";
+            this.btnCreateExport.Size = new System.Drawing.Size(276, 55);
+            this.btnCreateExport.TabIndex = 37;
+            this.btnCreateExport.Text = "Create bill";
+            this.btnCreateExport.Click += new System.EventHandler(this.btnCreateExport_Click);
             // 
             // dtgvExport
             // 
@@ -373,14 +413,143 @@
             this.tabBill.Text = "Bill";
             this.tabBill.UseVisualStyleBackColor = true;
             // 
+            // btnConfirmReceived
+            // 
+            this.btnConfirmReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmReceived.BorderRadius = 17;
+            this.btnConfirmReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmReceived.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmReceived.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnConfirmReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmReceived.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmReceived.Image")));
+            this.btnConfirmReceived.Location = new System.Drawing.Point(683, 19);
+            this.btnConfirmReceived.Name = "btnConfirmReceived";
+            this.btnConfirmReceived.Size = new System.Drawing.Size(207, 55);
+            this.btnConfirmReceived.TabIndex = 40;
+            this.btnConfirmReceived.Text = "Confirm";
+            this.btnConfirmReceived.Click += new System.EventHandler(this.btnConfirmReceived_Click);
+            // 
+            // btnCancelReceived
+            // 
+            this.btnCancelReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelReceived.BorderRadius = 17;
+            this.btnCancelReceived.BorderThickness = 1;
+            this.btnCancelReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelReceived.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelReceived.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.btnCancelReceived.FillColor2 = System.Drawing.Color.White;
+            this.btnCancelReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelReceived.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelReceived.Image")));
+            this.btnCancelReceived.Location = new System.Drawing.Point(683, 19);
+            this.btnCancelReceived.Name = "btnCancelReceived";
+            this.btnCancelReceived.Size = new System.Drawing.Size(207, 55);
+            this.btnCancelReceived.TabIndex = 39;
+            this.btnCancelReceived.Text = "Cancel";
+            this.btnCancelReceived.Click += new System.EventHandler(this.btnCancelReceived_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BorderRadius = 17;
+            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.btnCancel.FillColor2 = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(683, 19);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(207, 55);
+            this.btnCancel.TabIndex = 41;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BorderRadius = 17;
+            this.btnDelete.BorderThickness = 1;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.btnDelete.FillColor2 = System.Drawing.Color.White;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(1109, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(207, 55);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnModify
+            // 
+            this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModify.BorderRadius = 17;
+            this.btnModify.BorderThickness = 1;
+            this.btnModify.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModify.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModify.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModify.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModify.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModify.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.btnModify.FillColor2 = System.Drawing.Color.White;
+            this.btnModify.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
+            this.btnModify.Location = new System.Drawing.Point(896, 19);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(207, 55);
+            this.btnModify.TabIndex = 42;
+            this.btnModify.Text = "Modify";
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPay.BorderRadius = 17;
+            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPay.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPay.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
+            this.btnPay.Location = new System.Drawing.Point(683, 19);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(207, 55);
+            this.btnPay.TabIndex = 44;
+            this.btnPay.Text = "Pay";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // lblBillInfo
             // 
             this.lblBillInfo.AutoSize = true;
-            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBillInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBillInfo.Location = new System.Drawing.Point(9, 19);
             this.lblBillInfo.Name = "lblBillInfo";
-            this.lblBillInfo.Size = new System.Drawing.Size(0, 28);
+            this.lblBillInfo.Size = new System.Drawing.Size(0, 32);
             this.lblBillInfo.TabIndex = 13;
+            this.lblBillInfo.Visible = false;
             // 
             // dtgvBill
             // 
@@ -536,173 +705,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 8;
-            // 
-            // btnCreateImport
-            // 
-            this.btnCreateImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateImport.BorderRadius = 17;
-            this.btnCreateImport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateImport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateImport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateImport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateImport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreateImport.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnCreateImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCreateImport.ForeColor = System.Drawing.Color.White;
-            this.btnCreateImport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateImport.Image")));
-            this.btnCreateImport.Location = new System.Drawing.Point(1050, 8);
-            this.btnCreateImport.Name = "btnCreateImport";
-            this.btnCreateImport.Size = new System.Drawing.Size(276, 55);
-            this.btnCreateImport.TabIndex = 36;
-            this.btnCreateImport.Text = "Create bill";
-            this.btnCreateImport.Click += new System.EventHandler(this.btnCreateImport_Click);
-            // 
-            // btnCreateExport
-            // 
-            this.btnCreateExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateExport.BorderRadius = 17;
-            this.btnCreateExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreateExport.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnCreateExport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCreateExport.ForeColor = System.Drawing.Color.White;
-            this.btnCreateExport.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateExport.Image")));
-            this.btnCreateExport.Location = new System.Drawing.Point(1050, 8);
-            this.btnCreateExport.Name = "btnCreateExport";
-            this.btnCreateExport.Size = new System.Drawing.Size(276, 55);
-            this.btnCreateExport.TabIndex = 37;
-            this.btnCreateExport.Text = "Create bill";
-            this.btnCreateExport.Click += new System.EventHandler(this.btnCreateExport_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.BorderRadius = 17;
-            this.btnDelete.BorderThickness = 1;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.btnDelete.FillColor2 = System.Drawing.Color.White;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(1109, 19);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(207, 55);
-            this.btnDelete.TabIndex = 41;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnModify
-            // 
-            this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModify.BorderRadius = 17;
-            this.btnModify.BorderThickness = 1;
-            this.btnModify.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModify.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModify.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModify.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModify.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModify.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.btnModify.FillColor2 = System.Drawing.Color.White;
-            this.btnModify.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
-            this.btnModify.Location = new System.Drawing.Point(881, 19);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(207, 55);
-            this.btnModify.TabIndex = 40;
-            this.btnModify.Text = "Modify";
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPay.BorderRadius = 17;
-            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPay.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPay.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
-            this.btnPay.Location = new System.Drawing.Point(654, 19);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(207, 55);
-            this.btnPay.TabIndex = 39;
-            this.btnPay.Text = "Pay";
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BorderRadius = 17;
-            this.btnCancel.BorderThickness = 1;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.btnCancel.FillColor2 = System.Drawing.Color.White;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(654, 19);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(207, 55);
-            this.btnCancel.TabIndex = 42;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnConfirmReceived
-            // 
-            this.btnConfirmReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirmReceived.BorderRadius = 17;
-            this.btnConfirmReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirmReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirmReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirmReceived.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirmReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirmReceived.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnConfirmReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfirmReceived.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmReceived.Image")));
-            this.btnConfirmReceived.Location = new System.Drawing.Point(654, 19);
-            this.btnConfirmReceived.Name = "btnConfirmReceived";
-            this.btnConfirmReceived.Size = new System.Drawing.Size(207, 55);
-            this.btnConfirmReceived.TabIndex = 43;
-            this.btnConfirmReceived.Text = "Confirm";
-            // 
-            // btnCancelReceived
-            // 
-            this.btnCancelReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelReceived.BorderRadius = 17;
-            this.btnCancelReceived.BorderThickness = 1;
-            this.btnCancelReceived.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancelReceived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancelReceived.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancelReceived.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancelReceived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancelReceived.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.btnCancelReceived.FillColor2 = System.Drawing.Color.White;
-            this.btnCancelReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelReceived.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelReceived.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelReceived.Image")));
-            this.btnCancelReceived.Location = new System.Drawing.Point(881, 19);
-            this.btnCancelReceived.Name = "btnCancelReceived";
-            this.btnCancelReceived.Size = new System.Drawing.Size(207, 55);
-            this.btnCancelReceived.TabIndex = 42;
-            this.btnCancelReceived.Text = "Cancel";
-            this.btnCancelReceived.Click += new System.EventHandler(this.btnCancelReceived_Click);
             // 
             // FormPayment
             // 

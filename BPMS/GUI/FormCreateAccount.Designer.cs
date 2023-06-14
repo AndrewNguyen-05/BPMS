@@ -70,9 +70,10 @@
             this.grbNewAccount.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.grbNewAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbNewAccount.ForeColor = System.Drawing.Color.White;
-            this.grbNewAccount.Location = new System.Drawing.Point(12, 12);
+            this.grbNewAccount.Location = new System.Drawing.Point(14, 15);
+            this.grbNewAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grbNewAccount.Name = "grbNewAccount";
-            this.grbNewAccount.Size = new System.Drawing.Size(1170, 577);
+            this.grbNewAccount.Size = new System.Drawing.Size(1316, 721);
             this.grbNewAccount.TabIndex = 21;
             this.grbNewAccount.Text = "New Account";
             // 
@@ -85,11 +86,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 59);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 74);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1146, 439);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1289, 549);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -97,9 +99,10 @@
             this.panel1.Controls.Add(this.lblAccountInfo);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(567, 433);
+            this.panel1.Size = new System.Drawing.Size(638, 541);
             this.panel1.TabIndex = 0;
             // 
             // lblAccountInfo
@@ -108,10 +111,10 @@
             this.lblAccountInfo.AutoSize = true;
             this.lblAccountInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccountInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.lblAccountInfo.Location = new System.Drawing.Point(200, 6);
+            this.lblAccountInfo.Location = new System.Drawing.Point(225, 8);
             this.lblAccountInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountInfo.Name = "lblAccountInfo";
-            this.lblAccountInfo.Size = new System.Drawing.Size(137, 23);
+            this.lblAccountInfo.Size = new System.Drawing.Size(168, 30);
             this.lblAccountInfo.TabIndex = 16;
             this.lblAccountInfo.Text = "Account Info";
             // 
@@ -132,10 +135,10 @@
             this.guna2Panel1.Controls.Add(this.txbPassword);
             this.guna2Panel1.Controls.Add(this.txbDisplayname);
             this.guna2Panel1.Controls.Add(this.txbUsername);
-            this.guna2Panel1.Location = new System.Drawing.Point(26, 20);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(20, 5, 10, 5);
+            this.guna2Panel1.Location = new System.Drawing.Point(29, 25);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(22, 6, 11, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(531, 379);
+            this.guna2Panel1.Size = new System.Drawing.Size(597, 474);
             this.guna2Panel1.TabIndex = 14;
             // 
             // lblType
@@ -144,9 +147,9 @@
             this.lblType.BackColor = System.Drawing.Color.White;
             this.lblType.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblType.Location = new System.Drawing.Point(22, 303);
+            this.lblType.Location = new System.Drawing.Point(25, 379);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(48, 23);
+            this.lblType.Size = new System.Drawing.Size(59, 30);
             this.lblType.TabIndex = 46;
             this.lblType.Text = "Type";
             // 
@@ -155,9 +158,9 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblAddress.Location = new System.Drawing.Point(22, 238);
+            this.lblAddress.Location = new System.Drawing.Point(25, 298);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(74, 23);
+            this.lblAddress.Size = new System.Drawing.Size(91, 30);
             this.lblAddress.TabIndex = 47;
             this.lblAddress.Text = "Address";
             // 
@@ -166,9 +169,9 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblPassword.Location = new System.Drawing.Point(22, 163);
+            this.lblPassword.Location = new System.Drawing.Point(25, 204);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(85, 23);
+            this.lblPassword.Size = new System.Drawing.Size(105, 30);
             this.lblPassword.TabIndex = 45;
             this.lblPassword.Text = "Password";
             // 
@@ -177,9 +180,9 @@
             this.lblDisplayname.AutoSize = true;
             this.lblDisplayname.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblDisplayname.Location = new System.Drawing.Point(22, 86);
+            this.lblDisplayname.Location = new System.Drawing.Point(25, 108);
             this.lblDisplayname.Name = "lblDisplayname";
-            this.lblDisplayname.Size = new System.Drawing.Size(121, 23);
+            this.lblDisplayname.Size = new System.Drawing.Size(148, 30);
             this.lblDisplayname.TabIndex = 44;
             this.lblDisplayname.Text = "Display Name";
             // 
@@ -188,9 +191,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblUsername.Location = new System.Drawing.Point(22, 11);
+            this.lblUsername.Location = new System.Drawing.Point(25, 14);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(89, 23);
+            this.lblUsername.Size = new System.Drawing.Size(110, 30);
             this.lblUsername.TabIndex = 43;
             this.lblUsername.Text = "Username";
             // 
@@ -210,10 +213,10 @@
             this.cbType.ItemHeight = 30;
             this.cbType.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbType.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbType.Location = new System.Drawing.Point(26, 323);
-            this.cbType.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.cbType.Location = new System.Drawing.Point(29, 404);
+            this.cbType.Margin = new System.Windows.Forms.Padding(22, 12, 22, 12);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(489, 36);
+            this.cbType.Size = new System.Drawing.Size(550, 36);
             this.cbType.TabIndex = 8;
             this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
@@ -233,14 +236,14 @@
             this.txbAddress.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAddress.ForeColor = System.Drawing.Color.Black;
             this.txbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbAddress.Location = new System.Drawing.Point(26, 249);
-            this.txbAddress.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbAddress.Location = new System.Drawing.Point(29, 311);
+            this.txbAddress.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.PasswordChar = '\0';
             this.txbAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbAddress.PlaceholderText = "";
             this.txbAddress.SelectedText = "";
-            this.txbAddress.Size = new System.Drawing.Size(489, 53);
+            this.txbAddress.Size = new System.Drawing.Size(550, 66);
             this.txbAddress.TabIndex = 7;
             // 
             // txbPassword
@@ -259,14 +262,14 @@
             this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.ForeColor = System.Drawing.Color.Black;
             this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Location = new System.Drawing.Point(26, 174);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbPassword.Location = new System.Drawing.Point(29, 218);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPassword.PlaceholderText = "";
             this.txbPassword.SelectedText = "";
-            this.txbPassword.Size = new System.Drawing.Size(489, 53);
+            this.txbPassword.Size = new System.Drawing.Size(550, 66);
             this.txbPassword.TabIndex = 5;
             // 
             // txbDisplayname
@@ -285,14 +288,14 @@
             this.txbDisplayname.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbDisplayname.ForeColor = System.Drawing.Color.Black;
             this.txbDisplayname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDisplayname.Location = new System.Drawing.Point(26, 99);
-            this.txbDisplayname.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbDisplayname.Location = new System.Drawing.Point(29, 124);
+            this.txbDisplayname.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbDisplayname.Name = "txbDisplayname";
             this.txbDisplayname.PasswordChar = '\0';
             this.txbDisplayname.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbDisplayname.PlaceholderText = "";
             this.txbDisplayname.SelectedText = "";
-            this.txbDisplayname.Size = new System.Drawing.Size(489, 53);
+            this.txbDisplayname.Size = new System.Drawing.Size(550, 66);
             this.txbDisplayname.TabIndex = 4;
             // 
             // txbUsername
@@ -311,14 +314,14 @@
             this.txbUsername.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsername.ForeColor = System.Drawing.Color.Black;
             this.txbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Location = new System.Drawing.Point(26, 24);
-            this.txbUsername.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbUsername.Location = new System.Drawing.Point(29, 30);
+            this.txbUsername.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.PasswordChar = '\0';
             this.txbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbUsername.PlaceholderText = "";
             this.txbUsername.SelectedText = "";
-            this.txbUsername.Size = new System.Drawing.Size(489, 53);
+            this.txbUsername.Size = new System.Drawing.Size(550, 66);
             this.txbUsername.TabIndex = 0;
             // 
             // panel2
@@ -326,9 +329,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(576, 3);
+            this.panel2.Location = new System.Drawing.Point(647, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(567, 433);
+            this.panel2.Size = new System.Drawing.Size(639, 541);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -337,10 +341,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
-            this.label1.Location = new System.Drawing.Point(208, 6);
+            this.label1.Location = new System.Drawing.Point(234, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 23);
+            this.label1.Size = new System.Drawing.Size(187, 30);
             this.label1.TabIndex = 20;
             this.label1.Text = "Additional Info";
             // 
@@ -355,10 +359,10 @@
             this.guna2Panel2.Controls.Add(this.lblBankaccount);
             this.guna2Panel2.Controls.Add(this.txbPhone);
             this.guna2Panel2.Controls.Add(this.txbBankAccount);
-            this.guna2Panel2.Location = new System.Drawing.Point(10, 20);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(10, 5, 20, 5);
+            this.guna2Panel2.Location = new System.Drawing.Point(11, 25);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(11, 6, 22, 6);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(531, 186);
+            this.guna2Panel2.Size = new System.Drawing.Size(598, 232);
             this.guna2Panel2.TabIndex = 19;
             // 
             // lblPhone
@@ -366,9 +370,9 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblPhone.Location = new System.Drawing.Point(22, 86);
+            this.lblPhone.Location = new System.Drawing.Point(25, 108);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(130, 23);
+            this.lblPhone.Size = new System.Drawing.Size(163, 30);
             this.lblPhone.TabIndex = 44;
             this.lblPhone.Text = "Phone Number";
             // 
@@ -377,9 +381,9 @@
             this.lblBankaccount.AutoSize = true;
             this.lblBankaccount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBankaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.lblBankaccount.Location = new System.Drawing.Point(22, 11);
+            this.lblBankaccount.Location = new System.Drawing.Point(25, 14);
             this.lblBankaccount.Name = "lblBankaccount";
-            this.lblBankaccount.Size = new System.Drawing.Size(120, 23);
+            this.lblBankaccount.Size = new System.Drawing.Size(150, 30);
             this.lblBankaccount.TabIndex = 43;
             this.lblBankaccount.Text = "Bank Account";
             // 
@@ -399,14 +403,14 @@
             this.txbPhone.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPhone.ForeColor = System.Drawing.Color.Black;
             this.txbPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPhone.Location = new System.Drawing.Point(26, 99);
-            this.txbPhone.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbPhone.Location = new System.Drawing.Point(29, 124);
+            this.txbPhone.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.PasswordChar = '\0';
             this.txbPhone.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbPhone.PlaceholderText = "";
             this.txbPhone.SelectedText = "";
-            this.txbPhone.Size = new System.Drawing.Size(489, 53);
+            this.txbPhone.Size = new System.Drawing.Size(551, 66);
             this.txbPhone.TabIndex = 4;
             // 
             // txbBankAccount
@@ -425,14 +429,14 @@
             this.txbBankAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbBankAccount.ForeColor = System.Drawing.Color.Black;
             this.txbBankAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbBankAccount.Location = new System.Drawing.Point(26, 24);
-            this.txbBankAccount.Margin = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.txbBankAccount.Location = new System.Drawing.Point(29, 30);
+            this.txbBankAccount.Margin = new System.Windows.Forms.Padding(28, 14, 28, 14);
             this.txbBankAccount.Name = "txbBankAccount";
             this.txbBankAccount.PasswordChar = '\0';
             this.txbBankAccount.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbBankAccount.PlaceholderText = "";
             this.txbBankAccount.SelectedText = "";
-            this.txbBankAccount.Size = new System.Drawing.Size(489, 53);
+            this.txbBankAccount.Size = new System.Drawing.Size(551, 66);
             this.txbBankAccount.TabIndex = 0;
             // 
             // btnCreate
@@ -446,24 +450,26 @@
             this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(344, 517);
+            this.btnCreate.Location = new System.Drawing.Point(387, 646);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(501, 45);
+            this.btnCreate.Size = new System.Drawing.Size(564, 56);
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // FormCreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1194, 660);
+            this.ClientSize = new System.Drawing.Size(1343, 825);
             this.Controls.Add(this.grbNewAccount);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCreateAccount";
-            this.Text = "FormCreateAccount";
+            this.Text = "Create Account";
             this.grbNewAccount.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
