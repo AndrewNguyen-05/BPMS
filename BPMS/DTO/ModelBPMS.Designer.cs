@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\gokud\source\repos\BPMS\BPMS\DTO\ModelBPMS.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Manh\source\repos\andrew\BPMS\DTO\ModelBPMS.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

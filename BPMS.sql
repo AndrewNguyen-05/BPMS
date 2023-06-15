@@ -4,18 +4,6 @@ GO
 USE BPMS
 GO
 
-CREATE TABLE Book
-(
-	id INT IDENTITY PRIMARY KEY,
-	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
-	type NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thể loại',
-	author NVARCHAR(100) NOT NULL DEFAULT N'Chưa có tác giả',
-	price FLOAT DEFAULT 0,
-	isHidden INT DEFAULT 0
-)
-GO
-
-
 CREATE TABLE Account
 (
 	id INT IDENTITY PRIMARY KEY,
@@ -61,6 +49,19 @@ CREATE TABLE Agency
 	PaidMoney INT, --1: true, 0: false
 	FOREIGN KEY (idAccount) REFERENCES dbo.Account(id),
 	isHidden INT DEFAULT 0
+)
+GO
+
+CREATE TABLE Book
+(
+	id INT IDENTITY PRIMARY KEY,
+	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
+	type NVARCHAR(100) NOT NULL DEFAULT N'Chưa có thể loại',
+	author NVARCHAR(100) NOT NULL DEFAULT N'Chưa có tác giả',
+	price FLOAT DEFAULT 0,
+	idPublisher INT,
+	isHidden INT DEFAULT 0,
+	FOREIGN KEY (idPublisher) REFERENCES dbo.Publisher(id)
 )
 GO
 
@@ -135,17 +136,6 @@ GO
 
 
 
-INSERT INTO Book (name, type, author, price) VALUES (N'Nhà Giả Kim', 'Tiểu thuyết', N'Paulo Coelho', 50000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Đắc nhân tâm', 'Self Help', N'Dale Carnegie', 75000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Bố Già', 'Novel', N'Mario Puzo', 250000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Cuộc sống không giới hạn', 'Self Help', N'Nick Vujicic', 25000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Tuổi trẻ đáng giá bao nhiêu', 'Self Help', N'Rosie Nguyen', 25000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Vượt lên trật từ', 'Self Help', N'Jordan B. Peterson', 50000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Hành tinh của 1 kẻ nghĩ nhiều', 'Self Help', N'Dale Carnegie', 75000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Cây cam ngọt của tôi', 'Novel', N'Mario Puzo', 250000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Thiền sư và em bé 5 tuổi', 'Self Help', N'Nick Vujicic', 25000)
-INSERT INTO Book (name, type, author, price) VALUES (N'Happy Place', 'Self Help', N'Rosie Nguyen', 25000)
-GO
 
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('Admin', 'Admin', 'AD', 0, 'a')
 INSERT INTO Account (UserName, DisplayName, PassWord, type, address) VALUES ('FHS', N'Fahasa', 'DL', 4, 'c')
@@ -173,6 +163,18 @@ INSERT INTO Publisher (idAccount, AccountNumber, PhoneNumber) VALUES (8, '371858
 INSERT INTO Publisher (idAccount, AccountNumber, PhoneNumber) VALUES (9, '57530201136', '0331993578')
 INSERT INTO Publisher (idAccount, AccountNumber, PhoneNumber) VALUES (10, '35452033514', '0294557750')
 INSERT INTO Publisher (idAccount, AccountNumber, PhoneNumber) VALUES (11, '71596496195', '0382758627')
+GO
+
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Nhà Giả Kim', 'Tiểu thuyết', N'Paulo Coelho', 50000, 2)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Đắc nhân tâm', 'Self Help', N'Dale Carnegie', 75000, 1)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Bố Già', 'Novel', N'Mario Puzo', 250000, 3)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Cuộc sống không giới hạn', 'Self Help', N'Nick Vujicic', 25000, 3)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Tuổi trẻ đáng giá bao nhiêu', 'Self Help', N'Rosie Nguyen', 25000, 4)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Vượt lên trật từ', 'Self Help', N'Jordan B. Peterson', 50000, 1)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Hành tinh của 1 kẻ nghĩ nhiều', 'Self Help', N'Dale Carnegie', 75000, 5)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Cây cam ngọt của tôi', 'Novel', N'Mario Puzo', 250000, 2)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Thiền sư và em bé 5 tuổi', 'Self Help', N'Nick Vujicic', 25000, 5)
+INSERT INTO Book (name, type, author, price, idPublisher) VALUES (N'Happy Place', 'Self Help', N'Rosie Nguyen', 25000, 1)
 GO
 
 

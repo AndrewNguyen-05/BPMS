@@ -122,7 +122,7 @@
             // 
             // ID
             // 
-            this.ID.HeaderText = "Import ID";
+            this.ID.HeaderText = "Export ID";
             this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -136,7 +136,7 @@
             // 
             // ImportDate
             // 
-            this.ImportDate.HeaderText = "Import Date";
+            this.ImportDate.HeaderText = "Export Date";
             this.ImportDate.MinimumWidth = 8;
             this.ImportDate.Name = "ImportDate";
             this.ImportDate.ReadOnly = true;
@@ -162,7 +162,7 @@
             this.ClientSize = new System.Drawing.Size(1194, 660);
             this.Controls.Add(this.dtgvImport);
             this.Name = "FormPublisherExport";
-            this.Text = "FormPublisherExport";
+            this.Text = "Export";
             this.ParentChanged += new System.EventHandler(this.FormPublisherExport_ParentChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvImport)).EndInit();
             this.ResumeLayout(false);

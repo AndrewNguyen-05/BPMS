@@ -114,16 +114,18 @@ namespace BPMS
                 btnImport.Visible = true;
                 btnPayment.Visible = true;
                 btnAccount.Visible = true;
+                btnBook.Visible = true;
                 type = GetCbViewAsValue();
             }
             switch (type)
             {
                 case Permissions.Manager:
-
+                    btnBook.Visible = false;
                     return;
                 case Permissions.Accountant:
                     btnExport.Visible = false;
                     btnImport.Visible = false;
+                    btnBook.Visible = false;
                     return;
                 case Permissions.Publisher:
                     btnImport.Visible = false;
@@ -132,6 +134,7 @@ namespace BPMS
                 case Permissions.Agency:
                     btnExport.Visible = false;
                     btnAnalytic.Visible = false;
+                    btnBook.Visible = false;
                     return;
             }
         }
@@ -293,6 +296,25 @@ namespace BPMS
             return null;
         }
 
+        private Form GetBtnBook()
+        {
+            Permissions type = AccountDAO.Instance.GetAccountType(AccountId);
+            if (type == Permissions.Admin)
+            {
+                type = GetCbViewAsValue();
+            }
+            switch (type)
+            {
+                case Permissions.Publisher:
+                    FormPublisherBook formPublisherBook = new FormPublisherBook();
+                    formPublisherBook.InnerFormNavigating += FormPublisherBook_InnerFormNavigating;
+                    return formPublisherBook;
+            }
+            return null;
+        }
+
+
+
         #endregion
 
         #endregion
@@ -332,6 +354,11 @@ namespace BPMS
         {
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(GetBtnAccount());
+        }
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(GetBtnBook());
         }
         #endregion
 
@@ -407,6 +434,20 @@ namespace BPMS
             OpenChildForm(formPayment);
         }
 
+        private void FormPublisherBook_InnerFormNavigating(object sender, NavigationEventArgs e)
+        {
+            FormPublisherNewBook formPublisherNewBook = new FormPublisherNewBook();
+            formPublisherNewBook.NavigateBack += FormPublisherNewBook_NavigateBack;
+            OpenChildForm(e.NavigatingForm);
+        }
+
+        private void FormPublisherNewBook_NavigateBack(object sender, NavigationEventArgs e)
+        {
+            ActivateButton(btnBook, RGBColors.color2);
+            FormPublisherBook formPublisherBook = e.NavigatingForm as FormPublisherBook;
+            formPublisherBook.InnerFormNavigating += FormPublisherBook_InnerFormNavigating;
+            OpenChildForm(formPublisherBook);
+        }
 
 
         #endregion
@@ -469,5 +510,7 @@ namespace BPMS
         #endregion
 
         #endregion
+
+
     }
 }

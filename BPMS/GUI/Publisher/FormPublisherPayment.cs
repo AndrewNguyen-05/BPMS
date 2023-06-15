@@ -66,7 +66,7 @@ namespace BPMS.GUI.Publisher
             foreach (Bill bi in listB)
             {
                 dtgvBill.Rows.Add(new object[] { bi.id
-                                                    , bi.type == 1 ? "Export" : "None"
+                                                    , bi.type == 1 ? "None" : "Export"
                                                     , bi.Sender
                                                     , bi.Receiver
                                                     , bi.CreateDate

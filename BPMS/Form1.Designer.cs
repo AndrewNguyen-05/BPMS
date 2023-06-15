@@ -51,6 +51,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnBook = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.panelLogOut.SuspendLayout();
@@ -78,14 +79,15 @@
             // 
             this.flpnlButton.Controls.Add(this.btnMainPage);
             this.flpnlButton.Controls.Add(this.btnImport);
+            this.flpnlButton.Controls.Add(this.btnBook);
             this.flpnlButton.Controls.Add(this.btnExport);
             this.flpnlButton.Controls.Add(this.btnPayment);
             this.flpnlButton.Controls.Add(this.btnAnalytic);
             this.flpnlButton.Controls.Add(this.btnAccount);
             this.flpnlButton.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpnlButton.Location = new System.Drawing.Point(0, 160);
+            this.flpnlButton.Location = new System.Drawing.Point(0, 126);
             this.flpnlButton.Name = "flpnlButton";
-            this.flpnlButton.Size = new System.Drawing.Size(279, 484);
+            this.flpnlButton.Size = new System.Drawing.Size(279, 540);
             this.flpnlButton.TabIndex = 6;
             // 
             // btnMainPage
@@ -142,7 +144,7 @@
             this.btnExport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(2, 154);
+            this.btnExport.Location = new System.Drawing.Point(2, 230);
             this.btnExport.Margin = new System.Windows.Forms.Padding(2);
             this.btnExport.Name = "btnExport";
             this.btnExport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -164,7 +166,7 @@
             this.btnPayment.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.Location = new System.Drawing.Point(2, 230);
+            this.btnPayment.Location = new System.Drawing.Point(2, 306);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -186,7 +188,7 @@
             this.btnAnalytic.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnAnalytic.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAnalytic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalytic.Location = new System.Drawing.Point(2, 306);
+            this.btnAnalytic.Location = new System.Drawing.Point(2, 382);
             this.btnAnalytic.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnalytic.Name = "btnAnalytic";
             this.btnAnalytic.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -208,7 +210,7 @@
             this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(2, 382);
+            this.btnAccount.Location = new System.Drawing.Point(2, 458);
             this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -261,7 +263,7 @@
             "Agency"});
             this.cbViewAs.Location = new System.Drawing.Point(20, 22);
             this.cbViewAs.Name = "cbViewAs";
-            this.cbViewAs.Size = new System.Drawing.Size(238, 31);
+            this.cbViewAs.Size = new System.Drawing.Size(238, 27);
             this.cbViewAs.TabIndex = 1;
             this.cbViewAs.Visible = false;
             this.cbViewAs.SelectedIndexChanged += new System.EventHandler(this.cbViewAs_SelectedIndexChanged);
@@ -346,7 +348,7 @@
             this.lblTitleChildForm.Location = new System.Drawing.Point(68, 20);
             this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(85, 30);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -379,6 +381,28 @@
             // 
             this.Elipse.BorderRadius = 30;
             this.Elipse.TargetControl = this;
+            // 
+            // btnBook
+            // 
+            this.btnBook.FlatAppearance.BorderSize = 0;
+            this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBook.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(127)))));
+            this.btnBook.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
+            this.btnBook.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBook.Location = new System.Drawing.Point(2, 154);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnBook.Size = new System.Drawing.Size(275, 72);
+            this.btnBook.TabIndex = 13;
+            this.btnBook.Text = "Book";
+            this.btnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // FormMainMenu
             // 
@@ -430,6 +454,7 @@
         private FontAwesome.Sharp.IconButton btnAccount;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogOut;
+        private FontAwesome.Sharp.IconButton btnBook;
     }
 }
 

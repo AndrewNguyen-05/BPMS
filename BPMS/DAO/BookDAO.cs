@@ -1,6 +1,7 @@
 ﻿using BPMS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,11 @@ namespace BPMS.DAO
         public List<Book> GetBookList()
         {
             return db.Books.ToList();
+        }
+        public List<Book> GetBookList(DTO.Publisher publisher)
+        {
+            if (publisher == null) return GetBookList();
+            return db.Books.Where(e => e.idPublisher == publisher.id).ToList();
         }
         public double? GetBookPrice(string BookName)
         {

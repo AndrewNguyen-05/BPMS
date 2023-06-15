@@ -231,11 +231,23 @@
     <Compile Include="GUI\FormTemporary.Designer.cs">
       <DependentUpon>FormTemporary.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherBook.Designer.cs">
+      <DependentUpon>FormPublisherBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Publisher\FormPublisherExport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Publisher\FormPublisherExport.Designer.cs">
       <DependentUpon>FormPublisherExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherNewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Publisher\FormPublisherNewBook.Designer.cs">
+      <DependentUpon>FormPublisherNewBook.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Publisher\FormPublisherPayment.cs">
       <SubType>Form</SubType>
@@ -291,8 +303,14 @@
     <EmbeddedResource Include="GUI\FormTemporary.resx">
       <DependentUpon>FormTemporary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Publisher\FormPublisherBook.resx">
+      <DependentUpon>FormPublisherBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Publisher\FormPublisherExport.resx">
       <DependentUpon>FormPublisherExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Publisher\FormPublisherNewBook.resx">
+      <DependentUpon>FormPublisherNewBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Publisher\FormPublisherPayment.resx">
       <DependentUpon>FormPublisherPayment.cs</DependentUpon>
