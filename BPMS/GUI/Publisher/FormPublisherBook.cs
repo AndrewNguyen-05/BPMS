@@ -59,6 +59,7 @@ namespace BPMS.GUI.Publisher
             {
                 dtgvBook.Rows.Add(new object[] { bk.id
                                                     , bk.name
+                                                    , bk.type
                                                     , bk.Publisher.Account.DisplayName
                                                     , bk.author
                                                     , bk.price});
@@ -87,7 +88,9 @@ namespace BPMS.GUI.Publisher
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            Book book = BookDAO.Instance.GetBookById(int.Parse(dtgvBook.SelectedRows[0].Cells["ClmBookID"].Value.ToString()));
+            book.isHidden = 1;
+            BookDAO.Instance.CreateBook(book);
         }
     }
 }

@@ -40,6 +40,7 @@
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.ClmBookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeliveryPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@
             this.dtgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmBookID,
             this.DisplayName,
+            this.Column2,
             this.Column1,
             this.ImportDate,
             this.DeliveryPerson});
@@ -193,10 +195,12 @@
             // 
             // ClmBookID
             // 
+            this.ClmBookID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ClmBookID.HeaderText = "ID";
             this.ClmBookID.MinimumWidth = 8;
             this.ClmBookID.Name = "ClmBookID";
             this.ClmBookID.ReadOnly = true;
+            this.ClmBookID.Width = 58;
             // 
             // DisplayName
             // 
@@ -204,6 +208,13 @@
             this.DisplayName.MinimumWidth = 8;
             this.DisplayName.Name = "DisplayName";
             this.DisplayName.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Type";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column1
             // 
@@ -251,6 +262,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnCreate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmBookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DisplayName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryPerson;

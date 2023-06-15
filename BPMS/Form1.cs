@@ -436,7 +436,7 @@ namespace BPMS
 
         private void FormPublisherBook_InnerFormNavigating(object sender, NavigationEventArgs e)
         {
-            FormPublisherNewBook formPublisherNewBook = new FormPublisherNewBook();
+            FormPublisherNewBook formPublisherNewBook = e.NavigatingForm as FormPublisherNewBook;
             formPublisherNewBook.NavigateBack += FormPublisherNewBook_NavigateBack;
             OpenChildForm(e.NavigatingForm);
         }
