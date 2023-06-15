@@ -91,6 +91,7 @@ namespace BPMS.GUI.Publisher
             Book book = BookDAO.Instance.GetBookById(int.Parse(dtgvBook.SelectedRows[0].Cells["ClmBookID"].Value.ToString()));
             book.isHidden = 1;
             BookDAO.Instance.CreateBook(book);
+            GetAccountInfo();
         }
     }
 }
