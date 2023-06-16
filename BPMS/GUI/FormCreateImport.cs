@@ -31,6 +31,7 @@ namespace BPMS.GUI
             cbBook.DataSource = CurrentBookList;
             cbBook.DisplayMember = "name";
             CurrentImportReport = null;
+            dtpCreateDate.Value = DateTime.Now;
         }
 
         public FormCreateImport(ImportReport ir)
@@ -43,6 +44,7 @@ namespace BPMS.GUI
             CurrentImportReport = ir;
             LoadImportReportInformation();
             this.Text = "Modify Import";
+            dtpCreateDate.Value = DateTime.Now;
         }
 
 

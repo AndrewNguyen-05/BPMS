@@ -30,6 +30,7 @@ namespace BPMS.GUI
             cbBook.DataSource = CurrentBookList;
             cbBook.DisplayMember = "name";
             CurrentExportReport = null;
+            dtpCreateDate.Value = DateTime.Now;
         }
         public FormCreateExport(ExportReport er)
         {
@@ -41,6 +42,7 @@ namespace BPMS.GUI
             CurrentExportReport = er;
             LoadExportReportInformation();
             this.Text = "Modify Export";
+            dtpCreateDate.Value = DateTime.Now;
         }
 
         #region Handler
