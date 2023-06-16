@@ -10,19 +10,23 @@ using System.Windows.Forms;
 using BPMS.Classes;
 using BPMS.DAO;
 using BPMS.DTO;
+using static Guna.UI2.Native.WinApi;
 
 namespace BPMS.GUI.Publisher
 {
     public partial class FormPublisherNewBook : Form
     {
         Book currentBook = null;
-        public FormPublisherNewBook()
+        DTO.Publisher currentPublisher = null;
+        public FormPublisherNewBook(DTO.Publisher pb)
         {
             InitializeComponent();
             InitLoad();
+            currentPublisher = pb;
+            LoadCurretPb();
         }
         
-        public FormPublisherNewBook(DTO.Book book)
+        public FormPublisherNewBook(DTO.Publisher pb, DTO.Book book)
         {
             InitializeComponent();
             InitLoad();
@@ -34,6 +38,8 @@ namespace BPMS.GUI.Publisher
             cbPublisher.SelectedIndex = cbPublisher.Items.IndexOf(book.Publisher.Account);
             grbNewBook.Text = "Modify Book";
             btnCreate.Text = "Modify";
+            currentPublisher = pb;
+            LoadCurretPb();
         }
 
         #region Handler
@@ -46,6 +52,13 @@ namespace BPMS.GUI.Publisher
             cbPublisher.Items.Clear();
             cbPublisher.DataSource = PublisherDAO.Instance.GetPublisherAccountList();
             cbPublisher.DisplayMember = "DisplayName";
+        }
+       
+        public void LoadCurretPb()
+        {
+            if (currentPublisher == null) return;
+            cbPublisher.Enabled = false;
+            cbPublisher.SelectedIndex = cbPublisher.Items.IndexOf(currentPublisher.Account);
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -66,21 +79,27 @@ namespace BPMS.GUI.Publisher
             NavigateBack?.Invoke(this, navigationE);
         }
 
+        private void RevertTyped()
+        {
+            int tmp = txbPrice.SelectionStart;
+            txbPrice.Text = txbPrice.Text.Remove(txbPrice.SelectionStart - 1, 1);
+            txbPrice.SelectionStart = tmp - 1 >= 0 ? tmp - 1: 0;
+        }
+
         private void txbPrice_TextChanged(object sender, EventArgs e)
         {
-            //if (txbPrice.Text == "") return;
-            //if (txbPrice.Text.Count(x => x == '.') > 1)
-            //{
-            //    txbPrice.Undo();
-            //    txbPrice.ClearUndo();
-            //    return;
-            //}    
-            //if (!double.TryParse(txbPrice.Text, out double price))
-            //{
-            //    txbPrice.Undo();
-            //    txbPrice.ClearUndo();
-            //    return;
-            //}
+            if (txbPrice.Text == "") return;
+            if (txbPrice.Text.Count(x => x == '.') > 1
+                || txbPrice.Text.Count(x => x == 'e') > 0)
+            {
+                RevertTyped();
+                return;
+            }
+            if (!double.TryParse(txbPrice.Text, out double price))
+            {
+                RevertTyped();
+                return;
+            }
         }
     }
 }

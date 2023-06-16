@@ -74,7 +74,7 @@ namespace BPMS.GUI.Publisher
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormPublisherNewBook(), this);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormPublisherNewBook(currentPublisher), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
 
@@ -82,7 +82,7 @@ namespace BPMS.GUI.Publisher
         {
             if (dtgvBook.SelectedRows.Count == 0) return;
             Book book = BookDAO.Instance.GetBookById(int.Parse(dtgvBook.SelectedRows[0].Cells["ClmBookID"].Value.ToString()));
-            NavigationEventArgs navigationE = new NavigationEventArgs(new FormPublisherNewBook(book), this);
+            NavigationEventArgs navigationE = new NavigationEventArgs(new FormPublisherNewBook(currentPublisher, book), this);
             InnerFormNavigating?.Invoke(this, navigationE);
         }
 
