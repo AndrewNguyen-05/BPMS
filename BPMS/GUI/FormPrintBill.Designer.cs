@@ -37,6 +37,12 @@
             this.panelPreview = new System.Windows.Forms.Panel();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.dtgvBookList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.BookClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QualityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblImExportDate = new System.Windows.Forms.Label();
             this.lblIdBill = new System.Windows.Forms.Label();
             this.lblCreatePerson = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.BookClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QualityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbPreview.SuspendLayout();
             this.panelPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBookList)).BeginInit();
@@ -133,7 +133,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -173,6 +173,60 @@
             this.dtgvBookList.ThemeStyle.RowsStyle.Height = 37;
             this.dtgvBookList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvBookList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // BookClm
+            // 
+            this.BookClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BookClm.FillWeight = 43.06221F;
+            this.BookClm.HeaderText = "Book";
+            this.BookClm.MinimumWidth = 6;
+            this.BookClm.Name = "BookClm";
+            this.BookClm.ReadOnly = true;
+            this.BookClm.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BookClm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AuthorClm
+            // 
+            this.AuthorClm.FillWeight = 43.06221F;
+            this.AuthorClm.HeaderText = "Author";
+            this.AuthorClm.MinimumWidth = 6;
+            this.AuthorClm.Name = "AuthorClm";
+            this.AuthorClm.ReadOnly = true;
+            // 
+            // QuantityClm
+            // 
+            this.QuantityClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.QuantityClm.FillWeight = 143.5407F;
+            this.QuantityClm.HeaderText = "Quantity";
+            this.QuantityClm.MinimumWidth = 6;
+            this.QuantityClm.Name = "QuantityClm";
+            this.QuantityClm.ReadOnly = true;
+            this.QuantityClm.Width = 92;
+            // 
+            // QualityClm
+            // 
+            this.QualityClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.QualityClm.FillWeight = 227.2727F;
+            this.QualityClm.HeaderText = "Quality";
+            this.QualityClm.MinimumWidth = 6;
+            this.QualityClm.Name = "QualityClm";
+            this.QualityClm.ReadOnly = true;
+            this.QualityClm.Width = 83;
+            // 
+            // PriceClm
+            // 
+            this.PriceClm.FillWeight = 20F;
+            this.PriceClm.HeaderText = "Price";
+            this.PriceClm.MinimumWidth = 6;
+            this.PriceClm.Name = "PriceClm";
+            // 
+            // TotalPriceClm
+            // 
+            this.TotalPriceClm.FillWeight = 43.06221F;
+            this.TotalPriceClm.HeaderText = "Total Price";
+            this.TotalPriceClm.MinimumWidth = 6;
+            this.TotalPriceClm.Name = "TotalPriceClm";
+            this.TotalPriceClm.ReadOnly = true;
             // 
             // lblImExportDate
             // 
@@ -290,60 +344,6 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // BookClm
-            // 
-            this.BookClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BookClm.FillWeight = 43.06221F;
-            this.BookClm.HeaderText = "Book";
-            this.BookClm.MinimumWidth = 6;
-            this.BookClm.Name = "BookClm";
-            this.BookClm.ReadOnly = true;
-            this.BookClm.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BookClm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // AuthorClm
-            // 
-            this.AuthorClm.FillWeight = 43.06221F;
-            this.AuthorClm.HeaderText = "Author";
-            this.AuthorClm.MinimumWidth = 6;
-            this.AuthorClm.Name = "AuthorClm";
-            this.AuthorClm.ReadOnly = true;
-            // 
-            // QuantityClm
-            // 
-            this.QuantityClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.QuantityClm.FillWeight = 143.5407F;
-            this.QuantityClm.HeaderText = "Quantity";
-            this.QuantityClm.MinimumWidth = 6;
-            this.QuantityClm.Name = "QuantityClm";
-            this.QuantityClm.ReadOnly = true;
-            this.QuantityClm.Width = 92;
-            // 
-            // QualityClm
-            // 
-            this.QualityClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.QualityClm.FillWeight = 227.2727F;
-            this.QualityClm.HeaderText = "Quality";
-            this.QualityClm.MinimumWidth = 6;
-            this.QualityClm.Name = "QualityClm";
-            this.QualityClm.ReadOnly = true;
-            this.QualityClm.Width = 83;
-            // 
-            // PriceClm
-            // 
-            this.PriceClm.FillWeight = 20F;
-            this.PriceClm.HeaderText = "Price";
-            this.PriceClm.MinimumWidth = 6;
-            this.PriceClm.Name = "PriceClm";
-            // 
-            // TotalPriceClm
-            // 
-            this.TotalPriceClm.FillWeight = 43.06221F;
-            this.TotalPriceClm.HeaderText = "Total Price";
-            this.TotalPriceClm.MinimumWidth = 6;
-            this.TotalPriceClm.Name = "TotalPriceClm";
-            this.TotalPriceClm.ReadOnly = true;
             // 
             // FormPrintBill
             // 
