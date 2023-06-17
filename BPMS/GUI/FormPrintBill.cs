@@ -23,7 +23,7 @@ namespace BPMS.GUI
         }
         public void LoadData(Bill b)
         {
-            lblType.Text = b.type == 0 ? "Import" : "Export";
+            lblType.Text = b.type == 0 ? "Import Bill" : "Export Bill";
             lblIdBill.Text = "Bill id: " + b.id.ToString();
             lblCreatePerson.Text = "Create Person: " + AccountDAO.Instance.GetAccount(b.idCreatePerson).DisplayName;
             lblSender.Text = "Sender: " + b.Sender;
