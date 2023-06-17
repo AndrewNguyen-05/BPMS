@@ -189,7 +189,17 @@ namespace BPMS.GUI
             }
             LoadBillInfo();
         }
-
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dtgvBill.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
+            {
+                int idBill = (int)dtgvr.Cells["clmIdBill"].Value;
+                Bill tmp = BillDAO.Instance.GetBill(idBill);
+                FormPrintBill fpb = new FormPrintBill(tmp);
+                fpb.ShowDialog();
+            }
+        }
         private void dtgvBill_SelectionChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow dtgvr in dtgvBill.SelectedRows)
@@ -256,5 +266,7 @@ namespace BPMS.GUI
 
 
         #endregion
+
+
     }
 }
