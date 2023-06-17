@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrintBill));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrintBill));
             this.grbPreview = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelPreview = new System.Windows.Forms.Panel();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.dtgvBookList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.SelectClm = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.BookClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QualityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblImExportDate = new System.Windows.Forms.Label();
             this.lblIdBill = new System.Windows.Forms.Label();
             this.lblCreatePerson = new System.Windows.Forms.Label();
@@ -54,6 +44,15 @@
             this.lblSender = new System.Windows.Forms.Label();
             this.lblReceiver = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.BookClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QualityClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPriceClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbPreview.SuspendLayout();
             this.panelPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBookList)).BeginInit();
@@ -71,42 +70,9 @@
             this.grbPreview.ForeColor = System.Drawing.Color.White;
             this.grbPreview.Location = new System.Drawing.Point(12, 12);
             this.grbPreview.Name = "grbPreview";
-            this.grbPreview.Size = new System.Drawing.Size(885, 775);
+            this.grbPreview.Size = new System.Drawing.Size(1039, 812);
             this.grbPreview.TabIndex = 1;
             this.grbPreview.Text = "Print preview";
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnPrint.BorderRadius = 4;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(385, 799);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(160, 35);
-            this.btnPrint.TabIndex = 36;
-            this.btnPrint.Text = "PRINT";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
             // 
             // panelPreview
             // 
@@ -122,7 +88,7 @@
             this.panelPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreview.Location = new System.Drawing.Point(0, 40);
             this.panelPreview.Name = "panelPreview";
-            this.panelPreview.Size = new System.Drawing.Size(885, 735);
+            this.panelPreview.Size = new System.Drawing.Size(1039, 772);
             this.panelPreview.TabIndex = 0;
             // 
             // lblTotalPrice
@@ -158,7 +124,6 @@
             this.dtgvBookList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvBookList.ColumnHeadersHeight = 35;
             this.dtgvBookList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SelectClm,
             this.BookClm,
             this.AuthorClm,
             this.QuantityClm,
@@ -185,7 +150,7 @@
             this.dtgvBookList.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dtgvBookList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgvBookList.RowTemplate.Height = 37;
-            this.dtgvBookList.Size = new System.Drawing.Size(861, 339);
+            this.dtgvBookList.Size = new System.Drawing.Size(1015, 376);
             this.dtgvBookList.TabIndex = 28;
             this.dtgvBookList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvBookList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -209,14 +174,122 @@
             this.dtgvBookList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvBookList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // SelectClm
+            // lblImExportDate
             // 
-            this.SelectClm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SelectClm.HeaderText = "Select";
-            this.SelectClm.MinimumWidth = 6;
-            this.SelectClm.Name = "SelectClm";
-            this.SelectClm.Visible = false;
-            this.SelectClm.Width = 53;
+            this.lblImExportDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblImExportDate.AutoSize = true;
+            this.lblImExportDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImExportDate.ForeColor = System.Drawing.Color.Black;
+            this.lblImExportDate.Location = new System.Drawing.Point(559, 235);
+            this.lblImExportDate.Name = "lblImExportDate";
+            this.lblImExportDate.Size = new System.Drawing.Size(166, 26);
+            this.lblImExportDate.TabIndex = 27;
+            this.lblImExportDate.Text = "lblImExportDate";
+            // 
+            // lblIdBill
+            // 
+            this.lblIdBill.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblIdBill.AutoSize = true;
+            this.lblIdBill.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdBill.ForeColor = System.Drawing.Color.Black;
+            this.lblIdBill.Location = new System.Drawing.Point(223, 105);
+            this.lblIdBill.Name = "lblIdBill";
+            this.lblIdBill.Size = new System.Drawing.Size(88, 26);
+            this.lblIdBill.TabIndex = 26;
+            this.lblIdBill.Text = "lblIdBill";
+            // 
+            // lblCreatePerson
+            // 
+            this.lblCreatePerson.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCreatePerson.AutoSize = true;
+            this.lblCreatePerson.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreatePerson.ForeColor = System.Drawing.Color.Black;
+            this.lblCreatePerson.Location = new System.Drawing.Point(559, 105);
+            this.lblCreatePerson.Name = "lblCreatePerson";
+            this.lblCreatePerson.Size = new System.Drawing.Size(159, 26);
+            this.lblCreatePerson.TabIndex = 25;
+            this.lblCreatePerson.Text = "lblCreatePerson";
+            // 
+            // lblCreateDate
+            // 
+            this.lblCreateDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCreateDate.AutoSize = true;
+            this.lblCreateDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateDate.ForeColor = System.Drawing.Color.Black;
+            this.lblCreateDate.Location = new System.Drawing.Point(223, 235);
+            this.lblCreateDate.Name = "lblCreateDate";
+            this.lblCreateDate.Size = new System.Drawing.Size(137, 26);
+            this.lblCreateDate.TabIndex = 24;
+            this.lblCreateDate.Text = "lblCreateDate";
+            // 
+            // lblSender
+            // 
+            this.lblSender.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSender.AutoSize = true;
+            this.lblSender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSender.ForeColor = System.Drawing.Color.Black;
+            this.lblSender.Location = new System.Drawing.Point(223, 168);
+            this.lblSender.Name = "lblSender";
+            this.lblSender.Size = new System.Drawing.Size(101, 26);
+            this.lblSender.TabIndex = 23;
+            this.lblSender.Text = "lblSender";
+            // 
+            // lblReceiver
+            // 
+            this.lblReceiver.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblReceiver.AutoSize = true;
+            this.lblReceiver.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceiver.ForeColor = System.Drawing.Color.Black;
+            this.lblReceiver.Location = new System.Drawing.Point(559, 168);
+            this.lblReceiver.Name = "lblReceiver";
+            this.lblReceiver.Size = new System.Drawing.Size(117, 26);
+            this.lblReceiver.TabIndex = 22;
+            this.lblReceiver.Text = "lblReceiver";
+            // 
+            // lblType
+            // 
+            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.ForeColor = System.Drawing.Color.Black;
+            this.lblType.Location = new System.Drawing.Point(423, 23);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(162, 32);
+            this.lblType.TabIndex = 21;
+            this.lblType.Text = "BILL TYPE";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPrint.BorderRadius = 4;
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(165)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(462, 836);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(160, 35);
+            this.btnPrint.TabIndex = 36;
+            this.btnPrint.Text = "PRINT";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // BookClm
             // 
@@ -272,96 +345,12 @@
             this.TotalPriceClm.Name = "TotalPriceClm";
             this.TotalPriceClm.ReadOnly = true;
             // 
-            // lblImExportDate
-            // 
-            this.lblImExportDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblImExportDate.AutoSize = true;
-            this.lblImExportDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImExportDate.ForeColor = System.Drawing.Color.Black;
-            this.lblImExportDate.Location = new System.Drawing.Point(482, 235);
-            this.lblImExportDate.Name = "lblImExportDate";
-            this.lblImExportDate.Size = new System.Drawing.Size(166, 26);
-            this.lblImExportDate.TabIndex = 27;
-            this.lblImExportDate.Text = "lblImExportDate";
-            // 
-            // lblIdBill
-            // 
-            this.lblIdBill.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblIdBill.AutoSize = true;
-            this.lblIdBill.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdBill.ForeColor = System.Drawing.Color.Black;
-            this.lblIdBill.Location = new System.Drawing.Point(146, 105);
-            this.lblIdBill.Name = "lblIdBill";
-            this.lblIdBill.Size = new System.Drawing.Size(88, 26);
-            this.lblIdBill.TabIndex = 26;
-            this.lblIdBill.Text = "lblIdBill";
-            // 
-            // lblCreatePerson
-            // 
-            this.lblCreatePerson.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCreatePerson.AutoSize = true;
-            this.lblCreatePerson.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatePerson.ForeColor = System.Drawing.Color.Black;
-            this.lblCreatePerson.Location = new System.Drawing.Point(482, 105);
-            this.lblCreatePerson.Name = "lblCreatePerson";
-            this.lblCreatePerson.Size = new System.Drawing.Size(159, 26);
-            this.lblCreatePerson.TabIndex = 25;
-            this.lblCreatePerson.Text = "lblCreatePerson";
-            // 
-            // lblCreateDate
-            // 
-            this.lblCreateDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCreateDate.AutoSize = true;
-            this.lblCreateDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateDate.ForeColor = System.Drawing.Color.Black;
-            this.lblCreateDate.Location = new System.Drawing.Point(146, 235);
-            this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(137, 26);
-            this.lblCreateDate.TabIndex = 24;
-            this.lblCreateDate.Text = "lblCreateDate";
-            // 
-            // lblSender
-            // 
-            this.lblSender.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSender.AutoSize = true;
-            this.lblSender.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSender.ForeColor = System.Drawing.Color.Black;
-            this.lblSender.Location = new System.Drawing.Point(146, 168);
-            this.lblSender.Name = "lblSender";
-            this.lblSender.Size = new System.Drawing.Size(101, 26);
-            this.lblSender.TabIndex = 23;
-            this.lblSender.Text = "lblSender";
-            // 
-            // lblReceiver
-            // 
-            this.lblReceiver.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblReceiver.AutoSize = true;
-            this.lblReceiver.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceiver.ForeColor = System.Drawing.Color.Black;
-            this.lblReceiver.Location = new System.Drawing.Point(482, 168);
-            this.lblReceiver.Name = "lblReceiver";
-            this.lblReceiver.Size = new System.Drawing.Size(117, 26);
-            this.lblReceiver.TabIndex = 22;
-            this.lblReceiver.Text = "lblReceiver";
-            // 
-            // lblType
-            // 
-            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblType.AutoSize = true;
-            this.lblType.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.ForeColor = System.Drawing.Color.Black;
-            this.lblType.Location = new System.Drawing.Point(346, 23);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(162, 32);
-            this.lblType.TabIndex = 21;
-            this.lblType.Text = "BILL TYPE";
-            // 
             // FormPrintBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 845);
+            this.ClientSize = new System.Drawing.Size(1063, 882);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.grbPreview);
             this.Name = "FormPrintBill";
@@ -382,13 +371,6 @@
         private System.Windows.Forms.Panel panelPreview;
         private System.Windows.Forms.Label lblTotalPrice;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvBookList;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SelectClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QualityClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceClm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPriceClm;
         private System.Windows.Forms.Label lblImExportDate;
         private System.Windows.Forms.Label lblIdBill;
         private System.Windows.Forms.Label lblCreatePerson;
@@ -396,5 +378,11 @@
         private System.Windows.Forms.Label lblSender;
         private System.Windows.Forms.Label lblReceiver;
         private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookClm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorClm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityClm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QualityClm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceClm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPriceClm;
     }
 }

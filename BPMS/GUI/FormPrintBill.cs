@@ -16,7 +16,6 @@ namespace BPMS.GUI
 {
     public partial class FormPrintBill : Form
     {
-        Bitmap bitmap;
         public FormPrintBill(Bill b)
         {
             InitializeComponent();
@@ -70,33 +69,27 @@ namespace BPMS.GUI
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            Panel panel = new Panel();
-            panel.Location = panelPreview.Location;
-            grbPreview.Controls.Add(panel);
-
-            Graphics grp = panel.CreateGraphics();
-            Size pnlSize = panelPreview.ClientSize;
-            bitmap = new Bitmap(pnlSize.Width, pnlSize.Height, grp);
-            grp = Graphics.FromImage(bitmap);
-
-            Point panelLocation = PointToScreen(panel.Location);
-            grp.CopyFromScreen(panelLocation.X, panelLocation.Y, 0, 0, pnlSize);
+            CaptureScreen();
 
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
         }
+
+        Bitmap memoryImage;
         private void CaptureScreen()
         {
-            Graphics myGraphics = grbPreview.CreateGraphics();
-            Size s = grbPreview.Size;
-            bitmap = new Bitmap(s.Width, s.Height, myGraphics);
-            Graphics memoryGraphics = Graphics.FromImage(bitmap);
-            memoryGraphics.CopyFromScreen(grbPreview.Location.X, grbPreview.Location.Y, 0, 0, s);
+            Graphics myGraphics = panelPreview.CreateGraphics();
+            Size s = panelPreview.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X + grbPreview.Location.X + panelPreview.Location.X ,
+                                            this.Location.Y + grbPreview.Location.Y + panelPreview.Location.Y + grbPreview.CustomBorderThickness.Top, 0, 0, s);
         }
+
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap, 0, 0);
+            e.Graphics.DrawImage(memoryImage, 0, 0);
 
         }
     }
