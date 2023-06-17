@@ -1,6 +1,7 @@
 ﻿using BPMS.Classes;
 using BPMS.DAO;
 using BPMS.DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,17 @@ namespace BPMS.GUI
         {
             InitializeComponent();
             LoadData(b);
+            #region Border
+            //Form
+            
+
+            #endregion
         }
         public void LoadData(Bill b)
         {
-            lblType.Text = b.type == 0 ? "Import Bill" : "Export Bill";
-            lblIdBill.Text = "Bill id: " + b.id.ToString();
-            lblCreatePerson.Text = "Create Person: " + AccountDAO.Instance.GetAccount(b.idCreatePerson).DisplayName;
+            lblType.Text = b.type == 0 ? "Import Invoice" : "Export Invoice";
+            lblIdBill.Text = "Invoice No " + b.id.ToString();
+            lblCreatePerson.Text = "Created by " + AccountDAO.Instance.GetAccount(b.idCreatePerson).DisplayName;
             lblSender.Text = "Sender: " + b.Sender;
             lblReceiver.Text = "Receiver: " + b.Receiver;
             lblCreateDate.Text = "Create Date: " + b.CreateDate;
