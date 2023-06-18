@@ -2,12 +2,14 @@
 using BPMS.DAO;
 using BPMS.DTO;
 using Guna.UI2.WinForms;
+using LiveCharts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -23,7 +25,7 @@ namespace BPMS.GUI
             LoadData(b);
             #region Border
             //Form
-            
+
 
             #endregion
         }
@@ -32,14 +34,12 @@ namespace BPMS.GUI
             lblType.Text = b.type == 0 ? "Import Invoice" : "Export Invoice";
             lblIdBill.Text = "Invoice No " + b.id.ToString();
             lblCreatePerson.Text = "Created by " + AccountDAO.Instance.GetAccount(b.idCreatePerson).DisplayName;
-            lblSender.Text = "Sender: " + b.Sender;
-            lblReceiver.Text = "Receiver: " + b.Receiver;
-            lblCreateDate.Text = "Create Date: " + b.CreateDate;
-            lblImExportDate.Text = (b.type == 0 ? "Im" : "Ex" ) 
-                                    + "port Date: " 
-                                    + (b.type == 0 ?
-                                        b.ImportReports.FirstOrDefault().ImportDate :
-                                        b.ExportReports.FirstOrDefault().ExportDate
+            lblSender.Text = b.Sender;
+            lblReceiver.Text = b.Receiver;
+            lblCreateDate.Text = b.CreateDate.ToString();
+            lblImExportDate.Text = (b.type == 0 ?
+                                        b.ImportReports.FirstOrDefault().ImportDate.ToString() :
+                                        b.ExportReports.FirstOrDefault().ExportDate.ToString()
                                         );
             double? ttprice = 0;
             if (b.type == 0)
@@ -47,7 +47,7 @@ namespace BPMS.GUI
                 List<ImportReportDetail> detail = ImportReportDAO.Instance.GetImportDetail(b.ImportReports.FirstOrDefault());
                 foreach (ImportReportDetail ird in detail)
                 {
-                    dtgvBookList.Rows.Add(new object[] { ird.Book.name 
+                    dtgvBookList.Rows.Add(new object[] { ird.Book.name
                                                             , ird.Book.author
                                                             , ird.quantity
                                                             , ird.quality
@@ -70,7 +70,7 @@ namespace BPMS.GUI
                     ttprice += erd.quantity * erd.Book.price;
                 }
             }
-            lblTotalPrice.Text = "Total Price: " + ttprice.ToString();
+            lblTotalPrice.Text = "Total Price: " + ttprice.ToString() + " VND";
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -96,6 +96,39 @@ namespace BPMS.GUI
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
+
+        }
+
+        private void panelPreview_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            //Dashline
+            using (Pen dashedPen = new Pen(Color.Black))
+            {
+                dashedPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+
+                // Draw the 1st dashed line
+                Point startPoint = new Point(0, 270);
+                Point endPoint = new Point(this.ClientSize.Width, 270);
+                e.Graphics.DrawLine(dashedPen, startPoint, endPoint);
+
+                // Draw the 2nd dashed line
+                Point startPoint2 = new Point(0, 310);
+                Point endPoint2 = new Point(this.ClientSize.Width, 310);
+                e.Graphics.DrawLine(dashedPen, startPoint2, endPoint2);
+            }
+
+            //Line
+            using (Pen solidPen = new Pen(Color.Black))
+            {
+                solidPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+
+                Point startPoint = new Point(0, 715);
+                Point endPoint = new Point(this.ClientSize.Width, 715);
+                e.Graphics.DrawLine(solidPen, startPoint, endPoint);
+
+            }
 
         }
     }

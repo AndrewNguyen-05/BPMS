@@ -52,12 +52,12 @@
             this.btnCancelReceived = new Guna.UI2.WinForms.Guna2Button();
             this.tabImport = new System.Windows.Forms.TabPage();
             this.dtgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             this.clmIdImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalPriceIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBilledIm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPayment = new Guna.UI2.WinForms.Guna2TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
             this.tabPaid.SuspendLayout();
             this.tabImport.SuspendLayout();
@@ -135,10 +135,10 @@
             // lblBillInfo
             // 
             this.lblBillInfo.AutoSize = true;
-            this.lblBillInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBillInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBillInfo.Location = new System.Drawing.Point(8, 26);
             this.lblBillInfo.Name = "lblBillInfo";
-            this.lblBillInfo.Size = new System.Drawing.Size(0, 23);
+            this.lblBillInfo.Size = new System.Drawing.Size(0, 22);
             this.lblBillInfo.TabIndex = 14;
             // 
             // dtgvBill
@@ -369,38 +369,6 @@
             this.dtgvImport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvImport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // tabPayment
-            // 
-            this.tabPayment.Controls.Add(this.tabImport);
-            this.tabPayment.Controls.Add(this.tabPaid);
-            this.tabPayment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPayment.ItemSize = new System.Drawing.Size(180, 40);
-            this.tabPayment.Location = new System.Drawing.Point(0, 0);
-            this.tabPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPayment.Name = "tabPayment";
-            this.tabPayment.SelectedIndex = 0;
-            this.tabPayment.Size = new System.Drawing.Size(1183, 660);
-            this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tabPayment.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.tabPayment.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.tabPayment.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.tabPayment.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tabPayment.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tabPayment.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.tabPayment.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tabPayment.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tabPayment.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.tabPayment.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tabPayment.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.tabPayment.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.tabPayment.TabButtonSize = new System.Drawing.Size(180, 40);
-            this.tabPayment.TabIndex = 2;
-            this.tabPayment.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tabPayment.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
-            // 
             // clmIdImport
             // 
             this.clmIdImport.HeaderText = "Id Export";
@@ -435,6 +403,38 @@
             this.clmBilledIm.MinimumWidth = 6;
             this.clmBilledIm.Name = "clmBilledIm";
             this.clmBilledIm.ReadOnly = true;
+            // 
+            // tabPayment
+            // 
+            this.tabPayment.Controls.Add(this.tabImport);
+            this.tabPayment.Controls.Add(this.tabPaid);
+            this.tabPayment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPayment.ItemSize = new System.Drawing.Size(180, 40);
+            this.tabPayment.Location = new System.Drawing.Point(0, 0);
+            this.tabPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPayment.Name = "tabPayment";
+            this.tabPayment.SelectedIndex = 0;
+            this.tabPayment.Size = new System.Drawing.Size(1183, 660);
+            this.tabPayment.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tabPayment.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabPayment.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabPayment.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tabPayment.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabPayment.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tabPayment.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabPayment.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabPayment.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.tabPayment.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabPayment.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tabPayment.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.tabPayment.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabPayment.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.tabPayment.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.tabPayment.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.tabPayment.TabIndex = 2;
+            this.tabPayment.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabPayment.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
             // FormPublisherPayment
             // 

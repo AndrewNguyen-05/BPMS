@@ -579,10 +579,10 @@
             // lblBillInfo
             // 
             this.lblBillInfo.AutoSize = true;
-            this.lblBillInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBillInfo.Location = new System.Drawing.Point(8, 15);
             this.lblBillInfo.Name = "lblBillInfo";
-            this.lblBillInfo.Size = new System.Drawing.Size(0, 28);
+            this.lblBillInfo.Size = new System.Drawing.Size(0, 22);
             this.lblBillInfo.TabIndex = 13;
             this.lblBillInfo.Visible = false;
             // 
