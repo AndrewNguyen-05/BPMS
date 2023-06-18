@@ -265,8 +265,29 @@ namespace BPMS.GUI
         }
 
 
+
         #endregion
 
+        private void dtgvImport_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvImport.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow row in dtgvImport.SelectedRows)
+            {
+                ImportReport ir = ImportReportDAO.Instance.GetImportReport((int)row.Cells["clmIdImport"].Value);
+                if (ir.idBill != null) btnCreateImport.Visible = false;
+                else btnCreateImport.Visible = true;
+            }
+        }
 
+        private void dtgvExport_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvExport.SelectedRows.Count == 0) return;
+            foreach (DataGridViewRow row in dtgvExport.SelectedRows)
+            {
+                ExportReport er = ExportReportDAO.Instance.GetExportReport((int)row.Cells["clmIdExport"].Value);
+                if (er.idBill != null) btnCreateExport.Visible = false;
+                else btnCreateExport.Visible = true;
+            }
+        }
     }
 }
