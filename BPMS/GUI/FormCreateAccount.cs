@@ -107,6 +107,7 @@ namespace BPMS.GUI
             {
                 case Permissions.Publisher:
                     DTO.Publisher pb = PublisherDAO.Instance.GetPublisherByAccId(acc.id);
+                    if (pb == null) pb = new DTO.Publisher();
                     pb.idAccount = acc.id;
                     pb.AccountNumber = txbBankAccount.Text;
                     pb.PhoneNumber = txbPhone.Text;
@@ -115,6 +116,7 @@ namespace BPMS.GUI
                     break;
                 case Permissions.Accountant:
                     DTO.Accountant act = AccountantDAO.Instance.GetAccountantByAccId(acc.id);
+                    if (act == null) act = new DTO.Accountant();
                     act.idAccount = acc.id;
                     act.AccountNumber = txbBankAccount.Text;
                     act.PhoneNumber = txbPhone.Text;
