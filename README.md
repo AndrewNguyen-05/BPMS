@@ -104,7 +104,7 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 <a name="installation"></a>
 Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
 * <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a>, Community Edition để chạy mã nguồn
-* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition, nếu tải Developer Edition thì hãy tự chỉnh lại đường dẫn kết nối - connectionSTR trong DataProvider.cs nằm trong thư mục DAO)
+* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition)
 * <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">SMSS</a> để thao tác với database
 
 1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
