@@ -89,7 +89,7 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/>
+<img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
