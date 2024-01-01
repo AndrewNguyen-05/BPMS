@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <!-- PROJECT LOGO -->
 <div align="center">
-  <img src="BPMS/Pictures/BPMS_Logo.png" alt="Logo" width="200" height="120">
+  <img src="BPMS/Pictures/BPMS_Logo.png" alt="Logo" width="220" height="120">
 
   <h3 align="center">Ứng dụng Quản lý phát hành sách - Book Publish Management System</h3>
 
@@ -90,7 +90,7 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<div align="center"><img src="BPMS/Pictures/Readme/logos/ado.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="100" height="80"/></div>
+<div align="center"><img src="BPMS/Pictures/Readme/logos/ado.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="100" height="90"/></div>
 <p align="center"><i>Những công nghệ sử dụng</i></p>
 
 
@@ -205,7 +205,7 @@ Có 6 màn hình bao gồm: màn hình chính, nhập sách, xuất sách, thanh
 <!-- CONTACT -->
 ## Liên hệ
 <a name="contact"></a>
-* Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/cua.vosi/) - 21520144@gm.uit.edu.vn
+* Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/andrew.nguyen0505/) - 21520144@gm.uit.edu.vn
 * Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
 * Trương Hoàng Bảo Duy - [Facebook](https://www.facebook.com/baoduy.truonghoang.581) - 21520789@gm.uit.edu.vn
 
