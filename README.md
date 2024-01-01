@@ -90,7 +90,7 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<div align="center"><img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/></div>
+<div align="center"><img src="BPMS/Pictures/Readme/logos/ado.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="100" height="100"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="100" height="80"/></div>
 <p align="center"><i>Những công nghệ sử dụng</i></p>
 
 
