@@ -113,7 +113,7 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 4. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
     * Đầu tiên, hãy chuột phải vào solution BPMS và chọn vào mục Manage Nuget Packages
    <img src="BPMS/Pictures/Readme/install-1.png" alt="installation 1"/>
-   + *Lưu ý cập nhật các thư viện nuget cho đồ án* +
+   <p align="center" font-style="italic">Lưu ý cập nhật các thư viện nuget cho đồ án</p>
    
     * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
    <img src="BPMS/Pictures/Readme/install-2.png" alt="installation 2"/>
