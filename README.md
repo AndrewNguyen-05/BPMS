@@ -89,7 +89,7 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<img src="QLNH_Winform/Resources/screenshots/logos/ado.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/csharp.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/.net.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/sql.jpg" width="70" height="50"/>
+<img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,7 +104,7 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 <a name="installation"></a>
 Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
 * <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a>, Community Edition để chạy mã nguồn
-* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition, nếu tải Developer Edition thì hãy tự chỉnh lại đường dẫn kết nối - connectionSTR trong DataProvider.cs nằm trong thư mục DAO)
+* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition)
 * <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">SMSS</a> để thao tác với database
 
 1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
@@ -113,6 +113,7 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 4. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
     * Đầu tiên, hãy chuột phải vào solution BPMS và chọn vào mục Manage Nuget Packages
    <img src="BPMS/Pictures/Readme/install-1.png" alt="installation 1"/>
+   <p align="center"><i>Lưu ý cập nhật các thư viện nuget cho đồ án</i></p>
    
     * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
    <img src="BPMS/Pictures/Readme/install-2.png" alt="installation 2"/>
@@ -175,7 +176,7 @@ Có 6 màn hình bao gồm: màn hình chính, nhập sách, xuất sách, thanh
 * Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
 * Trương Hoàng Bảo Duy - [Facebook](https://www.facebook.com/baoduy.truonghoang.581) - 21520789@gm.uit.edu.vn
 
-Project Link: [QLNH_Winform](https://github.com/AndrewNguyen-05/QLNH_WF)
+Project Link: [BPMS](https://github.com/AndrewNguyen-05/BPMS)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
