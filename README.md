@@ -175,7 +175,7 @@ Có 6 màn hình bao gồm: màn hình chính, nhập sách, xuất sách, thanh
 * Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
 * Trương Hoàng Bảo Duy - [Facebook](https://www.facebook.com/baoduy.truonghoang.581) - 21520789@gm.uit.edu.vn
 
-Project Link: [QLNH_Winform](https://github.com/AndrewNguyen-05/QLNH_WF)
+Project Link: [BPMS](https://github.com/AndrewNguyen-05/BPMS)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
