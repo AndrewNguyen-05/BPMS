@@ -50,6 +50,7 @@
 ## Về ứng dụng này
 <div align="center">
 <img src="BPMS/Pictures/Readme/analytic-exported.png" alt="Book publish management system"/></div>
+<p align="center"><i>Ứng dụng quản lý phát hành sách</i></p>
 
 Ứng dụng Quản lý Phát hành Sách là một công cụ hiệu quả giúp các đối tác trong ngành xuất bản quản lý quá trình xuất nhập sách một cách linh hoạt và hiệu quả. Được thiết kế để đáp ứng nhu cầu đặc biệt của nhà xuất bản, đại lý và quản lý, ứng dụng này đóng vai trò quan trọng trong quá trình phân phối sách từ nhà xuất bản đến đại lý và ngược lại.
 
@@ -89,7 +90,9 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/>
+<div align="center"><img src="BPMS/Pictures/Readme/logos/ado.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/winform.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/csharp.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/.net.png" width="50" height="50"/> <img src="BPMS/Pictures/Readme/logos/sql.jpg" width="70" height="50"/></div>
+<p align="center"><i>Những công nghệ sử dụng</i></p>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,6 +113,7 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
 2. Mở file BPMS.sql bằng SSMS, và nhấn F5 để SMSS chạy và tạo 1 database mới có tên là BPMS với đầy đủ dữ liệu
    <img src="BPMS/Pictures/Readme/database.png" alt="Database instruction"/>
+   <p align="center"><i>Khởi chạy database</i></p>
 4. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
     * Đầu tiên, hãy chuột phải vào solution BPMS và chọn vào mục Manage Nuget Packages
    <img src="BPMS/Pictures/Readme/install-1.png" alt="installation 1"/>
@@ -117,9 +121,11 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
    
     * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
    <img src="BPMS/Pictures/Readme/install-2.png" alt="installation 2"/>
+   <p align="center"><i>Cập nhật tất cả thư viện nuget</i></p>
 
 5. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy. Tài khoản mật khẩu cho admin là: Admin - AD, đối với đại lý, mật khẩu sẽ là DL, và nhà xuất bản mật khẩu sẽ là NXB.
    <img src="BPMS/Pictures/Readme/account-password.png" alt="login"/>
+   <p align="center"><i>Danh sách tài khoản - mật khẩu hiện có trong hệ thống</i></p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -131,41 +137,68 @@ Có 6 màn hình bao gồm: màn hình chính, nhập sách, xuất sách, thanh
 1. Màn hình đăng nhập
    * Sử dụng tài khoản, mật khẩu đã được cung cấp để đăng nhập, có thể là admin hoặc nhân viên
    <img src="BPMS/Pictures/Readme/login.png"/>
+   <p align="center"><i>Màn hình đăng nhập ứng dụng</i></p>
    
 2. Màn hình chính
    * Trong màn hình này sẽ hiển thị thông tin tên ứng dụng, cũng như logo 
    <img src="BPMS/Pictures/Readme/home.png"/>
+   <p align="center"><i>Trang chủ ứng dụng</i></p>
    
 3. Màn hình nhập sách
    * Màn hình này sẽ giúp các đại lý có thể quản lý việc nhập sách dễ dàng hơn. Manager sẽ có thể tạo phiếu nhập dễ dàng, cũng như quản lý, xóa, sửa đổi các phiếu nhập đang có trong hệ thống.
    <img src="BPMS/Pictures/Readme/import.png"/>
+   <p align="center"><i>Màn hình hiển thị các phiếu nhập sách trong hệ thống</i></p>
+   
    <img src="BPMS/Pictures/Readme/import-add.png"/>
+   <p align="center"><i>Màn hình tạo phiếu nhập sách</i></p>
+   
    <img src="BPMS/Pictures/Readme/import-modify.png"/>
+   <p align="center"><i>Màn hình chỉnh sửa phiếu nhập sách</i></p>
    
 4. Màn hình Xuất sách
    * Tương tự như màn hình nhập sách, giao diện này giúp cho manager có thể quản lý việc phát hành sách của các nhà xuất bản dễ dàng hơn nhờ các thông tin chi tiết trong phiếu xuất sách
    <img src="BPMS/Pictures/Readme/export.png"/>
+   <p align="center"><i>Màn hình hiển thị các phiếu xuất sách trong hệ thống</i></p>
+   
    <img src="BPMS/Pictures/Readme/export-create.png"/>
+   <p align="center"><i>Màn hình tạo phiếu xuất sách</i></p>
+   
    <img src="BPMS/Pictures/Readme/export-modify.png"/>
+   <p align="center"><i>Màn hình chỉnh sửa phiếu xuất sách</i></p>
    
 5. Màn hình thanh toán
    * Giúp cho manager có thể quản lý những đơn hàng xuất, nhập sách, và quản lý các bill
    <img src="BPMS/Pictures/Readme/payment.png"/>
+   <p align="center"><i>Màn hình thanh toán</i></p> 
+   
    <img src="BPMS/Pictures/Readme/payment-bill.png"/>
+   <p align="center"><i>Màn hình quản lý hóa đơn trong hệ thống</i></p>
    
 6. Màn hình thống kê
    * Giúp cho manager có thể quản lý những đơn hàng, thống kê tiền ra tiền vào từ đó giúp cho việc kiểm soát tài chính trở nên dễ dàng. Ngoài ra cũng có thể theo dõi những đầu sách được nhập và xuất nhiều nhất, từ đó có thể đưa ra những nhận định, đánh giá phù hợp.
    <img src="BPMS/Pictures/Readme/analytic-exported.png"/>
+   <p align="center"><i>Màn hình quản lý thống kê xuất sách</i></p>
+   
    <img src="BPMS/Pictures/Readme/analytic-imported.png"/>
+   <p align="center"><i>Màn hình quản lý thống kê nhập sách</i></p>
      
 7. Màn hình tài khoản
    * Quản lý tài khoản các nhà xuất bản, đại lý, cũng như kế toán và admin trong hệ thống, có thể thêm xóa sửa tài khoản mới.
   <img src="BPMS/Pictures/Readme/account.png"/>
+  <p align="center"><i>Màn hình quản lý tài khoản trong hệ thống</i></p>
+  
   <img src="BPMS/Pictures/Readme/account-create.png"/>
+  <p align="center"><i>Màn hình tạo tài khoản mới</i></p>
      
 8. Các màn hình khác
   <img src="BPMS/Pictures/Readme/accountant.png"/>
+  <p align="center"><i>Giao diện dành cho kế toán</i></p>
+  
   <img src="BPMS/Pictures/Readme/publisher.png"/>   
+  <p align="center"><i>Giao diện dành cho nhà xuất bản - tạo sách mới</i></p>
+
+  <img src="BPMS/Pictures/Readme/agency.png"/>
+  <p align="center"><i>Giao diện dành cho đại lý</i></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
